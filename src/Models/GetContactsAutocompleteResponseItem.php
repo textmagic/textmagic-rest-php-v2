@@ -62,6 +62,7 @@ class GetContactsAutocompleteResponseItem implements ModelInterface, ArrayAccess
         'value' => 'string',
         'label' => 'string',
         'sharedBy' => 'string',
+        'isShared' => 'bool',
         'avatar' => 'string',
         'favorited' => 'bool',
         'userId' => 'int',
@@ -81,6 +82,7 @@ class GetContactsAutocompleteResponseItem implements ModelInterface, ArrayAccess
         'value' => null,
         'label' => null,
         'sharedBy' => null,
+        'isShared' => null,
         'avatar' => null,
         'favorited' => null,
         'userId' => null,
@@ -121,6 +123,7 @@ class GetContactsAutocompleteResponseItem implements ModelInterface, ArrayAccess
         'value' => 'value',
         'label' => 'label',
         'sharedBy' => 'sharedBy',
+        'isShared' => 'isShared',
         'avatar' => 'avatar',
         'favorited' => 'favorited',
         'userId' => 'userId',
@@ -140,6 +143,7 @@ class GetContactsAutocompleteResponseItem implements ModelInterface, ArrayAccess
         'value' => 'setValue',
         'label' => 'setLabel',
         'sharedBy' => 'setSharedBy',
+        'isShared' => 'setIsShared',
         'avatar' => 'setAvatar',
         'favorited' => 'setFavorited',
         'userId' => 'setUserId',
@@ -159,6 +163,7 @@ class GetContactsAutocompleteResponseItem implements ModelInterface, ArrayAccess
         'value' => 'getValue',
         'label' => 'getLabel',
         'sharedBy' => 'getSharedBy',
+        'isShared' => 'getIsShared',
         'avatar' => 'getAvatar',
         'favorited' => 'getFavorited',
         'userId' => 'getUserId',
@@ -249,6 +254,7 @@ class GetContactsAutocompleteResponseItem implements ModelInterface, ArrayAccess
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
         $this->container['label'] = isset($data['label']) ? $data['label'] : null;
         $this->container['sharedBy'] = isset($data['sharedBy']) ? $data['sharedBy'] : null;
+        $this->container['isShared'] = isset($data['isShared']) ? $data['isShared'] : null;
         $this->container['avatar'] = isset($data['avatar']) ? $data['avatar'] : null;
         $this->container['favorited'] = isset($data['favorited']) ? $data['favorited'] : null;
         $this->container['userId'] = isset($data['userId']) ? $data['userId'] : null;
@@ -288,6 +294,9 @@ class GetContactsAutocompleteResponseItem implements ModelInterface, ArrayAccess
         }
         if ($this->container['sharedBy'] === null) {
             $invalidProperties[] = "'sharedBy' can't be null";
+        }
+        if ($this->container['isShared'] === null) {
+            $invalidProperties[] = "'isShared' can't be null";
         }
         if ($this->container['avatar'] === null) {
             $invalidProperties[] = "'avatar' can't be null";
@@ -447,6 +456,30 @@ class GetContactsAutocompleteResponseItem implements ModelInterface, ArrayAccess
     public function setSharedBy($sharedBy)
     {
         $this->container['sharedBy'] = $sharedBy;
+
+        return $this;
+    }
+
+    /**
+     * Gets isShared
+     *
+     * @return bool
+     */
+    public function getIsShared()
+    {
+        return $this->container['isShared'];
+    }
+
+    /**
+     * Sets isShared
+     *
+     * @param bool $isShared If contact or list was shared by another sub-account then `true` will be set.
+     *
+     * @return $this
+     */
+    public function setIsShared($isShared)
+    {
+        $this->container['isShared'] = $isShared;
 
         return $this;
     }
