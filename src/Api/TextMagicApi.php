@@ -11810,7 +11810,7 @@ class TextMagicApi
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -11830,7 +11830,7 @@ class TextMagicApi
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -11916,7 +11916,7 @@ class TextMagicApi
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -11939,7 +11939,7 @@ class TextMagicApi
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -11992,7 +11992,7 @@ class TextMagicApi
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -12665,7 +12665,7 @@ class TextMagicApi
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $status Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -12686,7 +12686,7 @@ class TextMagicApi
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $status Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -12773,7 +12773,7 @@ class TextMagicApi
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $status Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -12797,7 +12797,7 @@ class TextMagicApi
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $status Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -12851,7 +12851,7 @@ class TextMagicApi
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $status Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -14314,9 +14314,9 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find blocked contacts by specified search query (optional)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $query Find blocked contacts by specified search query. (optional)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -14335,9 +14335,9 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find blocked contacts by specified search query (optional)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $query Find blocked contacts by specified search query. (optional)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -14430,9 +14430,9 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find blocked contacts by specified search query (optional)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $query Find blocked contacts by specified search query. (optional)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -14454,9 +14454,9 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find blocked contacts by specified search query (optional)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $query Find blocked contacts by specified search query. (optional)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -14508,9 +14508,9 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find blocked contacts by specified search query (optional)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $query Find blocked contacts by specified search query. (optional)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -15745,7 +15745,7 @@ class TextMagicApi
      * @param  string $query Find messages by specified search query (optional)
      * @param  int $start Return messages since specified timestamp only (optional)
      * @param  int $end Return messages up to specified timestamp only (optional)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      * @param  int $voice Fetch results with voice calls (optional, default to 0)
      *
      * @throws \TextMagic\ApiException on non-2xx response
@@ -15769,7 +15769,7 @@ class TextMagicApi
      * @param  string $query Find messages by specified search query (optional)
      * @param  int $start Return messages since specified timestamp only (optional)
      * @param  int $end Return messages up to specified timestamp only (optional)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      * @param  int $voice Fetch results with voice calls (optional, default to 0)
      *
      * @throws \TextMagic\ApiException on non-2xx response
@@ -15851,7 +15851,7 @@ class TextMagicApi
      * @param  string $query Find messages by specified search query (optional)
      * @param  int $start Return messages since specified timestamp only (optional)
      * @param  int $end Return messages up to specified timestamp only (optional)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      * @param  int $voice Fetch results with voice calls (optional, default to 0)
      *
      * @throws \InvalidArgumentException
@@ -15878,7 +15878,7 @@ class TextMagicApi
      * @param  string $query Find messages by specified search query (optional)
      * @param  int $start Return messages since specified timestamp only (optional)
      * @param  int $end Return messages up to specified timestamp only (optional)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      * @param  int $voice Fetch results with voice calls (optional, default to 0)
      *
      * @throws \InvalidArgumentException
@@ -15935,7 +15935,7 @@ class TextMagicApi
      * @param  string $query Find messages by specified search query (optional)
      * @param  int $start Return messages since specified timestamp only (optional)
      * @param  int $end Return messages up to specified timestamp only (optional)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      * @param  int $voice Fetch results with voice calls (optional, default to 0)
      *
      * @throws \InvalidArgumentException
@@ -17777,8 +17777,8 @@ class TextMagicApi
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  int $shared Should shared contacts to be included (optional, default to 0)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -17798,8 +17798,8 @@ class TextMagicApi
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  int $shared Should shared contacts to be included (optional, default to 0)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -17885,8 +17885,8 @@ class TextMagicApi
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  int $shared Should shared contacts to be included (optional, default to 0)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -17909,8 +17909,8 @@ class TextMagicApi
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  int $shared Should shared contacts to be included (optional, default to 0)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -17963,8 +17963,8 @@ class TextMagicApi
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  int $shared Should shared contacts to be included (optional, default to 0)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -18074,7 +18074,7 @@ class TextMagicApi
      *
      * Get contacts autocomplete suggestions
      *
-     * @param  string $query Find recipients by specified search query (required)
+     * @param  string $query Find recipients by specified search query. (required)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  int $lists Should lists be returned or not (optional, default to 0)
      *
@@ -18093,7 +18093,7 @@ class TextMagicApi
      *
      * Get contacts autocomplete suggestions
      *
-     * @param  string $query Find recipients by specified search query (required)
+     * @param  string $query Find recipients by specified search query. (required)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  int $lists Should lists be returned or not (optional, default to 0)
      *
@@ -18178,7 +18178,7 @@ class TextMagicApi
      *
      * Get contacts autocomplete suggestions
      *
-     * @param  string $query Find recipients by specified search query (required)
+     * @param  string $query Find recipients by specified search query. (required)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  int $lists Should lists be returned or not (optional, default to 0)
      *
@@ -18200,7 +18200,7 @@ class TextMagicApi
      *
      * Get contacts autocomplete suggestions
      *
-     * @param  string $query Find recipients by specified search query (required)
+     * @param  string $query Find recipients by specified search query. (required)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  int $lists Should lists be returned or not (optional, default to 0)
      *
@@ -18252,7 +18252,7 @@ class TextMagicApi
     /**
      * Create request for operation 'getContactsAutocomplete'
      *
-     * @param  string $query Find recipients by specified search query (required)
+     * @param  string $query Find recipients by specified search query. (required)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  int $lists Should lists be returned or not (optional, default to 0)
      *
@@ -18366,7 +18366,7 @@ class TextMagicApi
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -18387,7 +18387,7 @@ class TextMagicApi
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -18482,7 +18482,7 @@ class TextMagicApi
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -18506,7 +18506,7 @@ class TextMagicApi
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -18560,7 +18560,7 @@ class TextMagicApi
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -21693,8 +21693,8 @@ class TextMagicApi
      *
      * @param  int $page The current fetched page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      * @param  int $favoriteOnly Return only favorite lists (optional, default to 0)
      * @param  int $onlyMine Return only current user lists (optional, default to 0)
      *
@@ -21715,8 +21715,8 @@ class TextMagicApi
      *
      * @param  int $page The current fetched page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      * @param  int $favoriteOnly Return only favorite lists (optional, default to 0)
      * @param  int $onlyMine Return only current user lists (optional, default to 0)
      *
@@ -21811,8 +21811,8 @@ class TextMagicApi
      *
      * @param  int $page The current fetched page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      * @param  int $favoriteOnly Return only favorite lists (optional, default to 0)
      * @param  int $onlyMine Return only current user lists (optional, default to 0)
      *
@@ -21836,8 +21836,8 @@ class TextMagicApi
      *
      * @param  int $page The current fetched page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      * @param  int $favoriteOnly Return only favorite lists (optional, default to 0)
      * @param  int $onlyMine Return only current user lists (optional, default to 0)
      *
@@ -21891,8 +21891,8 @@ class TextMagicApi
      *
      * @param  int $page The current fetched page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      * @param  int $favoriteOnly Return only favorite lists (optional, default to 0)
      * @param  int $onlyMine Return only current user lists (optional, default to 0)
      *
@@ -22322,7 +22322,7 @@ class TextMagicApi
      * @param  string $from One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs). (optional)
      * @param  string $rule An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details. (optional)
      * @param  int $createChat Should the sending method try to create new Chat(if not exist) with specified recipients? (optional, default to 0)
-     * @param  int $tts Send Text to Speech message. (optional, default to 0)
+     * @param  int $tts Send Text-to-Speech message. (optional, default to 0)
      * @param  int $local Treat phone numbers passed in the \\&#39;phones\\&#39; field as local. (optional, default to 0)
      * @param  string $localCountry The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country. (optional)
      *
@@ -22355,7 +22355,7 @@ class TextMagicApi
      * @param  string $from One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs). (optional)
      * @param  string $rule An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details. (optional)
      * @param  int $createChat Should the sending method try to create new Chat(if not exist) with specified recipients? (optional, default to 0)
-     * @param  int $tts Send Text to Speech message. (optional, default to 0)
+     * @param  int $tts Send Text-to-Speech message. (optional, default to 0)
      * @param  int $local Treat phone numbers passed in the \\&#39;phones\\&#39; field as local. (optional, default to 0)
      * @param  string $localCountry The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country. (optional)
      *
@@ -22462,7 +22462,7 @@ class TextMagicApi
      * @param  string $from One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs). (optional)
      * @param  string $rule An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details. (optional)
      * @param  int $createChat Should the sending method try to create new Chat(if not exist) with specified recipients? (optional, default to 0)
-     * @param  int $tts Send Text to Speech message. (optional, default to 0)
+     * @param  int $tts Send Text-to-Speech message. (optional, default to 0)
      * @param  int $local Treat phone numbers passed in the \\&#39;phones\\&#39; field as local. (optional, default to 0)
      * @param  string $localCountry The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country. (optional)
      *
@@ -22498,7 +22498,7 @@ class TextMagicApi
      * @param  string $from One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs). (optional)
      * @param  string $rule An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details. (optional)
      * @param  int $createChat Should the sending method try to create new Chat(if not exist) with specified recipients? (optional, default to 0)
-     * @param  int $tts Send Text to Speech message. (optional, default to 0)
+     * @param  int $tts Send Text-to-Speech message. (optional, default to 0)
      * @param  int $local Treat phone numbers passed in the \\&#39;phones\\&#39; field as local. (optional, default to 0)
      * @param  string $localCountry The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country. (optional)
      *
@@ -22564,7 +22564,7 @@ class TextMagicApi
      * @param  string $from One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs). (optional)
      * @param  string $rule An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details. (optional)
      * @param  int $createChat Should the sending method try to create new Chat(if not exist) with specified recipients? (optional, default to 0)
-     * @param  int $tts Send Text to Speech message. (optional, default to 0)
+     * @param  int $tts Send Text-to-Speech message. (optional, default to 0)
      * @param  int $local Treat phone numbers passed in the \\&#39;phones\\&#39; field as local. (optional, default to 0)
      * @param  string $localCountry The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country. (optional)
      *
@@ -22739,7 +22739,7 @@ class TextMagicApi
      * @param  string $from One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs). (optional)
      * @param  string $rule An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details. (optional)
      * @param  int $createChat Should the sending method try to create new Chat (if not exist) with specified recipients? (optional, default to 0)
-     * @param  int $tts Send a Text to Speech message. (optional, default to 0)
+     * @param  int $tts Send a Text-to-Speech message. (optional, default to 0)
      * @param  int $local Treat phone numbers passed in the \\&#39;phones\\&#39; field as local. (optional, default to 0)
      * @param  string $localCountry The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country. (optional)
      *
@@ -22773,7 +22773,7 @@ class TextMagicApi
      * @param  string $from One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs). (optional)
      * @param  string $rule An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details. (optional)
      * @param  int $createChat Should the sending method try to create new Chat (if not exist) with specified recipients? (optional, default to 0)
-     * @param  int $tts Send a Text to Speech message. (optional, default to 0)
+     * @param  int $tts Send a Text-to-Speech message. (optional, default to 0)
      * @param  int $local Treat phone numbers passed in the \\&#39;phones\\&#39; field as local. (optional, default to 0)
      * @param  string $localCountry The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country. (optional)
      *
@@ -22881,7 +22881,7 @@ class TextMagicApi
      * @param  string $from One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs). (optional)
      * @param  string $rule An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details. (optional)
      * @param  int $createChat Should the sending method try to create new Chat (if not exist) with specified recipients? (optional, default to 0)
-     * @param  int $tts Send a Text to Speech message. (optional, default to 0)
+     * @param  int $tts Send a Text-to-Speech message. (optional, default to 0)
      * @param  int $local Treat phone numbers passed in the \\&#39;phones\\&#39; field as local. (optional, default to 0)
      * @param  string $localCountry The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country. (optional)
      *
@@ -22918,7 +22918,7 @@ class TextMagicApi
      * @param  string $from One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs). (optional)
      * @param  string $rule An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details. (optional)
      * @param  int $createChat Should the sending method try to create new Chat (if not exist) with specified recipients? (optional, default to 0)
-     * @param  int $tts Send a Text to Speech message. (optional, default to 0)
+     * @param  int $tts Send a Text-to-Speech message. (optional, default to 0)
      * @param  int $local Treat phone numbers passed in the \\&#39;phones\\&#39; field as local. (optional, default to 0)
      * @param  string $localCountry The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country. (optional)
      *
@@ -22985,7 +22985,7 @@ class TextMagicApi
      * @param  string $from One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs). (optional)
      * @param  string $rule An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details. (optional)
      * @param  int $createChat Should the sending method try to create new Chat (if not exist) with specified recipients? (optional, default to 0)
-     * @param  int $tts Send a Text to Speech message. (optional, default to 0)
+     * @param  int $tts Send a Text-to-Speech message. (optional, default to 0)
      * @param  int $local Treat phone numbers passed in the \\&#39;phones\\&#39; field as local. (optional, default to 0)
      * @param  string $localCountry The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country. (optional)
      *
@@ -24863,7 +24863,7 @@ class TextMagicApi
      * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. (optional)
      * @param  string $query Find message by specified search query (optional)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -24884,7 +24884,7 @@ class TextMagicApi
      * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. (optional)
      * @param  string $query Find message by specified search query (optional)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -24979,7 +24979,7 @@ class TextMagicApi
      * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. (optional)
      * @param  string $query Find message by specified search query (optional)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -25003,7 +25003,7 @@ class TextMagicApi
      * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. (optional)
      * @param  string $query Find message by specified search query (optional)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -25057,7 +25057,7 @@ class TextMagicApi
      * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. (optional)
      * @param  string $query Find message by specified search query (optional)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -32561,8 +32561,8 @@ class TextMagicApi
      * @param  string $query Find contacts by specified search query (optional)
      * @param  int $local Treat phone number passed in &#39;query&#39; field as local. Default is 0 (optional, default to 0)
      * @param  string $country 2-letter ISO country code for local phone numbers, used when &#39;local&#39; is set to true. Default is account country (optional)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -32588,8 +32588,8 @@ class TextMagicApi
      * @param  string $query Find contacts by specified search query (optional)
      * @param  int $local Treat phone number passed in &#39;query&#39; field as local. Default is 0 (optional, default to 0)
      * @param  string $country 2-letter ISO country code for local phone numbers, used when &#39;local&#39; is set to true. Default is account country (optional)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -32681,8 +32681,8 @@ class TextMagicApi
      * @param  string $query Find contacts by specified search query (optional)
      * @param  int $local Treat phone number passed in &#39;query&#39; field as local. Default is 0 (optional, default to 0)
      * @param  string $country 2-letter ISO country code for local phone numbers, used when &#39;local&#39; is set to true. Default is account country (optional)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -32711,8 +32711,8 @@ class TextMagicApi
      * @param  string $query Find contacts by specified search query (optional)
      * @param  int $local Treat phone number passed in &#39;query&#39; field as local. Default is 0 (optional, default to 0)
      * @param  string $country 2-letter ISO country code for local phone numbers, used when &#39;local&#39; is set to true. Default is account country (optional)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -32771,8 +32771,8 @@ class TextMagicApi
      * @param  string $query Find contacts by specified search query (optional)
      * @param  int $local Treat phone number passed in &#39;query&#39; field as local. Default is 0 (optional, default to 0)
      * @param  string $country 2-letter ISO country code for local phone numbers, used when &#39;local&#39; is set to true. Default is account country (optional)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -32912,11 +32912,11 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $ids Find message by ID(s) (optional)
-     * @param  string $query Find recipients by specified search query (optional)
+     * @param  string $ids Find message by ID(s). (optional)
+     * @param  string $query Find recipients by specified search query. (optional)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
-     * @param  int $expand Expand by adding firstName, lastName and contactId (optional, default to 0)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
+     * @param  int $expand Expand by adding firstName, lastName and contactId. (optional, default to 0)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -32935,11 +32935,11 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $ids Find message by ID(s) (optional)
-     * @param  string $query Find recipients by specified search query (optional)
+     * @param  string $ids Find message by ID(s). (optional)
+     * @param  string $query Find recipients by specified search query. (optional)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
-     * @param  int $expand Expand by adding firstName, lastName and contactId (optional, default to 0)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
+     * @param  int $expand Expand by adding firstName, lastName and contactId. (optional, default to 0)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -33032,11 +33032,11 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $ids Find message by ID(s) (optional)
-     * @param  string $query Find recipients by specified search query (optional)
+     * @param  string $ids Find message by ID(s). (optional)
+     * @param  string $query Find recipients by specified search query. (optional)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
-     * @param  int $expand Expand by adding firstName, lastName and contactId (optional, default to 0)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
+     * @param  int $expand Expand by adding firstName, lastName and contactId. (optional, default to 0)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -33058,11 +33058,11 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $ids Find message by ID(s) (optional)
-     * @param  string $query Find recipients by specified search query (optional)
+     * @param  string $ids Find message by ID(s). (optional)
+     * @param  string $query Find recipients by specified search query. (optional)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
-     * @param  int $expand Expand by adding firstName, lastName and contactId (optional, default to 0)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
+     * @param  int $expand Expand by adding firstName, lastName and contactId. (optional, default to 0)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -33114,11 +33114,11 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $ids Find message by ID(s) (optional)
-     * @param  string $query Find recipients by specified search query (optional)
+     * @param  string $ids Find message by ID(s). (optional)
+     * @param  string $query Find recipients by specified search query. (optional)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
-     * @param  int $expand Expand by adding firstName, lastName and contactId (optional, default to 0)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
+     * @param  int $expand Expand by adding firstName, lastName and contactId. (optional, default to 0)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -33247,7 +33247,7 @@ class TextMagicApi
      * @param  int $onlyMine Return only current user lists (optional, default to 0)
      * @param  int $onlyDefault Return only default lists (optional, default to 0)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -33271,7 +33271,7 @@ class TextMagicApi
      * @param  int $onlyMine Return only current user lists (optional, default to 0)
      * @param  int $onlyDefault Return only default lists (optional, default to 0)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -33369,7 +33369,7 @@ class TextMagicApi
      * @param  int $onlyMine Return only current user lists (optional, default to 0)
      * @param  int $onlyDefault Return only default lists (optional, default to 0)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -33396,7 +33396,7 @@ class TextMagicApi
      * @param  int $onlyMine Return only current user lists (optional, default to 0)
      * @param  int $onlyDefault Return only default lists (optional, default to 0)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -33453,7 +33453,7 @@ class TextMagicApi
      * @param  int $onlyMine Return only current user lists (optional, default to 0)
      * @param  int $onlyDefault Return only default lists (optional, default to 0)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -33577,12 +33577,12 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)
-     * @param  string $ids Find message by ID(s) (optional)
-     * @param  int $sessionId Find messages by session ID (optional)
-     * @param  string $statuses Find messages by status (optional)
-     * @param  int $includeDeleted Search also in deleted messages (optional, default to 0)
-     * @param  string $query Find messages by specified search query (optional)
+     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)
+     * @param  string $ids Find message by ID(s). (optional)
+     * @param  int $sessionId Find messages by session ID. (optional)
+     * @param  string $statuses Find messages by status. (optional)
+     * @param  int $includeDeleted Search also in deleted messages. (optional, default to 0)
+     * @param  string $query Find messages by specified search query. (optional)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -33601,12 +33601,12 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)
-     * @param  string $ids Find message by ID(s) (optional)
-     * @param  int $sessionId Find messages by session ID (optional)
-     * @param  string $statuses Find messages by status (optional)
-     * @param  int $includeDeleted Search also in deleted messages (optional, default to 0)
-     * @param  string $query Find messages by specified search query (optional)
+     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)
+     * @param  string $ids Find message by ID(s). (optional)
+     * @param  int $sessionId Find messages by session ID. (optional)
+     * @param  string $statuses Find messages by status. (optional)
+     * @param  int $includeDeleted Search also in deleted messages. (optional, default to 0)
+     * @param  string $query Find messages by specified search query. (optional)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -33699,12 +33699,12 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)
-     * @param  string $ids Find message by ID(s) (optional)
-     * @param  int $sessionId Find messages by session ID (optional)
-     * @param  string $statuses Find messages by status (optional)
-     * @param  int $includeDeleted Search also in deleted messages (optional, default to 0)
-     * @param  string $query Find messages by specified search query (optional)
+     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)
+     * @param  string $ids Find message by ID(s). (optional)
+     * @param  int $sessionId Find messages by session ID. (optional)
+     * @param  string $statuses Find messages by status. (optional)
+     * @param  int $includeDeleted Search also in deleted messages. (optional, default to 0)
+     * @param  string $query Find messages by specified search query. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -33726,12 +33726,12 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)
-     * @param  string $ids Find message by ID(s) (optional)
-     * @param  int $sessionId Find messages by session ID (optional)
-     * @param  string $statuses Find messages by status (optional)
-     * @param  int $includeDeleted Search also in deleted messages (optional, default to 0)
-     * @param  string $query Find messages by specified search query (optional)
+     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)
+     * @param  string $ids Find message by ID(s). (optional)
+     * @param  int $sessionId Find messages by session ID. (optional)
+     * @param  string $statuses Find messages by status. (optional)
+     * @param  int $includeDeleted Search also in deleted messages. (optional, default to 0)
+     * @param  string $query Find messages by specified search query. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -33783,12 +33783,12 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)
-     * @param  string $ids Find message by ID(s) (optional)
-     * @param  int $sessionId Find messages by session ID (optional)
-     * @param  string $statuses Find messages by status (optional)
-     * @param  int $includeDeleted Search also in deleted messages (optional, default to 0)
-     * @param  string $query Find messages by specified search query (optional)
+     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)
+     * @param  string $ids Find message by ID(s). (optional)
+     * @param  int $sessionId Find messages by session ID. (optional)
+     * @param  string $statuses Find messages by status. (optional)
+     * @param  int $includeDeleted Search also in deleted messages. (optional, default to 0)
+     * @param  string $query Find messages by specified search query. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -33920,7 +33920,7 @@ class TextMagicApi
      * @param  string $ids Find schedules by ID(s) (optional)
      * @param  string $status Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -33943,7 +33943,7 @@ class TextMagicApi
      * @param  string $ids Find schedules by ID(s) (optional)
      * @param  string $status Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -34040,7 +34040,7 @@ class TextMagicApi
      * @param  string $ids Find schedules by ID(s) (optional)
      * @param  string $status Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -34066,7 +34066,7 @@ class TextMagicApi
      * @param  string $ids Find schedules by ID(s) (optional)
      * @param  string $status Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -34122,7 +34122,7 @@ class TextMagicApi
      * @param  string $ids Find schedules by ID(s) (optional)
      * @param  string $status Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)
      * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
-     * @param  string $direction Order direction. Default is desc (optional, default to desc)
+     * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

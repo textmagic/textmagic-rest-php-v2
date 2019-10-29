@@ -327,7 +327,7 @@ class BulkSession implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status * **n** - bulk session is just created * **w** - work in progress * **f** - failed * **c** - completed with success * **s** - suspended
+     * @param string $status * **n** – bulk session is just created * **w** - work in progress * **f** - failed * **c** - completed with success * **s** - suspended
      *
      * @return $this
      */
@@ -360,7 +360,7 @@ class BulkSession implements ModelInterface, ArrayAccess
     /**
      * Sets itemsProcessed
      *
-     * @param int $itemsProcessed Amount of messages which is already processed.
+     * @param int $itemsProcessed Amount of messages already processed.
      *
      * @return $this
      */

@@ -319,7 +319,7 @@ class SendMessageInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets text
      *
-     * @param string $text Message text. Required if **template_id** is not set.
+     * @param string $text Message text. Required if the **template_id** is not set.
      *
      * @return $this
      */
@@ -343,7 +343,7 @@ class SendMessageInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets templateId
      *
-     * @param int $templateId Template used instead of message text. Required if **text** is not set.
+     * @param int $templateId Template used instead of message text. Required if the **text** is not set.
      *
      * @return $this
      */
@@ -655,7 +655,7 @@ class SendMessageInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets tts
      *
-     * @param bool $tts Send a Text to Speech message.
+     * @param bool $tts Send a Text-to-Speech message.
      *
      * @return $this
      */

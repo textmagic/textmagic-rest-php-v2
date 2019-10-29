@@ -880,7 +880,7 @@ class MessageOut implements ModelInterface, ArrayAccess
     /**
      * Sets fromNumber
      *
-     * @param string $fromNumber Phone number used to send the SMS.
+     * @param string $fromNumber The Phone number used to send the SMS.
      *
      * @return $this
      */

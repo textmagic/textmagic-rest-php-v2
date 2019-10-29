@@ -2145,7 +2145,7 @@ void (empty response body)
 
 Delete messages (bulk)
 
-Delete outbound messages by given ID(s) or delete all outbound messages.
+Delete outbound messages by the given ID(s) or delete all outbound messages.
 
 ### Example
 ```php
@@ -2735,7 +2735,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
 $orderBy = "id"; // string | Order results by some field. Default is id
-$direction = "desc"; // string | Order direction. Default is desc
+$direction = "desc"; // string | Order direction. Default is desc.
 
 try {
     $result = $apiInstance->getAllInboundMessages($page, $limit, $orderBy, $direction);
@@ -2753,7 +2753,7 @@ Name | Type | Description  | Notes
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
  **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
- **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
+ **direction** | **string**| Order direction. Default is desc. | [optional] [default to desc]
 
 ### Return type
 
@@ -2916,7 +2916,7 @@ $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
 $status = "x"; // string | Fetch schedules with the specific status: a - actual, c - completed, x - all
 $orderBy = "id"; // string | Order results by some field. Default is id
-$direction = "desc"; // string | Order direction. Default is desc
+$direction = "desc"; // string | Order direction. Default is desc.
 
 try {
     $result = $apiInstance->getAllScheduledMessages($page, $limit, $status, $orderBy, $direction);
@@ -2935,7 +2935,7 @@ Name | Type | Description  | Notes
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
  **status** | **string**| Fetch schedules with the specific status: a - actual, c - completed, x - all | [optional] [default to x]
  **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
- **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
+ **direction** | **string**| Order direction. Default is desc. | [optional] [default to desc]
 
 ### Return type
 
@@ -3256,9 +3256,9 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 );
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
-$query = "query_example"; // string | Find blocked contacts by specified search query
-$orderBy = "id"; // string | Order results by some field. Default is id
-$direction = "desc"; // string | Order direction. Default is desc
+$query = "query_example"; // string | Find blocked contacts by specified search query.
+$orderBy = "id"; // string | Order results by some field. Default is id.
+$direction = "desc"; // string | Order direction. Default is desc.
 
 try {
     $result = $apiInstance->getBlockedContacts($page, $limit, $query, $orderBy, $direction);
@@ -3275,9 +3275,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
- **query** | **string**| Find blocked contacts by specified search query | [optional]
- **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
- **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
+ **query** | **string**| Find blocked contacts by specified search query. | [optional]
+ **orderBy** | **string**| Order results by some field. Default is id. | [optional] [default to id]
+ **direction** | **string**| Order direction. Default is desc. | [optional] [default to desc]
 
 ### Return type
 
@@ -3548,7 +3548,7 @@ $limit = 10; // int | The number of results per page.
 $query = "query_example"; // string | Find messages by specified search query
 $start = 56; // int | Return messages since specified timestamp only
 $end = 56; // int | Return messages up to specified timestamp only
-$direction = "desc"; // string | Order direction. Default is desc
+$direction = "desc"; // string | Order direction. Default is desc.
 $voice = 0; // int | Fetch results with voice calls
 
 try {
@@ -3570,7 +3570,7 @@ Name | Type | Description  | Notes
  **query** | **string**| Find messages by specified search query | [optional]
  **start** | **int**| Return messages since specified timestamp only | [optional]
  **end** | **int**| Return messages up to specified timestamp only | [optional]
- **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
+ **direction** | **string**| Order direction. Default is desc. | [optional] [default to desc]
  **voice** | **int**| Fetch results with voice calls | [optional] [default to 0]
 
 ### Return type
@@ -3955,8 +3955,8 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
 $shared = 0; // int | Should shared contacts to be included
-$orderBy = "id"; // string | Order results by some field. Default is id
-$direction = "desc"; // string | Order direction. Default is desc
+$orderBy = "id"; // string | Order results by some field. Default is id.
+$direction = "desc"; // string | Order direction. Default is desc.
 
 try {
     $result = $apiInstance->getContacts($page, $limit, $shared, $orderBy, $direction);
@@ -3974,8 +3974,8 @@ Name | Type | Description  | Notes
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
  **shared** | **int**| Should shared contacts to be included | [optional] [default to 0]
- **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
- **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
+ **orderBy** | **string**| Order results by some field. Default is id. | [optional] [default to id]
+ **direction** | **string**| Order direction. Default is desc. | [optional] [default to desc]
 
 ### Return type
 
@@ -4016,7 +4016,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     new GuzzleHttp\Client(),
     $config
 );
-$query = "\"A\""; // string | Find recipients by specified search query
+$query = "\"A\""; // string | Find recipients by specified search query.
 $limit = 10; // int | The number of results per page.
 $lists = 0; // int | Should lists be returned or not
 
@@ -4033,7 +4033,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query** | **string**| Find recipients by specified search query |
+ **query** | **string**| Find recipients by specified search query. |
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
  **lists** | **int**| Should lists be returned or not | [optional] [default to 0]
 
@@ -4080,7 +4080,7 @@ $id = 1; // int | Given group Id.
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
 $orderBy = "id"; // string | Order results by some field. Default is id
-$direction = "desc"; // string | Order direction. Default is desc
+$direction = "desc"; // string | Order direction. Default is desc.
 
 try {
     $result = $apiInstance->getContactsByListId($id, $page, $limit, $orderBy, $direction);
@@ -4099,7 +4099,7 @@ Name | Type | Description  | Notes
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
  **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
- **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
+ **direction** | **string**| Order direction. Default is desc. | [optional] [default to desc]
 
 ### Return type
 
@@ -4754,8 +4754,8 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 );
 $page = 1; // int | The current fetched page.
 $limit = 10; // int | The number of results per page.
-$orderBy = "id"; // string | Order results by some field. Default is id
-$direction = "desc"; // string | Order direction. Default is desc
+$orderBy = "id"; // string | Order results by some field. Default is id.
+$direction = "desc"; // string | Order direction. Default is desc.
 $favoriteOnly = 0; // int | Return only favorite lists
 $onlyMine = 0; // int | Return only current user lists
 
@@ -4774,8 +4774,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| The current fetched page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
- **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
- **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
+ **orderBy** | **string**| Order results by some field. Default is id. | [optional] [default to id]
+ **direction** | **string**| Order direction. Default is desc. | [optional] [default to desc]
  **favoriteOnly** | **int**| Return only favorite lists | [optional] [default to 0]
  **onlyMine** | **int**| Return only current user lists | [optional] [default to 0]
 
@@ -4859,7 +4859,7 @@ Name | Type | Description  | Notes
 
 Preview message
 
-Get messages preview (with tags merged) up to 100 messages per session.
+Get a messages preview (with tags merged) of up to 100 messages per session.
 
 ### Example
 ```php
@@ -4892,7 +4892,7 @@ $referenceId = 1; // int | Custom message reference id which can be used in your
 $from = "\"Test Sender ID\""; // string | One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs).
 $rule = "\"FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=1;COUNT=1\""; // string | An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
 $createChat = 0; // int | Should the sending method try to create new Chat(if not exist) with specified recipients?
-$tts = 0; // int | Send Text to Speech message.
+$tts = 0; // int | Send Text-to-Speech message.
 $local = 0; // int | Treat phone numbers passed in the \\'phones\\' field as local.
 $localCountry = "\"US\""; // string | The 2-letter ISO country code for local phone numbers, used when \\'local\\' is set to true. Default is the account country.
 
@@ -4923,7 +4923,7 @@ Name | Type | Description  | Notes
  **from** | **string**| One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs). | [optional]
  **rule** | **string**| An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details. | [optional]
  **createChat** | **int**| Should the sending method try to create new Chat(if not exist) with specified recipients? | [optional] [default to 0]
- **tts** | **int**| Send Text to Speech message. | [optional] [default to 0]
+ **tts** | **int**| Send Text-to-Speech message. | [optional] [default to 0]
  **local** | **int**| Treat phone numbers passed in the \\&#39;phones\\&#39; field as local. | [optional] [default to 0]
  **localCountry** | **string**| The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country. | [optional]
 
@@ -4981,7 +4981,7 @@ $referenceId = 1; // int | Custom message reference id which can be used in your
 $from = "\"Test Sender ID\""; // string | One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs).
 $rule = "\"FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=1;COUNT=1\""; // string | An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
 $createChat = 0; // int | Should the sending method try to create new Chat (if not exist) with specified recipients?
-$tts = 0; // int | Send a Text to Speech message.
+$tts = 0; // int | Send a Text-to-Speech message.
 $local = 0; // int | Treat phone numbers passed in the \\'phones\\' field as local.
 $localCountry = "\"US\""; // string | The 2-letter ISO country code for local phone numbers, used when \\'local\\' is set to true. Default is the account country.
 
@@ -5013,7 +5013,7 @@ Name | Type | Description  | Notes
  **from** | **string**| One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs). | [optional]
  **rule** | **string**| An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details. | [optional]
  **createChat** | **int**| Should the sending method try to create new Chat (if not exist) with specified recipients? | [optional] [default to 0]
- **tts** | **int**| Send a Text to Speech message. | [optional] [default to 0]
+ **tts** | **int**| Send a Text-to-Speech message. | [optional] [default to 0]
  **local** | **int**| Treat phone numbers passed in the \\&#39;phones\\&#39; field as local. | [optional] [default to 0]
  **localCountry** | **string**| The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country. | [optional]
 
@@ -5383,7 +5383,7 @@ Name | Type | Description  | Notes
 
 Get history
 
-Get outbound messages history.
+Get the outbound messages history.
 
 ### Example
 ```php
@@ -5406,7 +5406,7 @@ $limit = 10; // int | The number of results per page.
 $lastId = 56; // int | Filter results by ID, selecting all values lesser than the specified ID.
 $query = "query_example"; // string | Find message by specified search query
 $orderBy = "id"; // string | Order results by some field. Default is id
-$direction = "desc"; // string | Order direction. Default is desc
+$direction = "desc"; // string | Order direction. Default is desc.
 
 try {
     $result = $apiInstance->getOutboundMessagesHistory($limit, $lastId, $query, $orderBy, $direction);
@@ -5425,7 +5425,7 @@ Name | Type | Description  | Notes
  **lastId** | **int**| Filter results by ID, selecting all values lesser than the specified ID. | [optional]
  **query** | **string**| Find message by specified search query | [optional]
  **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
- **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
+ **direction** | **string**| Order direction. Default is desc. | [optional] [default to desc]
 
 ### Return type
 
@@ -7014,8 +7014,8 @@ $includeBlocked = 56; // int | Should blocked contacts to be included
 $query = "query_example"; // string | Find contacts by specified search query
 $local = 0; // int | Treat phone number passed in 'query' field as local. Default is 0
 $country = "country_example"; // string | 2-letter ISO country code for local phone numbers, used when 'local' is set to true. Default is account country
-$orderBy = "id"; // string | Order results by some field. Default is id
-$direction = "desc"; // string | Order direction. Default is desc
+$orderBy = "id"; // string | Order results by some field. Default is id.
+$direction = "desc"; // string | Order direction. Default is desc.
 
 try {
     $result = $apiInstance->searchContacts($page, $limit, $shared, $ids, $listId, $includeBlocked, $query, $local, $country, $orderBy, $direction);
@@ -7039,8 +7039,8 @@ Name | Type | Description  | Notes
  **query** | **string**| Find contacts by specified search query | [optional]
  **local** | **int**| Treat phone number passed in &#39;query&#39; field as local. Default is 0 | [optional] [default to 0]
  **country** | **string**| 2-letter ISO country code for local phone numbers, used when &#39;local&#39; is set to true. Default is account country | [optional]
- **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
- **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
+ **orderBy** | **string**| Order results by some field. Default is id. | [optional] [default to id]
+ **direction** | **string**| Order direction. Default is desc. | [optional] [default to desc]
 
 ### Return type
 
@@ -7083,11 +7083,11 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 );
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
-$ids = "ids_example"; // string | Find message by ID(s)
-$query = "query_example"; // string | Find recipients by specified search query
+$ids = "ids_example"; // string | Find message by ID(s).
+$query = "query_example"; // string | Find recipients by specified search query.
 $orderBy = "id"; // string | Order results by some field. Default is id
-$direction = "desc"; // string | Order direction. Default is desc
-$expand = 0; // int | Expand by adding firstName, lastName and contactId
+$direction = "desc"; // string | Order direction. Default is desc.
+$expand = 0; // int | Expand by adding firstName, lastName and contactId.
 
 try {
     $result = $apiInstance->searchInboundMessages($page, $limit, $ids, $query, $orderBy, $direction, $expand);
@@ -7104,11 +7104,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
- **ids** | **string**| Find message by ID(s) | [optional]
- **query** | **string**| Find recipients by specified search query | [optional]
+ **ids** | **string**| Find message by ID(s). | [optional]
+ **query** | **string**| Find recipients by specified search query. | [optional]
  **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
- **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
- **expand** | **int**| Expand by adding firstName, lastName and contactId | [optional] [default to 0]
+ **direction** | **string**| Order direction. Default is desc. | [optional] [default to desc]
+ **expand** | **int**| Expand by adding firstName, lastName and contactId. | [optional] [default to 0]
 
 ### Return type
 
@@ -7156,7 +7156,7 @@ $query = "\"A\""; // string | Find lists by specified search query
 $onlyMine = 0; // int | Return only current user lists
 $onlyDefault = 0; // int | Return only default lists
 $orderBy = "id"; // string | Order results by some field. Default is id
-$direction = "desc"; // string | Order direction. Default is desc
+$direction = "desc"; // string | Order direction. Default is desc.
 
 try {
     $result = $apiInstance->searchLists($page, $limit, $ids, $query, $onlyMine, $onlyDefault, $orderBy, $direction);
@@ -7178,7 +7178,7 @@ Name | Type | Description  | Notes
  **onlyMine** | **int**| Return only current user lists | [optional] [default to 0]
  **onlyDefault** | **int**| Return only default lists | [optional] [default to 0]
  **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
- **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
+ **direction** | **string**| Order direction. Default is desc. | [optional] [default to desc]
 
 ### Return type
 
@@ -7221,12 +7221,12 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 );
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
-$lastId = 56; // int | Filter results by ID, selecting all values lesser than the specified ID. Note that \\'page\\' parameter is ignored when \\'lastId\\' is specified
-$ids = "ids_example"; // string | Find message by ID(s)
-$sessionId = 56; // int | Find messages by session ID
-$statuses = "\"q\""; // string | Find messages by status
-$includeDeleted = 0; // int | Search also in deleted messages
-$query = "query_example"; // string | Find messages by specified search query
+$lastId = 56; // int | Filter results by ID, selecting all values lesser than the specified ID. Note that the \\'page\\' parameter is ignored when \\'lastId\\' is specified
+$ids = "ids_example"; // string | Find message by ID(s).
+$sessionId = 56; // int | Find messages by session ID.
+$statuses = "\"q\""; // string | Find messages by status.
+$includeDeleted = 0; // int | Search also in deleted messages.
+$query = "query_example"; // string | Find messages by specified search query.
 
 try {
     $result = $apiInstance->searchOutboundMessages($page, $limit, $lastId, $ids, $sessionId, $statuses, $includeDeleted, $query);
@@ -7243,12 +7243,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
- **lastId** | **int**| Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified | [optional]
- **ids** | **string**| Find message by ID(s) | [optional]
- **sessionId** | **int**| Find messages by session ID | [optional]
- **statuses** | **string**| Find messages by status | [optional]
- **includeDeleted** | **int**| Search also in deleted messages | [optional] [default to 0]
- **query** | **string**| Find messages by specified search query | [optional]
+ **lastId** | **int**| Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified | [optional]
+ **ids** | **string**| Find message by ID(s). | [optional]
+ **sessionId** | **int**| Find messages by session ID. | [optional]
+ **statuses** | **string**| Find messages by status. | [optional]
+ **includeDeleted** | **int**| Search also in deleted messages. | [optional] [default to 0]
+ **query** | **string**| Find messages by specified search query. | [optional]
 
 ### Return type
 
@@ -7295,7 +7295,7 @@ $query = "query_example"; // string | Find messages by specified search query
 $ids = "ids_example"; // string | Find schedules by ID(s)
 $status = "x"; // string | Fetch schedules with the specific status: a - actual, c - completed, x - all
 $orderBy = "id"; // string | Order results by some field. Default is id
-$direction = "desc"; // string | Order direction. Default is desc
+$direction = "desc"; // string | Order direction. Default is desc.
 
 try {
     $result = $apiInstance->searchScheduledMessages($page, $limit, $query, $ids, $status, $orderBy, $direction);
@@ -7316,7 +7316,7 @@ Name | Type | Description  | Notes
  **ids** | **string**| Find schedules by ID(s) | [optional]
  **status** | **string**| Fetch schedules with the specific status: a - actual, c - completed, x - all | [optional] [default to x]
  **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
- **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
+ **direction** | **string**| Order direction. Default is desc. | [optional] [default to desc]
 
 ### Return type
 
