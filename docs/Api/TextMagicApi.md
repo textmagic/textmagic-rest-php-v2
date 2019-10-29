@@ -30,7 +30,7 @@ Method | HTTP request | Description
 [**deleteContactsByIds**](TextMagicApi.md#deleteContactsByIds) | **POST** /api/v2/contacts/delete | Delete contacts by IDs (bulk)
 [**deleteContactsFromList**](TextMagicApi.md#deleteContactsFromList) | **DELETE** /api/v2/lists/{id}/contacts | Unassign contacts from a list
 [**deleteCustomField**](TextMagicApi.md#deleteCustomField) | **DELETE** /api/v2/customfields/{id} | Delete a custom field
-[**deleteDedicatedNumber**](TextMagicApi.md#deleteDedicatedNumber) | **DELETE** /api/v2/numbers/{id} | Cancel dedicated number subscription
+[**deleteDedicatedNumber**](TextMagicApi.md#deleteDedicatedNumber) | **DELETE** /api/v2/numbers/{id} | Cancel a dedicated number subscription
 [**deleteInboundMessage**](TextMagicApi.md#deleteInboundMessage) | **DELETE** /api/v2/replies/{id} | Delete a single inbound message
 [**deleteInboundMessagesBulk**](TextMagicApi.md#deleteInboundMessagesBulk) | **POST** /api/v2/replies/delete | Delete inbound messages (bulk)
 [**deleteList**](TextMagicApi.md#deleteList) | **DELETE** /api/v2/lists/{id} | Delete a list
@@ -70,7 +70,7 @@ Method | HTTP request | Description
 [**getContactIfBlocked**](TextMagicApi.md#getContactIfBlocked) | **GET** /api/v2/contacts/block/phone | Check is that phone number blocked
 [**getContactImportSessionProgress**](TextMagicApi.md#getContactImportSessionProgress) | **GET** /api/v2/contacts/import/progress/{id} | Check import progress
 [**getContactNote**](TextMagicApi.md#getContactNote) | **GET** /api/v2/notes/{id} | Get a contact note
-[**getContactNotes**](TextMagicApi.md#getContactNotes) | **GET** /api/v2/contacts/{id}/notes | Fetch notes assigned to the given contact.
+[**getContactNotes**](TextMagicApi.md#getContactNotes) | **GET** /api/v2/contacts/{id}/notes | Fetch notes assigned to a given contact
 [**getContacts**](TextMagicApi.md#getContacts) | **GET** /api/v2/contacts | Get all contacts
 [**getContactsAutocomplete**](TextMagicApi.md#getContactsAutocomplete) | **GET** /api/v2/contacts/autocomplete | Get contacts autocomplete suggestions
 [**getContactsByListId**](TextMagicApi.md#getContactsByListId) | **GET** /api/v2/lists/{id}/contacts | Get all contacts in a list
@@ -1591,7 +1591,7 @@ void (empty response body)
 # **deleteDedicatedNumber**
 > deleteDedicatedNumber($id)
 
-Cancel dedicated number subscription
+Cancel a dedicated number subscription
 
 
 
@@ -2475,7 +2475,7 @@ void (empty response body)
 
 Carrier Lookup
 
-This API call allows you to retrieve additional information about a phone number: region-specific phone number formatting, carrier, phone type (landline/mobile) and country information.  > Numbers can be checked one by one. You cannot check multiple numbers in one request.
+This API call allows you to retrieve additional information about a phone number: region-specific phone number formatting, carrier, phone type (landline/mobile) and country information.  > Numbers must be checked one by one. You cannot check multiple numbers in one request.
 
 ### Example
 ```php
@@ -2495,7 +2495,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     $config
 );
 $phone = "\"447860021130\""; // string | Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers).
-$country = "\"GB\""; // string | This option must be specified only if the phone number in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**.
+$country = "\"GB\""; // string | This option must be specified only if the phone number is in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**.
 
 try {
     $result = $apiInstance->doCarrierLookup($phone, $country);
@@ -2511,7 +2511,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **phone** | **string**| Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers). |
- **country** | **string**| This option must be specified only if the phone number in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**. | [optional]
+ **country** | **string**| This option must be specified only if the phone number is in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**. | [optional]
 
 ### Return type
 
@@ -2533,7 +2533,7 @@ Name | Type | Description  | Notes
 
 Email Lookup
 
-To get more details about an email address or to check if it is a valid email, you can use the Email Lookup command. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).  This API call allows you to retrieve additional information about an email address, such as mailbox detection, syntax checks, DNS validation, deliverability status, and many more helpful values (see the table below).  > Emails must be checked one by one. You cannot check multiple emails in one request. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).
+To get more details about an email address or to check whether it is a valid email or not, you can use the Email Lookup command. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).  This API call allows you to retrieve additional information about an email address, such as mailbox detection, syntax checks, DNS validation, deliverability status, and many more helpful values (see the table below).  > Emails must be checked one by one. You cannot check multiple emails in one request. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).
 
 ### Example
 ```php
@@ -3034,8 +3034,8 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     new GuzzleHttp\Client(),
     $config
 );
-$country = "\"GB\""; // string | Two-letter dedicated number country ISO code.
-$prefix = 447155; // int | Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country.
+$country = "\"GB\""; // string | The 2-letter dedicated number country ISO code.
+$prefix = 447155; // int | Desired number prefix. Should include the country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country.
 $tollfree = 0; // int | Should we show only tollfree numbers (tollfree available only for US).
 
 try {
@@ -3051,8 +3051,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **country** | **string**| Two-letter dedicated number country ISO code. |
- **prefix** | **int**| Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. | [optional]
+ **country** | **string**| The 2-letter dedicated number country ISO code. |
+ **prefix** | **int**| Desired number prefix. Should include the country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. | [optional]
  **tollfree** | **int**| Should we show only tollfree numbers (tollfree available only for US). | [optional] [default to 0]
 
 ### Return type
@@ -3075,7 +3075,7 @@ Name | Type | Description  | Notes
 
 Get available sender settings
 
-Get all available sender setting options which could be used in \"from\" parameter of POST messages method.
+Get all available sender setting options which can be used in the \"from\" parameter of the POST messages method.
 
 ### Example
 ```php
@@ -3871,7 +3871,7 @@ Name | Type | Description  | Notes
 # **getContactNotes**
 > \TextMagic\Models\GetContactNotesPaginatedResponse getContactNotes($id, $page, $limit)
 
-Fetch notes assigned to the given contact.
+Fetch notes assigned to a given contact
 
 
 
@@ -5636,7 +5636,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     new GuzzleHttp\Client(),
     $config
 );
-$country = "\"US\""; // string | Return sender settings enabled for sending to specified country. Two upper case characters
+$country = "\"US\""; // string | Return sender settings enabled for sending to a specified country. Should be 2 upper-case characters.
 
 try {
     $result = $apiInstance->getSenderSettings($country);
@@ -5651,7 +5651,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **country** | **string**| Return sender settings enabled for sending to specified country. Two upper case characters | [optional]
+ **country** | **string**| Return sender settings enabled for sending to a specified country. Should be 2 upper-case characters. | [optional]
 
 ### Return type
 
@@ -6208,7 +6208,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 );
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
-$surveyId = 56; // int | Fetch only that numbers which are ready for the survey
+$surveyId = 56; // int | Fetch only those numbers that are ready for the survey.
 
 try {
     $result = $apiInstance->getUserDedicatedNumbers($page, $limit, $surveyId);
@@ -6225,7 +6225,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
- **surveyId** | **int**| Fetch only that numbers which are ready for the survey | [optional]
+ **surveyId** | **int**| Fetch only those numbers that are ready for the survey. | [optional]
 
 ### Return type
 
@@ -6267,7 +6267,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     $config
 );
 $file = "/path/to/file.txt"; // \SplFileObject | File containing contacts in csv or xls(x) formats
-$column = "\"0:firstName;1:lastName;3:phone;4:email\""; // string | Import file column mapping. String must contain substrings of mapping in format `columnNumber:field` glued by `;`. For example: `0:firstName;1:lastName;3:phone;4:email` where value before `:` is a number of column in file, value after `:` is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: `firstName`, `lastName`, `phone`, `email`. Existing of `phone` mapping is required.
+$column = "\"0:firstName;1:lastName;3:phone;4:email\""; // string | Import file column mapping. The string must contain sub-strings of mapping in format `columnNumber:field` glued by `;`. For example: `0:firstName;1:lastName;3:phone;4:email` where the value before `:` is a number of the column in the file, and the value after `:` is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: `firstName`, `lastName`, `phone`, `email`. Existing of `phone` mapping is required.
 $listId = 443; // int | List ID contacts will be imported to. Ignored if `listName` is specified.
 $listName = "\"A new list\""; // string | List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if `listId` is specified.
 
@@ -6285,7 +6285,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file** | **\SplFileObject**| File containing contacts in csv or xls(x) formats |
- **column** | **string**| Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. |
+ **column** | **string**| Import file column mapping. The string must contain sub-strings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where the value before &#x60;:&#x60; is a number of the column in the file, and the value after &#x60;:&#x60; is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. |
  **listId** | **int**| List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified. | [optional]
  **listName** | **string**| List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified. | [optional]
 
@@ -6530,7 +6530,7 @@ Name | Type | Description  | Notes
 
 Mute chats (bulk)
 
-Mute several chats by chat IDs or mute all chats
+Mute several chats by chat ids or mute all chats.
 
 ### Example
 ```php
@@ -6748,7 +6748,7 @@ Name | Type | Description  | Notes
 
 Apply for a new Sender ID
 
-> Sender IDs are shared between all of your sub-accounts.
+> Sender IDs are shared among all of your sub-accounts.
 
 ### Example
 ```php
@@ -7680,7 +7680,7 @@ void (empty response body)
 
 Unmute chats (bulk)
 
-Unmute several chats by chat IDs or unmute all chats
+Unmute several chats by chat ids or unmute all chats.
 
 ### Example
 ```php
@@ -8544,7 +8544,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     new GuzzleHttp\Client(),
     $config
 );
-$image = "/path/to/file.txt"; // \SplFileObject | Contact avatar. Should be PNG or JPG file not more than 10 MB
+$image = "/path/to/file.txt"; // \SplFileObject | Contact avatar. Should be a PNG or JPG file not more than 10 MB.
 $id = 1; // int | 
 
 try {
@@ -8560,7 +8560,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **image** | **\SplFileObject**| Contact avatar. Should be PNG or JPG file not more than 10 MB |
+ **image** | **\SplFileObject**| Contact avatar. Should be a PNG or JPG file not more than 10 MB. |
  **id** | **int**|  |
 
 ### Return type

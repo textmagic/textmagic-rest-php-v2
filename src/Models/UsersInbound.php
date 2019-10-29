@@ -444,7 +444,7 @@ class UsersInbound implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Number status: *   **U** for Unused. No messages have been sent from (or received to) this number. *   **A** for Active.
+     * @param string $status Number status: *   **U** for Unused. No messages have been sent from (or received to) this number; *   **A** for Active.
      *
      * @return $this
      */

@@ -253,7 +253,7 @@ class GetAvailableDedicatedNumbersResponse implements ModelInterface, ArrayAcces
     /**
      * Sets price
      *
-     * @param float $price Dedicated number monthly fee for this country. Returned in current [account](http://docs.textmagictesting.com/#tag/User) currency.
+     * @param float $price Dedicated number monthly fee for this country. Returned in the current [account](http://docs.textmagictesting.com/#tag/User) currency.
      *
      * @return $this
      */

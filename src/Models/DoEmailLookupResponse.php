@@ -617,7 +617,7 @@ class DoEmailLookupResponse implements ModelInterface, ArrayAccess
     /**
      * Sets isDisposableAddress
      *
-     * @param bool $isDisposableAddress This is be `true` if the domain is in the list of disposable email addresses, otherwise returns as `false`.
+     * @param bool $isDisposableAddress This is `true` if the domain is in the list of disposable email addresses; otherwise, it returns as `false`.
      *
      * @return $this
      */
@@ -641,7 +641,7 @@ class DoEmailLookupResponse implements ModelInterface, ArrayAccess
     /**
      * Sets suggestion
      *
-     * @param string $suggestion Null if nothing is suggested, however, if there is a potential typo in the email address, the closest suggestion is provided.
+     * @param string $suggestion Null if nothing is suggested; however, if there is a potential typo in the email address, the closest suggestion is provided.
      *
      * @return $this
      */
@@ -665,7 +665,7 @@ class DoEmailLookupResponse implements ModelInterface, ArrayAccess
     /**
      * Sets emailRole
      *
-     * @param string $emailRole Checks the mailbox part of the email whether it matches a specific role type (‘admin’, ‘sales’, ‘webmaster’)
+     * @param string $emailRole Checks the mailbox part of the email to see whether it matches a specific role type (‘admin’, ‘sales’, ‘webmaster’)
      *
      * @return $this
      */
@@ -785,7 +785,7 @@ class DoEmailLookupResponse implements ModelInterface, ArrayAccess
     /**
      * Sets isInWhiteList
      *
-     * @param bool $isInWhiteList `true` if the email address exists in TextMagic whitelist.
+     * @param bool $isInWhiteList `true` if the email address exists in the TextMagic whitelist.
      *
      * @return $this
      */
@@ -809,7 +809,7 @@ class DoEmailLookupResponse implements ModelInterface, ArrayAccess
     /**
      * Sets isInBlackList
      *
-     * @param bool $isInBlackList `true` if the email address exists in TextMagic blacklist.
+     * @param bool $isInBlackList `true` if the email address exists in the TextMagic blacklist.
      *
      * @return $this
      */

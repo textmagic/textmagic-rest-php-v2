@@ -247,7 +247,7 @@ class GetAvailableSenderSettingOptionsResponse implements ModelInterface, ArrayA
     /**
      * Sets dedicated
      *
-     * @param string[] $dedicated Array of dedicated numbers strings.
+     * @param string[] $dedicated Array of dedicated number strings.
      *
      * @return $this
      */
@@ -295,7 +295,7 @@ class GetAvailableSenderSettingOptionsResponse implements ModelInterface, ArrayA
     /**
      * Sets shared
      *
-     * @param string[] $shared Array of shared numbers strings.
+     * @param string[] $shared Array of shared number strings.
      *
      * @return $this
      */

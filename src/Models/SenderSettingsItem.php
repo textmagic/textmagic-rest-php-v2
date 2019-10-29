@@ -229,7 +229,7 @@ class SenderSettingsItem implements ModelInterface, ArrayAccess
     /**
      * Sets country
      *
-     * @param string $country The 2-letter ISO country code of the recipient phone number.
+     * @param string $country The 2-letter ISO country code of the recipient's phone number.
      *
      * @return $this
      */

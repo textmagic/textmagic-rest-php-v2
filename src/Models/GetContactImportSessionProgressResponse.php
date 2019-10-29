@@ -229,7 +229,7 @@ class GetContactImportSessionProgressResponse implements ModelInterface, ArrayAc
     /**
      * Sets status
      *
-     * @param int $status Session status: * **1** if session has been initialized but not yet started * **3** if session is being processed * **4** if session has errors * **5** if session completed successfully
+     * @param int $status Session status: * **1** - if session has been initialized but not yet started; * **3** - if session is being processed; * **4** - if session has errors; * **5** - if session completed successfully.
      *
      * @return $this
      */
@@ -253,7 +253,7 @@ class GetContactImportSessionProgressResponse implements ModelInterface, ArrayAc
     /**
      * Sets processed
      *
-     * @param int $processed How many contacts have been imported.
+     * @param int $processed How many contacts have been imported?
      *
      * @return $this
      */

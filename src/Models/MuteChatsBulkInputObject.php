@@ -277,7 +277,7 @@ class MuteChatsBulkInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets for
      *
-     * @param int $for Mute for N hours
+     * @param int $for Mute for N hours.
      *
      * @return $this
      */

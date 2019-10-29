@@ -6722,7 +6722,7 @@ class TextMagicApi
     /**
      * Operation deleteDedicatedNumber
      *
-     * Cancel dedicated number subscription
+     * Cancel a dedicated number subscription
      *
      * @param  int $id id (required)
      *
@@ -6738,7 +6738,7 @@ class TextMagicApi
     /**
      * Operation deleteDedicatedNumberWithHttpInfo
      *
-     * Cancel dedicated number subscription
+     * Cancel a dedicated number subscription
      *
      * @param  int $id (required)
      *
@@ -6807,7 +6807,7 @@ class TextMagicApi
     /**
      * Operation deleteDedicatedNumberAsync
      *
-     * Cancel dedicated number subscription
+     * Cancel a dedicated number subscription
      *
      * @param  int $id (required)
      *
@@ -6827,7 +6827,7 @@ class TextMagicApi
     /**
      * Operation deleteDedicatedNumberAsyncWithHttpInfo
      *
-     * Cancel dedicated number subscription
+     * Cancel a dedicated number subscription
      *
      * @param  int $id (required)
      *
@@ -10645,7 +10645,7 @@ class TextMagicApi
      * Carrier Lookup
      *
      * @param  string $phone Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers). (required)
-     * @param  string $country This option must be specified only if the phone number in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**. (optional)
+     * @param  string $country This option must be specified only if the phone number is in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**. (optional)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -10663,7 +10663,7 @@ class TextMagicApi
      * Carrier Lookup
      *
      * @param  string $phone Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers). (required)
-     * @param  string $country This option must be specified only if the phone number in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**. (optional)
+     * @param  string $country This option must be specified only if the phone number is in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**. (optional)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -10755,7 +10755,7 @@ class TextMagicApi
      * Carrier Lookup
      *
      * @param  string $phone Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers). (required)
-     * @param  string $country This option must be specified only if the phone number in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**. (optional)
+     * @param  string $country This option must be specified only if the phone number is in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -10776,7 +10776,7 @@ class TextMagicApi
      * Carrier Lookup
      *
      * @param  string $phone Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers). (required)
-     * @param  string $country This option must be specified only if the phone number in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**. (optional)
+     * @param  string $country This option must be specified only if the phone number is in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -10827,7 +10827,7 @@ class TextMagicApi
      * Create request for operation 'doCarrierLookup'
      *
      * @param  string $phone Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers). (required)
-     * @param  string $country This option must be specified only if the phone number in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**. (optional)
+     * @param  string $country This option must be specified only if the phone number is in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -13234,8 +13234,8 @@ class TextMagicApi
      *
      * Find dedicated numbers available for purchase
      *
-     * @param  string $country Two-letter dedicated number country ISO code. (required)
-     * @param  int $prefix Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional)
+     * @param  string $country The 2-letter dedicated number country ISO code. (required)
+     * @param  int $prefix Desired number prefix. Should include the country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional)
      * @param  int $tollfree Should we show only tollfree numbers (tollfree available only for US). (optional, default to 0)
      *
      * @throws \TextMagic\ApiException on non-2xx response
@@ -13253,8 +13253,8 @@ class TextMagicApi
      *
      * Find dedicated numbers available for purchase
      *
-     * @param  string $country Two-letter dedicated number country ISO code. (required)
-     * @param  int $prefix Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional)
+     * @param  string $country The 2-letter dedicated number country ISO code. (required)
+     * @param  int $prefix Desired number prefix. Should include the country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional)
      * @param  int $tollfree Should we show only tollfree numbers (tollfree available only for US). (optional, default to 0)
      *
      * @throws \TextMagic\ApiException on non-2xx response
@@ -13354,8 +13354,8 @@ class TextMagicApi
      *
      * Find dedicated numbers available for purchase
      *
-     * @param  string $country Two-letter dedicated number country ISO code. (required)
-     * @param  int $prefix Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional)
+     * @param  string $country The 2-letter dedicated number country ISO code. (required)
+     * @param  int $prefix Desired number prefix. Should include the country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional)
      * @param  int $tollfree Should we show only tollfree numbers (tollfree available only for US). (optional, default to 0)
      *
      * @throws \InvalidArgumentException
@@ -13376,8 +13376,8 @@ class TextMagicApi
      *
      * Find dedicated numbers available for purchase
      *
-     * @param  string $country Two-letter dedicated number country ISO code. (required)
-     * @param  int $prefix Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional)
+     * @param  string $country The 2-letter dedicated number country ISO code. (required)
+     * @param  int $prefix Desired number prefix. Should include the country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional)
      * @param  int $tollfree Should we show only tollfree numbers (tollfree available only for US). (optional, default to 0)
      *
      * @throws \InvalidArgumentException
@@ -13428,8 +13428,8 @@ class TextMagicApi
     /**
      * Create request for operation 'getAvailableDedicatedNumbers'
      *
-     * @param  string $country Two-letter dedicated number country ISO code. (required)
-     * @param  int $prefix Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional)
+     * @param  string $country The 2-letter dedicated number country ISO code. (required)
+     * @param  int $prefix Desired number prefix. Should include the country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional)
      * @param  int $tollfree Should we show only tollfree numbers (tollfree available only for US). (optional, default to 0)
      *
      * @throws \InvalidArgumentException
@@ -17472,7 +17472,7 @@ class TextMagicApi
     /**
      * Operation getContactNotes
      *
-     * Fetch notes assigned to the given contact.
+     * Fetch notes assigned to a given contact
      *
      * @param  int $id id (required)
      * @param  int $page Fetch specified results page. (optional, default to 1)
@@ -17491,7 +17491,7 @@ class TextMagicApi
     /**
      * Operation getContactNotesWithHttpInfo
      *
-     * Fetch notes assigned to the given contact.
+     * Fetch notes assigned to a given contact
      *
      * @param  int $id (required)
      * @param  int $page Fetch specified results page. (optional, default to 1)
@@ -17584,7 +17584,7 @@ class TextMagicApi
     /**
      * Operation getContactNotesAsync
      *
-     * Fetch notes assigned to the given contact.
+     * Fetch notes assigned to a given contact
      *
      * @param  int $id (required)
      * @param  int $page Fetch specified results page. (optional, default to 1)
@@ -17606,7 +17606,7 @@ class TextMagicApi
     /**
      * Operation getContactNotesAsyncWithHttpInfo
      *
-     * Fetch notes assigned to the given contact.
+     * Fetch notes assigned to a given contact
      *
      * @param  int $id (required)
      * @param  int $page Fetch specified results page. (optional, default to 1)
@@ -26004,7 +26004,7 @@ class TextMagicApi
      *
      * Get current sender settings
      *
-     * @param  string $country Return sender settings enabled for sending to specified country. Two upper case characters (optional)
+     * @param  string $country Return sender settings enabled for sending to a specified country. Should be 2 upper-case characters. (optional)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -26021,7 +26021,7 @@ class TextMagicApi
      *
      * Get current sender settings
      *
-     * @param  string $country Return sender settings enabled for sending to specified country. Two upper case characters (optional)
+     * @param  string $country Return sender settings enabled for sending to a specified country. Should be 2 upper-case characters. (optional)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -26104,7 +26104,7 @@ class TextMagicApi
      *
      * Get current sender settings
      *
-     * @param  string $country Return sender settings enabled for sending to specified country. Two upper case characters (optional)
+     * @param  string $country Return sender settings enabled for sending to a specified country. Should be 2 upper-case characters. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -26124,7 +26124,7 @@ class TextMagicApi
      *
      * Get current sender settings
      *
-     * @param  string $country Return sender settings enabled for sending to specified country. Two upper case characters (optional)
+     * @param  string $country Return sender settings enabled for sending to a specified country. Should be 2 upper-case characters. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -26174,7 +26174,7 @@ class TextMagicApi
     /**
      * Create request for operation 'getSenderSettings'
      *
-     * @param  string $country Return sender settings enabled for sending to specified country. Two upper case characters (optional)
+     * @param  string $country Return sender settings enabled for sending to a specified country. Should be 2 upper-case characters. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -28783,7 +28783,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $surveyId Fetch only that numbers which are ready for the survey (optional)
+     * @param  int $surveyId Fetch only those numbers that are ready for the survey. (optional)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -28802,7 +28802,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $surveyId Fetch only that numbers which are ready for the survey (optional)
+     * @param  int $surveyId Fetch only those numbers that are ready for the survey. (optional)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -28895,7 +28895,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $surveyId Fetch only that numbers which are ready for the survey (optional)
+     * @param  int $surveyId Fetch only those numbers that are ready for the survey. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -28917,7 +28917,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $surveyId Fetch only that numbers which are ready for the survey (optional)
+     * @param  int $surveyId Fetch only those numbers that are ready for the survey. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -28969,7 +28969,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $surveyId Fetch only that numbers which are ready for the survey (optional)
+     * @param  int $surveyId Fetch only those numbers that are ready for the survey. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -29072,7 +29072,7 @@ class TextMagicApi
      * Import contacts
      *
      * @param  \SplFileObject $file File containing contacts in csv or xls(x) formats (required)
-     * @param  string $column Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. (required)
+     * @param  string $column Import file column mapping. The string must contain sub-strings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where the value before &#x60;:&#x60; is a number of the column in the file, and the value after &#x60;:&#x60; is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. (required)
      * @param  int $listId List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified. (optional)
      * @param  string $listName List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified. (optional)
      *
@@ -29092,7 +29092,7 @@ class TextMagicApi
      * Import contacts
      *
      * @param  \SplFileObject $file File containing contacts in csv or xls(x) formats (required)
-     * @param  string $column Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. (required)
+     * @param  string $column Import file column mapping. The string must contain sub-strings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where the value before &#x60;:&#x60; is a number of the column in the file, and the value after &#x60;:&#x60; is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. (required)
      * @param  int $listId List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified. (optional)
      * @param  string $listName List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified. (optional)
      *
@@ -29194,7 +29194,7 @@ class TextMagicApi
      * Import contacts
      *
      * @param  \SplFileObject $file File containing contacts in csv or xls(x) formats (required)
-     * @param  string $column Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. (required)
+     * @param  string $column Import file column mapping. The string must contain sub-strings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where the value before &#x60;:&#x60; is a number of the column in the file, and the value after &#x60;:&#x60; is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. (required)
      * @param  int $listId List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified. (optional)
      * @param  string $listName List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified. (optional)
      *
@@ -29217,7 +29217,7 @@ class TextMagicApi
      * Import contacts
      *
      * @param  \SplFileObject $file File containing contacts in csv or xls(x) formats (required)
-     * @param  string $column Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. (required)
+     * @param  string $column Import file column mapping. The string must contain sub-strings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where the value before &#x60;:&#x60; is a number of the column in the file, and the value after &#x60;:&#x60; is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. (required)
      * @param  int $listId List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified. (optional)
      * @param  string $listName List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified. (optional)
      *
@@ -29270,7 +29270,7 @@ class TextMagicApi
      * Create request for operation 'importContacts'
      *
      * @param  \SplFileObject $file File containing contacts in csv or xls(x) formats (required)
-     * @param  string $column Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. (required)
+     * @param  string $column Import file column mapping. The string must contain sub-strings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where the value before &#x60;:&#x60; is a number of the column in the file, and the value after &#x60;:&#x60; is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. (required)
      * @param  int $listId List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified. (optional)
      * @param  string $listName List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified. (optional)
      *
@@ -39909,7 +39909,7 @@ class TextMagicApi
      *
      * Upload an avatar
      *
-     * @param  \SplFileObject $image Contact avatar. Should be PNG or JPG file not more than 10 MB (required)
+     * @param  \SplFileObject $image Contact avatar. Should be a PNG or JPG file not more than 10 MB. (required)
      * @param  int $id id (required)
      *
      * @throws \TextMagic\ApiException on non-2xx response
@@ -39927,7 +39927,7 @@ class TextMagicApi
      *
      * Upload an avatar
      *
-     * @param  \SplFileObject $image Contact avatar. Should be PNG or JPG file not more than 10 MB (required)
+     * @param  \SplFileObject $image Contact avatar. Should be a PNG or JPG file not more than 10 MB. (required)
      * @param  int $id (required)
      *
      * @throws \TextMagic\ApiException on non-2xx response
@@ -40027,7 +40027,7 @@ class TextMagicApi
      *
      * Upload an avatar
      *
-     * @param  \SplFileObject $image Contact avatar. Should be PNG or JPG file not more than 10 MB (required)
+     * @param  \SplFileObject $image Contact avatar. Should be a PNG or JPG file not more than 10 MB. (required)
      * @param  int $id (required)
      *
      * @throws \InvalidArgumentException
@@ -40048,7 +40048,7 @@ class TextMagicApi
      *
      * Upload an avatar
      *
-     * @param  \SplFileObject $image Contact avatar. Should be PNG or JPG file not more than 10 MB (required)
+     * @param  \SplFileObject $image Contact avatar. Should be a PNG or JPG file not more than 10 MB. (required)
      * @param  int $id (required)
      *
      * @throws \InvalidArgumentException
@@ -40099,7 +40099,7 @@ class TextMagicApi
     /**
      * Create request for operation 'uploadContactAvatar'
      *
-     * @param  \SplFileObject $image Contact avatar. Should be PNG or JPG file not more than 10 MB (required)
+     * @param  \SplFileObject $image Contact avatar. Should be a PNG or JPG file not more than 10 MB. (required)
      * @param  int $id (required)
      *
      * @throws \InvalidArgumentException
