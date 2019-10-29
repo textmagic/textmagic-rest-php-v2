@@ -304,7 +304,7 @@ class UnsubscribedContact implements ModelInterface, ArrayAccess
     /**
      * Sets unsubscribeTime
      *
-     * @param \DateTime $unsubscribeTime Time when contact has been opted-out.
+     * @param \DateTime $unsubscribeTime Time when contact was opted-out.
      *
      * @return $this
      */

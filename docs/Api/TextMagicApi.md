@@ -5,7 +5,7 @@ All URIs are relative to *http://rest.textmagic.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**assignContactsToList**](TextMagicApi.md#assignContactsToList) | **PUT** /api/v2/lists/{id}/contacts | Assign contacts to a list
-[**blockContact**](TextMagicApi.md#blockContact) | **POST** /api/v2/contacts/block | Block contact by phone number
+[**blockContact**](TextMagicApi.md#blockContact) | **POST** /api/v2/contacts/block | Block a contact by phone number
 [**buyDedicatedNumber**](TextMagicApi.md#buyDedicatedNumber) | **POST** /api/v2/numbers | Buy a dedicated number
 [**cancelVerification**](TextMagicApi.md#cancelVerification) | **DELETE** /api/v2/verify/{verifyId} | Cancel verification process
 [**checkPhoneVerificationCodeTFA**](TextMagicApi.md#checkPhoneVerificationCodeTFA) | **PUT** /api/v2/verify | Step 2: Check the verification code
@@ -67,7 +67,7 @@ Method | HTTP request | Description
 [**getChatMessages**](TextMagicApi.md#getChatMessages) | **GET** /api/v2/chats/{id}/message | Get chat messages
 [**getContact**](TextMagicApi.md#getContact) | **GET** /api/v2/contacts/{id} | Get the details of a specific contact
 [**getContactByPhone**](TextMagicApi.md#getContactByPhone) | **GET** /api/v2/contacts/phone/{phone} | Get the details of a specific contact by phone number
-[**getContactIfBlocked**](TextMagicApi.md#getContactIfBlocked) | **GET** /api/v2/contacts/block/phone | Check is that phone number blocked
+[**getContactIfBlocked**](TextMagicApi.md#getContactIfBlocked) | **GET** /api/v2/contacts/block/phone | Check if a phone number is blocked
 [**getContactImportSessionProgress**](TextMagicApi.md#getContactImportSessionProgress) | **GET** /api/v2/contacts/import/progress/{id} | Check import progress
 [**getContactNote**](TextMagicApi.md#getContactNote) | **GET** /api/v2/notes/{id} | Get a contact note
 [**getContactNotes**](TextMagicApi.md#getContactNotes) | **GET** /api/v2/contacts/{id}/notes | Fetch notes assigned to a given contact
@@ -132,7 +132,7 @@ Method | HTTP request | Description
 [**sendMessage**](TextMagicApi.md#sendMessage) | **POST** /api/v2/messages | Send message
 [**sendPhoneVerificationCodeTFA**](TextMagicApi.md#sendPhoneVerificationCodeTFA) | **POST** /api/v2/verify | Step 1: Send a verification code
 [**setChatStatus**](TextMagicApi.md#setChatStatus) | **POST** /api/v2/chats/status | Change chat status
-[**unblockContact**](TextMagicApi.md#unblockContact) | **POST** /api/v2/contacts/unblock | Unblock contact by phone number.
+[**unblockContact**](TextMagicApi.md#unblockContact) | **POST** /api/v2/contacts/unblock | Unblock a contact by phone number
 [**unblockContactsBulk**](TextMagicApi.md#unblockContactsBulk) | **POST** /api/v2/contacts/unblock/bulk | Unblock contacts (bulk)
 [**unmuteChatsBulk**](TextMagicApi.md#unmuteChatsBulk) | **POST** /api/v2/chats/unmute/bulk | Unmute chats (bulk)
 [**unsubscribeContact**](TextMagicApi.md#unsubscribeContact) | **POST** /api/v2/unsubscribers | Manually unsubscribe a contact
@@ -215,9 +215,9 @@ Name | Type | Description  | Notes
 # **blockContact**
 > \TextMagic\Models\ResourceLinkResponse blockContact($blockContactInputObject)
 
-Block contact by phone number
+Block a contact by phone number
 
-Block contact from inbound and outbound communication by phone number.
+Block a contact from inbound and outbound communication by phone number.
 
 ### Example
 ```php
@@ -1204,7 +1204,7 @@ void (empty response body)
 
 Delete a contact
 
-> This command removes your contact completely. If it was assigned or saved to a shared list, it will disappear from there too. If you only need to remove a contact from selected lists, instead use the Contact assignment command in the Lists section rather than deleting the contact.
+> This command removes your contact completely. If it was assigned or saved to a shared list, it will disappear from there too. If you only need to remove a contact from selected lists, use the Contact assignment command in the Lists section instead, rather than deleting the contact.
 
 ### Example
 ```php
@@ -3612,7 +3612,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 1; // int | The contact id
+$id = 1; // int | Contact ID.
 
 try {
     $result = $apiInstance->getContact($id);
@@ -3627,7 +3627,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| The contact id |
+ **id** | **int**| Contact ID. |
 
 ### Return type
 
@@ -3703,7 +3703,7 @@ Name | Type | Description  | Notes
 # **getContactIfBlocked**
 > \TextMagic\Models\Contact getContactIfBlocked($phone)
 
-Check is that phone number blocked
+Check if a phone number is blocked
 
 
 
@@ -3724,7 +3724,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     new GuzzleHttp\Client(),
     $config
 );
-$phone = "\"447860021130\""; // string | Phone number to check
+$phone = "\"447860021130\""; // string | Phone number to check.
 
 try {
     $result = $apiInstance->getContactIfBlocked($phone);
@@ -3739,7 +3739,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **phone** | **string**| Phone number to check |
+ **phone** | **string**| Phone number to check. |
 
 ### Return type
 
@@ -6129,7 +6129,7 @@ Name | Type | Description  | Notes
 
 Get all unsubscribed contacts
 
-When one of your message recipients sends a request with one of the [STOP-words](https://www.textmagic.com/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use:
+When one of your message recipients sends a request with one of the [STOP-words](https://www.textmagic.com/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed status, use:
 
 ### Example
 ```php
@@ -6266,9 +6266,9 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     new GuzzleHttp\Client(),
     $config
 );
-$file = "/path/to/file.txt"; // \SplFileObject | File containing contacts in csv or xls(x) formats
+$file = "/path/to/file.txt"; // \SplFileObject | File containing contacts in csv or xls(x) formats.
 $column = "\"0:firstName;1:lastName;3:phone;4:email\""; // string | Import file column mapping. The string must contain sub-strings of mapping in format `columnNumber:field` glued by `;`. For example: `0:firstName;1:lastName;3:phone;4:email` where the value before `:` is a number of the column in the file, and the value after `:` is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: `firstName`, `lastName`, `phone`, `email`. Existing of `phone` mapping is required.
-$listId = 443; // int | List ID contacts will be imported to. Ignored if `listName` is specified.
+$listId = 443; // int | List that ID contacts will be imported to. Ignored if `listName` is specified.
 $listName = "\"A new list\""; // string | List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if `listId` is specified.
 
 try {
@@ -6284,9 +6284,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file** | **\SplFileObject**| File containing contacts in csv or xls(x) formats |
+ **file** | **\SplFileObject**| File containing contacts in csv or xls(x) formats. |
  **column** | **string**| Import file column mapping. The string must contain sub-strings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where the value before &#x60;:&#x60; is a number of the column in the file, and the value after &#x60;:&#x60; is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. |
- **listId** | **int**| List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified. | [optional]
+ **listId** | **int**| List that ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified. | [optional]
  **listName** | **string**| List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified. | [optional]
 
 ### Return type
@@ -7568,9 +7568,9 @@ Name | Type | Description  | Notes
 # **unblockContact**
 > unblockContact($unblockContactInputObject)
 
-Unblock contact by phone number.
+Unblock a contact by phone number
 
-
+Unblock a contact by phone number
 
 ### Example
 ```php
@@ -7625,7 +7625,7 @@ void (empty response body)
 
 Unblock contacts (bulk)
 
-Unblock several contacts by blocked contact ids or unblock all contacts
+Unblock several contacts by blocked contact IDs or unblock all contacts.
 
 ### Example
 ```php

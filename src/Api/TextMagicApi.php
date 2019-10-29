@@ -394,7 +394,7 @@ class TextMagicApi
     /**
      * Operation blockContact
      *
-     * Block contact by phone number
+     * Block a contact by phone number
      *
      * @param  \TextMagic\Models\BlockContactInputObject $blockContactInputObject blockContactInputObject (required)
      *
@@ -411,7 +411,7 @@ class TextMagicApi
     /**
      * Operation blockContactWithHttpInfo
      *
-     * Block contact by phone number
+     * Block a contact by phone number
      *
      * @param  \TextMagic\Models\BlockContactInputObject $blockContactInputObject (required)
      *
@@ -510,7 +510,7 @@ class TextMagicApi
     /**
      * Operation blockContactAsync
      *
-     * Block contact by phone number
+     * Block a contact by phone number
      *
      * @param  \TextMagic\Models\BlockContactInputObject $blockContactInputObject (required)
      *
@@ -530,7 +530,7 @@ class TextMagicApi
     /**
      * Operation blockContactAsyncWithHttpInfo
      *
-     * Block contact by phone number
+     * Block a contact by phone number
      *
      * @param  \TextMagic\Models\BlockContactInputObject $blockContactInputObject (required)
      *
@@ -16068,7 +16068,7 @@ class TextMagicApi
      *
      * Get the details of a specific contact
      *
-     * @param  int $id The contact id (required)
+     * @param  int $id Contact ID. (required)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -16085,7 +16085,7 @@ class TextMagicApi
      *
      * Get the details of a specific contact
      *
-     * @param  int $id The contact id (required)
+     * @param  int $id Contact ID. (required)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -16176,7 +16176,7 @@ class TextMagicApi
      *
      * Get the details of a specific contact
      *
-     * @param  int $id The contact id (required)
+     * @param  int $id Contact ID. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -16196,7 +16196,7 @@ class TextMagicApi
      *
      * Get the details of a specific contact
      *
-     * @param  int $id The contact id (required)
+     * @param  int $id Contact ID. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -16246,7 +16246,7 @@ class TextMagicApi
     /**
      * Create request for operation 'getContact'
      *
-     * @param  int $id The contact id (required)
+     * @param  int $id Contact ID. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -16630,9 +16630,9 @@ class TextMagicApi
     /**
      * Operation getContactIfBlocked
      *
-     * Check is that phone number blocked
+     * Check if a phone number is blocked
      *
-     * @param  string $phone Phone number to check (required)
+     * @param  string $phone Phone number to check. (required)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -16647,9 +16647,9 @@ class TextMagicApi
     /**
      * Operation getContactIfBlockedWithHttpInfo
      *
-     * Check is that phone number blocked
+     * Check if a phone number is blocked
      *
-     * @param  string $phone Phone number to check (required)
+     * @param  string $phone Phone number to check. (required)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -16738,9 +16738,9 @@ class TextMagicApi
     /**
      * Operation getContactIfBlockedAsync
      *
-     * Check is that phone number blocked
+     * Check if a phone number is blocked
      *
-     * @param  string $phone Phone number to check (required)
+     * @param  string $phone Phone number to check. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -16758,9 +16758,9 @@ class TextMagicApi
     /**
      * Operation getContactIfBlockedAsyncWithHttpInfo
      *
-     * Check is that phone number blocked
+     * Check if a phone number is blocked
      *
-     * @param  string $phone Phone number to check (required)
+     * @param  string $phone Phone number to check. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -16810,7 +16810,7 @@ class TextMagicApi
     /**
      * Create request for operation 'getContactIfBlocked'
      *
-     * @param  string $phone Phone number to check (required)
+     * @param  string $phone Phone number to check. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -29071,9 +29071,9 @@ class TextMagicApi
      *
      * Import contacts
      *
-     * @param  \SplFileObject $file File containing contacts in csv or xls(x) formats (required)
+     * @param  \SplFileObject $file File containing contacts in csv or xls(x) formats. (required)
      * @param  string $column Import file column mapping. The string must contain sub-strings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where the value before &#x60;:&#x60; is a number of the column in the file, and the value after &#x60;:&#x60; is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. (required)
-     * @param  int $listId List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified. (optional)
+     * @param  int $listId List that ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified. (optional)
      * @param  string $listName List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified. (optional)
      *
      * @throws \TextMagic\ApiException on non-2xx response
@@ -29091,9 +29091,9 @@ class TextMagicApi
      *
      * Import contacts
      *
-     * @param  \SplFileObject $file File containing contacts in csv or xls(x) formats (required)
+     * @param  \SplFileObject $file File containing contacts in csv or xls(x) formats. (required)
      * @param  string $column Import file column mapping. The string must contain sub-strings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where the value before &#x60;:&#x60; is a number of the column in the file, and the value after &#x60;:&#x60; is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. (required)
-     * @param  int $listId List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified. (optional)
+     * @param  int $listId List that ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified. (optional)
      * @param  string $listName List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified. (optional)
      *
      * @throws \TextMagic\ApiException on non-2xx response
@@ -29193,9 +29193,9 @@ class TextMagicApi
      *
      * Import contacts
      *
-     * @param  \SplFileObject $file File containing contacts in csv or xls(x) formats (required)
+     * @param  \SplFileObject $file File containing contacts in csv or xls(x) formats. (required)
      * @param  string $column Import file column mapping. The string must contain sub-strings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where the value before &#x60;:&#x60; is a number of the column in the file, and the value after &#x60;:&#x60; is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. (required)
-     * @param  int $listId List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified. (optional)
+     * @param  int $listId List that ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified. (optional)
      * @param  string $listName List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified. (optional)
      *
      * @throws \InvalidArgumentException
@@ -29216,9 +29216,9 @@ class TextMagicApi
      *
      * Import contacts
      *
-     * @param  \SplFileObject $file File containing contacts in csv or xls(x) formats (required)
+     * @param  \SplFileObject $file File containing contacts in csv or xls(x) formats. (required)
      * @param  string $column Import file column mapping. The string must contain sub-strings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where the value before &#x60;:&#x60; is a number of the column in the file, and the value after &#x60;:&#x60; is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. (required)
-     * @param  int $listId List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified. (optional)
+     * @param  int $listId List that ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified. (optional)
      * @param  string $listName List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified. (optional)
      *
      * @throws \InvalidArgumentException
@@ -29269,9 +29269,9 @@ class TextMagicApi
     /**
      * Create request for operation 'importContacts'
      *
-     * @param  \SplFileObject $file File containing contacts in csv or xls(x) formats (required)
+     * @param  \SplFileObject $file File containing contacts in csv or xls(x) formats. (required)
      * @param  string $column Import file column mapping. The string must contain sub-strings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where the value before &#x60;:&#x60; is a number of the column in the file, and the value after &#x60;:&#x60; is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. (required)
-     * @param  int $listId List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified. (optional)
+     * @param  int $listId List that ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified. (optional)
      * @param  string $listName List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified. (optional)
      *
      * @throws \InvalidArgumentException
@@ -35373,7 +35373,7 @@ class TextMagicApi
     /**
      * Operation unblockContact
      *
-     * Unblock contact by phone number.
+     * Unblock a contact by phone number
      *
      * @param  \TextMagic\Models\UnblockContactInputObject $unblockContactInputObject unblockContactInputObject (required)
      *
@@ -35389,7 +35389,7 @@ class TextMagicApi
     /**
      * Operation unblockContactWithHttpInfo
      *
-     * Unblock contact by phone number.
+     * Unblock a contact by phone number
      *
      * @param  \TextMagic\Models\UnblockContactInputObject $unblockContactInputObject (required)
      *
@@ -35466,7 +35466,7 @@ class TextMagicApi
     /**
      * Operation unblockContactAsync
      *
-     * Unblock contact by phone number.
+     * Unblock a contact by phone number
      *
      * @param  \TextMagic\Models\UnblockContactInputObject $unblockContactInputObject (required)
      *
@@ -35486,7 +35486,7 @@ class TextMagicApi
     /**
      * Operation unblockContactAsyncWithHttpInfo
      *
-     * Unblock contact by phone number.
+     * Unblock a contact by phone number
      *
      * @param  \TextMagic\Models\UnblockContactInputObject $unblockContactInputObject (required)
      *

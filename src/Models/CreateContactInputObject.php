@@ -433,7 +433,7 @@ class CreateContactInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets favorited
      *
-     * @param bool $favorited Is contact marked as favorite.
+     * @param bool $favorited Is the contact marked as favorite?
      *
      * @return $this
      */
@@ -457,7 +457,7 @@ class CreateContactInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets blocked
      *
-     * @param bool $blocked Is contact blocked for outgoing and incoming messaging.
+     * @param bool $blocked Is the contact blocked for outgoing and incoming messaging?
      *
      * @return $this
      */
@@ -481,7 +481,7 @@ class CreateContactInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param int $type Force type of phone. Possible values: 0 - landline, 1 - mobile. Default is -1 (auto detection).
+     * @param int $type Force type of phone. Possible values: 0 is landline; 1 is mobile; default is -1 (auto-detection).
      *
      * @return $this
      */
@@ -529,7 +529,7 @@ class CreateContactInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets local
      *
-     * @param int $local Treat phone number passed in request body as local
+     * @param int $local Treat phone numbers passed in the request body as local.
      *
      * @return $this
      */
@@ -553,7 +553,7 @@ class CreateContactInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets country
      *
-     * @param string $country 2-letter ISO country code for local phone numbers, used when local is  set to true. Default is account country
+     * @param string $country The 2-letter ISO country code for local phone numbers, used when local is  set to true. Default is the account country.
      *
      * @return $this
      */

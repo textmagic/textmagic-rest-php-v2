@@ -247,7 +247,7 @@ class UnsubscribeContactInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets blockIncoming
      *
-     * @param int $blockIncoming If set to 1 incoming messages from this number will be blocked.
+     * @param int $blockIncoming If set to 1, incoming messages from this number will be blocked.
      *
      * @return $this
      */

@@ -370,7 +370,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets favorited
      *
-     * @param bool $favorited Is the Contact favorite? [Custom fields list](http://docs.textmagictesting.com/#operation/getFavorites).
+     * @param bool $favorited Is the Contact favorite? [Favorite list](http://docs.textmagictesting.com/#operation/getFavorites).
      *
      * @return $this
      */
