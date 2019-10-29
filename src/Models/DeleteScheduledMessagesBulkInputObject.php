@@ -253,7 +253,7 @@ class DeleteScheduledMessagesBulkInputObject implements ModelInterface, ArrayAcc
     /**
      * Sets all
      *
-     * @param int $all Default is 0 (false). If set to 1 all the entities will be removed.
+     * @param int $all Default is 0 (false). If set to 1, all the entities will be removed.
      *
      * @return $this
      */
@@ -277,7 +277,7 @@ class DeleteScheduledMessagesBulkInputObject implements ModelInterface, ArrayAcc
     /**
      * Sets status
      *
-     * @param string $status Default is empty string (false). If set then all entities with specified status will be affected.
+     * @param string $status Default is an empty string (false). If set, all entities with specified status will be affected.
      *
      * @return $this
      */

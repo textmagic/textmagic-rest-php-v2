@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **service** | **bool** | Internal service field. | 
 **shared** | **bool** | Is the list **shared** among all sub-accounts? | 
 **avatar** | [**\TextMagic\Models\ListImage**](ListImage.md) |  | 
-**isDefault** | **bool** | Indicates that List is used as a default. All new contacts added via web app will be added in this List by default. | 
+**isDefault** | **bool** | Indicates that List is used as a default. All new contacts added via the Web-app will be added in this List by default. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -229,7 +229,7 @@ class CheckPhoneVerificationCodeInputObject implements ModelInterface, ArrayAcce
     /**
      * Sets code
      *
-     * @param int $code Verification code that was received by the user and entered into the form field.
+     * @param int $code Verification code received by the user and entered into the form field.
      *
      * @return $this
      */

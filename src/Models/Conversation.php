@@ -409,7 +409,7 @@ class Conversation implements ModelInterface, ArrayAccess
     /**
      * Sets messageTime
      *
-     * @param \DateTime $messageTime Time when message arrived at TextMagic.
+     * @param \DateTime $messageTime Time when  the message arrived at TextMagic.
      *
      * @return $this
      */
@@ -457,7 +457,7 @@ class Conversation implements ModelInterface, ArrayAccess
     /**
      * Sets receiver
      *
-     * @param string $receiver Receiver phone number.
+     * @param string $receiver Receiver's phone number.
      *
      * @return $this
      */

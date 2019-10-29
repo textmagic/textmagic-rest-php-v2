@@ -288,7 +288,7 @@ class MessagesIcsTextParameters implements ModelInterface, ArrayAccess
     /**
      * Sets cost
      *
-     * @param float $cost Cost to check one number is constant – 0.04 in your account currency.
+     * @param float $cost Cost to check that one number is constant – 0.04 in your account currency.
      *
      * @return $this
      */
@@ -360,7 +360,7 @@ class MessagesIcsTextParameters implements ModelInterface, ArrayAccess
     /**
      * Sets encoding
      *
-     * @param string $encoding Message charset. Could be: * **ISO-8859-1** for plaintext SMS * **UTF-16BE** for Unicode SMS
+     * @param string $encoding Message charset. Could be: * **ISO-8859-1** – for plaintext SMS; * **UTF-16BE** – for Unicode SMS.
      *
      * @return $this
      */
@@ -417,7 +417,7 @@ class MessagesIcsTextParameters implements ModelInterface, ArrayAccess
     /**
      * Sets charsetLabel
      *
-     * @param string $charsetLabel Human-readable message charset label. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS *   **Voice** for voice services (Text-to-Speech or Voice Broadcast) messages
+     * @param string $charsetLabel Human-readable message charset label. Could be: *   **ISO-8859-1** for plaintext SMS; *   **UTF-16BE** for Unicode SMS; *   **Voice** for voice services (Text-to-Speech or Voice Broadcast) messages.
      *
      * @return $this
      */

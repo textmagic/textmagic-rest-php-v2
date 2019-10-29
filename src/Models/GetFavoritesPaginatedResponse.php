@@ -1,6 +1,6 @@
 <?php
 /**
- * GetFavouritesPaginatedResponse
+ * GetFavoritesPaginatedResponse
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \TextMagic\ObjectSerializer;
 
 /**
- * GetFavouritesPaginatedResponse Class Doc Comment
+ * GetFavoritesPaginatedResponse Class Doc Comment
  *
  * @category Class
  * @package  TextMagic
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class GetFavouritesPaginatedResponse implements ModelInterface, ArrayAccess
+class GetFavoritesPaginatedResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class GetFavouritesPaginatedResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'GetFavouritesPaginatedResponse';
+    protected static $swaggerModelName = 'GetFavoritesPaginatedResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

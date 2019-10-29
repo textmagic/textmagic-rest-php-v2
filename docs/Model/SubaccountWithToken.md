@@ -16,8 +16,8 @@ Name | Type | Description | Notes
 **country** | [**\TextMagic\Models\Country**](Country.md) |  | 
 **timezone** | [**\TextMagic\Models\Timezone**](Timezone.md) |  | 
 **subaccountType** | **string** | Type of account: *   **A** for Administrator sub-account *   **U** for Regular User | 
-**emailAccepted** | **bool** | Is account has confirmed Email. | 
-**phoneAccepted** | **bool** | Is account has confirmed Phone number. | 
+**emailAccepted** | **bool** | Does the account have a confirmed Email?. | 
+**phoneAccepted** | **bool** | Does the account have a confirmed Phone Number?. | 
 **avatar** | [**\TextMagic\Models\UserImage**](UserImage.md) |  | 
 **token** | **string** | Access token of account. | 
 

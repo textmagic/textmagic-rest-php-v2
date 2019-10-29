@@ -456,7 +456,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Sets displayTimeFormat
      *
-     * @param string $displayTimeFormat User's preferred format of time display: * *12h* – AM/PM format; * *24h* – 24 hour clock format.
+     * @param string $displayTimeFormat User's preferred format of time display: * *12h* - AM/PM format; * *24h* - 24-hour clock format.
      *
      * @return $this
      */
@@ -642,7 +642,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Sets phone
      *
-     * @param string $phone User`s phone number.
+     * @param string $phone User's phone number.
      *
      * @return $this
      */
@@ -762,7 +762,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Sets subaccountType
      *
-     * @param string $subaccountType Type of account: * **P** for Parent User; * **A** for Administrator Sub-Account; * **U** for Regular User
+     * @param string $subaccountType Type of account: * **P** for Parent User; * **A** for Administrator Sub-Account; * **U** for Regular User.
      *
      * @return $this
      */

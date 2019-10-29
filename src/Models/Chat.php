@@ -446,7 +446,7 @@ class Chat implements ModelInterface, ArrayAccess
     /**
      * Sets phone
      *
-     * @param string $phone Chat partner phone number.
+     * @param string $phone Chat partner's phone number.
      *
      * @return $this
      */
@@ -494,7 +494,7 @@ class Chat implements ModelInterface, ArrayAccess
     /**
      * Sets unsubscribedContactId
      *
-     * @param int $unsubscribedContactId If this field has a value then it means that chat phone number has been unsubscribed from you and this value is a ID of a Unsubscribed contact entity. See [Get all unsubscribed contacts](http://docs.textmagictesting.com/#operation/getUnsubscribers).
+     * @param int $unsubscribedContactId If this field has a value, it means that the chat phone number has been unsubscribed from you and this value is an ID of an Unsubscribed contact entity. See [Get all unsubscribed contacts](http://docs.textmagictesting.com/#operation/getUnsubscribers).
      *
      * @return $this
      */
@@ -542,7 +542,7 @@ class Chat implements ModelInterface, ArrayAccess
     /**
      * Sets updatedAt
      *
-     * @param \DateTime $updatedAt Time when last incoming message arrived at this chat.
+     * @param \DateTime $updatedAt Time when the last incoming message arrived at this chat.
      *
      * @return $this
      */
@@ -599,7 +599,7 @@ class Chat implements ModelInterface, ArrayAccess
     /**
      * Sets mute
      *
-     * @param int $mute Indicates when chat is muted.
+     * @param int $mute Indicates when the chat is muted.
      *
      * @return $this
      */
@@ -647,7 +647,7 @@ class Chat implements ModelInterface, ArrayAccess
     /**
      * Sets direction
      *
-     * @param string $direction Last message type: * **ci** - incoming call * **co** - outgoing call * **i** - incoming message * **o** - outgoing message
+     * @param string $direction Last message type: * **ci** - incoming call; * **co** - outgoing call; * **i** - incoming message; * **o** - outgoing message.
      *
      * @return $this
      */
@@ -680,7 +680,7 @@ class Chat implements ModelInterface, ArrayAccess
     /**
      * Sets from
      *
-     * @param string $from If filled then value will be used as a sender number for all outgoing messages of a chat.
+     * @param string $from If filled, the value will be used as a sender number for all outgoing messages of a chat.
      *
      * @return $this
      */
@@ -704,7 +704,7 @@ class Chat implements ModelInterface, ArrayAccess
     /**
      * Sets mutedUntil
      *
-     * @param \DateTime $mutedUntil Date and time until chat will be mutted.
+     * @param \DateTime $mutedUntil Date and time until the chat will be muted.
      *
      * @return $this
      */
@@ -728,7 +728,7 @@ class Chat implements ModelInterface, ArrayAccess
     /**
      * Sets timeLeftMute
      *
-     * @param int $timeLeftMute Time left till chat will be unmutted (seconds).
+     * @param int $timeLeftMute Time left untill the chat will be unmuted (seconds).
      *
      * @return $this
      */

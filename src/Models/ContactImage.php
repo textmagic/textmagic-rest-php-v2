@@ -220,7 +220,7 @@ class ContactImage implements ModelInterface, ArrayAccess
     /**
      * Sets href
      *
-     * @param string $href URI of a contact avatar.
+     * @param string $href The URI of a contact avatar.
      *
      * @return $this
      */

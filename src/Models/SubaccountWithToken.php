@@ -740,7 +740,7 @@ class SubaccountWithToken implements ModelInterface, ArrayAccess
     /**
      * Sets emailAccepted
      *
-     * @param bool $emailAccepted Is account has confirmed Email.
+     * @param bool $emailAccepted Does the account have a confirmed Email?.
      *
      * @return $this
      */
@@ -764,7 +764,7 @@ class SubaccountWithToken implements ModelInterface, ArrayAccess
     /**
      * Sets phoneAccepted
      *
-     * @param bool $phoneAccepted Is account has confirmed Phone number.
+     * @param bool $phoneAccepted Does the account have a confirmed Phone Number?.
      *
      * @return $this
      */

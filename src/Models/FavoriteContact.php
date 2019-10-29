@@ -312,7 +312,7 @@ class FavoriteContact implements ModelInterface, ArrayAccess
     /**
      * Sets entityType
      *
-     * @param string $entityType Entity type which should be marked as **favourite**.
+     * @param string $entityType Entity type which should be marked as **favorite**.
      *
      * @return $this
      */

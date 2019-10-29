@@ -253,7 +253,7 @@ class SendPhoneVerificationCodeResponse implements ModelInterface, ArrayAccess
     /**
      * Sets price
      *
-     * @param float $price Amount of credit which will be deducted from your account balance when this verification is successfully completed.
+     * @param float $price An amount of credit which will be deducted from your account balance when this verification is successfully completed.
      *
      * @return $this
      */

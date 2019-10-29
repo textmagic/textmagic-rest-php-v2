@@ -79,7 +79,7 @@ Method | HTTP request | Description
 [**getCustomField**](TextMagicApi.md#getCustomField) | **GET** /api/v2/customfields/{id} | Get the details of a specific custom field
 [**getCustomFields**](TextMagicApi.md#getCustomFields) | **GET** /api/v2/customfields | Get all custom fields
 [**getDedicatedNumber**](TextMagicApi.md#getDedicatedNumber) | **GET** /api/v2/numbers/{id} | Get the details of a specific dedicated number
-[**getFavourites**](TextMagicApi.md#getFavourites) | **GET** /api/v2/contacts/favorite | Get favorite contacts and lists
+[**getFavorites**](TextMagicApi.md#getFavorites) | **GET** /api/v2/contacts/favorite | Get favorite contacts and lists
 [**getInboundMessage**](TextMagicApi.md#getInboundMessage) | **GET** /api/v2/replies/{id} | Get a single inbound message
 [**getInboundMessagesNotificationSettings**](TextMagicApi.md#getInboundMessagesNotificationSettings) | **GET** /api/v2/user/notification/inbound | Get inbound messages notification settings
 [**getInvoices**](TextMagicApi.md#getInvoices) | **GET** /api/v2/invoices | Get all invoices
@@ -347,7 +347,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     new GuzzleHttp\Client(),
     $config
 );
-$verifyId = "\"123e4567-e89b-12d3-a456-426655440000\""; // string | the verifyId that you received in Step 1.
+$verifyId = "\"123e4567-e89b-12d3-a456-426655440000\""; // string | The verifyId that you received in Step 1.
 
 try {
     $apiInstance->cancelVerification($verifyId);
@@ -361,7 +361,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **verifyId** | **string**| the verifyId that you received in Step 1. |
+ **verifyId** | **string**| The verifyId that you received in Step 1. |
 
 ### Return type
 
@@ -1648,7 +1648,7 @@ void (empty response body)
 
 Delete a single inbound message
 
-> Note, deleted inbound message will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful!
+> Note: deleted inbound messages will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful!
 
 ### Example
 ```php
@@ -1703,7 +1703,7 @@ void (empty response body)
 
 Delete inbound messages (bulk)
 
-> Note, deleted inbound message will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful!
+> Note: deleted inbound messages will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful!
 
 ### Example
 ```php
@@ -2669,9 +2669,9 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 $status = "\"a\""; // string | Fetch only (a)ctive, (c)losed or (d)eleted chats
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
-$orderBy = "id"; // string | Order results by some field. Default is id
-$voice = 0; // int | Fetch results with voice calls
-$flat = 0; // int | Should additional contact info be included
+$orderBy = "id"; // string | Order results by some field. Default is id.
+$voice = 0; // int | Fetch results with voice calls.
+$flat = 0; // int | Should additional contact info be included?
 
 try {
     $result = $apiInstance->getAllChats($status, $page, $limit, $orderBy, $voice, $flat);
@@ -2689,9 +2689,9 @@ Name | Type | Description  | Notes
  **status** | **string**| Fetch only (a)ctive, (c)losed or (d)eleted chats | [optional]
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
- **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
- **voice** | **int**| Fetch results with voice calls | [optional] [default to 0]
- **flat** | **int**| Should additional contact info be included | [optional] [default to 0]
+ **orderBy** | **string**| Order results by some field. Default is id. | [optional] [default to id]
+ **voice** | **int**| Fetch results with voice calls. | [optional] [default to 0]
+ **flat** | **int**| Should additional contact info be included? | [optional] [default to 0]
 
 ### Return type
 
@@ -2734,7 +2734,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 );
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
-$orderBy = "id"; // string | Order results by some field. Default is id
+$orderBy = "id"; // string | Order results by some field. Default is id.
 $direction = "desc"; // string | Order direction. Default is desc.
 
 try {
@@ -2752,7 +2752,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
- **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
+ **orderBy** | **string**| Order results by some field. Default is id. | [optional] [default to id]
  **direction** | **string**| Order direction. Default is desc. | [optional] [default to desc]
 
 ### Return type
@@ -2914,7 +2914,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 );
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
-$status = "x"; // string | Fetch schedules with the specific status: a - actual, c - completed, x - all
+$status = "x"; // string | Fetch schedules with a specific status: a - actual, c - completed, x - all.
 $orderBy = "id"; // string | Order results by some field. Default is id
 $direction = "desc"; // string | Order direction. Default is desc.
 
@@ -2933,7 +2933,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
- **status** | **string**| Fetch schedules with the specific status: a - actual, c - completed, x - all | [optional] [default to x]
+ **status** | **string**| Fetch schedules with a specific status: a - actual, c - completed, x - all. | [optional] [default to x]
  **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
  **direction** | **string**| Order direction. Default is desc. | [optional] [default to desc]
 
@@ -3546,10 +3546,10 @@ $id = 1; // int |
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
 $query = "query_example"; // string | Find messages by specified search query
-$start = 56; // int | Return messages since specified timestamp only
-$end = 56; // int | Return messages up to specified timestamp only
+$start = 56; // int | Return messages since specified timestamp only.
+$end = 56; // int | Return messages up to specified timestamp only.
 $direction = "desc"; // string | Order direction. Default is desc.
-$voice = 0; // int | Fetch results with voice calls
+$voice = 0; // int | Fetch results with voice calls.
 
 try {
     $result = $apiInstance->getChatMessages($id, $page, $limit, $query, $start, $end, $direction, $voice);
@@ -3568,10 +3568,10 @@ Name | Type | Description  | Notes
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
  **query** | **string**| Find messages by specified search query | [optional]
- **start** | **int**| Return messages since specified timestamp only | [optional]
- **end** | **int**| Return messages up to specified timestamp only | [optional]
+ **start** | **int**| Return messages since specified timestamp only. | [optional]
+ **end** | **int**| Return messages up to specified timestamp only. | [optional]
  **direction** | **string**| Order direction. Default is desc. | [optional] [default to desc]
- **voice** | **int**| Fetch results with voice calls | [optional] [default to 0]
+ **voice** | **int**| Fetch results with voice calls. | [optional] [default to 0]
 
 ### Return type
 
@@ -4390,8 +4390,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **getFavourites**
-> \TextMagic\Models\GetFavouritesPaginatedResponse getFavourites($page, $limit, $query)
+# **getFavorites**
+> \TextMagic\Models\GetFavoritesPaginatedResponse getFavorites($page, $limit, $query)
 
 Get favorite contacts and lists
 
@@ -4419,10 +4419,10 @@ $limit = 10; // int | The number of results per page.
 $query = "\"A\""; // string | Find contacts or lists by specified search query
 
 try {
-    $result = $apiInstance->getFavourites($page, $limit, $query);
+    $result = $apiInstance->getFavorites($page, $limit, $query);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TextMagicApi->getFavourites: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TextMagicApi->getFavorites: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -4437,7 +4437,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\TextMagic\Models\GetFavouritesPaginatedResponse**](../Model/GetFavouritesPaginatedResponse.md)
+[**\TextMagic\Models\GetFavoritesPaginatedResponse**](../Model/GetFavoritesPaginatedResponse.md)
 
 ### Authorization
 
@@ -6946,7 +6946,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
 $query = "query_example"; // string | Find chats by specified search query
-$orderBy = "id"; // string | Order results by some field. Default is id
+$orderBy = "id"; // string | Order results by some field. Default is id.
 
 try {
     $result = $apiInstance->searchChatsByReceipent($page, $limit, $query, $orderBy);
@@ -6964,7 +6964,7 @@ Name | Type | Description  | Notes
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
  **query** | **string**| Find chats by specified search query | [optional]
- **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
+ **orderBy** | **string**| Order results by some field. Default is id. | [optional] [default to id]
 
 ### Return type
 
@@ -7011,7 +7011,7 @@ $shared = 0; // int | Should shared contacts to be included
 $ids = "ids_example"; // string | Find contact by ID(s)
 $listId = 56; // int | Find contact by List ID
 $includeBlocked = 56; // int | Should blocked contacts to be included
-$query = "query_example"; // string | Find contacts by specified search query
+$query = "query_example"; // string | Find contacts by specified search query.
 $local = 0; // int | Treat phone number passed in 'query' field as local. Default is 0
 $country = "country_example"; // string | 2-letter ISO country code for local phone numbers, used when 'local' is set to true. Default is account country
 $orderBy = "id"; // string | Order results by some field. Default is id.
@@ -7036,7 +7036,7 @@ Name | Type | Description  | Notes
  **ids** | **string**| Find contact by ID(s) | [optional]
  **listId** | **int**| Find contact by List ID | [optional]
  **includeBlocked** | **int**| Should blocked contacts to be included | [optional]
- **query** | **string**| Find contacts by specified search query | [optional]
+ **query** | **string**| Find contacts by specified search query. | [optional]
  **local** | **int**| Treat phone number passed in &#39;query&#39; field as local. Default is 0 | [optional] [default to 0]
  **country** | **string**| 2-letter ISO country code for local phone numbers, used when &#39;local&#39; is set to true. Default is account country | [optional]
  **orderBy** | **string**| Order results by some field. Default is id. | [optional] [default to id]
@@ -7085,7 +7085,7 @@ $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
 $ids = "ids_example"; // string | Find message by ID(s).
 $query = "query_example"; // string | Find recipients by specified search query.
-$orderBy = "id"; // string | Order results by some field. Default is id
+$orderBy = "id"; // string | Order results by some field. Default is id.
 $direction = "desc"; // string | Order direction. Default is desc.
 $expand = 0; // int | Expand by adding firstName, lastName and contactId.
 
@@ -7106,7 +7106,7 @@ Name | Type | Description  | Notes
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
  **ids** | **string**| Find message by ID(s). | [optional]
  **query** | **string**| Find recipients by specified search query. | [optional]
- **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
+ **orderBy** | **string**| Order results by some field. Default is id. | [optional] [default to id]
  **direction** | **string**| Order direction. Default is desc. | [optional] [default to desc]
  **expand** | **int**| Expand by adding firstName, lastName and contactId. | [optional] [default to 0]
 
@@ -7293,8 +7293,8 @@ $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
 $query = "query_example"; // string | Find messages by specified search query
 $ids = "ids_example"; // string | Find schedules by ID(s)
-$status = "x"; // string | Fetch schedules with the specific status: a - actual, c - completed, x - all
-$orderBy = "id"; // string | Order results by some field. Default is id
+$status = "x"; // string | Fetch schedules with a specific status: a - actual, c - completed, x - all.
+$orderBy = "id"; // string | Order results by some field. Default is id.
 $direction = "desc"; // string | Order direction. Default is desc.
 
 try {
@@ -7314,8 +7314,8 @@ Name | Type | Description  | Notes
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
  **query** | **string**| Find messages by specified search query | [optional]
  **ids** | **string**| Find schedules by ID(s) | [optional]
- **status** | **string**| Fetch schedules with the specific status: a - actual, c - completed, x - all | [optional] [default to x]
- **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
+ **status** | **string**| Fetch schedules with a specific status: a - actual, c - completed, x - all. | [optional] [default to x]
+ **orderBy** | **string**| Order results by some field. Default is id. | [optional] [default to id]
  **direction** | **string**| Order direction. Default is desc. | [optional] [default to desc]
 
 ### Return type
@@ -7458,7 +7458,7 @@ Name | Type | Description  | Notes
 
 Step 1: Send a verification code
 
-Sends verification code to specified phone number.
+Sends a verification code to a specified phone number.
 
 ### Example
 ```php

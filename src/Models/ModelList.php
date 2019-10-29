@@ -517,7 +517,7 @@ class ModelList implements ModelInterface, ArrayAccess
     /**
      * Sets isDefault
      *
-     * @param bool $isDefault Indicates that List is used as a default. All new contacts added via web app will be added in this List by default.
+     * @param bool $isDefault Indicates that List is used as a default. All new contacts added via the Web-app will be added in this List by default.
      *
      * @return $this
      */

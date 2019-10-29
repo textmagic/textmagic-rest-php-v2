@@ -307,7 +307,7 @@ class DeleteChatMessagesBulkInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets all
      *
-     * @param bool $all Default is 0 (false). If set to 1, all entities will be removed.
+     * @param bool $all Default is 0 (false). If set to 1, all the entities will be removed.
      *
      * @return $this
      */

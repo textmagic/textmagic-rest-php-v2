@@ -296,7 +296,7 @@ class DoCarrierLookupResponse implements ModelInterface, ArrayAccess
     /**
      * Sets cost
      *
-     * @param float $cost Cost to check one number is constant – 0.04 in your account currency.
+     * @param float $cost Cost to check that one number is constant – 0.04 in your account currency.
      *
      * @return $this
      */

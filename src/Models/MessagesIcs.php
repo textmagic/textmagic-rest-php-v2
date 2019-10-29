@@ -419,7 +419,7 @@ class MessagesIcs implements ModelInterface, ArrayAccess
     /**
      * Sets nextSend
      *
-     * @param \DateTime $nextSend Next send date in [ISO 8601](https://en.wikipedia.org/?title=ISO_8601) format.
+     * @param \DateTime $nextSend The next send date in [ISO 8601](https://en.wikipedia.org/?title=ISO_8601) format.
      *
      * @return $this
      */
@@ -491,7 +491,7 @@ class MessagesIcs implements ModelInterface, ArrayAccess
     /**
      * Sets lastSent
      *
-     * @param \DateTime $lastSent Date and time when last message has been sent.
+     * @param \DateTime $lastSent The date and time when the last message was sent.
      *
      * @return $this
      */
@@ -515,7 +515,7 @@ class MessagesIcs implements ModelInterface, ArrayAccess
     /**
      * Sets contactName
      *
-     * @param string $contactName Aggregated contact information. If the message scheduled to be sent to a single contact, a full name will be returned here. Otherwise, a total amount contacts will be returned.
+     * @param string $contactName Aggregated contact information. If the message was scheduled to be sent to a single contact, a full name will be returned here. Otherwise, a total amount of contacts will be returned.
      *
      * @return $this
      */
@@ -740,7 +740,7 @@ class MessagesIcs implements ModelInterface, ArrayAccess
     /**
      * Sets completed
      *
-     * @param bool $completed Indicates that schedling has been completed.
+     * @param bool $completed Indicates that scheduling has been completed.
      *
      * @return $this
      */
