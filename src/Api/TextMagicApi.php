@@ -17776,7 +17776,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $shared Should shared contacts to be included (optional, default to 0)
+     * @param  int $shared Should shared contacts be included? (optional, default to 0)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
@@ -17797,7 +17797,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $shared Should shared contacts to be included (optional, default to 0)
+     * @param  int $shared Should shared contacts be included? (optional, default to 0)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
@@ -17884,7 +17884,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $shared Should shared contacts to be included (optional, default to 0)
+     * @param  int $shared Should shared contacts be included? (optional, default to 0)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
@@ -17908,7 +17908,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $shared Should shared contacts to be included (optional, default to 0)
+     * @param  int $shared Should shared contacts be included? (optional, default to 0)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
@@ -17962,7 +17962,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $shared Should shared contacts to be included (optional, default to 0)
+     * @param  int $shared Should shared contacts be included? (optional, default to 0)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
@@ -18076,7 +18076,7 @@ class TextMagicApi
      *
      * @param  string $query Find recipients by specified search query. (required)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $lists Should lists be returned or not (optional, default to 0)
+     * @param  int $lists Should lists be returned or not? (optional, default to 0)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -18095,7 +18095,7 @@ class TextMagicApi
      *
      * @param  string $query Find recipients by specified search query. (required)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $lists Should lists be returned or not (optional, default to 0)
+     * @param  int $lists Should lists be returned or not? (optional, default to 0)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -18180,7 +18180,7 @@ class TextMagicApi
      *
      * @param  string $query Find recipients by specified search query. (required)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $lists Should lists be returned or not (optional, default to 0)
+     * @param  int $lists Should lists be returned or not? (optional, default to 0)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -18202,7 +18202,7 @@ class TextMagicApi
      *
      * @param  string $query Find recipients by specified search query. (required)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $lists Should lists be returned or not (optional, default to 0)
+     * @param  int $lists Should lists be returned or not? (optional, default to 0)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -18254,7 +18254,7 @@ class TextMagicApi
      *
      * @param  string $query Find recipients by specified search query. (required)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $lists Should lists be returned or not (optional, default to 0)
+     * @param  int $lists Should lists be returned or not? (optional, default to 0)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -32554,13 +32554,13 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $shared Should shared contacts to be included (optional, default to 0)
-     * @param  string $ids Find contact by ID(s) (optional)
-     * @param  int $listId Find contact by List ID (optional)
-     * @param  int $includeBlocked Should blocked contacts to be included (optional)
+     * @param  int $shared Should shared contacts be included? (optional, default to 0)
+     * @param  string $ids Find contacts by IDs. (optional)
+     * @param  int $listId Find contacts by List ID. (optional)
+     * @param  int $includeBlocked Should blocked contacts be included? (optional)
      * @param  string $query Find contacts by specified search query. (optional)
-     * @param  int $local Treat phone number passed in &#39;query&#39; field as local. Default is 0 (optional, default to 0)
-     * @param  string $country 2-letter ISO country code for local phone numbers, used when &#39;local&#39; is set to true. Default is account country (optional)
+     * @param  int $local Treat phone number passed in the \&quot;query\&quot; field as local. Default is 0. (optional, default to 0)
+     * @param  string $country The 2-letter ISO country code for local phone numbers, used when \&quot;local\&quot; is set to true. Default is the account country. (optional)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
@@ -32581,13 +32581,13 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $shared Should shared contacts to be included (optional, default to 0)
-     * @param  string $ids Find contact by ID(s) (optional)
-     * @param  int $listId Find contact by List ID (optional)
-     * @param  int $includeBlocked Should blocked contacts to be included (optional)
+     * @param  int $shared Should shared contacts be included? (optional, default to 0)
+     * @param  string $ids Find contacts by IDs. (optional)
+     * @param  int $listId Find contacts by List ID. (optional)
+     * @param  int $includeBlocked Should blocked contacts be included? (optional)
      * @param  string $query Find contacts by specified search query. (optional)
-     * @param  int $local Treat phone number passed in &#39;query&#39; field as local. Default is 0 (optional, default to 0)
-     * @param  string $country 2-letter ISO country code for local phone numbers, used when &#39;local&#39; is set to true. Default is account country (optional)
+     * @param  int $local Treat phone number passed in the \&quot;query\&quot; field as local. Default is 0. (optional, default to 0)
+     * @param  string $country The 2-letter ISO country code for local phone numbers, used when \&quot;local\&quot; is set to true. Default is the account country. (optional)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
@@ -32674,13 +32674,13 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $shared Should shared contacts to be included (optional, default to 0)
-     * @param  string $ids Find contact by ID(s) (optional)
-     * @param  int $listId Find contact by List ID (optional)
-     * @param  int $includeBlocked Should blocked contacts to be included (optional)
+     * @param  int $shared Should shared contacts be included? (optional, default to 0)
+     * @param  string $ids Find contacts by IDs. (optional)
+     * @param  int $listId Find contacts by List ID. (optional)
+     * @param  int $includeBlocked Should blocked contacts be included? (optional)
      * @param  string $query Find contacts by specified search query. (optional)
-     * @param  int $local Treat phone number passed in &#39;query&#39; field as local. Default is 0 (optional, default to 0)
-     * @param  string $country 2-letter ISO country code for local phone numbers, used when &#39;local&#39; is set to true. Default is account country (optional)
+     * @param  int $local Treat phone number passed in the \&quot;query\&quot; field as local. Default is 0. (optional, default to 0)
+     * @param  string $country The 2-letter ISO country code for local phone numbers, used when \&quot;local\&quot; is set to true. Default is the account country. (optional)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
@@ -32704,13 +32704,13 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $shared Should shared contacts to be included (optional, default to 0)
-     * @param  string $ids Find contact by ID(s) (optional)
-     * @param  int $listId Find contact by List ID (optional)
-     * @param  int $includeBlocked Should blocked contacts to be included (optional)
+     * @param  int $shared Should shared contacts be included? (optional, default to 0)
+     * @param  string $ids Find contacts by IDs. (optional)
+     * @param  int $listId Find contacts by List ID. (optional)
+     * @param  int $includeBlocked Should blocked contacts be included? (optional)
      * @param  string $query Find contacts by specified search query. (optional)
-     * @param  int $local Treat phone number passed in &#39;query&#39; field as local. Default is 0 (optional, default to 0)
-     * @param  string $country 2-letter ISO country code for local phone numbers, used when &#39;local&#39; is set to true. Default is account country (optional)
+     * @param  int $local Treat phone number passed in the \&quot;query\&quot; field as local. Default is 0. (optional, default to 0)
+     * @param  string $country The 2-letter ISO country code for local phone numbers, used when \&quot;local\&quot; is set to true. Default is the account country. (optional)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
@@ -32764,13 +32764,13 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $shared Should shared contacts to be included (optional, default to 0)
-     * @param  string $ids Find contact by ID(s) (optional)
-     * @param  int $listId Find contact by List ID (optional)
-     * @param  int $includeBlocked Should blocked contacts to be included (optional)
+     * @param  int $shared Should shared contacts be included? (optional, default to 0)
+     * @param  string $ids Find contacts by IDs. (optional)
+     * @param  int $listId Find contacts by List ID. (optional)
+     * @param  int $includeBlocked Should blocked contacts be included? (optional)
      * @param  string $query Find contacts by specified search query. (optional)
-     * @param  int $local Treat phone number passed in &#39;query&#39; field as local. Default is 0 (optional, default to 0)
-     * @param  string $country 2-letter ISO country code for local phone numbers, used when &#39;local&#39; is set to true. Default is account country (optional)
+     * @param  int $local Treat phone number passed in the \&quot;query\&quot; field as local. Default is 0. (optional, default to 0)
+     * @param  string $country The 2-letter ISO country code for local phone numbers, used when \&quot;local\&quot; is set to true. Default is the account country. (optional)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *

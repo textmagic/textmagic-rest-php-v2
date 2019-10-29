@@ -394,7 +394,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets blocked
      *
-     * @param bool $blocked Is the Contact blocked? [Custom fields list](http://docs.textmagictesting.com/#operation/getBlockedContacts).
+     * @param bool $blocked Is the Contact blocked? [Blocked contacts](http://docs.textmagictesting.com/#operation/getBlockedContacts).
      *
      * @return $this
      */

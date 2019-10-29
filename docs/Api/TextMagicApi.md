@@ -3954,7 +3954,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 );
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
-$shared = 0; // int | Should shared contacts to be included
+$shared = 0; // int | Should shared contacts be included?
 $orderBy = "id"; // string | Order results by some field. Default is id.
 $direction = "desc"; // string | Order direction. Default is desc.
 
@@ -3973,7 +3973,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
- **shared** | **int**| Should shared contacts to be included | [optional] [default to 0]
+ **shared** | **int**| Should shared contacts be included? | [optional] [default to 0]
  **orderBy** | **string**| Order results by some field. Default is id. | [optional] [default to id]
  **direction** | **string**| Order direction. Default is desc. | [optional] [default to desc]
 
@@ -3997,7 +3997,7 @@ Name | Type | Description  | Notes
 
 Get contacts autocomplete suggestions
 
-Get contacts autocomplete suggestions by given search term
+Get contacts autocomplete suggestions by given search terms.
 
 ### Example
 ```php
@@ -4018,7 +4018,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 );
 $query = "\"A\""; // string | Find recipients by specified search query.
 $limit = 10; // int | The number of results per page.
-$lists = 0; // int | Should lists be returned or not
+$lists = 0; // int | Should lists be returned or not?
 
 try {
     $result = $apiInstance->getContactsAutocomplete($query, $limit, $lists);
@@ -4035,7 +4035,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | **string**| Find recipients by specified search query. |
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
- **lists** | **int**| Should lists be returned or not | [optional] [default to 0]
+ **lists** | **int**| Should lists be returned or not? | [optional] [default to 0]
 
 ### Return type
 
@@ -7007,13 +7007,13 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 );
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
-$shared = 0; // int | Should shared contacts to be included
-$ids = "ids_example"; // string | Find contact by ID(s)
-$listId = 56; // int | Find contact by List ID
-$includeBlocked = 56; // int | Should blocked contacts to be included
+$shared = 0; // int | Should shared contacts be included?
+$ids = "ids_example"; // string | Find contacts by IDs.
+$listId = 56; // int | Find contacts by List ID.
+$includeBlocked = 56; // int | Should blocked contacts be included?
 $query = "query_example"; // string | Find contacts by specified search query.
-$local = 0; // int | Treat phone number passed in 'query' field as local. Default is 0
-$country = "country_example"; // string | 2-letter ISO country code for local phone numbers, used when 'local' is set to true. Default is account country
+$local = 0; // int | Treat phone number passed in the \"query\" field as local. Default is 0.
+$country = "country_example"; // string | The 2-letter ISO country code for local phone numbers, used when \"local\" is set to true. Default is the account country.
 $orderBy = "id"; // string | Order results by some field. Default is id.
 $direction = "desc"; // string | Order direction. Default is desc.
 
@@ -7032,13 +7032,13 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
- **shared** | **int**| Should shared contacts to be included | [optional] [default to 0]
- **ids** | **string**| Find contact by ID(s) | [optional]
- **listId** | **int**| Find contact by List ID | [optional]
- **includeBlocked** | **int**| Should blocked contacts to be included | [optional]
+ **shared** | **int**| Should shared contacts be included? | [optional] [default to 0]
+ **ids** | **string**| Find contacts by IDs. | [optional]
+ **listId** | **int**| Find contacts by List ID. | [optional]
+ **includeBlocked** | **int**| Should blocked contacts be included? | [optional]
  **query** | **string**| Find contacts by specified search query. | [optional]
- **local** | **int**| Treat phone number passed in &#39;query&#39; field as local. Default is 0 | [optional] [default to 0]
- **country** | **string**| 2-letter ISO country code for local phone numbers, used when &#39;local&#39; is set to true. Default is account country | [optional]
+ **local** | **int**| Treat phone number passed in the \&quot;query\&quot; field as local. Default is 0. | [optional] [default to 0]
+ **country** | **string**| The 2-letter ISO country code for local phone numbers, used when \&quot;local\&quot; is set to true. Default is the account country. | [optional]
  **orderBy** | **string**| Order results by some field. Default is id. | [optional] [default to id]
  **direction** | **string**| Order direction. Default is desc. | [optional] [default to desc]
 

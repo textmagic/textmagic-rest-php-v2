@@ -344,7 +344,7 @@ class GetContactsAutocompleteResponseItem implements ModelInterface, ArrayAccess
     /**
      * Sets entityId
      *
-     * @param int $entityId Id of entity. 0 if object is a Reply
+     * @param int $entityId Id of entity. 0 if object is a reply.
      *
      * @return $this
      */
@@ -368,7 +368,7 @@ class GetContactsAutocompleteResponseItem implements ModelInterface, ArrayAccess
     /**
      * Sets entityType
      *
-     * @param string $entityType Entry type: * **contact** if it is related to a contact * **list** if it is related to a contact list * **reply** if it is related to an incoming message
+     * @param string $entityType Entry type: * **contact** if it is related to a contact; * **list** if it is related to a contact list; * **reply** if it is related to an incoming message.
      *
      * @return $this
      */
@@ -401,7 +401,7 @@ class GetContactsAutocompleteResponseItem implements ModelInterface, ArrayAccess
     /**
      * Sets value
      *
-     * @param string $value Id of contact/list if entityType is contact/list OR phone number if entityType is reply.
+     * @param string $value ID of the contact/list if entityType is contact/list OR phone number if entityType is reply.
      *
      * @return $this
      */
@@ -449,7 +449,7 @@ class GetContactsAutocompleteResponseItem implements ModelInterface, ArrayAccess
     /**
      * Sets sharedBy
      *
-     * @param string $sharedBy If contact or list was shared by another sub-account then name if this user will be shown.
+     * @param string $sharedBy If contact or list was shared by another sub-account, the name of this user will be shown.
      *
      * @return $this
      */
@@ -545,7 +545,7 @@ class GetContactsAutocompleteResponseItem implements ModelInterface, ArrayAccess
     /**
      * Sets userId
      *
-     * @param int $userId Owner id of the contact/list (if it was shared).
+     * @param int $userId Owner ID of the contact/list (if it was shared).
      *
      * @return $this
      */
