@@ -86,7 +86,7 @@ Method | HTTP request | Description
 [**getList**](TextMagicApi.md#getList) | **GET** /api/v2/lists/{id} | Get the details of a specific list
 [**getListContactsIds**](TextMagicApi.md#getListContactsIds) | **GET** /api/v2/lists/{id}/contacts/ids | Get all contacts IDs in a list
 [**getLists**](TextMagicApi.md#getLists) | **GET** /api/v2/lists | Get all lists
-[**getListsOfContact**](TextMagicApi.md#getListsOfContact) | **GET** /api/v2/contacts/{id}/lists | Get contact&#39;s lists
+[**getListsOfContact**](TextMagicApi.md#getListsOfContact) | **GET** /api/v2/contacts/{id}/lists | Get a contact&#39;s lists
 [**getMessagePreview**](TextMagicApi.md#getMessagePreview) | **GET** /api/v2/messages/preview | Preview message
 [**getMessagePrice**](TextMagicApi.md#getMessagePrice) | **GET** /api/v2/messages/price/normalized | Check message price
 [**getMessageSession**](TextMagicApi.md#getMessageSession) | **GET** /api/v2/sessions/{id} | Get a session&#x60;s details
@@ -4797,9 +4797,9 @@ Name | Type | Description  | Notes
 # **getListsOfContact**
 > \TextMagic\Models\GetListsOfContactPaginatedResponse getListsOfContact($id, $page, $limit)
 
-Get contact's lists
+Get a contact's lists
 
-Get all the lists in which the contact is included
+Get all the lists in which a contact is included.
 
 ### Example
 ```php
@@ -7151,11 +7151,11 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 );
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
-$ids = "\"1,2,3,4\""; // string | Find lists by ID(s)
-$query = "\"A\""; // string | Find lists by specified search query
-$onlyMine = 0; // int | Return only current user lists
-$onlyDefault = 0; // int | Return only default lists
-$orderBy = "id"; // string | Order results by some field. Default is id
+$ids = "\"1,2,3,4\""; // string | Find lists by IDs.
+$query = "\"A\""; // string | Find lists by specified search query.
+$onlyMine = 0; // int | Return only current user lists.
+$onlyDefault = 0; // int | Return only default lists.
+$orderBy = "id"; // string | Order results by some field. Default is id.
 $direction = "desc"; // string | Order direction. Default is desc.
 
 try {
@@ -7173,11 +7173,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
- **ids** | **string**| Find lists by ID(s) | [optional]
- **query** | **string**| Find lists by specified search query | [optional]
- **onlyMine** | **int**| Return only current user lists | [optional] [default to 0]
- **onlyDefault** | **int**| Return only default lists | [optional] [default to 0]
- **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
+ **ids** | **string**| Find lists by IDs. | [optional]
+ **query** | **string**| Find lists by specified search query. | [optional]
+ **onlyMine** | **int**| Return only current user lists. | [optional] [default to 0]
+ **onlyDefault** | **int**| Return only default lists. | [optional] [default to 0]
+ **orderBy** | **string**| Order results by some field. Default is id. | [optional] [default to id]
  **direction** | **string**| Order direction. Default is desc. | [optional] [default to desc]
 
 ### Return type

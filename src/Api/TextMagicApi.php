@@ -22006,7 +22006,7 @@ class TextMagicApi
     /**
      * Operation getListsOfContact
      *
-     * Get contact's lists
+     * Get a contact's lists
      *
      * @param  int $id id (required)
      * @param  int $page Fetch specified results page. (optional, default to 1)
@@ -22025,7 +22025,7 @@ class TextMagicApi
     /**
      * Operation getListsOfContactWithHttpInfo
      *
-     * Get contact's lists
+     * Get a contact's lists
      *
      * @param  int $id (required)
      * @param  int $page Fetch specified results page. (optional, default to 1)
@@ -22118,7 +22118,7 @@ class TextMagicApi
     /**
      * Operation getListsOfContactAsync
      *
-     * Get contact's lists
+     * Get a contact's lists
      *
      * @param  int $id (required)
      * @param  int $page Fetch specified results page. (optional, default to 1)
@@ -22140,7 +22140,7 @@ class TextMagicApi
     /**
      * Operation getListsOfContactAsyncWithHttpInfo
      *
-     * Get contact's lists
+     * Get a contact's lists
      *
      * @param  int $id (required)
      * @param  int $page Fetch specified results page. (optional, default to 1)
@@ -33242,11 +33242,11 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $ids Find lists by ID(s) (optional)
-     * @param  string $query Find lists by specified search query (optional)
-     * @param  int $onlyMine Return only current user lists (optional, default to 0)
-     * @param  int $onlyDefault Return only default lists (optional, default to 0)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
+     * @param  string $ids Find lists by IDs. (optional)
+     * @param  string $query Find lists by specified search query. (optional)
+     * @param  int $onlyMine Return only current user lists. (optional, default to 0)
+     * @param  int $onlyDefault Return only default lists. (optional, default to 0)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \TextMagic\ApiException on non-2xx response
@@ -33266,11 +33266,11 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $ids Find lists by ID(s) (optional)
-     * @param  string $query Find lists by specified search query (optional)
-     * @param  int $onlyMine Return only current user lists (optional, default to 0)
-     * @param  int $onlyDefault Return only default lists (optional, default to 0)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
+     * @param  string $ids Find lists by IDs. (optional)
+     * @param  string $query Find lists by specified search query. (optional)
+     * @param  int $onlyMine Return only current user lists. (optional, default to 0)
+     * @param  int $onlyDefault Return only default lists. (optional, default to 0)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \TextMagic\ApiException on non-2xx response
@@ -33364,11 +33364,11 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $ids Find lists by ID(s) (optional)
-     * @param  string $query Find lists by specified search query (optional)
-     * @param  int $onlyMine Return only current user lists (optional, default to 0)
-     * @param  int $onlyDefault Return only default lists (optional, default to 0)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
+     * @param  string $ids Find lists by IDs. (optional)
+     * @param  string $query Find lists by specified search query. (optional)
+     * @param  int $onlyMine Return only current user lists. (optional, default to 0)
+     * @param  int $onlyDefault Return only default lists. (optional, default to 0)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
@@ -33391,11 +33391,11 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $ids Find lists by ID(s) (optional)
-     * @param  string $query Find lists by specified search query (optional)
-     * @param  int $onlyMine Return only current user lists (optional, default to 0)
-     * @param  int $onlyDefault Return only default lists (optional, default to 0)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
+     * @param  string $ids Find lists by IDs. (optional)
+     * @param  string $query Find lists by specified search query. (optional)
+     * @param  int $onlyMine Return only current user lists. (optional, default to 0)
+     * @param  int $onlyDefault Return only default lists. (optional, default to 0)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
@@ -33448,11 +33448,11 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $ids Find lists by ID(s) (optional)
-     * @param  string $query Find lists by specified search query (optional)
-     * @param  int $onlyMine Return only current user lists (optional, default to 0)
-     * @param  int $onlyDefault Return only default lists (optional, default to 0)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
+     * @param  string $ids Find lists by IDs. (optional)
+     * @param  string $query Find lists by specified search query. (optional)
+     * @param  int $onlyMine Return only current user lists. (optional, default to 0)
+     * @param  int $onlyDefault Return only default lists. (optional, default to 0)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException

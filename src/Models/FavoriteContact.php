@@ -345,7 +345,7 @@ class FavoriteContact implements ModelInterface, ArrayAccess
     /**
      * Sets primaryLabel
      *
-     * @param string $primaryLabel Contact first name/last name if entityType is **contact**, List name if entity type is **list**.
+     * @param string $primaryLabel Contact first name/last name if entityType is **contact** List name if entity type is **list**.
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class FavoriteContact implements ModelInterface, ArrayAccess
     /**
      * Sets secondaryLabel
      *
-     * @param string $secondaryLabel Phone number if entityType is **contact**, List contacts number if entity type is **list**.
+     * @param string $secondaryLabel Phone number if entityType is **contact** List contacts number if entity type is **list**.
      *
      * @return $this
      */
