@@ -253,7 +253,7 @@ class SenderSettingsItem implements ModelInterface, ArrayAccess
     /**
      * Sets phone
      *
-     * @param string $phone Phone enabled for sending to specified country
+     * @param string $phone Phone enabled for sending to a specified country
      *
      * @return $this
      */

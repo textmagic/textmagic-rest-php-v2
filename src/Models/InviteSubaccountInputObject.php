@@ -252,7 +252,7 @@ class InviteSubaccountInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email Invitation email will be sent to this email address.
+     * @param string $email The invitation email will be sent to this email address.
      *
      * @return $this
      */

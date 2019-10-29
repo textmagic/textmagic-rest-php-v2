@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **email** | **string** |  | [optional] 
 **phone** | **string** |  | [optional] 
 **company** | **string** | Account company name. | [optional] 
-**timezone** | **int** | The timezome internal id. See [Get timezones](http://docs.textmagictesting.com/#operation/getTimezones). | [optional] 
+**timezone** | **int** | The timezome internal ID. See [Get timezones](http://docs.textmagictesting.com/#operation/getTimezones). | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

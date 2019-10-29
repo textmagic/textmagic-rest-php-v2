@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Dedicated number ID. | 
-**displayTimeFormat** | **string** | Format for representation of time | [optional] 
+**displayTimeFormat** | **string** | Format for representation of time. | [optional] 
 **phone** | **string** | Dedicated phone number. | [optional] 
 **user** | [**\TextMagic\Models\User**](User.md) |  | 
 **purchasedAt** | [**\DateTime**](\DateTime.md) | Time when the dedicated number was purchased. | 

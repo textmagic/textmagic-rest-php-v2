@@ -235,7 +235,7 @@ class RequestNewSubaccountTokenInputObject implements ModelInterface, ArrayAcces
     /**
      * Sets userId
      *
-     * @param int $userId Subaccount ID
+     * @param int $userId Sub-account ID.
      *
      * @return $this
      */
@@ -259,7 +259,7 @@ class RequestNewSubaccountTokenInputObject implements ModelInterface, ArrayAcces
     /**
      * Sets password
      *
-     * @param string $password Your account password
+     * @param string $password Your account password.
      *
      * @return $this
      */
@@ -283,7 +283,7 @@ class RequestNewSubaccountTokenInputObject implements ModelInterface, ArrayAcces
     /**
      * Sets appName
      *
-     * @param string $appName Application name
+     * @param string $appName Application name.
      *
      * @return $this
      */

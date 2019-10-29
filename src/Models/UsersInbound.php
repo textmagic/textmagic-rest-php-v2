@@ -324,7 +324,7 @@ class UsersInbound implements ModelInterface, ArrayAccess
     /**
      * Sets displayTimeFormat
      *
-     * @param string $displayTimeFormat Format for representation of time
+     * @param string $displayTimeFormat Format for representation of time.
      *
      * @return $this
      */

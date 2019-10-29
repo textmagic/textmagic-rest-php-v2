@@ -253,7 +253,7 @@ class PingResponse implements ModelInterface, ArrayAccess
     /**
      * Sets utcDateTime
      *
-     * @param string $utcDateTime Current date time
+     * @param string $utcDateTime Current date and time.
      *
      * @return $this
      */

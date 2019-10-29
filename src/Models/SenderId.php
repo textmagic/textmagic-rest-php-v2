@@ -302,7 +302,7 @@ class SenderId implements ModelInterface, ArrayAccess
     /**
      * Sets displayTimeFormat
      *
-     * @param string $displayTimeFormat Format for representation of time
+     * @param string $displayTimeFormat Format for representation of time.
      *
      * @return $this
      */
@@ -374,7 +374,7 @@ class SenderId implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status *   **P** for Pending. This Sender ID is being reviewed by our support team. *   **R** for Rejected. Our support team rejected your application for this Sender ID. *   **A** for Active.
+     * @param string $status *   **P** for Pending - this Sender ID is being reviewed by our support team; *   **R** for Rejected - our support team rejected your application for this Sender ID; *   **A** for Active.
      *
      * @return $this
      */

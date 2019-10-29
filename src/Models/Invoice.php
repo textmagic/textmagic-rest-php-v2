@@ -280,7 +280,7 @@ class Invoice implements ModelInterface, ArrayAccess
     /**
      * Sets bundle
      *
-     * @param int $bundle Top up amount.
+     * @param int $bundle Top-up amount.
      *
      * @return $this
      */
@@ -304,7 +304,7 @@ class Invoice implements ModelInterface, ArrayAccess
     /**
      * Sets currency
      *
-     * @param string $currency Top up currency.
+     * @param string $currency Top-up currency.
      *
      * @return $this
      */

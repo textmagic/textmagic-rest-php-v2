@@ -229,7 +229,7 @@ class GetSubaccountsWithTokensInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets appName
      *
-     * @param string $appName Application name
+     * @param string $appName Application name.
      *
      * @return $this
      */
@@ -253,7 +253,7 @@ class GetSubaccountsWithTokensInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets password
      *
-     * @param string $password Your account password
+     * @param string $password Your account password.
      *
      * @return $this
      */

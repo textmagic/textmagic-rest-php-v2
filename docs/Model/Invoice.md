@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | The invoice ID. | 
-**bundle** | **int** | Top up amount. | 
-**currency** | **string** | Top up currency. | 
+**bundle** | **int** | Top-up amount. | 
+**currency** | **string** | Top-up currency. | 
 **vat** | **float** | VAT charged (if any). | 
 **paymentMethod** | **string** | Payment method description. | 
 

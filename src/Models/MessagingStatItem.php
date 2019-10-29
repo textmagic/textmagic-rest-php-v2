@@ -334,7 +334,7 @@ class MessagingStatItem implements ModelInterface, ArrayAccess
     /**
      * Sets date
      *
-     * @param \DateTime $date Time interval start, empty if the **by** parameter was set to **off**.
+     * @param \DateTime $date Time interval start: empty if the **by** parameter was set to **off**.
      *
      * @return $this
      */
@@ -454,7 +454,7 @@ class MessagingStatItem implements ModelInterface, ArrayAccess
     /**
      * Sets messagesSentAccepted
      *
-     * @param int $messagesSentAccepted Messages accepted for delivery (in queue), but not yet delivered.
+     * @param int $messagesSentAccepted Messages accepted for delivery (in queue) but not yet delivered.
      *
      * @return $this
      */
@@ -502,7 +502,7 @@ class MessagingStatItem implements ModelInterface, ArrayAccess
     /**
      * Sets messagesSentFailed
      *
-     * @param int $messagesSentFailed Messages that have failed for whatever reason, e.g. the destination phone was switched off for 48 hours or the recipient phone account is out of service.
+     * @param int $messagesSentFailed Messages that have failed for whatever reason, e.g. the destination phone was switched off for 48 hours or the recipient's phone account is out of service.
      *
      * @return $this
      */

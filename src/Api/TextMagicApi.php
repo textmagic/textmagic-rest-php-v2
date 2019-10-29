@@ -20029,7 +20029,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find contacts or lists by specified search query (optional)
+     * @param  string $query Find contacts or lists by specified search query. (optional)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -20048,7 +20048,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find contacts or lists by specified search query (optional)
+     * @param  string $query Find contacts or lists by specified search query. (optional)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -20133,7 +20133,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find contacts or lists by specified search query (optional)
+     * @param  string $query Find contacts or lists by specified search query. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -20155,7 +20155,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find contacts or lists by specified search query (optional)
+     * @param  string $query Find contacts or lists by specified search query. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -20207,7 +20207,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find contacts or lists by specified search query (optional)
+     * @param  string $query Find contacts or lists by specified search query. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -24287,7 +24287,7 @@ class TextMagicApi
      *
      * Get messaging statistics
      *
-     * @param  string $by *   **off** to get total values per specified time interval *   **day** to show values grouped by day *   **month** to show values grouped by month *   **year** to show values grouped by year (optional, default to off)
+     * @param  string $by *   **off** - to get total values per specified time interval; *   **day** - to show values grouped by day; *   **month** - to show values grouped by month; *   **year** - to show values grouped by year. (optional, default to off)
      * @param  int $start Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior. (optional)
      * @param  int $end Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today. (optional)
      *
@@ -24306,7 +24306,7 @@ class TextMagicApi
      *
      * Get messaging statistics
      *
-     * @param  string $by *   **off** to get total values per specified time interval *   **day** to show values grouped by day *   **month** to show values grouped by month *   **year** to show values grouped by year (optional, default to off)
+     * @param  string $by *   **off** - to get total values per specified time interval; *   **day** - to show values grouped by day; *   **month** - to show values grouped by month; *   **year** - to show values grouped by year. (optional, default to off)
      * @param  int $start Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior. (optional)
      * @param  int $end Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today. (optional)
      *
@@ -24399,7 +24399,7 @@ class TextMagicApi
      *
      * Get messaging statistics
      *
-     * @param  string $by *   **off** to get total values per specified time interval *   **day** to show values grouped by day *   **month** to show values grouped by month *   **year** to show values grouped by year (optional, default to off)
+     * @param  string $by *   **off** - to get total values per specified time interval; *   **day** - to show values grouped by day; *   **month** - to show values grouped by month; *   **year** - to show values grouped by year. (optional, default to off)
      * @param  int $start Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior. (optional)
      * @param  int $end Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today. (optional)
      *
@@ -24421,7 +24421,7 @@ class TextMagicApi
      *
      * Get messaging statistics
      *
-     * @param  string $by *   **off** to get total values per specified time interval *   **day** to show values grouped by day *   **month** to show values grouped by month *   **year** to show values grouped by year (optional, default to off)
+     * @param  string $by *   **off** - to get total values per specified time interval; *   **day** - to show values grouped by day; *   **month** - to show values grouped by month; *   **year** - to show values grouped by year. (optional, default to off)
      * @param  int $start Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior. (optional)
      * @param  int $end Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today. (optional)
      *
@@ -24473,7 +24473,7 @@ class TextMagicApi
     /**
      * Create request for operation 'getMessagingStat'
      *
-     * @param  string $by *   **off** to get total values per specified time interval *   **day** to show values grouped by day *   **month** to show values grouped by month *   **year** to show values grouped by year (optional, default to off)
+     * @param  string $by *   **off** - to get total values per specified time interval; *   **day** - to show values grouped by day; *   **month** - to show values grouped by month; *   **year** - to show values grouped by year. (optional, default to off)
      * @param  int $start Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior. (optional)
      * @param  int $end Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today. (optional)
      *
@@ -26847,7 +26847,7 @@ class TextMagicApi
     /**
      * Operation getSubaccounts
      *
-     * Get sub-accounts list
+     * Get a sub-accounts list
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
@@ -26865,7 +26865,7 @@ class TextMagicApi
     /**
      * Operation getSubaccountsWithHttpInfo
      *
-     * Get sub-accounts list
+     * Get a sub-accounts list
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
@@ -26949,7 +26949,7 @@ class TextMagicApi
     /**
      * Operation getSubaccountsAsync
      *
-     * Get sub-accounts list
+     * Get a sub-accounts list
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
@@ -26970,7 +26970,7 @@ class TextMagicApi
     /**
      * Operation getSubaccountsAsyncWithHttpInfo
      *
-     * Get sub-accounts list
+     * Get a sub-accounts list
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
@@ -27120,7 +27120,7 @@ class TextMagicApi
     /**
      * Operation getSubaccountsWithTokens
      *
-     * Get all sub-accounts with their REST API tokens associated with app name
+     * Get all sub-accounts with their REST API tokens associated with a specified app name
      *
      * @param  \TextMagic\Models\GetSubaccountsWithTokensInputObject $getSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject (required)
      * @param  float $page Fetch specified results page. (optional, default to 1)
@@ -27139,7 +27139,7 @@ class TextMagicApi
     /**
      * Operation getSubaccountsWithTokensWithHttpInfo
      *
-     * Get all sub-accounts with their REST API tokens associated with app name
+     * Get all sub-accounts with their REST API tokens associated with a specified app name
      *
      * @param  \TextMagic\Models\GetSubaccountsWithTokensInputObject $getSubaccountsWithTokensInputObject (required)
      * @param  float $page Fetch specified results page. (optional, default to 1)
@@ -27232,7 +27232,7 @@ class TextMagicApi
     /**
      * Operation getSubaccountsWithTokensAsync
      *
-     * Get all sub-accounts with their REST API tokens associated with app name
+     * Get all sub-accounts with their REST API tokens associated with a specified app name
      *
      * @param  \TextMagic\Models\GetSubaccountsWithTokensInputObject $getSubaccountsWithTokensInputObject (required)
      * @param  float $page Fetch specified results page. (optional, default to 1)
@@ -27254,7 +27254,7 @@ class TextMagicApi
     /**
      * Operation getSubaccountsWithTokensAsyncWithHttpInfo
      *
-     * Get all sub-accounts with their REST API tokens associated with app name
+     * Get all sub-accounts with their REST API tokens associated with a specified app name
      *
      * @param  \TextMagic\Models\GetSubaccountsWithTokensInputObject $getSubaccountsWithTokensInputObject (required)
      * @param  float $page Fetch specified results page. (optional, default to 1)
@@ -27699,7 +27699,7 @@ class TextMagicApi
      *
      * Get timezones
      *
-     * @param  int $full Return full info about timezones in array (0 or 1). Default is 0 (optional, default to 0)
+     * @param  int $full Return full info about timezones in array (0 or 1). Default is 0. (optional, default to 0)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -27716,7 +27716,7 @@ class TextMagicApi
      *
      * Get timezones
      *
-     * @param  int $full Return full info about timezones in array (0 or 1). Default is 0 (optional, default to 0)
+     * @param  int $full Return full info about timezones in array (0 or 1). Default is 0. (optional, default to 0)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -27807,7 +27807,7 @@ class TextMagicApi
      *
      * Get timezones
      *
-     * @param  int $full Return full info about timezones in array (0 or 1). Default is 0 (optional, default to 0)
+     * @param  int $full Return full info about timezones in array (0 or 1). Default is 0. (optional, default to 0)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -27827,7 +27827,7 @@ class TextMagicApi
      *
      * Get timezones
      *
-     * @param  int $full Return full info about timezones in array (0 or 1). Default is 0 (optional, default to 0)
+     * @param  int $full Return full info about timezones in array (0 or 1). Default is 0. (optional, default to 0)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -27877,7 +27877,7 @@ class TextMagicApi
     /**
      * Create request for operation 'getTimezones'
      *
-     * @param  int $full Return full info about timezones in array (0 or 1). Default is 0 (optional, default to 0)
+     * @param  int $full Return full info about timezones in array (0 or 1). Default is 0. (optional, default to 0)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -39667,7 +39667,7 @@ class TextMagicApi
      *
      * Upload an avatar
      *
-     * @param  \SplFileObject $image User avatar. Should be PNG or JPG file not more than 10 MB (required)
+     * @param  \SplFileObject $image User avatar. Should be a PNG or JPG file not more than 10 MB. (required)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -39683,7 +39683,7 @@ class TextMagicApi
      *
      * Upload an avatar
      *
-     * @param  \SplFileObject $image User avatar. Should be PNG or JPG file not more than 10 MB (required)
+     * @param  \SplFileObject $image User avatar. Should be a PNG or JPG file not more than 10 MB. (required)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -39752,7 +39752,7 @@ class TextMagicApi
      *
      * Upload an avatar
      *
-     * @param  \SplFileObject $image User avatar. Should be PNG or JPG file not more than 10 MB (required)
+     * @param  \SplFileObject $image User avatar. Should be a PNG or JPG file not more than 10 MB. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -39772,7 +39772,7 @@ class TextMagicApi
      *
      * Upload an avatar
      *
-     * @param  \SplFileObject $image User avatar. Should be PNG or JPG file not more than 10 MB (required)
+     * @param  \SplFileObject $image User avatar. Should be a PNG or JPG file not more than 10 MB. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -39808,7 +39808,7 @@ class TextMagicApi
     /**
      * Create request for operation 'uploadAvatar'
      *
-     * @param  \SplFileObject $image User avatar. Should be PNG or JPG file not more than 10 MB (required)
+     * @param  \SplFileObject $image User avatar. Should be a PNG or JPG file not more than 10 MB. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
