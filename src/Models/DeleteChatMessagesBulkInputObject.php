@@ -235,7 +235,7 @@ class DeleteChatMessagesBulkInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets inboundIds
      *
-     * @param string $inboundIds Inbound messages ID(s) to delete. Require when \"all\" equal to 0 (false).
+     * @param string $inboundIds Inbound message IDs to delete. Require when \"all\" is equal to 0 (false).
      *
      * @return $this
      */
@@ -259,7 +259,7 @@ class DeleteChatMessagesBulkInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets sentIds
      *
-     * @param string $sentIds Sent messages ID(s) to delete. Require when \"all\" equal to 0 (false).
+     * @param string $sentIds Sent message IDs to delete. Require when \"all\" is equal to 0 (false).
      *
      * @return $this
      */
@@ -283,7 +283,7 @@ class DeleteChatMessagesBulkInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets callsIds
      *
-     * @param string $callsIds Calls ID(s) to delete. Require when \"all\" equal to 0 (false).
+     * @param string $callsIds Calls IDs to delete. Require when \"all\" is equal to 0 (false).
      *
      * @return $this
      */
@@ -307,7 +307,7 @@ class DeleteChatMessagesBulkInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets all
      *
-     * @param bool $all Default is 0 (false). If set to 1 all the entities will be removed.
+     * @param bool $all Default is 0 (false). If set to 1, all entities will be removed.
      *
      * @return $this
      */

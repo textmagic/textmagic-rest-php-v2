@@ -463,7 +463,7 @@ class MessageOut implements ModelInterface, ArrayAccess
     /**
      * Sets receiver
      *
-     * @param string $receiver Recipient phone number.
+     * @param string $receiver Recipient`s phone number.
      *
      * @return $this
      */
@@ -568,7 +568,7 @@ class MessageOut implements ModelInterface, ArrayAccess
     /**
      * Sets sessionId
      *
-     * @param int $sessionId Message Session ID of a Message.
+     * @param int $sessionId Message Session ID of a message.
      *
      * @return $this
      */
@@ -784,7 +784,7 @@ class MessageOut implements ModelInterface, ArrayAccess
     /**
      * Sets phone
      *
-     * @param string $phone Receipent phone number.
+     * @param string $phone Receipent`s phone number.
      *
      * @return $this
      */
@@ -856,7 +856,7 @@ class MessageOut implements ModelInterface, ArrayAccess
     /**
      * Sets fromEmail
      *
-     * @param string $fromEmail The user email which this message came from. For Email2SMS and Distribution Lists the message will come from an original email address; in other cases, it will come from an account email address.
+     * @param string $fromEmail The user email which this message came from. For Email2SMS and Distribution Lists the messages, it is an original email address - in other cases, it is an account email address.
      *
      * @return $this
      */

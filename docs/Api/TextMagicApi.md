@@ -89,9 +89,9 @@ Method | HTTP request | Description
 [**getListsOfContact**](TextMagicApi.md#getListsOfContact) | **GET** /api/v2/contacts/{id}/lists | Get contact&#39;s lists
 [**getMessagePreview**](TextMagicApi.md#getMessagePreview) | **GET** /api/v2/messages/preview | Preview message
 [**getMessagePrice**](TextMagicApi.md#getMessagePrice) | **GET** /api/v2/messages/price/normalized | Check message price
-[**getMessageSession**](TextMagicApi.md#getMessageSession) | **GET** /api/v2/sessions/{id} | Get a session details
-[**getMessageSessionStat**](TextMagicApi.md#getMessageSessionStat) | **GET** /api/v2/sessions/{id}/stat | Get a session statistics
-[**getMessagesBySessionId**](TextMagicApi.md#getMessagesBySessionId) | **GET** /api/v2/sessions/{id}/messages | Get a session messages
+[**getMessageSession**](TextMagicApi.md#getMessageSession) | **GET** /api/v2/sessions/{id} | Get a session&#x60;s details
+[**getMessageSessionStat**](TextMagicApi.md#getMessageSessionStat) | **GET** /api/v2/sessions/{id}/stat | Get a session&#x60;s statistics
+[**getMessagesBySessionId**](TextMagicApi.md#getMessagesBySessionId) | **GET** /api/v2/sessions/{id}/messages | Get a session&#x60;s messages
 [**getMessagingCounters**](TextMagicApi.md#getMessagingCounters) | **GET** /api/v2/stats/messaging/data | Get sent/received messages counters values
 [**getMessagingStat**](TextMagicApi.md#getMessagingStat) | **GET** /api/v2/stats/messaging | Get messaging statistics
 [**getOutboundMessage**](TextMagicApi.md#getOutboundMessage) | **GET** /api/v2/messages/{id} | Get a single message
@@ -104,7 +104,7 @@ Method | HTTP request | Description
 [**getSubaccount**](TextMagicApi.md#getSubaccount) | **GET** /api/v2/subaccounts/{id} | Get sub-account information
 [**getSubaccounts**](TextMagicApi.md#getSubaccounts) | **GET** /api/v2/subaccounts | Get sub-accounts list
 [**getSubaccountsWithTokens**](TextMagicApi.md#getSubaccountsWithTokens) | **POST** /api/v2/subaccounts/tokens/list | Get all sub-accounts with their REST API tokens associated with app name
-[**getTemplate**](TextMagicApi.md#getTemplate) | **GET** /api/v2/templates/{id} | Get a template details
+[**getTemplate**](TextMagicApi.md#getTemplate) | **GET** /api/v2/templates/{id} | Get a template&#x60;s details
 [**getTimezones**](TextMagicApi.md#getTimezones) | **GET** /api/v2/timezones | Get timezones
 [**getUnreadMessagesTotal**](TextMagicApi.md#getUnreadMessagesTotal) | **GET** /api/v2/chats/unread/count | Get unread messages number
 [**getUnsubscribedContact**](TextMagicApi.md#getUnsubscribedContact) | **GET** /api/v2/unsubscribers/{id} | Get the details of a specific unsubscribed contact
@@ -496,7 +496,7 @@ Name | Type | Description  | Notes
 
 Close chats (bulk)
 
-Close chats by chat ids or close all chats
+Close chats by chat IDs or close all chats
 
 ### Example
 ```php
@@ -1092,7 +1092,7 @@ void (empty response body)
 
 Delete chat messages by ID(s)
 
-Delete messages from chat by given messages ID(s).
+Delete messages from chat by given message IDs.
 
 ### Example
 ```php
@@ -1149,7 +1149,7 @@ void (empty response body)
 
 Delete chats (bulk)
 
-Delete chats by given ID(s) or delete all chats.
+Delete chats by given IDs or delete all chats.
 
 ### Example
 ```php
@@ -2035,7 +2035,7 @@ void (empty response body)
 
 Delete sessions (bulk)
 
-Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
+Delete message sessions, together with all nested messages, by given ID(s) or delete all message sessions.
 
 ### Example
 ```php
@@ -2420,7 +2420,7 @@ void (empty response body)
 
 Delete templates (bulk)
 
-Delete template by given ID(s) or delete all templates.
+Delete templates by given IDs or delete all templates.
 
 ### Example
 ```php
@@ -4756,8 +4756,8 @@ $page = 1; // int | The current fetched page.
 $limit = 10; // int | The number of results per page.
 $orderBy = "id"; // string | Order results by some field. Default is id.
 $direction = "desc"; // string | Order direction. Default is desc.
-$favoriteOnly = 0; // int | Return only favorite lists
-$onlyMine = 0; // int | Return only current user lists
+$favoriteOnly = 0; // int | Return only favorited lists.
+$onlyMine = 0; // int | Return only current user lists.
 
 try {
     $result = $apiInstance->getLists($page, $limit, $orderBy, $direction, $favoriteOnly, $onlyMine);
@@ -4776,8 +4776,8 @@ Name | Type | Description  | Notes
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
  **orderBy** | **string**| Order results by some field. Default is id. | [optional] [default to id]
  **direction** | **string**| Order direction. Default is desc. | [optional] [default to desc]
- **favoriteOnly** | **int**| Return only favorite lists | [optional] [default to 0]
- **onlyMine** | **int**| Return only current user lists | [optional] [default to 0]
+ **favoriteOnly** | **int**| Return only favorited lists. | [optional] [default to 0]
+ **onlyMine** | **int**| Return only current user lists. | [optional] [default to 0]
 
 ### Return type
 
@@ -5035,9 +5035,9 @@ Name | Type | Description  | Notes
 # **getMessageSession**
 > \TextMagic\Models\MessageSession getMessageSession($id)
 
-Get a session details
+Get a session`s details
 
-Get a specific session’s details
+Get a specific session’s details.
 
 ### Example
 ```php
@@ -5056,7 +5056,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 1; // int | a session ID
+$id = 1; // int | Session ID.
 
 try {
     $result = $apiInstance->getMessageSession($id);
@@ -5071,7 +5071,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| a session ID |
+ **id** | **int**| Session ID. |
 
 ### Return type
 
@@ -5091,7 +5091,7 @@ Name | Type | Description  | Notes
 # **getMessageSessionStat**
 > \TextMagic\Models\GetMessageSessionStatResponse getMessageSessionStat($id, $includeDeleted)
 
-Get a session statistics
+Get a session`s statistics
 
 
 
@@ -5113,7 +5113,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     $config
 );
 $id = 1; // int | 
-$includeDeleted = 0; // int | Search also in deleted messages
+$includeDeleted = 0; // int | Search also in deleted messages.
 
 try {
     $result = $apiInstance->getMessageSessionStat($id, $includeDeleted);
@@ -5129,7 +5129,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  |
- **includeDeleted** | **int**| Search also in deleted messages | [optional] [default to 0]
+ **includeDeleted** | **int**| Search also in deleted messages. | [optional] [default to 0]
 
 ### Return type
 
@@ -5149,9 +5149,9 @@ Name | Type | Description  | Notes
 # **getMessagesBySessionId**
 > \TextMagic\Models\GetMessagesBySessionIdPaginatedResponse getMessagesBySessionId($id, $page, $limit, $statuses, $includeDeleted)
 
-Get a session messages
+Get a session`s messages
 
-A useful synonym for \"messages/search\" command with provided \"sessionId\" parameter.
+A useful synonym for the \"messages/search\" command with the provided \"sessionId\" parameter.
 
 ### Example
 ```php
@@ -5173,8 +5173,8 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 $id = 1; // int | 
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
-$statuses = "statuses_example"; // string | Find messages by status
-$includeDeleted = 0; // int | Search also in deleted messages
+$statuses = "statuses_example"; // string | Find messages by status.
+$includeDeleted = 0; // int | Search also in deleted messages.
 
 try {
     $result = $apiInstance->getMessagesBySessionId($id, $page, $limit, $statuses, $includeDeleted);
@@ -5192,8 +5192,8 @@ Name | Type | Description  | Notes
  **id** | **int**|  |
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
- **statuses** | **string**| Find messages by status | [optional]
- **includeDeleted** | **int**| Search also in deleted messages | [optional] [default to 0]
+ **statuses** | **string**| Find messages by status. | [optional]
+ **includeDeleted** | **int**| Search also in deleted messages. | [optional] [default to 0]
 
 ### Return type
 
@@ -5907,7 +5907,7 @@ Name | Type | Description  | Notes
 # **getTemplate**
 > \TextMagic\Models\MessageTemplate getTemplate($id)
 
-Get a template details
+Get a template`s details
 
 Get a single template.
 
@@ -6364,7 +6364,7 @@ void (empty response body)
 
 Mark chats as read (bulk)
 
-Mark several chats as read by chat ids or mark all chats as read
+Mark several chats as read by chat IDs or mark all chats as read
 
 ### Example
 ```php
@@ -6419,7 +6419,7 @@ void (empty response body)
 
 Mark chats as unread (bulk)
 
-Mark several chats as UNread by chat ids or mark all chats as UNread
+Mark several chats as UNread by chat IDs or mark all chats as UNread
 
 ### Example
 ```php
@@ -6530,7 +6530,7 @@ Name | Type | Description  | Notes
 
 Mute chats (bulk)
 
-Mute several chats by chat ids or mute all chats
+Mute several chats by chat IDs or mute all chats
 
 ### Example
 ```php
@@ -6637,7 +6637,7 @@ This endpoint does not need any parameter.
 
 Reopen chats (bulk)
 
-Reopen chats by chat ids or reopen all chats
+Reopen chats by chat IDs or reopen all chats
 
 ### Example
 ```php
@@ -7359,9 +7359,9 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 );
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
-$ids = "ids_example"; // string | Find template by ID(s)
-$name = "name_example"; // string | Find template by name
-$content = "content_example"; // string | Find template by content
+$ids = "ids_example"; // string | Find template by ID(s).
+$name = "name_example"; // string | Find template by name.
+$content = "content_example"; // string | Find template by content.
 
 try {
     $result = $apiInstance->searchTemplates($page, $limit, $ids, $name, $content);
@@ -7378,9 +7378,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
- **ids** | **string**| Find template by ID(s) | [optional]
- **name** | **string**| Find template by name | [optional]
- **content** | **string**| Find template by content | [optional]
+ **ids** | **string**| Find template by ID(s). | [optional]
+ **name** | **string**| Find template by name. | [optional]
+ **content** | **string**| Find template by content. | [optional]
 
 ### Return type
 
@@ -7680,7 +7680,7 @@ void (empty response body)
 
 Unmute chats (bulk)
 
-Unmute several chats by chat ids or unmute all chats
+Unmute several chats by chat IDs or unmute all chats
 
 ### Example
 ```php

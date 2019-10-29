@@ -304,7 +304,7 @@ class Timezone implements ModelInterface, ArrayAccess
     /**
      * Sets dst
      *
-     * @param int $dst Is Daylight saving time used in this timezone?
+     * @param int $dst Is daylight saving time used in this timezone?
      *
      * @return $this
      */
@@ -328,7 +328,7 @@ class Timezone implements ModelInterface, ArrayAccess
     /**
      * Sets offset
      *
-     * @param int $offset Offset from UTC time in seconds. In this example it is 21600/60/60=6 hours.
+     * @param int $offset Offset from UTC time in seconds. In this example, it is 21600/60/60=6 hours.
      *
      * @return $this
      */

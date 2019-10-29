@@ -302,7 +302,7 @@ class DeleteChatsBulkInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Default is empty string. If set then all entities with specified status will be affected.
+     * @param string $status Default is empty string. If set, all entities with specified status will be affected.
      *
      * @return $this
      */

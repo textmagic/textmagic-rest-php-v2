@@ -380,7 +380,7 @@ class MessageSession implements ModelInterface, ArrayAccess
     /**
      * Sets source
      *
-     * @param string $source *   **O** – for TextMagic Online *   **A** – for API *   **M** – for TextMagic Messenger *   **E** – for [Email to SMS](http://docs.textmagictesting.com/#tag/Send-Email-to-SMS) *   **X** – for [Distribution Lists](http://docs.textmagictesting.com/#tag/Distribution-Lists)
+     * @param string $source *   **O** – for TextMagic Online; *   **A** – for API; *   **M** – for TextMagic Messenger; *   **E** – for [Email to SMS](http://docs.textmagictesting.com/#tag/Send-Email-to-SMS); *   **X** – for [Distribution Lists](http://docs.textmagictesting.com/#tag/Distribution-Lists).
      *
      * @return $this
      */
@@ -476,7 +476,7 @@ class MessageSession implements ModelInterface, ArrayAccess
     /**
      * Sets destination
      *
-     * @param string $destination Destination type of a Message Session: * **t** - text SMS * **s** - text-to-speech * **v** - voice broadcast
+     * @param string $destination Destination type of a Message Session: * **t** – text SMS; * **s** – text-to-speech; * **v** – voice broadcast.
      *
      * @return $this
      */

@@ -373,7 +373,7 @@ class ModelList implements ModelInterface, ArrayAccess
     /**
      * Sets favorited
      *
-     * @param bool $favorited Is the List favourite? [Custom fields list](http://docs.textmagictesting.com/#operation/getFavourites).
+     * @param bool $favorited Is the List favorited? See [Favorites list](http://docs.textmagictesting.com/#operation/getFavourites).
      *
      * @return $this
      */
@@ -517,7 +517,7 @@ class ModelList implements ModelInterface, ArrayAccess
     /**
      * Sets isDefault
      *
-     * @param bool $isDefault Indicates that List is used as a default. All new contacts that added via Web-app will be added in this List by default.
+     * @param bool $isDefault Indicates that List is used as a default. All new contacts added via web app will be added in this List by default.
      *
      * @return $this
      */

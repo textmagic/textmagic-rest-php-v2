@@ -21695,8 +21695,8 @@ class TextMagicApi
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
-     * @param  int $favoriteOnly Return only favorite lists (optional, default to 0)
-     * @param  int $onlyMine Return only current user lists (optional, default to 0)
+     * @param  int $favoriteOnly Return only favorited lists. (optional, default to 0)
+     * @param  int $onlyMine Return only current user lists. (optional, default to 0)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -21717,8 +21717,8 @@ class TextMagicApi
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
-     * @param  int $favoriteOnly Return only favorite lists (optional, default to 0)
-     * @param  int $onlyMine Return only current user lists (optional, default to 0)
+     * @param  int $favoriteOnly Return only favorited lists. (optional, default to 0)
+     * @param  int $onlyMine Return only current user lists. (optional, default to 0)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -21813,8 +21813,8 @@ class TextMagicApi
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
-     * @param  int $favoriteOnly Return only favorite lists (optional, default to 0)
-     * @param  int $onlyMine Return only current user lists (optional, default to 0)
+     * @param  int $favoriteOnly Return only favorited lists. (optional, default to 0)
+     * @param  int $onlyMine Return only current user lists. (optional, default to 0)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -21838,8 +21838,8 @@ class TextMagicApi
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
-     * @param  int $favoriteOnly Return only favorite lists (optional, default to 0)
-     * @param  int $onlyMine Return only current user lists (optional, default to 0)
+     * @param  int $favoriteOnly Return only favorited lists. (optional, default to 0)
+     * @param  int $onlyMine Return only current user lists. (optional, default to 0)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -21893,8 +21893,8 @@ class TextMagicApi
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
-     * @param  int $favoriteOnly Return only favorite lists (optional, default to 0)
-     * @param  int $onlyMine Return only current user lists (optional, default to 0)
+     * @param  int $favoriteOnly Return only favorited lists. (optional, default to 0)
+     * @param  int $onlyMine Return only current user lists. (optional, default to 0)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -23147,9 +23147,9 @@ class TextMagicApi
     /**
      * Operation getMessageSession
      *
-     * Get a session details
+     * Get a session`s details
      *
-     * @param  int $id a session ID (required)
+     * @param  int $id Session ID. (required)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -23164,9 +23164,9 @@ class TextMagicApi
     /**
      * Operation getMessageSessionWithHttpInfo
      *
-     * Get a session details
+     * Get a session`s details
      *
-     * @param  int $id a session ID (required)
+     * @param  int $id Session ID. (required)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -23255,9 +23255,9 @@ class TextMagicApi
     /**
      * Operation getMessageSessionAsync
      *
-     * Get a session details
+     * Get a session`s details
      *
-     * @param  int $id a session ID (required)
+     * @param  int $id Session ID. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -23275,9 +23275,9 @@ class TextMagicApi
     /**
      * Operation getMessageSessionAsyncWithHttpInfo
      *
-     * Get a session details
+     * Get a session`s details
      *
-     * @param  int $id a session ID (required)
+     * @param  int $id Session ID. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -23327,7 +23327,7 @@ class TextMagicApi
     /**
      * Create request for operation 'getMessageSession'
      *
-     * @param  int $id a session ID (required)
+     * @param  int $id Session ID. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -23429,10 +23429,10 @@ class TextMagicApi
     /**
      * Operation getMessageSessionStat
      *
-     * Get a session statistics
+     * Get a session`s statistics
      *
      * @param  int $id id (required)
-     * @param  int $includeDeleted Search also in deleted messages (optional, default to 0)
+     * @param  int $includeDeleted Search also in deleted messages. (optional, default to 0)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -23447,10 +23447,10 @@ class TextMagicApi
     /**
      * Operation getMessageSessionStatWithHttpInfo
      *
-     * Get a session statistics
+     * Get a session`s statistics
      *
      * @param  int $id (required)
-     * @param  int $includeDeleted Search also in deleted messages (optional, default to 0)
+     * @param  int $includeDeleted Search also in deleted messages. (optional, default to 0)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -23539,10 +23539,10 @@ class TextMagicApi
     /**
      * Operation getMessageSessionStatAsync
      *
-     * Get a session statistics
+     * Get a session`s statistics
      *
      * @param  int $id (required)
-     * @param  int $includeDeleted Search also in deleted messages (optional, default to 0)
+     * @param  int $includeDeleted Search also in deleted messages. (optional, default to 0)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -23560,10 +23560,10 @@ class TextMagicApi
     /**
      * Operation getMessageSessionStatAsyncWithHttpInfo
      *
-     * Get a session statistics
+     * Get a session`s statistics
      *
      * @param  int $id (required)
-     * @param  int $includeDeleted Search also in deleted messages (optional, default to 0)
+     * @param  int $includeDeleted Search also in deleted messages. (optional, default to 0)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -23614,7 +23614,7 @@ class TextMagicApi
      * Create request for operation 'getMessageSessionStat'
      *
      * @param  int $id (required)
-     * @param  int $includeDeleted Search also in deleted messages (optional, default to 0)
+     * @param  int $includeDeleted Search also in deleted messages. (optional, default to 0)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -23720,13 +23720,13 @@ class TextMagicApi
     /**
      * Operation getMessagesBySessionId
      *
-     * Get a session messages
+     * Get a session`s messages
      *
      * @param  int $id id (required)
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $statuses Find messages by status (optional)
-     * @param  int $includeDeleted Search also in deleted messages (optional, default to 0)
+     * @param  string $statuses Find messages by status. (optional)
+     * @param  int $includeDeleted Search also in deleted messages. (optional, default to 0)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -23741,13 +23741,13 @@ class TextMagicApi
     /**
      * Operation getMessagesBySessionIdWithHttpInfo
      *
-     * Get a session messages
+     * Get a session`s messages
      *
      * @param  int $id (required)
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $statuses Find messages by status (optional)
-     * @param  int $includeDeleted Search also in deleted messages (optional, default to 0)
+     * @param  string $statuses Find messages by status. (optional)
+     * @param  int $includeDeleted Search also in deleted messages. (optional, default to 0)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -23828,13 +23828,13 @@ class TextMagicApi
     /**
      * Operation getMessagesBySessionIdAsync
      *
-     * Get a session messages
+     * Get a session`s messages
      *
      * @param  int $id (required)
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $statuses Find messages by status (optional)
-     * @param  int $includeDeleted Search also in deleted messages (optional, default to 0)
+     * @param  string $statuses Find messages by status. (optional)
+     * @param  int $includeDeleted Search also in deleted messages. (optional, default to 0)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -23852,13 +23852,13 @@ class TextMagicApi
     /**
      * Operation getMessagesBySessionIdAsyncWithHttpInfo
      *
-     * Get a session messages
+     * Get a session`s messages
      *
      * @param  int $id (required)
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $statuses Find messages by status (optional)
-     * @param  int $includeDeleted Search also in deleted messages (optional, default to 0)
+     * @param  string $statuses Find messages by status. (optional)
+     * @param  int $includeDeleted Search also in deleted messages. (optional, default to 0)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -23911,8 +23911,8 @@ class TextMagicApi
      * @param  int $id (required)
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $statuses Find messages by status (optional)
-     * @param  int $includeDeleted Search also in deleted messages (optional, default to 0)
+     * @param  string $statuses Find messages by status. (optional)
+     * @param  int $includeDeleted Search also in deleted messages. (optional, default to 0)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -27415,7 +27415,7 @@ class TextMagicApi
     /**
      * Operation getTemplate
      *
-     * Get a template details
+     * Get a template`s details
      *
      * @param  int $id id (required)
      *
@@ -27432,7 +27432,7 @@ class TextMagicApi
     /**
      * Operation getTemplateWithHttpInfo
      *
-     * Get a template details
+     * Get a template`s details
      *
      * @param  int $id (required)
      *
@@ -27523,7 +27523,7 @@ class TextMagicApi
     /**
      * Operation getTemplateAsync
      *
-     * Get a template details
+     * Get a template`s details
      *
      * @param  int $id (required)
      *
@@ -27543,7 +27543,7 @@ class TextMagicApi
     /**
      * Operation getTemplateAsyncWithHttpInfo
      *
-     * Get a template details
+     * Get a template`s details
      *
      * @param  int $id (required)
      *
@@ -34246,9 +34246,9 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $ids Find template by ID(s) (optional)
-     * @param  string $name Find template by name (optional)
-     * @param  string $content Find template by content (optional)
+     * @param  string $ids Find template by ID(s). (optional)
+     * @param  string $name Find template by name. (optional)
+     * @param  string $content Find template by content. (optional)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -34267,9 +34267,9 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $ids Find template by ID(s) (optional)
-     * @param  string $name Find template by name (optional)
-     * @param  string $content Find template by content (optional)
+     * @param  string $ids Find template by ID(s). (optional)
+     * @param  string $name Find template by name. (optional)
+     * @param  string $content Find template by content. (optional)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -34354,9 +34354,9 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $ids Find template by ID(s) (optional)
-     * @param  string $name Find template by name (optional)
-     * @param  string $content Find template by content (optional)
+     * @param  string $ids Find template by ID(s). (optional)
+     * @param  string $name Find template by name. (optional)
+     * @param  string $content Find template by content. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -34378,9 +34378,9 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $ids Find template by ID(s) (optional)
-     * @param  string $name Find template by name (optional)
-     * @param  string $content Find template by content (optional)
+     * @param  string $ids Find template by ID(s). (optional)
+     * @param  string $name Find template by name. (optional)
+     * @param  string $content Find template by content. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -34432,9 +34432,9 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $ids Find template by ID(s) (optional)
-     * @param  string $name Find template by name (optional)
-     * @param  string $content Find template by content (optional)
+     * @param  string $ids Find template by ID(s). (optional)
+     * @param  string $name Find template by name. (optional)
+     * @param  string $content Find template by content. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
