@@ -276,7 +276,7 @@ class InviteSubaccountInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets role
      *
-     * @param string $role Type of account: *   **A** for Administrator sub-account *   **U** for Regular User
+     * @param string $role Type of account: *   **A** for Administrator sub-account; *   **U** for Regular User.
      *
      * @return $this
      */

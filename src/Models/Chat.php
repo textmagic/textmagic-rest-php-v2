@@ -566,7 +566,7 @@ class Chat implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Chat status:   * **a** - Active   * **c** - Closed   * **d** - Deleted
+     * @param string $status Chat status:   * **a** - Active;   * **c** - Closed;   * **d** - Deleted.
      *
      * @return $this
      */

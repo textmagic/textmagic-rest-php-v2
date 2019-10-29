@@ -31695,7 +31695,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find chats by specified search query (optional)
+     * @param  string $query Find chats by specified search query. (optional)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -31714,7 +31714,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find chats by specified search query (optional)
+     * @param  string $query Find chats by specified search query. (optional)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -31799,7 +31799,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find chats by specified search query (optional)
+     * @param  string $query Find chats by specified search query. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -31821,7 +31821,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find chats by specified search query (optional)
+     * @param  string $query Find chats by specified search query. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -31873,7 +31873,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find chats by specified search query (optional)
+     * @param  string $query Find chats by specified search query. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -31977,7 +31977,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $ids Find chats by ID(s) (optional)
+     * @param  string $ids Find chats by ID(s). (optional)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -31996,7 +31996,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $ids Find chats by ID(s) (optional)
+     * @param  string $ids Find chats by ID(s). (optional)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -32081,7 +32081,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $ids Find chats by ID(s) (optional)
+     * @param  string $ids Find chats by ID(s). (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -32103,7 +32103,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $ids Find chats by ID(s) (optional)
+     * @param  string $ids Find chats by ID(s). (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -32155,7 +32155,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $ids Find chats by ID(s) (optional)
+     * @param  string $ids Find chats by ID(s). (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

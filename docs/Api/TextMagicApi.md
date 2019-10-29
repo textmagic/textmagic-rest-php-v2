@@ -6021,7 +6021,7 @@ Name | Type | Description  | Notes
 
 Get unread messages number
 
-Get total amount of unread messages in the current user chats.
+Get the total amount of unread messages in the current user chats.
 
 ### Example
 ```php
@@ -6825,7 +6825,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 );
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
-$query = "query_example"; // string | Find chats by specified search query
+$query = "query_example"; // string | Find chats by specified search query.
 
 try {
     $result = $apiInstance->searchChats($page, $limit, $query);
@@ -6842,7 +6842,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
- **query** | **string**| Find chats by specified search query | [optional]
+ **query** | **string**| Find chats by specified search query. | [optional]
 
 ### Return type
 
@@ -6885,7 +6885,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 );
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
-$ids = "ids_example"; // string | Find chats by ID(s)
+$ids = "ids_example"; // string | Find chats by ID(s).
 
 try {
     $result = $apiInstance->searchChatsByIds($page, $limit, $ids);
@@ -6902,7 +6902,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
- **ids** | **string**| Find chats by ID(s) | [optional]
+ **ids** | **string**| Find chats by ID(s). | [optional]
 
 ### Return type
 
@@ -7514,7 +7514,7 @@ Name | Type | Description  | Notes
 
 Change chat status
 
-Set status of the chat given by ID.
+Set the status of the chat given by ID.
 
 ### Example
 ```php

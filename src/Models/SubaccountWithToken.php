@@ -530,7 +530,7 @@ class SubaccountWithToken implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Current account status: * **A** for Active * **T** for Trial.
+     * @param string $status Current account status: * **A** for Active; * **T** for Trial.
      *
      * @return $this
      */
@@ -707,7 +707,7 @@ class SubaccountWithToken implements ModelInterface, ArrayAccess
     /**
      * Sets subaccountType
      *
-     * @param string $subaccountType Type of account: *   **A** for Administrator sub-account *   **U** for Regular User
+     * @param string $subaccountType Type of account: *   **A** for Administrator sub-account; *   **U** for Regular User.
      *
      * @return $this
      */
