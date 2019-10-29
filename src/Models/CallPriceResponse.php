@@ -319,7 +319,7 @@ class CallPriceResponse implements ModelInterface, ArrayAccess
     /**
      * Sets country
      *
-     * @param string $country 2-letter ISO country code for local phone numbers, used when local is  set to true. Default is account country
+     * @param string $country The 2-letter ISO country code for local phone numbers, used when local is  set to true. Default is account country
      *
      * @return $this
      */

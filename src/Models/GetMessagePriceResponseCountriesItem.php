@@ -274,7 +274,7 @@ class GetMessagePriceResponseCountriesItem implements ModelInterface, ArrayAcces
     /**
      * Sets country
      *
-     * @param string $country Two-letter ISO country code
+     * @param string $country The 2-letter ISO country code.
      *
      * @return $this
      */
@@ -298,7 +298,7 @@ class GetMessagePriceResponseCountriesItem implements ModelInterface, ArrayAcces
     /**
      * Sets countryName
      *
-     * @param string $countryName Country name
+     * @param string $countryName Country name.
      *
      * @return $this
      */
@@ -322,7 +322,7 @@ class GetMessagePriceResponseCountriesItem implements ModelInterface, ArrayAcces
     /**
      * Sets allowDedicated
      *
-     * @param bool $allowDedicated Is allow to use dedicated number
+     * @param bool $allowDedicated Is allowed to use a dedicated number?
      *
      * @return $this
      */
@@ -346,7 +346,7 @@ class GetMessagePriceResponseCountriesItem implements ModelInterface, ArrayAcces
     /**
      * Sets count
      *
-     * @param float $count Parts count to send
+     * @param float $count Parts count to send.
      *
      * @return $this
      */
@@ -370,7 +370,7 @@ class GetMessagePriceResponseCountriesItem implements ModelInterface, ArrayAcces
     /**
      * Sets max
      *
-     * @param float $max Maximum parts to send
+     * @param float $max Maximum parts to send.
      *
      * @return $this
      */
@@ -394,7 +394,7 @@ class GetMessagePriceResponseCountriesItem implements ModelInterface, ArrayAcces
     /**
      * Sets sum
      *
-     * @param string $sum Total price to send
+     * @param string $sum Total price to send.
      *
      * @return $this
      */
@@ -418,7 +418,7 @@ class GetMessagePriceResponseCountriesItem implements ModelInterface, ArrayAcces
     /**
      * Sets landline
      *
-     * @param float $landline Is this landline number?
+     * @param float $landline Is this a landline number?
      *
      * @return $this
      */

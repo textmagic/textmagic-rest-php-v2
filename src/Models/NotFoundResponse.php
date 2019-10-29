@@ -248,7 +248,7 @@ class NotFoundResponse implements ModelInterface, ArrayAccess
     /**
      * Sets message
      *
-     * @param string $message Brief error message. You could display this message to your user or save it in a log.
+     * @param string $message A Brief error message. You could display this message to your user or save it in a log.
      *
      * @return $this
      */

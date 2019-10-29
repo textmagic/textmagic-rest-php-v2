@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**total** | **float** | Total price of the mesasge. | 
+**total** | **float** | Total price of the message. | 
 **parts** | **int** | Message parts (multiples of 160 characters) count. | 
 **countries** | [**\TextMagic\Models\GetMessagePriceResponseCountriesItem[]**](GetMessagePriceResponseCountriesItem.md) |  | 
 

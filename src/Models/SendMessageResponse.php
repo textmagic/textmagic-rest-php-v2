@@ -334,7 +334,7 @@ class SendMessageResponse implements ModelInterface, ArrayAccess
     /**
      * Sets href
      *
-     * @param string $href URI of message session.
+     * @param string $href URI of the message session.
      *
      * @return $this
      */
@@ -358,7 +358,7 @@ class SendMessageResponse implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param string $type Message response type: * **message** when message sent to a single recipient * **session** when message sent to multiple recipients * **schedule** when message has been scheduled for sending * **bulk** when message sent to multiple recipient and the number of recipients requires asynchronous processiong See [Sending more than 1,000 messages in one session](http://docs.textmagictesting.com/#section/Tutorials/Sending-more-than-1000-messages-in-one-session).
+     * @param string $type Message response type: * **message** – when the message is sent to a single recipient. * **session** – when the message is sent is to multiple recipients. * **schedule** - when the message is scheduled for sending. * **bulk** - when the message is sent to multiple recipients and the number of recipients requires asynchronous processing See [Sending more than 1,000 messages in one session](http://docs.textmagictesting.com/#section/Tutorials/Sending-more-than-1000-messages-in-one-session).
      *
      * @return $this
      */

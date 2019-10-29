@@ -640,7 +640,7 @@ class MessageOut implements ModelInterface, ArrayAccess
     /**
      * Sets deleted
      *
-     * @param bool $deleted Indicates that message has been deleted.
+     * @param bool $deleted Indicates that the message has been deleted.
      *
      * @return $this
      */
@@ -664,7 +664,7 @@ class MessageOut implements ModelInterface, ArrayAccess
     /**
      * Sets charset
      *
-     * @param string $charset Message charset. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS
+     * @param string $charset Message charset. Could be: *   **ISO-8859-1** for plaintext SMS; *   **UTF-16BE** for Unicode SMS.
      *
      * @return $this
      */
@@ -688,7 +688,7 @@ class MessageOut implements ModelInterface, ArrayAccess
     /**
      * Sets charsetLabel
      *
-     * @param string $charsetLabel Human-readable message charset label. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS *   **Voice** for voice services (Text-to-Speech or Voice Broadcast) messages
+     * @param string $charsetLabel Human-readable message charset label. Could be: *   **ISO-8859-1** for plaintext SMS; *   **UTF-16BE** for Unicode SMS; *   **Voice** for voice services (Text-to-Speech or Voice Broadcast) messages.
      *
      * @return $this
      */
@@ -712,7 +712,7 @@ class MessageOut implements ModelInterface, ArrayAccess
     /**
      * Sets firstName
      *
-     * @param string $firstName Contact first name. Could be substituted from your [Contacts](http://docs.textmagictesting.com/#tag/Contacts) (even if you submitted phone number instead of contact ID).
+     * @param string $firstName Contact first name. Could be substituted from your [Contacts](http://docs.textmagictesting.com/#tag/Contacts) (even if you submitted the phone number instead of the contact ID).
      *
      * @return $this
      */
@@ -760,7 +760,7 @@ class MessageOut implements ModelInterface, ArrayAccess
     /**
      * Sets country
      *
-     * @param string $country Two-letter ISO country code of the recipient phone number.
+     * @param string $country The 2-letter ISO country code of the recipient's phone number.
      *
      * @return $this
      */
@@ -856,7 +856,7 @@ class MessageOut implements ModelInterface, ArrayAccess
     /**
      * Sets fromEmail
      *
-     * @param string $fromEmail User email which this message came from. For Email2SMS and Distribution Lists messages it will be an original email address, in other cases it is an account email address.
+     * @param string $fromEmail The user email which this message came from. For Email2SMS and Distribution Lists the message will come from an original email address; in other cases, it will come from an account email address.
      *
      * @return $this
      */
@@ -880,7 +880,7 @@ class MessageOut implements ModelInterface, ArrayAccess
     /**
      * Sets fromNumber
      *
-     * @param string $fromNumber Phone number which is used to send SMS.
+     * @param string $fromNumber Phone number used to send the SMS.
      *
      * @return $this
      */

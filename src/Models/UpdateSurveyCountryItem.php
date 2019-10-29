@@ -229,7 +229,7 @@ class UpdateSurveyCountryItem implements ModelInterface, ArrayAccess
     /**
      * Sets country
      *
-     * @param string $country Two-letter ISO country code
+     * @param string $country The 2-letter ISO country code
      *
      * @return $this
      */

@@ -229,7 +229,7 @@ class Country implements ModelInterface, ArrayAccess
     /**
      * Sets id
      *
-     * @param string $id Two-letter ISO country ID.
+     * @param string $id The 2-letter ISO country ID.
      *
      * @return $this
      */

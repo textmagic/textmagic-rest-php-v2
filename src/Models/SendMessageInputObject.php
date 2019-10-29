@@ -631,7 +631,7 @@ class SendMessageInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets createChat
      *
-     * @param bool $createChat Should sending method try to create new Chat(if not exist) with specified recipients.
+     * @param bool $createChat Should sending method try to create new Chat (if not exist) with specified recipients?
      *
      * @return $this
      */
@@ -655,7 +655,7 @@ class SendMessageInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets tts
      *
-     * @param bool $tts Send Text to Speech message.
+     * @param bool $tts Send a Text to Speech message.
      *
      * @return $this
      */
@@ -679,7 +679,7 @@ class SendMessageInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets local
      *
-     * @param bool $local Treat phone numbers passed in \\'phones\\' field as local.
+     * @param bool $local Treat phone numbers passed in the \\'phones\\' field as local.
      *
      * @return $this
      */
@@ -703,7 +703,7 @@ class SendMessageInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets localCountry
      *
-     * @param string $localCountry 2-letter ISO country code for local phone numbers, used when \\'local\\' is set to true. Default is account country.
+     * @param string $localCountry The 2-letter ISO country code for local phone numbers, used when \\'local\\' is set to true. Default is the account country.
      *
      * @return $this
      */

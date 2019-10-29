@@ -319,7 +319,7 @@ class SurveySenderCountries implements ModelInterface, ArrayAccess
     /**
      * Sets allowDedicated
      *
-     * @param bool $allowDedicated allowDedicated
+     * @param bool $allowDedicated Is allowed to use a dedicated number?
      *
      * @return $this
      */

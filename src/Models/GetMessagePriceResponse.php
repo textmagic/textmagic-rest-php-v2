@@ -238,7 +238,7 @@ class GetMessagePriceResponse implements ModelInterface, ArrayAccess
     /**
      * Sets total
      *
-     * @param float $total Total price of the mesasge.
+     * @param float $total Total price of the message.
      *
      * @return $this
      */
