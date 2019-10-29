@@ -201,12 +201,6 @@ class RequestNewSubaccountTokenInputObject implements ModelInterface, ArrayAcces
     {
         $invalidProperties = [];
 
-        if ($this->container['userId'] === null) {
-            $invalidProperties[] = "'userId' can't be null";
-        }
-        if ($this->container['password'] === null) {
-            $invalidProperties[] = "'password' can't be null";
-        }
         return $invalidProperties;
     }
 

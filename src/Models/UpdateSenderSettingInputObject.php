@@ -201,12 +201,6 @@ class UpdateSenderSettingInputObject implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['value'] === null) {
-            $invalidProperties[] = "'value' can't be null";
-        }
-        if ($this->container['country'] === null) {
-            $invalidProperties[] = "'country' can't be null";
-        }
         return $invalidProperties;
     }
 

@@ -219,9 +219,6 @@ class UpdateBalanceNotificationSettingsInputObject implements ModelInterface, Ar
     {
         $invalidProperties = [];
 
-        if ($this->container['alertBalance'] === null) {
-            $invalidProperties[] = "'alertBalance' can't be null";
-        }
         return $invalidProperties;
     }
 

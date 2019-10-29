@@ -195,12 +195,6 @@ class RequestSenderIdInputObject implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['senderId'] === null) {
-            $invalidProperties[] = "'senderId' can't be null";
-        }
-        if ($this->container['explanation'] === null) {
-            $invalidProperties[] = "'explanation' can't be null";
-        }
         return $invalidProperties;
     }
 

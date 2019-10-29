@@ -285,12 +285,6 @@ class SendMessageInputObject implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['text'] === null) {
-            $invalidProperties[] = "'text' can't be null";
-        }
-        if ($this->container['phones'] === null) {
-            $invalidProperties[] = "'phones' can't be null";
-        }
         return $invalidProperties;
     }
 

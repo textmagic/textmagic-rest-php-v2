@@ -207,12 +207,6 @@ class UpdateChatDesktopNotificationSettingsInputObject implements ModelInterface
     {
         $invalidProperties = [];
 
-        if ($this->container['playSound'] === null) {
-            $invalidProperties[] = "'playSound' can't be null";
-        }
-        if ($this->container['showNotifications'] === null) {
-            $invalidProperties[] = "'showNotifications' can't be null";
-        }
         return $invalidProperties;
     }
 

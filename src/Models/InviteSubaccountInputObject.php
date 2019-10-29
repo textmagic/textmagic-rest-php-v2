@@ -210,12 +210,6 @@ class InviteSubaccountInputObject implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['email'] === null) {
-            $invalidProperties[] = "'email' can't be null";
-        }
-        if ($this->container['role'] === null) {
-            $invalidProperties[] = "'role' can't be null";
-        }
         $allowedValues = $this->getRoleAllowableValues();
         if (!is_null($this->container['role']) && !in_array($this->container['role'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -283,7 +277,7 @@ class InviteSubaccountInputObject implements ModelInterface, ArrayAccess
     public function setRole($role)
     {
         $allowedValues = $this->getRoleAllowableValues();
-        if (!in_array($role, $allowedValues, true)) {
+        if (!is_null($role) && !in_array($role, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
                     "Invalid value for 'role', must be one of '%s'",

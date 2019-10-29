@@ -195,12 +195,6 @@ class GetSubaccountsWithTokensInputObject implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['appName'] === null) {
-            $invalidProperties[] = "'appName' can't be null";
-        }
-        if ($this->container['password'] === null) {
-            $invalidProperties[] = "'password' can't be null";
-        }
         return $invalidProperties;
     }
 

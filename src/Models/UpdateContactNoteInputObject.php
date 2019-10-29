@@ -189,9 +189,6 @@ class UpdateContactNoteInputObject implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['note'] === null) {
-            $invalidProperties[] = "'note' can't be null";
-        }
         return $invalidProperties;
     }
 

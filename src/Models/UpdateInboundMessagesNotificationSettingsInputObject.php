@@ -219,15 +219,6 @@ class UpdateInboundMessagesNotificationSettingsInputObject implements ModelInter
     {
         $invalidProperties = [];
 
-        if ($this->container['inboundMessageNotification'] === null) {
-            $invalidProperties[] = "'inboundMessageNotification' can't be null";
-        }
-        if ($this->container['includeSmsHistory'] === null) {
-            $invalidProperties[] = "'includeSmsHistory' can't be null";
-        }
-        if ($this->container['sendInHtmlFormat'] === null) {
-            $invalidProperties[] = "'sendInHtmlFormat' can't be null";
-        }
         return $invalidProperties;
     }
 

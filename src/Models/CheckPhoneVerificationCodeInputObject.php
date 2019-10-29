@@ -195,12 +195,6 @@ class CheckPhoneVerificationCodeInputObject implements ModelInterface, ArrayAcce
     {
         $invalidProperties = [];
 
-        if ($this->container['code'] === null) {
-            $invalidProperties[] = "'code' can't be null";
-        }
-        if ($this->container['verifyId'] === null) {
-            $invalidProperties[] = "'verifyId' can't be null";
-        }
         return $invalidProperties;
     }
 

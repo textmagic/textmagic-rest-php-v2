@@ -201,15 +201,6 @@ class BuyDedicatedNumberInputObject implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['phone'] === null) {
-            $invalidProperties[] = "'phone' can't be null";
-        }
-        if ($this->container['country'] === null) {
-            $invalidProperties[] = "'country' can't be null";
-        }
-        if ($this->container['userId'] === null) {
-            $invalidProperties[] = "'userId' can't be null";
-        }
         return $invalidProperties;
     }
 

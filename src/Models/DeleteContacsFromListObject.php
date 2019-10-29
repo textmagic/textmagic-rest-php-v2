@@ -189,9 +189,6 @@ class DeleteContacsFromListObject implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['contacts'] === null) {
-            $invalidProperties[] = "'contacts' can't be null";
-        }
         return $invalidProperties;
     }
 

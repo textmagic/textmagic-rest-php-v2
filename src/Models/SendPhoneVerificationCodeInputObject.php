@@ -219,15 +219,6 @@ class SendPhoneVerificationCodeInputObject implements ModelInterface, ArrayAcces
     {
         $invalidProperties = [];
 
-        if ($this->container['phone'] === null) {
-            $invalidProperties[] = "'phone' can't be null";
-        }
-        if ($this->container['brand'] === null) {
-            $invalidProperties[] = "'brand' can't be null";
-        }
-        if ($this->container['codeLength'] === null) {
-            $invalidProperties[] = "'codeLength' can't be null";
-        }
         return $invalidProperties;
     }
 

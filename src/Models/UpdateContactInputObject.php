@@ -255,12 +255,6 @@ class UpdateContactInputObject implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['phone'] === null) {
-            $invalidProperties[] = "'phone' can't be null";
-        }
-        if ($this->container['lists'] === null) {
-            $invalidProperties[] = "'lists' can't be null";
-        }
         return $invalidProperties;
     }
 

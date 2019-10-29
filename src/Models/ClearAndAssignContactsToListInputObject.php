@@ -189,9 +189,6 @@ class ClearAndAssignContactsToListInputObject implements ModelInterface, ArrayAc
     {
         $invalidProperties = [];
 
-        if ($this->container['contacts'] === null) {
-            $invalidProperties[] = "'contacts' can't be null";
-        }
         return $invalidProperties;
     }
 

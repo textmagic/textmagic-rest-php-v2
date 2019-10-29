@@ -218,15 +218,6 @@ class UpdateCallbackSettingsInputObject implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['outUrl'] === null) {
-            $invalidProperties[] = "'outUrl' can't be null";
-        }
-        if ($this->container['inUrl'] === null) {
-            $invalidProperties[] = "'inUrl' can't be null";
-        }
-        if ($this->container['format'] === null) {
-            $invalidProperties[] = "'format' can't be null";
-        }
         $allowedValues = $this->getFormatAllowableValues();
         if (!is_null($this->container['format']) && !in_array($this->container['format'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -318,7 +309,7 @@ class UpdateCallbackSettingsInputObject implements ModelInterface, ArrayAccess
     public function setFormat($format)
     {
         $allowedValues = $this->getFormatAllowableValues();
-        if (!in_array($format, $allowedValues, true)) {
+        if (!is_null($format) && !in_array($format, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
                     "Invalid value for 'format', must be one of '%s'",
