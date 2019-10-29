@@ -311,7 +311,7 @@ class GetCallbackSettingsResponse implements ModelInterface, ArrayAccess
     /**
      * Sets format
      *
-     * @param string $format Desired callback data format. m - multipart/form-data, u - application/x-www-form-urlencoded, j - application/json
+     * @param string $format Desired callback data format. m - multipart/form-data, u - application/x-www-form-urlencoded, j - application/json.
      *
      * @return $this
      */

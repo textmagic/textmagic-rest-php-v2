@@ -229,7 +229,7 @@ class UpdateSurveyCountryItem implements ModelInterface, ArrayAccess
     /**
      * Sets country
      *
-     * @param string $country The 2-letter ISO country code
+     * @param string $country The 2-letter ISO country code.
      *
      * @return $this
      */
@@ -253,7 +253,7 @@ class UpdateSurveyCountryItem implements ModelInterface, ArrayAccess
     /**
      * Sets userInboundId
      *
-     * @param int $userInboundId User inbound phone ID
+     * @param int $userInboundId User inbound phone ID.
      *
      * @return $this
      */

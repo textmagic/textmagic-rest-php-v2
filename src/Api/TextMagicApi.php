@@ -11498,7 +11498,7 @@ class TextMagicApi
      *
      * Get all chats
      *
-     * @param  string $status Fetch only (a)ctive, (c)losed or (d)eleted chats (optional)
+     * @param  string $status Fetch only (a)ctive, (c)losed or (d)eleted chats. (optional)
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
@@ -11520,7 +11520,7 @@ class TextMagicApi
      *
      * Get all chats
      *
-     * @param  string $status Fetch only (a)ctive, (c)losed or (d)eleted chats (optional)
+     * @param  string $status Fetch only (a)ctive, (c)losed or (d)eleted chats. (optional)
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
@@ -11608,7 +11608,7 @@ class TextMagicApi
      *
      * Get all chats
      *
-     * @param  string $status Fetch only (a)ctive, (c)losed or (d)eleted chats (optional)
+     * @param  string $status Fetch only (a)ctive, (c)losed or (d)eleted chats. (optional)
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
@@ -11633,7 +11633,7 @@ class TextMagicApi
      *
      * Get all chats
      *
-     * @param  string $status Fetch only (a)ctive, (c)losed or (d)eleted chats (optional)
+     * @param  string $status Fetch only (a)ctive, (c)losed or (d)eleted chats. (optional)
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
@@ -11688,7 +11688,7 @@ class TextMagicApi
     /**
      * Create request for operation 'getAllChats'
      *
-     * @param  string $status Fetch only (a)ctive, (c)losed or (d)eleted chats (optional)
+     * @param  string $status Fetch only (a)ctive, (c)losed or (d)eleted chats. (optional)
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
@@ -12373,7 +12373,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)
+     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified. (optional)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -12392,7 +12392,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)
+     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified. (optional)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -12485,7 +12485,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)
+     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -12507,7 +12507,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)
+     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -12559,7 +12559,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)
+     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -12664,7 +12664,7 @@ class TextMagicApi
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $status Fetch schedules with a specific status: a - actual, c - completed, x - all. (optional, default to x)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \TextMagic\ApiException on non-2xx response
@@ -12685,7 +12685,7 @@ class TextMagicApi
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $status Fetch schedules with a specific status: a - actual, c - completed, x - all. (optional, default to x)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \TextMagic\ApiException on non-2xx response
@@ -12772,7 +12772,7 @@ class TextMagicApi
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $status Fetch schedules with a specific status: a - actual, c - completed, x - all. (optional, default to x)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
@@ -12796,7 +12796,7 @@ class TextMagicApi
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $status Fetch schedules with a specific status: a - actual, c - completed, x - all. (optional, default to x)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
@@ -12850,7 +12850,7 @@ class TextMagicApi
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  string $status Fetch schedules with a specific status: a - actual, c - completed, x - all. (optional, default to x)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
@@ -15440,8 +15440,8 @@ class TextMagicApi
      * Find chats by phone
      *
      * @param  string $phone phone (required)
-     * @param  int $upsert Create a new chat if not found (optional, default to 0)
-     * @param  int $reopen Reopen chat if found or do not change status (optional, default to 0)
+     * @param  int $upsert Create a new chat if not found. (optional, default to 0)
+     * @param  int $reopen Reopen chat if found or do not change status. (optional, default to 0)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -15459,8 +15459,8 @@ class TextMagicApi
      * Find chats by phone
      *
      * @param  string $phone (required)
-     * @param  int $upsert Create a new chat if not found (optional, default to 0)
-     * @param  int $reopen Reopen chat if found or do not change status (optional, default to 0)
+     * @param  int $upsert Create a new chat if not found. (optional, default to 0)
+     * @param  int $reopen Reopen chat if found or do not change status. (optional, default to 0)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -15552,8 +15552,8 @@ class TextMagicApi
      * Find chats by phone
      *
      * @param  string $phone (required)
-     * @param  int $upsert Create a new chat if not found (optional, default to 0)
-     * @param  int $reopen Reopen chat if found or do not change status (optional, default to 0)
+     * @param  int $upsert Create a new chat if not found. (optional, default to 0)
+     * @param  int $reopen Reopen chat if found or do not change status. (optional, default to 0)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -15574,8 +15574,8 @@ class TextMagicApi
      * Find chats by phone
      *
      * @param  string $phone (required)
-     * @param  int $upsert Create a new chat if not found (optional, default to 0)
-     * @param  int $reopen Reopen chat if found or do not change status (optional, default to 0)
+     * @param  int $upsert Create a new chat if not found. (optional, default to 0)
+     * @param  int $reopen Reopen chat if found or do not change status. (optional, default to 0)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -15626,8 +15626,8 @@ class TextMagicApi
      * Create request for operation 'getChatByPhone'
      *
      * @param  string $phone (required)
-     * @param  int $upsert Create a new chat if not found (optional, default to 0)
-     * @param  int $reopen Reopen chat if found or do not change status (optional, default to 0)
+     * @param  int $upsert Create a new chat if not found. (optional, default to 0)
+     * @param  int $reopen Reopen chat if found or do not change status. (optional, default to 0)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -15742,7 +15742,7 @@ class TextMagicApi
      * @param  int $id id (required)
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find messages by specified search query (optional)
+     * @param  string $query Find messages by specified search query. (optional)
      * @param  int $start Return messages since specified timestamp only. (optional)
      * @param  int $end Return messages up to specified timestamp only. (optional)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
@@ -15766,7 +15766,7 @@ class TextMagicApi
      * @param  int $id (required)
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find messages by specified search query (optional)
+     * @param  string $query Find messages by specified search query. (optional)
      * @param  int $start Return messages since specified timestamp only. (optional)
      * @param  int $end Return messages up to specified timestamp only. (optional)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
@@ -15848,7 +15848,7 @@ class TextMagicApi
      * @param  int $id (required)
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find messages by specified search query (optional)
+     * @param  string $query Find messages by specified search query. (optional)
      * @param  int $start Return messages since specified timestamp only. (optional)
      * @param  int $end Return messages up to specified timestamp only. (optional)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
@@ -15875,7 +15875,7 @@ class TextMagicApi
      * @param  int $id (required)
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find messages by specified search query (optional)
+     * @param  string $query Find messages by specified search query. (optional)
      * @param  int $start Return messages since specified timestamp only. (optional)
      * @param  int $end Return messages up to specified timestamp only. (optional)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
@@ -15932,7 +15932,7 @@ class TextMagicApi
      * @param  int $id (required)
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find messages by specified search query (optional)
+     * @param  string $query Find messages by specified search query. (optional)
      * @param  int $start Return messages since specified timestamp only. (optional)
      * @param  int $end Return messages up to specified timestamp only. (optional)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
@@ -24861,8 +24861,8 @@ class TextMagicApi
      *
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. (optional)
-     * @param  string $query Find message by specified search query (optional)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
+     * @param  string $query Find message by specified search query. (optional)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \TextMagic\ApiException on non-2xx response
@@ -24882,8 +24882,8 @@ class TextMagicApi
      *
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. (optional)
-     * @param  string $query Find message by specified search query (optional)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
+     * @param  string $query Find message by specified search query. (optional)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \TextMagic\ApiException on non-2xx response
@@ -24977,8 +24977,8 @@ class TextMagicApi
      *
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. (optional)
-     * @param  string $query Find message by specified search query (optional)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
+     * @param  string $query Find message by specified search query. (optional)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
@@ -25001,8 +25001,8 @@ class TextMagicApi
      *
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. (optional)
-     * @param  string $query Find message by specified search query (optional)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
+     * @param  string $query Find message by specified search query. (optional)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
@@ -25055,8 +25055,8 @@ class TextMagicApi
      *
      * @param  int $limit The number of results per page. (optional, default to 10)
      * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. (optional)
-     * @param  string $query Find message by specified search query (optional)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
+     * @param  string $query Find message by specified search query. (optional)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
@@ -32263,7 +32263,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find chats by specified search query (optional)
+     * @param  string $query Find chats by specified search query. (optional)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      *
      * @throws \TextMagic\ApiException on non-2xx response
@@ -32283,7 +32283,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find chats by specified search query (optional)
+     * @param  string $query Find chats by specified search query. (optional)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      *
      * @throws \TextMagic\ApiException on non-2xx response
@@ -32369,7 +32369,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find chats by specified search query (optional)
+     * @param  string $query Find chats by specified search query. (optional)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      *
      * @throws \InvalidArgumentException
@@ -32392,7 +32392,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find chats by specified search query (optional)
+     * @param  string $query Find chats by specified search query. (optional)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      *
      * @throws \InvalidArgumentException
@@ -32445,7 +32445,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find chats by specified search query (optional)
+     * @param  string $query Find chats by specified search query. (optional)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      *
      * @throws \InvalidArgumentException
@@ -33577,7 +33577,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)
+     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified. (optional)
      * @param  string $ids Find message by ID(s). (optional)
      * @param  int $sessionId Find messages by session ID. (optional)
      * @param  string $statuses Find messages by status. (optional)
@@ -33601,7 +33601,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)
+     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified. (optional)
      * @param  string $ids Find message by ID(s). (optional)
      * @param  int $sessionId Find messages by session ID. (optional)
      * @param  string $statuses Find messages by status. (optional)
@@ -33699,7 +33699,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)
+     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified. (optional)
      * @param  string $ids Find message by ID(s). (optional)
      * @param  int $sessionId Find messages by session ID. (optional)
      * @param  string $statuses Find messages by status. (optional)
@@ -33726,7 +33726,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)
+     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified. (optional)
      * @param  string $ids Find message by ID(s). (optional)
      * @param  int $sessionId Find messages by session ID. (optional)
      * @param  string $statuses Find messages by status. (optional)
@@ -33783,7 +33783,7 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)
+     * @param  int $lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified. (optional)
      * @param  string $ids Find message by ID(s). (optional)
      * @param  int $sessionId Find messages by session ID. (optional)
      * @param  string $statuses Find messages by status. (optional)
@@ -33916,8 +33916,8 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find messages by specified search query (optional)
-     * @param  string $ids Find schedules by ID(s) (optional)
+     * @param  string $query Find messages by specified search query. (optional)
+     * @param  string $ids Find schedules by ID(s). (optional)
      * @param  string $status Fetch schedules with a specific status: a - actual, c - completed, x - all. (optional, default to x)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
@@ -33939,8 +33939,8 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find messages by specified search query (optional)
-     * @param  string $ids Find schedules by ID(s) (optional)
+     * @param  string $query Find messages by specified search query. (optional)
+     * @param  string $ids Find schedules by ID(s). (optional)
      * @param  string $status Fetch schedules with a specific status: a - actual, c - completed, x - all. (optional, default to x)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
@@ -34036,8 +34036,8 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find messages by specified search query (optional)
-     * @param  string $ids Find schedules by ID(s) (optional)
+     * @param  string $query Find messages by specified search query. (optional)
+     * @param  string $ids Find schedules by ID(s). (optional)
      * @param  string $status Fetch schedules with a specific status: a - actual, c - completed, x - all. (optional, default to x)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
@@ -34062,8 +34062,8 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find messages by specified search query (optional)
-     * @param  string $ids Find schedules by ID(s) (optional)
+     * @param  string $query Find messages by specified search query. (optional)
+     * @param  string $ids Find schedules by ID(s). (optional)
      * @param  string $status Fetch schedules with a specific status: a - actual, c - completed, x - all. (optional, default to x)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
@@ -34118,8 +34118,8 @@ class TextMagicApi
      *
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $query Find messages by specified search query (optional)
-     * @param  string $ids Find schedules by ID(s) (optional)
+     * @param  string $query Find messages by specified search query. (optional)
+     * @param  string $ids Find schedules by ID(s). (optional)
      * @param  string $status Fetch schedules with a specific status: a - actual, c - completed, x - all. (optional, default to x)
      * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
@@ -40521,7 +40521,7 @@ class TextMagicApi
      *
      * Upload message attachment
      *
-     * @param  \SplFileObject $file Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats (required)
+     * @param  \SplFileObject $file Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats. (required)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -40538,7 +40538,7 @@ class TextMagicApi
      *
      * Upload message attachment
      *
-     * @param  \SplFileObject $file Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats (required)
+     * @param  \SplFileObject $file Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats. (required)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -40629,7 +40629,7 @@ class TextMagicApi
      *
      * Upload message attachment
      *
-     * @param  \SplFileObject $file Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats (required)
+     * @param  \SplFileObject $file Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -40649,7 +40649,7 @@ class TextMagicApi
      *
      * Upload message attachment
      *
-     * @param  \SplFileObject $file Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats (required)
+     * @param  \SplFileObject $file Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -40699,7 +40699,7 @@ class TextMagicApi
     /**
      * Create request for operation 'uploadMessageAttachment'
      *
-     * @param  \SplFileObject $file Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats (required)
+     * @param  \SplFileObject $file Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

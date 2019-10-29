@@ -247,7 +247,7 @@ class CallPriceResponse implements ModelInterface, ArrayAccess
     /**
      * Sets outbound
      *
-     * @param float $outbound Price for outbound message
+     * @param float $outbound Price for outbound message.
      *
      * @return $this
      */
@@ -271,7 +271,7 @@ class CallPriceResponse implements ModelInterface, ArrayAccess
     /**
      * Sets inbound
      *
-     * @param float $inbound Price for inbound message
+     * @param float $inbound Price for inbound message.
      *
      * @return $this
      */
@@ -295,7 +295,7 @@ class CallPriceResponse implements ModelInterface, ArrayAccess
     /**
      * Sets forward
      *
-     * @param float $forward Price for forward
+     * @param float $forward Price for forward.
      *
      * @return $this
      */
@@ -319,7 +319,7 @@ class CallPriceResponse implements ModelInterface, ArrayAccess
     /**
      * Sets country
      *
-     * @param string $country The 2-letter ISO country code for local phone numbers, used when local is  set to true. Default is account country
+     * @param string $country The 2-letter ISO country code for local phone numbers, used when local is  set to true. Default is account country.
      *
      * @return $this
      */

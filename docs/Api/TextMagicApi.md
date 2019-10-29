@@ -2666,7 +2666,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     new GuzzleHttp\Client(),
     $config
 );
-$status = "\"a\""; // string | Fetch only (a)ctive, (c)losed or (d)eleted chats
+$status = "\"a\""; // string | Fetch only (a)ctive, (c)losed or (d)eleted chats.
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
 $orderBy = "id"; // string | Order results by some field. Default is id.
@@ -2686,7 +2686,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **status** | **string**| Fetch only (a)ctive, (c)losed or (d)eleted chats | [optional]
+ **status** | **string**| Fetch only (a)ctive, (c)losed or (d)eleted chats. | [optional]
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
  **orderBy** | **string**| Order results by some field. Default is id. | [optional] [default to id]
@@ -2854,7 +2854,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 );
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
-$lastId = 56; // int | Filter results by ID, selecting all values lesser than the specified ID. Note that the \\'page\\' parameter is ignored when \\'lastId\\' is specified
+$lastId = 56; // int | Filter results by ID, selecting all values lesser than the specified ID. Note that the \\'page\\' parameter is ignored when \\'lastId\\' is specified.
 
 try {
     $result = $apiInstance->getAllOutboundMessages($page, $limit, $lastId);
@@ -2871,7 +2871,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
- **lastId** | **int**| Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified | [optional]
+ **lastId** | **int**| Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified. | [optional]
 
 ### Return type
 
@@ -2915,7 +2915,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
 $status = "x"; // string | Fetch schedules with a specific status: a - actual, c - completed, x - all.
-$orderBy = "id"; // string | Order results by some field. Default is id
+$orderBy = "id"; // string | Order results by some field. Default is id.
 $direction = "desc"; // string | Order direction. Default is desc.
 
 try {
@@ -2934,7 +2934,7 @@ Name | Type | Description  | Notes
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
  **status** | **string**| Fetch schedules with a specific status: a - actual, c - completed, x - all. | [optional] [default to x]
- **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
+ **orderBy** | **string**| Order results by some field. Default is id. | [optional] [default to id]
  **direction** | **string**| Order direction. Default is desc. | [optional] [default to desc]
 
 ### Return type
@@ -3483,8 +3483,8 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     $config
 );
 $phone = "\"447860021130\""; // string | 
-$upsert = 0; // int | Create a new chat if not found
-$reopen = 0; // int | Reopen chat if found or do not change status
+$upsert = 0; // int | Create a new chat if not found.
+$reopen = 0; // int | Reopen chat if found or do not change status.
 
 try {
     $result = $apiInstance->getChatByPhone($phone, $upsert, $reopen);
@@ -3500,8 +3500,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **phone** | **string**|  |
- **upsert** | **int**| Create a new chat if not found | [optional] [default to 0]
- **reopen** | **int**| Reopen chat if found or do not change status | [optional] [default to 0]
+ **upsert** | **int**| Create a new chat if not found. | [optional] [default to 0]
+ **reopen** | **int**| Reopen chat if found or do not change status. | [optional] [default to 0]
 
 ### Return type
 
@@ -3545,7 +3545,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 $id = 1; // int | 
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
-$query = "query_example"; // string | Find messages by specified search query
+$query = "query_example"; // string | Find messages by specified search query.
 $start = 56; // int | Return messages since specified timestamp only.
 $end = 56; // int | Return messages up to specified timestamp only.
 $direction = "desc"; // string | Order direction. Default is desc.
@@ -3567,7 +3567,7 @@ Name | Type | Description  | Notes
  **id** | **int**|  |
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
- **query** | **string**| Find messages by specified search query | [optional]
+ **query** | **string**| Find messages by specified search query. | [optional]
  **start** | **int**| Return messages since specified timestamp only. | [optional]
  **end** | **int**| Return messages up to specified timestamp only. | [optional]
  **direction** | **string**| Order direction. Default is desc. | [optional] [default to desc]
@@ -5404,8 +5404,8 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 );
 $limit = 10; // int | The number of results per page.
 $lastId = 56; // int | Filter results by ID, selecting all values lesser than the specified ID.
-$query = "query_example"; // string | Find message by specified search query
-$orderBy = "id"; // string | Order results by some field. Default is id
+$query = "query_example"; // string | Find message by specified search query.
+$orderBy = "id"; // string | Order results by some field. Default is id.
 $direction = "desc"; // string | Order direction. Default is desc.
 
 try {
@@ -5423,8 +5423,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
  **lastId** | **int**| Filter results by ID, selecting all values lesser than the specified ID. | [optional]
- **query** | **string**| Find message by specified search query | [optional]
- **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
+ **query** | **string**| Find message by specified search query. | [optional]
+ **orderBy** | **string**| Order results by some field. Default is id. | [optional] [default to id]
  **direction** | **string**| Order direction. Default is desc. | [optional] [default to desc]
 
 ### Return type
@@ -6945,7 +6945,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 );
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
-$query = "query_example"; // string | Find chats by specified search query
+$query = "query_example"; // string | Find chats by specified search query.
 $orderBy = "id"; // string | Order results by some field. Default is id.
 
 try {
@@ -6963,7 +6963,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
- **query** | **string**| Find chats by specified search query | [optional]
+ **query** | **string**| Find chats by specified search query. | [optional]
  **orderBy** | **string**| Order results by some field. Default is id. | [optional] [default to id]
 
 ### Return type
@@ -7221,7 +7221,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 );
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
-$lastId = 56; // int | Filter results by ID, selecting all values lesser than the specified ID. Note that the \\'page\\' parameter is ignored when \\'lastId\\' is specified
+$lastId = 56; // int | Filter results by ID, selecting all values lesser than the specified ID. Note that the \\'page\\' parameter is ignored when \\'lastId\\' is specified.
 $ids = "ids_example"; // string | Find message by ID(s).
 $sessionId = 56; // int | Find messages by session ID.
 $statuses = "\"q\""; // string | Find messages by status.
@@ -7243,7 +7243,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
- **lastId** | **int**| Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified | [optional]
+ **lastId** | **int**| Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified. | [optional]
  **ids** | **string**| Find message by ID(s). | [optional]
  **sessionId** | **int**| Find messages by session ID. | [optional]
  **statuses** | **string**| Find messages by status. | [optional]
@@ -7291,8 +7291,8 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 );
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
-$query = "query_example"; // string | Find messages by specified search query
-$ids = "ids_example"; // string | Find schedules by ID(s)
+$query = "query_example"; // string | Find messages by specified search query.
+$ids = "ids_example"; // string | Find schedules by ID(s).
 $status = "x"; // string | Fetch schedules with a specific status: a - actual, c - completed, x - all.
 $orderBy = "id"; // string | Order results by some field. Default is id.
 $direction = "desc"; // string | Order direction. Default is desc.
@@ -7312,8 +7312,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
- **query** | **string**| Find messages by specified search query | [optional]
- **ids** | **string**| Find schedules by ID(s) | [optional]
+ **query** | **string**| Find messages by specified search query. | [optional]
+ **ids** | **string**| Find schedules by ID(s). | [optional]
  **status** | **string**| Fetch schedules with a specific status: a - actual, c - completed, x - all. | [optional] [default to x]
  **orderBy** | **string**| Order results by some field. Default is id. | [optional] [default to id]
  **direction** | **string**| Order direction. Default is desc. | [optional] [default to desc]
@@ -8660,7 +8660,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     new GuzzleHttp\Client(),
     $config
 );
-$file = "/path/to/file.txt"; // \SplFileObject | Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx & .vcf file formats
+$file = "/path/to/file.txt"; // \SplFileObject | Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx & .vcf file formats.
 
 try {
     $result = $apiInstance->uploadMessageAttachment($file);
@@ -8675,7 +8675,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file** | **\SplFileObject**| Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats |
+ **file** | **\SplFileObject**| Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats. |
 
 ### Return type
 

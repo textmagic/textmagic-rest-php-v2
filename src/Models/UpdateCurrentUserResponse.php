@@ -397,7 +397,7 @@ class UpdateCurrentUserResponse implements ModelInterface, ArrayAccess
     /**
      * Sets timezone
      *
-     * @param int $timezone Internal timezone ID. See [Get timezones](http://docs.textmagictesting.com/#operation/getTimezones)
+     * @param int $timezone Internal timezone ID. See [Get timezones](http://docs.textmagictesting.com/#operation/getTimezones).
      *
      * @return $this
      */

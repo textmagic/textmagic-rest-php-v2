@@ -254,7 +254,7 @@ class DeleteChatsBulkInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets ids
      *
-     * @param string $ids Entity ID(s), separated by comma
+     * @param string $ids Entity ID(s), separated by comma.
      *
      * @return $this
      */
@@ -278,7 +278,7 @@ class DeleteChatsBulkInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets all
      *
-     * @param bool $all Entity ID(s), separated by comma
+     * @param bool $all Entity ID(s), separated by comma.
      *
      * @return $this
      */

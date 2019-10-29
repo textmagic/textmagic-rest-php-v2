@@ -229,7 +229,7 @@ class MuteChatsBulkInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets ids
      *
-     * @param string $ids Entity ID(s), separated by comma
+     * @param string $ids Entity ID(s), separated by comma.
      *
      * @return $this
      */

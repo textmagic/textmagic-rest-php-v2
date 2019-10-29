@@ -503,7 +503,7 @@ class DoEmailLookupResponse implements ModelInterface, ArrayAccess
     /**
      * Sets deliverability
      *
-     * @param string $deliverability The delivery status of the email address is`deliverable`, `undeliverable`  or `unknown`.
+     * @param string $deliverability The delivery status of the email address is`deliverable`, `undeliverable`. or `unknown`.
      *
      * @return $this
      */
@@ -665,7 +665,7 @@ class DoEmailLookupResponse implements ModelInterface, ArrayAccess
     /**
      * Sets emailRole
      *
-     * @param string $emailRole Checks the mailbox part of the email to see whether it matches a specific role type (‘admin’, ‘sales’, ‘webmaster’)
+     * @param string $emailRole Checks the mailbox part of the email to see whether it matches a specific role type (‘admin’, ‘sales’, ‘webmaster’).
      *
      * @return $this
      */
