@@ -7697,7 +7697,7 @@ class TextMagicApi
     /**
      * Operation deleteListAvatar
      *
-     * Delete an avatar for the list
+     * Delete an avatar for a list
      *
      * @param  int $id id (required)
      *
@@ -7713,7 +7713,7 @@ class TextMagicApi
     /**
      * Operation deleteListAvatarWithHttpInfo
      *
-     * Delete an avatar for the list
+     * Delete an avatar for a list
      *
      * @param  int $id (required)
      *
@@ -7782,7 +7782,7 @@ class TextMagicApi
     /**
      * Operation deleteListAvatarAsync
      *
-     * Delete an avatar for the list
+     * Delete an avatar for a list
      *
      * @param  int $id (required)
      *
@@ -7802,7 +7802,7 @@ class TextMagicApi
     /**
      * Operation deleteListAvatarAsyncWithHttpInfo
      *
-     * Delete an avatar for the list
+     * Delete an avatar for a list
      *
      * @param  int $id (required)
      *
@@ -7942,7 +7942,7 @@ class TextMagicApi
     /**
      * Operation deleteListContactsBulk
      *
-     * Delete contacts from list (bulk)
+     * Delete contacts from a list (bulk)
      *
      * @param  \TextMagic\Models\DeleteListContactsBulkInputObject $deleteListContactsBulkInputObject deleteListContactsBulkInputObject (required)
      * @param  int $id id (required)
@@ -7959,7 +7959,7 @@ class TextMagicApi
     /**
      * Operation deleteListContactsBulkWithHttpInfo
      *
-     * Delete contacts from list (bulk)
+     * Delete contacts from a list (bulk)
      *
      * @param  \TextMagic\Models\DeleteListContactsBulkInputObject $deleteListContactsBulkInputObject (required)
      * @param  int $id (required)
@@ -8037,7 +8037,7 @@ class TextMagicApi
     /**
      * Operation deleteListContactsBulkAsync
      *
-     * Delete contacts from list (bulk)
+     * Delete contacts from a list (bulk)
      *
      * @param  \TextMagic\Models\DeleteListContactsBulkInputObject $deleteListContactsBulkInputObject (required)
      * @param  int $id (required)
@@ -8058,7 +8058,7 @@ class TextMagicApi
     /**
      * Operation deleteListContactsBulkAsyncWithHttpInfo
      *
-     * Delete contacts from list (bulk)
+     * Delete contacts from a list (bulk)
      *
      * @param  \TextMagic\Models\DeleteListContactsBulkInputObject $deleteListContactsBulkInputObject (required)
      * @param  int $id (required)
@@ -18362,10 +18362,10 @@ class TextMagicApi
      *
      * Get all contacts in a list
      *
-     * @param  int $id Given group Id. (required)
+     * @param  int $id Given group ID. (required)
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \TextMagic\ApiException on non-2xx response
@@ -18383,10 +18383,10 @@ class TextMagicApi
      *
      * Get all contacts in a list
      *
-     * @param  int $id Given group Id. (required)
+     * @param  int $id Given group ID. (required)
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \TextMagic\ApiException on non-2xx response
@@ -18478,10 +18478,10 @@ class TextMagicApi
      *
      * Get all contacts in a list
      *
-     * @param  int $id Given group Id. (required)
+     * @param  int $id Given group ID. (required)
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
@@ -18502,10 +18502,10 @@ class TextMagicApi
      *
      * Get all contacts in a list
      *
-     * @param  int $id Given group Id. (required)
+     * @param  int $id Given group ID. (required)
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
@@ -18556,10 +18556,10 @@ class TextMagicApi
     /**
      * Create request for operation 'getContactsByListId'
      *
-     * @param  int $id Given group Id. (required)
+     * @param  int $id Given group ID. (required)
      * @param  int $page Fetch specified results page. (optional, default to 1)
      * @param  int $limit The number of results per page. (optional, default to 10)
-     * @param  string $orderBy Order results by some field. Default is id (optional, default to id)
+     * @param  string $orderBy Order results by some field. Default is id. (optional, default to id)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      *
      * @throws \InvalidArgumentException
@@ -21407,7 +21407,7 @@ class TextMagicApi
     /**
      * Operation getListContactsIds
      *
-     * Get all contacts IDs in a list
+     * Get all contact IDs in a list
      *
      * @param  int $id id (required)
      *
@@ -21424,7 +21424,7 @@ class TextMagicApi
     /**
      * Operation getListContactsIdsWithHttpInfo
      *
-     * Get all contacts IDs in a list
+     * Get all contact IDs in a list
      *
      * @param  int $id (required)
      *
@@ -21515,7 +21515,7 @@ class TextMagicApi
     /**
      * Operation getListContactsIdsAsync
      *
-     * Get all contacts IDs in a list
+     * Get all contact IDs in a list
      *
      * @param  int $id (required)
      *
@@ -21535,7 +21535,7 @@ class TextMagicApi
     /**
      * Operation getListContactsIdsAsyncWithHttpInfo
      *
-     * Get all contacts IDs in a list
+     * Get all contact IDs in a list
      *
      * @param  int $id (required)
      *
@@ -40213,9 +40213,9 @@ class TextMagicApi
     /**
      * Operation uploadListAvatar
      *
-     * Add an avatar for the list
+     * Add an avatar for a list
      *
-     * @param  \SplFileObject $image List avatar. Should be PNG or JPG file not more than 10 MB (required)
+     * @param  \SplFileObject $image List avatar. Should be a PNG or JPG file not more than 10 MB. (required)
      * @param  int $id id (required)
      *
      * @throws \TextMagic\ApiException on non-2xx response
@@ -40231,9 +40231,9 @@ class TextMagicApi
     /**
      * Operation uploadListAvatarWithHttpInfo
      *
-     * Add an avatar for the list
+     * Add an avatar for a list
      *
-     * @param  \SplFileObject $image List avatar. Should be PNG or JPG file not more than 10 MB (required)
+     * @param  \SplFileObject $image List avatar. Should be a PNG or JPG file not more than 10 MB. (required)
      * @param  int $id (required)
      *
      * @throws \TextMagic\ApiException on non-2xx response
@@ -40331,9 +40331,9 @@ class TextMagicApi
     /**
      * Operation uploadListAvatarAsync
      *
-     * Add an avatar for the list
+     * Add an avatar for a list
      *
-     * @param  \SplFileObject $image List avatar. Should be PNG or JPG file not more than 10 MB (required)
+     * @param  \SplFileObject $image List avatar. Should be a PNG or JPG file not more than 10 MB. (required)
      * @param  int $id (required)
      *
      * @throws \InvalidArgumentException
@@ -40352,9 +40352,9 @@ class TextMagicApi
     /**
      * Operation uploadListAvatarAsyncWithHttpInfo
      *
-     * Add an avatar for the list
+     * Add an avatar for a list
      *
-     * @param  \SplFileObject $image List avatar. Should be PNG or JPG file not more than 10 MB (required)
+     * @param  \SplFileObject $image List avatar. Should be a PNG or JPG file not more than 10 MB. (required)
      * @param  int $id (required)
      *
      * @throws \InvalidArgumentException
@@ -40405,7 +40405,7 @@ class TextMagicApi
     /**
      * Create request for operation 'uploadListAvatar'
      *
-     * @param  \SplFileObject $image List avatar. Should be PNG or JPG file not more than 10 MB (required)
+     * @param  \SplFileObject $image List avatar. Should be a PNG or JPG file not more than 10 MB. (required)
      * @param  int $id (required)
      *
      * @throws \InvalidArgumentException

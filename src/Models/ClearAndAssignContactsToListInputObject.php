@@ -220,7 +220,7 @@ class ClearAndAssignContactsToListInputObject implements ModelInterface, ArrayAc
     /**
      * Sets contacts
      *
-     * @param string $contacts Contact ID(s), separated by comma or 'all' to add all contacts belonging to the current user
+     * @param string $contacts Contact ID(s), separated by a comma or \"all\" to add all contacts belonging to the current user.
      *
      * @return $this
      */

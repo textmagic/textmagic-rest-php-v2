@@ -34,8 +34,8 @@ Method | HTTP request | Description
 [**deleteInboundMessage**](TextMagicApi.md#deleteInboundMessage) | **DELETE** /api/v2/replies/{id} | Delete a single inbound message
 [**deleteInboundMessagesBulk**](TextMagicApi.md#deleteInboundMessagesBulk) | **POST** /api/v2/replies/delete | Delete inbound messages (bulk)
 [**deleteList**](TextMagicApi.md#deleteList) | **DELETE** /api/v2/lists/{id} | Delete a list
-[**deleteListAvatar**](TextMagicApi.md#deleteListAvatar) | **DELETE** /api/v2/lists/{id}/avatar | Delete an avatar for the list
-[**deleteListContactsBulk**](TextMagicApi.md#deleteListContactsBulk) | **POST** /api/v2/lists/{id}/contacts/delete | Delete contacts from list (bulk)
+[**deleteListAvatar**](TextMagicApi.md#deleteListAvatar) | **DELETE** /api/v2/lists/{id}/avatar | Delete an avatar for a list
+[**deleteListContactsBulk**](TextMagicApi.md#deleteListContactsBulk) | **POST** /api/v2/lists/{id}/contacts/delete | Delete contacts from a list (bulk)
 [**deleteListsBulk**](TextMagicApi.md#deleteListsBulk) | **POST** /api/v2/lists/delete | Delete lists (bulk)
 [**deleteMessageSession**](TextMagicApi.md#deleteMessageSession) | **DELETE** /api/v2/sessions/{id} | Delete a session
 [**deleteMessageSessionsBulk**](TextMagicApi.md#deleteMessageSessionsBulk) | **POST** /api/v2/sessions/delete | Delete sessions (bulk)
@@ -84,7 +84,7 @@ Method | HTTP request | Description
 [**getInboundMessagesNotificationSettings**](TextMagicApi.md#getInboundMessagesNotificationSettings) | **GET** /api/v2/user/notification/inbound | Get inbound messages notification settings
 [**getInvoices**](TextMagicApi.md#getInvoices) | **GET** /api/v2/invoices | Get all invoices
 [**getList**](TextMagicApi.md#getList) | **GET** /api/v2/lists/{id} | Get the details of a specific list
-[**getListContactsIds**](TextMagicApi.md#getListContactsIds) | **GET** /api/v2/lists/{id}/contacts/ids | Get all contacts IDs in a list
+[**getListContactsIds**](TextMagicApi.md#getListContactsIds) | **GET** /api/v2/lists/{id}/contacts/ids | Get all contact IDs in a list
 [**getLists**](TextMagicApi.md#getLists) | **GET** /api/v2/lists | Get all lists
 [**getListsOfContact**](TextMagicApi.md#getListsOfContact) | **GET** /api/v2/contacts/{id}/lists | Get a contact&#39;s lists
 [**getMessagePreview**](TextMagicApi.md#getMessagePreview) | **GET** /api/v2/messages/preview | Preview message
@@ -150,7 +150,7 @@ Method | HTTP request | Description
 [**updateTemplate**](TextMagicApi.md#updateTemplate) | **PUT** /api/v2/templates/{id} | Update a template
 [**uploadAvatar**](TextMagicApi.md#uploadAvatar) | **POST** /api/v2/user/avatar | Upload an avatar
 [**uploadContactAvatar**](TextMagicApi.md#uploadContactAvatar) | **POST** /api/v2/contacts/{id}/avatar | Upload an avatar
-[**uploadListAvatar**](TextMagicApi.md#uploadListAvatar) | **POST** /api/v2/lists/{id}/avatar | Add an avatar for the list
+[**uploadListAvatar**](TextMagicApi.md#uploadListAvatar) | **POST** /api/v2/lists/{id}/avatar | Add an avatar for a list
 [**uploadMessageAttachment**](TextMagicApi.md#uploadMessageAttachment) | **POST** /api/v2/messages/attachment | Upload message attachment
 
 
@@ -1758,7 +1758,7 @@ void (empty response body)
 
 Delete a list
 
-This command has no parameters. If successful, this command will return the standard delete response (204 No Content), otherwise a standard error response will be returned.  When you delete a list, the contacts in it are deleted as well unless they were saved in other list.
+This command has no parameters. If successful, this command will return the standard delete response (204 No Content); otherwise, a standard error response will be returned.  When you delete a list, the contacts in it are deleted as well, unless they were saved in another list.
 
 ### Example
 ```php
@@ -1811,9 +1811,9 @@ void (empty response body)
 # **deleteListAvatar**
 > deleteListAvatar($id)
 
-Delete an avatar for the list
+Delete an avatar for a list
 
-
+Delete an avatar for a list
 
 ### Example
 ```php
@@ -1866,9 +1866,9 @@ void (empty response body)
 # **deleteListContactsBulk**
 > deleteListContactsBulk($deleteListContactsBulkInputObject, $id)
 
-Delete contacts from list (bulk)
+Delete contacts from a list (bulk)
 
-
+Delete contacts from a list (bulk)
 
 ### Example
 ```php
@@ -4057,7 +4057,7 @@ Name | Type | Description  | Notes
 
 Get all contacts in a list
 
-A useful synonym for \"contacts/search\" command with provided \"listId\" parameter.
+A useful synonym for the \"contacts/search\" command with the provided \"listId\" parameter.
 
 ### Example
 ```php
@@ -4076,10 +4076,10 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 1; // int | Given group Id.
+$id = 1; // int | Given group ID.
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
-$orderBy = "id"; // string | Order results by some field. Default is id
+$orderBy = "id"; // string | Order results by some field. Default is id.
 $direction = "desc"; // string | Order direction. Default is desc.
 
 try {
@@ -4095,10 +4095,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| Given group Id. |
+ **id** | **int**| Given group ID. |
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
- **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
+ **orderBy** | **string**| Order results by some field. Default is id. | [optional] [default to id]
  **direction** | **string**| Order direction. Default is desc. | [optional] [default to desc]
 
 ### Return type
@@ -4675,7 +4675,7 @@ Name | Type | Description  | Notes
 # **getListContactsIds**
 > \TextMagic\Models\GetListContactsIdsResponse getListContactsIds($id)
 
-Get all contacts IDs in a list
+Get all contact IDs in a list
 
 
 
@@ -8581,9 +8581,9 @@ Name | Type | Description  | Notes
 # **uploadListAvatar**
 > \TextMagic\Models\ResourceLinkResponse uploadListAvatar($image, $id)
 
-Add an avatar for the list
+Add an avatar for a list
 
-
+Add an avatar for a list
 
 ### Example
 ```php
@@ -8602,7 +8602,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     new GuzzleHttp\Client(),
     $config
 );
-$image = "/path/to/file.txt"; // \SplFileObject | List avatar. Should be PNG or JPG file not more than 10 MB
+$image = "/path/to/file.txt"; // \SplFileObject | List avatar. Should be a PNG or JPG file not more than 10 MB.
 $id = 1; // int | 
 
 try {
@@ -8618,7 +8618,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **image** | **\SplFileObject**| List avatar. Should be PNG or JPG file not more than 10 MB |
+ **image** | **\SplFileObject**| List avatar. Should be a PNG or JPG file not more than 10 MB. |
  **id** | **int**|  |
 
 ### Return type
