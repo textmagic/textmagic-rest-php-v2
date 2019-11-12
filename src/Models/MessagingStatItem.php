@@ -382,7 +382,7 @@ class MessagingStatItem implements ModelInterface, ArrayAccess
     /**
      * Sets costs
      *
-     * @param float $costs Cost for sent messages during this period. The costs are in the [Account](http://docs.textmagictesting.com/#tag/User) currency.
+     * @param float $costs Cost for sent messages during this period. The costs are in the [Account](https://docs.textmagic.com/#tag/User) currency.
      *
      * @return $this
      */

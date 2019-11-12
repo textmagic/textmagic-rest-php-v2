@@ -217,7 +217,7 @@ class DeleteContacsFromListObject implements ModelInterface, ArrayAccess
     /**
      * Sets contacts
      *
-     * @param string $contacts Comma-separated array of [Contacts](http://docs.textmagictesting.com/#tag/Contacts) IDs.
+     * @param string $contacts Comma-separated array of [Contacts](https://docs.textmagic.com/#tag/Contacts) IDs.
      *
      * @return $this
      */

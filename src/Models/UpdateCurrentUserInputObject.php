@@ -397,7 +397,7 @@ class UpdateCurrentUserInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets timezone
      *
-     * @param int $timezone The timezome internal ID. See [Get timezones](http://docs.textmagictesting.com/#operation/getTimezones).
+     * @param int $timezone The timezome internal ID. See [Get timezones](https://docs.textmagic.com/#operation/getTimezones).
      *
      * @return $this
      */

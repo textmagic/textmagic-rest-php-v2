@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **id** | **int** | List ID. | 
 **name** | **string** | List name. | 
 **description** | **string** | Description of the list. | 
-**favorited** | **bool** | Is the List favorited? See [Favorites list](http://docs.textmagictesting.com/#operation/getFavourites). | 
+**favorited** | **bool** | Is the List favorited? See [Favorites list](https://docs.textmagic.com/#operation/getFavourites). | 
 **membersCount** | **int** | List members count. | 
 **user** | [**\TextMagic\Models\User**](User.md) |  | 
 **service** | **bool** | Internal service field. | 

@@ -373,7 +373,7 @@ class ModelList implements ModelInterface, ArrayAccess
     /**
      * Sets favorited
      *
-     * @param bool $favorited Is the List favorited? See [Favorites list](http://docs.textmagictesting.com/#operation/getFavourites).
+     * @param bool $favorited Is the List favorited? See [Favorites list](https://docs.textmagic.com/#operation/getFavourites).
      *
      * @return $this
      */

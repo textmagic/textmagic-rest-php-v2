@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **sender** | **string** | Message sender (phone number or alphanumeric Sender ID). | [optional] 
 **receiver** | **string** | Recipient&#x60;s phone number. | [optional] 
 **text** | **string** |  | 
-**status** | **string** | Delivery status of the message. See [message delivery statuses](http://docs.textmagictesting.com/#section/Delivery-status-codes) for details. | 
+**status** | **string** | Delivery status of the message. See [message delivery statuses](https://docs.textmagic.com/#section/Delivery-status-codes) for details. | 
 **contactId** | **int** | Recipient contact ID. | 
 **sessionId** | **int** | Message Session ID of a message. | 
 **messageTime** | [**\DateTime**](\DateTime.md) | Sending time. | 
@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **deleted** | **bool** | Indicates that the message has been deleted. | [optional] 
 **charset** | **string** | Message charset. Could be: *   **ISO-8859-1** for plaintext SMS; *   **UTF-16BE** for Unicode SMS. | 
 **charsetLabel** | **string** | Human-readable message charset label. Could be: *   **ISO-8859-1** for plaintext SMS; *   **UTF-16BE** for Unicode SMS; *   **Voice** for voice services (Text-to-Speech or Voice Broadcast) messages. | 
-**firstName** | **string** | Contact first name. Could be substituted from your [Contacts](http://docs.textmagictesting.com/#tag/Contacts) (even if you submitted the phone number instead of the contact ID). | 
+**firstName** | **string** | Contact first name. Could be substituted from your [Contacts](https://docs.textmagic.com/#tag/Contacts) (even if you submitted the phone number instead of the contact ID). | 
 **lastName** | **string** | Contact last name. | 
 **country** | **string** | The 2-letter ISO country code of the recipient&#39;s phone number. | 
 **phone** | **string** | Receipent&#x60;s phone number. | [optional] 

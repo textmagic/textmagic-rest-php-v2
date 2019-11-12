@@ -494,7 +494,7 @@ class Chat implements ModelInterface, ArrayAccess
     /**
      * Sets unsubscribedContactId
      *
-     * @param int $unsubscribedContactId If this field has a value, it means that the chat phone number has been unsubscribed from you and this value is an ID of an Unsubscribed contact entity. See [Get all unsubscribed contacts](http://docs.textmagictesting.com/#operation/getUnsubscribers).
+     * @param int $unsubscribedContactId If this field has a value, it means that the chat phone number has been unsubscribed from you and this value is an ID of an Unsubscribed contact entity. See [Get all unsubscribed contacts](https://docs.textmagic.com/#operation/getUnsubscribers).
      *
      * @return $this
      */

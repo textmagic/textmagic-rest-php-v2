@@ -223,7 +223,7 @@ class UpdateCustomFieldValueInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets contactId
      *
-     * @param int $contactId Contact ID. See [Contact](http://docs.textmagictesting.com/#tag/Contacts).
+     * @param int $contactId Contact ID. See [Contact](https://docs.textmagic.com/#tag/Contacts).
      *
      * @return $this
      */

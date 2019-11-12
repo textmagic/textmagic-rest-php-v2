@@ -481,7 +481,7 @@ class Conversation implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Message status (for chats outbound only). See [message delivery statuses](http://docs.textmagictesting.com/#section/Delivery-status-codes) for details.
+     * @param string $status Message status (for chats outbound only). See [message delivery statuses](https://docs.textmagic.com/#section/Delivery-status-codes) for details.
      *
      * @return $this
      */
@@ -553,7 +553,7 @@ class Conversation implements ModelInterface, ArrayAccess
     /**
      * Sets sessionId
      *
-     * @param int $sessionId Session ID of a message. See [message sessions](http://docs.textmagictesting.com/#tag/Outbound-Message-Sessions) for details.
+     * @param int $sessionId Session ID of a message. See [message sessions](https://docs.textmagic.com/#tag/Outbound-Message-Sessions) for details.
      *
      * @return $this
      */

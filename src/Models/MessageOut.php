@@ -511,7 +511,7 @@ class MessageOut implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Delivery status of the message. See [message delivery statuses](http://docs.textmagictesting.com/#section/Delivery-status-codes) for details.
+     * @param string $status Delivery status of the message. See [message delivery statuses](https://docs.textmagic.com/#section/Delivery-status-codes) for details.
      *
      * @return $this
      */
@@ -712,7 +712,7 @@ class MessageOut implements ModelInterface, ArrayAccess
     /**
      * Sets firstName
      *
-     * @param string $firstName Contact first name. Could be substituted from your [Contacts](http://docs.textmagictesting.com/#tag/Contacts) (even if you submitted the phone number instead of the contact ID).
+     * @param string $firstName Contact first name. Could be substituted from your [Contacts](https://docs.textmagic.com/#tag/Contacts) (even if you submitted the phone number instead of the contact ID).
      *
      * @return $this
      */

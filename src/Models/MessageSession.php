@@ -356,7 +356,7 @@ class MessageSession implements ModelInterface, ArrayAccess
     /**
      * Sets text
      *
-     * @param string $text Session text. If a template was used for the session text (see [Messages: Send](http://docs.textmagictesting.com/#tag/Outbound-Messages) for details), it may contain template tags.
+     * @param string $text Session text. If a template was used for the session text (see [Messages: Send](https://docs.textmagic.com/#tag/Outbound-Messages) for details), it may contain template tags.
      *
      * @return $this
      */
@@ -380,7 +380,7 @@ class MessageSession implements ModelInterface, ArrayAccess
     /**
      * Sets source
      *
-     * @param string $source *   **O** – for TextMagic Online; *   **A** – for API; *   **M** – for TextMagic Messenger; *   **E** – for [Email to SMS](http://docs.textmagictesting.com/#tag/Send-Email-to-SMS); *   **X** – for [Distribution Lists](http://docs.textmagictesting.com/#tag/Distribution-Lists).
+     * @param string $source *   **O** – for TextMagic Online; *   **A** – for API; *   **M** – for TextMagic Messenger; *   **E** – for [Email to SMS](https://docs.textmagic.com/#tag/Send-Email-to-SMS); *   **X** – for [Distribution Lists](https://docs.textmagic.com/#tag/Distribution-Lists).
      *
      * @return $this
      */
@@ -404,7 +404,7 @@ class MessageSession implements ModelInterface, ArrayAccess
     /**
      * Sets referenceId
      *
-     * @param string $referenceId Custom reference ID (see [Messages: Send](http://docs.textmagictesting.com/#tag/Send-Email-to-SMS) for details).
+     * @param string $referenceId Custom reference ID (see [Messages: Send](https://docs.textmagic.com/#tag/Send-Email-to-SMS) for details).
      *
      * @return $this
      */

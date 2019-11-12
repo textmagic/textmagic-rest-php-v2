@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **cutExtra** | **bool** | Should sending method cut extra characters which not fit supplied partsCount or return 400 Bad request response instead. | [optional] [default to false]
 **partsCount** | **int** | Maximum message parts count (TextMagic allows sending 1 to 6 message parts). | [optional] 
 **referenceId** | **int** | Custom message reference id which can be used in your application infrastructure. | [optional] 
-**from** | **string** | One of allowed Sender ID (phone number or alphanumeric sender ID). If specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs). | [optional] 
+**from** | **string** | One of allowed Sender ID (phone number or alphanumeric sender ID). If specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](https://docs.textmagic.com/#tag/Sender-IDs). | [optional] 
 **rrule** | **string** | iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details. | [optional] 
 **createChat** | **bool** | Should sending method try to create new Chat (if not exist) with specified recipients? | [optional] [default to false]
 **tts** | **bool** | Send a Text-to-Speech message. | [optional] [default to false]

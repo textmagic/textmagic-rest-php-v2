@@ -403,7 +403,7 @@ class CreateContactInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets lists
      *
-     * @param string $lists Contact [list](http://docs.textmagictesting.com/#tag/Lists) ID. Each contact must be assigned to at least one list.
+     * @param string $lists Contact [list](https://docs.textmagic.com/#tag/Lists) ID. Each contact must be assigned to at least one list.
      *
      * @return $this
      */

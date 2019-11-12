@@ -370,7 +370,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets favorited
      *
-     * @param bool $favorited Is the Contact favorite? [Favorite list](http://docs.textmagictesting.com/#operation/getFavorites).
+     * @param bool $favorited Is the Contact favorite? [Favorite list](https://docs.textmagic.com/#operation/getFavorites).
      *
      * @return $this
      */
@@ -394,7 +394,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets blocked
      *
-     * @param bool $blocked Is the Contact blocked? [Blocked contacts](http://docs.textmagictesting.com/#operation/getBlockedContacts).
+     * @param bool $blocked Is the Contact blocked? [Blocked contacts](https://docs.textmagic.com/#operation/getBlockedContacts).
      *
      * @return $this
      */
@@ -562,7 +562,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets customFields
      *
-     * @param \TextMagic\Models\ContactCustomField[] $customFields See the [Custom Fields](http://docs.textmagictesting.com/#tag/Custom-Fields) section.
+     * @param \TextMagic\Models\ContactCustomField[] $customFields See the [Custom Fields](https://docs.textmagic.com/#tag/Custom-Fields) section.
      *
      * @return $this
      */
