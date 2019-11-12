@@ -65,7 +65,8 @@ class MessageIn implements ModelInterface, ArrayAccess
         'contactId' => 'int',
         'firstName' => 'string',
         'lastName' => 'string',
-        'avatar' => 'string'
+        'avatar' => 'string',
+        'email' => 'string'
     ];
 
     /**
@@ -82,7 +83,8 @@ class MessageIn implements ModelInterface, ArrayAccess
         'contactId' => null,
         'firstName' => null,
         'lastName' => null,
-        'avatar' => null
+        'avatar' => null,
+        'email' => null
     ];
 
     /**
@@ -120,7 +122,8 @@ class MessageIn implements ModelInterface, ArrayAccess
         'contactId' => 'contactId',
         'firstName' => 'firstName',
         'lastName' => 'lastName',
-        'avatar' => 'avatar'
+        'avatar' => 'avatar',
+        'email' => 'email'
     ];
 
     /**
@@ -137,7 +140,8 @@ class MessageIn implements ModelInterface, ArrayAccess
         'contactId' => 'setContactId',
         'firstName' => 'setFirstName',
         'lastName' => 'setLastName',
-        'avatar' => 'setAvatar'
+        'avatar' => 'setAvatar',
+        'email' => 'setEmail'
     ];
 
     /**
@@ -154,7 +158,8 @@ class MessageIn implements ModelInterface, ArrayAccess
         'contactId' => 'getContactId',
         'firstName' => 'getFirstName',
         'lastName' => 'getLastName',
-        'avatar' => 'getAvatar'
+        'avatar' => 'getAvatar',
+        'email' => 'getEmail'
     ];
 
     /**
@@ -226,6 +231,7 @@ class MessageIn implements ModelInterface, ArrayAccess
         $this->container['firstName'] = isset($data['firstName']) ? $data['firstName'] : null;
         $this->container['lastName'] = isset($data['lastName']) ? $data['lastName'] : null;
         $this->container['avatar'] = isset($data['avatar']) ? $data['avatar'] : null;
+        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
     }
 
     /**
@@ -482,6 +488,30 @@ class MessageIn implements ModelInterface, ArrayAccess
     public function setAvatar($avatar)
     {
         $this->container['avatar'] = $avatar;
+
+        return $this;
+    }
+
+    /**
+     * Gets email
+     *
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->container['email'];
+    }
+
+    /**
+     * Sets email
+     *
+     * @param string $email Sender email.
+     *
+     * @return $this
+     */
+    public function setEmail($email)
+    {
+        $this->container['email'] = $email;
 
         return $this;
     }
