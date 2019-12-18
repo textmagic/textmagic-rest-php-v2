@@ -1,6 +1,6 @@
 <?php
 /**
- * CheckPhoneVerificationCodeInputObject
+ * SendPhoneVerificationCodeTFAInputObject
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \TextMagic\ObjectSerializer;
 
 /**
- * CheckPhoneVerificationCodeInputObject Class Doc Comment
+ * SendPhoneVerificationCodeTFAInputObject Class Doc Comment
  *
  * @category Class
  * @package  TextMagic
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CheckPhoneVerificationCodeInputObject implements ModelInterface, ArrayAccess
+class SendPhoneVerificationCodeTFAInputObject implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class CheckPhoneVerificationCodeInputObject implements ModelInterface, ArrayAcce
       *
       * @var string
       */
-    protected static $swaggerModelName = 'CheckPhoneVerificationCodeInputObject';
+    protected static $swaggerModelName = 'SendPhoneVerificationCodeTFAInputObject';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,12 @@ class CheckPhoneVerificationCodeInputObject implements ModelInterface, ArrayAcce
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'code' => 'int',
-        'verifyId' => 'string'
+        'phone' => 'string',
+        'brand' => 'string',
+        'codeLength' => 'int',
+        'language' => 'string',
+        'senderId' => 'string',
+        'country' => 'string'
     ];
 
     /**
@@ -67,8 +71,12 @@ class CheckPhoneVerificationCodeInputObject implements ModelInterface, ArrayAcce
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'code' => null,
-        'verifyId' => null
+        'phone' => null,
+        'brand' => null,
+        'codeLength' => null,
+        'language' => null,
+        'senderId' => null,
+        'country' => null
     ];
 
     /**
@@ -98,8 +106,12 @@ class CheckPhoneVerificationCodeInputObject implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $attributeMap = [
-        'code' => 'code',
-        'verifyId' => 'verifyId'
+        'phone' => 'phone',
+        'brand' => 'brand',
+        'codeLength' => 'codeLength',
+        'language' => 'language',
+        'senderId' => 'senderId',
+        'country' => 'country'
     ];
 
     /**
@@ -108,8 +120,12 @@ class CheckPhoneVerificationCodeInputObject implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $setters = [
-        'code' => 'setCode',
-        'verifyId' => 'setVerifyId'
+        'phone' => 'setPhone',
+        'brand' => 'setBrand',
+        'codeLength' => 'setCodeLength',
+        'language' => 'setLanguage',
+        'senderId' => 'setSenderId',
+        'country' => 'setCountry'
     ];
 
     /**
@@ -118,8 +134,12 @@ class CheckPhoneVerificationCodeInputObject implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $getters = [
-        'code' => 'getCode',
-        'verifyId' => 'getVerifyId'
+        'phone' => 'getPhone',
+        'brand' => 'getBrand',
+        'codeLength' => 'getCodeLength',
+        'language' => 'getLanguage',
+        'senderId' => 'getSenderId',
+        'country' => 'getCountry'
     ];
 
     /**
@@ -182,8 +202,12 @@ class CheckPhoneVerificationCodeInputObject implements ModelInterface, ArrayAcce
      */
     public function __construct(array $data = null)
     {
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['verifyId'] = isset($data['verifyId']) ? $data['verifyId'] : null;
+        $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
+        $this->container['brand'] = isset($data['brand']) ? $data['brand'] : null;
+        $this->container['codeLength'] = isset($data['codeLength']) ? $data['codeLength'] : null;
+        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
+        $this->container['senderId'] = isset($data['senderId']) ? $data['senderId'] : null;
+        $this->container['country'] = isset($data['country']) ? $data['country'] : null;
     }
 
     /**
@@ -211,49 +235,145 @@ class CheckPhoneVerificationCodeInputObject implements ModelInterface, ArrayAcce
 
 
     /**
-     * Gets code
+     * Gets phone
      *
-     * @return int
+     * @return string
      */
-    public function getCode()
+    public function getPhone()
     {
-        return $this->container['code'];
+        return $this->container['phone'];
     }
 
     /**
-     * Sets code
+     * Sets phone
      *
-     * @param int $code Verification code received by the user and entered into the form field.
+     * @param string $phone Use the phone number in international E.164 format. If you need to pass a phone number in the local format, please use it with the **country** parameter to specify the origin country of the phone number.
      *
      * @return $this
      */
-    public function setCode($code)
+    public function setPhone($phone)
     {
-        $this->container['code'] = $code;
+        $this->container['phone'] = $phone;
 
         return $this;
     }
 
     /**
-     * Gets verifyId
+     * Gets brand
      *
      * @return string
      */
-    public function getVerifyId()
+    public function getBrand()
     {
-        return $this->container['verifyId'];
+        return $this->container['brand'];
     }
 
     /**
-     * Sets verifyId
+     * Sets brand
      *
-     * @param string $verifyId VerifyId from Step 1 to match both requests together.
+     * @param string $brand An alphanumeric string with up to 18 characters you can use to personalize the verification text message body, to help users identify your company or application name. For example: “Your TextMagic PIN is …”
      *
      * @return $this
      */
-    public function setVerifyId($verifyId)
+    public function setBrand($brand)
     {
-        $this->container['verifyId'] = $verifyId;
+        $this->container['brand'] = $brand;
+
+        return $this;
+    }
+
+    /**
+     * Gets codeLength
+     *
+     * @return int
+     */
+    public function getCodeLength()
+    {
+        return $this->container['codeLength'];
+    }
+
+    /**
+     * Sets codeLength
+     *
+     * @param int $codeLength The length of the verification code. The value can be 4 or 6 characters.
+     *
+     * @return $this
+     */
+    public function setCodeLength($codeLength)
+    {
+        $this->container['codeLength'] = $codeLength;
+
+        return $this;
+    }
+
+    /**
+     * Gets language
+     *
+     * @return string
+     */
+    public function getLanguage()
+    {
+        return $this->container['language'];
+    }
+
+    /**
+     * Sets language
+     *
+     * @param string $language By default, the SMS or text-to-speech (TTS) voice message is generated in the locale that matches the number. For example, the text message or TTS message for a 33\\* number is sent in French. Use this parameter to explicitly control the language, accent, and gender used for the verification request. Choosing one of the following: `de-de`, `en-au`, `en-gb`, `en-us`, `en-in`, `es-es`, `es-mx`, `es-us`, `fr-ca`, `fr-fr`, `is-is`, `it-it`, `ja-jp`, `ko-kr`, `nl-nl`, `pl-pl`, `pt-pt`, `pt-br`, `ro-ro`, `ru-ru`, `sv-se`, `tr-tr`, `zh-cn` or `zh-tw`.
+     *
+     * @return $this
+     */
+    public function setLanguage($language)
+    {
+        $this->container['language'] = $language;
+
+        return $this;
+    }
+
+    /**
+     * Gets senderId
+     *
+     * @return string
+     */
+    public function getSenderId()
+    {
+        return $this->container['senderId'];
+    }
+
+    /**
+     * Sets senderId
+     *
+     * @param string $senderId One of the available [sender settings](https://my.textmagic.com/online/reply-options/) on your TextMagic account. If the specified sender setting type is not allowed for some destinations, a fallback default sender will be used to ensure message delivery. More info about known restrictions can be found [here](https://support.textmagic.com/article/how-to-understand-sender-setting-restrictions/).
+     *
+     * @return $this
+     */
+    public function setSenderId($senderId)
+    {
+        $this->container['senderId'] = $senderId;
+
+        return $this;
+    }
+
+    /**
+     * Gets country
+     *
+     * @return string
+     */
+    public function getCountry()
+    {
+        return $this->container['country'];
+    }
+
+    /**
+     * Sets country
+     *
+     * @param string $country The 2-letter ISO country code for the local phone number.
+     *
+     * @return $this
+     */
+    public function setCountry($country)
+    {
+        $this->container['country'] = $country;
 
         return $this;
     }

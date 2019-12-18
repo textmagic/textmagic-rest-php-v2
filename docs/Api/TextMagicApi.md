@@ -379,7 +379,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **checkPhoneVerificationCodeTFA**
-> checkPhoneVerificationCodeTFA($checkPhoneVerificationCodeInputObject)
+> checkPhoneVerificationCodeTFA($checkPhoneVerificationCodeTFAInputObject)
 
 Step 2: Check the verification code
 
@@ -402,10 +402,10 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     new GuzzleHttp\Client(),
     $config
 );
-$checkPhoneVerificationCodeInputObject = new \TextMagic\Models\CheckPhoneVerificationCodeInputObject(); // \TextMagic\Models\CheckPhoneVerificationCodeInputObject | 
+$checkPhoneVerificationCodeTFAInputObject = new \TextMagic\Models\CheckPhoneVerificationCodeTFAInputObject(); // \TextMagic\Models\CheckPhoneVerificationCodeTFAInputObject | 
 
 try {
-    $apiInstance->checkPhoneVerificationCodeTFA($checkPhoneVerificationCodeInputObject);
+    $apiInstance->checkPhoneVerificationCodeTFA($checkPhoneVerificationCodeTFAInputObject);
 } catch (Exception $e) {
     echo 'Exception when calling TextMagicApi->checkPhoneVerificationCodeTFA: ', $e->getMessage(), PHP_EOL;
 }
@@ -416,7 +416,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **checkPhoneVerificationCodeInputObject** | [**\TextMagic\Models\CheckPhoneVerificationCodeInputObject**](../Model/CheckPhoneVerificationCodeInputObject.md)|  |
+ **checkPhoneVerificationCodeTFAInputObject** | [**\TextMagic\Models\CheckPhoneVerificationCodeTFAInputObject**](../Model/CheckPhoneVerificationCodeTFAInputObject.md)|  |
 
 ### Return type
 
@@ -7454,7 +7454,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **sendPhoneVerificationCodeTFA**
-> \TextMagic\Models\SendPhoneVerificationCodeResponse sendPhoneVerificationCodeTFA($sendPhoneVerificationCodeInputObject)
+> \TextMagic\Models\SendPhoneVerificationCodeResponse sendPhoneVerificationCodeTFA($sendPhoneVerificationCodeTFAInputObject)
 
 Step 1: Send a verification code
 
@@ -7477,10 +7477,10 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     new GuzzleHttp\Client(),
     $config
 );
-$sendPhoneVerificationCodeInputObject = new \TextMagic\Models\SendPhoneVerificationCodeInputObject(); // \TextMagic\Models\SendPhoneVerificationCodeInputObject | 
+$sendPhoneVerificationCodeTFAInputObject = new \TextMagic\Models\SendPhoneVerificationCodeTFAInputObject(); // \TextMagic\Models\SendPhoneVerificationCodeTFAInputObject | 
 
 try {
-    $result = $apiInstance->sendPhoneVerificationCodeTFA($sendPhoneVerificationCodeInputObject);
+    $result = $apiInstance->sendPhoneVerificationCodeTFA($sendPhoneVerificationCodeTFAInputObject);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TextMagicApi->sendPhoneVerificationCodeTFA: ', $e->getMessage(), PHP_EOL;
@@ -7492,7 +7492,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sendPhoneVerificationCodeInputObject** | [**\TextMagic\Models\SendPhoneVerificationCodeInputObject**](../Model/SendPhoneVerificationCodeInputObject.md)|  |
+ **sendPhoneVerificationCodeTFAInputObject** | [**\TextMagic\Models\SendPhoneVerificationCodeTFAInputObject**](../Model/SendPhoneVerificationCodeTFAInputObject.md)|  |
 
 ### Return type
 

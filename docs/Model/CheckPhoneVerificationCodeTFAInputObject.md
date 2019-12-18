@@ -1,4 +1,4 @@
-# CheckPhoneVerificationCodeInputObject
+# CheckPhoneVerificationCodeTFAInputObject
 
 ## Properties
 Name | Type | Description | Notes

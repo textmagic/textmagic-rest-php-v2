@@ -1166,15 +1166,15 @@ class TextMagicApi
      *
      * Step 2: Check the verification code
      *
-     * @param  \TextMagic\Models\CheckPhoneVerificationCodeInputObject $checkPhoneVerificationCodeInputObject checkPhoneVerificationCodeInputObject (required)
+     * @param  \TextMagic\Models\CheckPhoneVerificationCodeTFAInputObject $checkPhoneVerificationCodeTFAInputObject checkPhoneVerificationCodeTFAInputObject (required)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function checkPhoneVerificationCodeTFA($checkPhoneVerificationCodeInputObject)
+    public function checkPhoneVerificationCodeTFA($checkPhoneVerificationCodeTFAInputObject)
     {
-        $this->checkPhoneVerificationCodeTFAWithHttpInfo($checkPhoneVerificationCodeInputObject);
+        $this->checkPhoneVerificationCodeTFAWithHttpInfo($checkPhoneVerificationCodeTFAInputObject);
     }
 
     /**
@@ -1182,16 +1182,16 @@ class TextMagicApi
      *
      * Step 2: Check the verification code
      *
-     * @param  \TextMagic\Models\CheckPhoneVerificationCodeInputObject $checkPhoneVerificationCodeInputObject (required)
+     * @param  \TextMagic\Models\CheckPhoneVerificationCodeTFAInputObject $checkPhoneVerificationCodeTFAInputObject (required)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function checkPhoneVerificationCodeTFAWithHttpInfo($checkPhoneVerificationCodeInputObject)
+    public function checkPhoneVerificationCodeTFAWithHttpInfo($checkPhoneVerificationCodeTFAInputObject)
     {
         $returnType = '';
-        $request = $this->checkPhoneVerificationCodeTFARequest($checkPhoneVerificationCodeInputObject);
+        $request = $this->checkPhoneVerificationCodeTFARequest($checkPhoneVerificationCodeTFAInputObject);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1251,14 +1251,14 @@ class TextMagicApi
      *
      * Step 2: Check the verification code
      *
-     * @param  \TextMagic\Models\CheckPhoneVerificationCodeInputObject $checkPhoneVerificationCodeInputObject (required)
+     * @param  \TextMagic\Models\CheckPhoneVerificationCodeTFAInputObject $checkPhoneVerificationCodeTFAInputObject (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function checkPhoneVerificationCodeTFAAsync($checkPhoneVerificationCodeInputObject)
+    public function checkPhoneVerificationCodeTFAAsync($checkPhoneVerificationCodeTFAInputObject)
     {
-        return $this->checkPhoneVerificationCodeTFAAsyncWithHttpInfo($checkPhoneVerificationCodeInputObject)
+        return $this->checkPhoneVerificationCodeTFAAsyncWithHttpInfo($checkPhoneVerificationCodeTFAInputObject)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1271,15 +1271,15 @@ class TextMagicApi
      *
      * Step 2: Check the verification code
      *
-     * @param  \TextMagic\Models\CheckPhoneVerificationCodeInputObject $checkPhoneVerificationCodeInputObject (required)
+     * @param  \TextMagic\Models\CheckPhoneVerificationCodeTFAInputObject $checkPhoneVerificationCodeTFAInputObject (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function checkPhoneVerificationCodeTFAAsyncWithHttpInfo($checkPhoneVerificationCodeInputObject)
+    public function checkPhoneVerificationCodeTFAAsyncWithHttpInfo($checkPhoneVerificationCodeTFAInputObject)
     {
         $returnType = '';
-        $request = $this->checkPhoneVerificationCodeTFARequest($checkPhoneVerificationCodeInputObject);
+        $request = $this->checkPhoneVerificationCodeTFARequest($checkPhoneVerificationCodeTFAInputObject);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1307,17 +1307,17 @@ class TextMagicApi
     /**
      * Create request for operation 'checkPhoneVerificationCodeTFA'
      *
-     * @param  \TextMagic\Models\CheckPhoneVerificationCodeInputObject $checkPhoneVerificationCodeInputObject (required)
+     * @param  \TextMagic\Models\CheckPhoneVerificationCodeTFAInputObject $checkPhoneVerificationCodeTFAInputObject (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function checkPhoneVerificationCodeTFARequest($checkPhoneVerificationCodeInputObject)
+    protected function checkPhoneVerificationCodeTFARequest($checkPhoneVerificationCodeTFAInputObject)
     {
-        // verify the required parameter 'checkPhoneVerificationCodeInputObject' is set
-        if ($checkPhoneVerificationCodeInputObject === null || (is_array($checkPhoneVerificationCodeInputObject) && count($checkPhoneVerificationCodeInputObject) === 0)) {
+        // verify the required parameter 'checkPhoneVerificationCodeTFAInputObject' is set
+        if ($checkPhoneVerificationCodeTFAInputObject === null || (is_array($checkPhoneVerificationCodeTFAInputObject) && count($checkPhoneVerificationCodeTFAInputObject) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $checkPhoneVerificationCodeInputObject when calling checkPhoneVerificationCodeTFA'
+                'Missing the required parameter $checkPhoneVerificationCodeTFAInputObject when calling checkPhoneVerificationCodeTFA'
             );
         }
 
@@ -1332,8 +1332,8 @@ class TextMagicApi
 
         // body params
         $_tempBody = null;
-        if (isset($checkPhoneVerificationCodeInputObject)) {
-            $_tempBody = $checkPhoneVerificationCodeInputObject;
+        if (isset($checkPhoneVerificationCodeTFAInputObject)) {
+            $_tempBody = $checkPhoneVerificationCodeTFAInputObject;
         }
 
         if ($multipart) {
@@ -34821,15 +34821,15 @@ class TextMagicApi
      *
      * Step 1: Send a verification code
      *
-     * @param  \TextMagic\Models\SendPhoneVerificationCodeInputObject $sendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject (required)
+     * @param  \TextMagic\Models\SendPhoneVerificationCodeTFAInputObject $sendPhoneVerificationCodeTFAInputObject sendPhoneVerificationCodeTFAInputObject (required)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \TextMagic\Models\SendPhoneVerificationCodeResponse
      */
-    public function sendPhoneVerificationCodeTFA($sendPhoneVerificationCodeInputObject)
+    public function sendPhoneVerificationCodeTFA($sendPhoneVerificationCodeTFAInputObject)
     {
-        list($response) = $this->sendPhoneVerificationCodeTFAWithHttpInfo($sendPhoneVerificationCodeInputObject);
+        list($response) = $this->sendPhoneVerificationCodeTFAWithHttpInfo($sendPhoneVerificationCodeTFAInputObject);
         return $response;
     }
 
@@ -34838,16 +34838,16 @@ class TextMagicApi
      *
      * Step 1: Send a verification code
      *
-     * @param  \TextMagic\Models\SendPhoneVerificationCodeInputObject $sendPhoneVerificationCodeInputObject (required)
+     * @param  \TextMagic\Models\SendPhoneVerificationCodeTFAInputObject $sendPhoneVerificationCodeTFAInputObject (required)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \TextMagic\Models\SendPhoneVerificationCodeResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function sendPhoneVerificationCodeTFAWithHttpInfo($sendPhoneVerificationCodeInputObject)
+    public function sendPhoneVerificationCodeTFAWithHttpInfo($sendPhoneVerificationCodeTFAInputObject)
     {
         $returnType = '\TextMagic\Models\SendPhoneVerificationCodeResponse';
-        $request = $this->sendPhoneVerificationCodeTFARequest($sendPhoneVerificationCodeInputObject);
+        $request = $this->sendPhoneVerificationCodeTFARequest($sendPhoneVerificationCodeTFAInputObject);
 
         try {
             $options = $this->createHttpClientOption();
@@ -34929,14 +34929,14 @@ class TextMagicApi
      *
      * Step 1: Send a verification code
      *
-     * @param  \TextMagic\Models\SendPhoneVerificationCodeInputObject $sendPhoneVerificationCodeInputObject (required)
+     * @param  \TextMagic\Models\SendPhoneVerificationCodeTFAInputObject $sendPhoneVerificationCodeTFAInputObject (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function sendPhoneVerificationCodeTFAAsync($sendPhoneVerificationCodeInputObject)
+    public function sendPhoneVerificationCodeTFAAsync($sendPhoneVerificationCodeTFAInputObject)
     {
-        return $this->sendPhoneVerificationCodeTFAAsyncWithHttpInfo($sendPhoneVerificationCodeInputObject)
+        return $this->sendPhoneVerificationCodeTFAAsyncWithHttpInfo($sendPhoneVerificationCodeTFAInputObject)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -34949,15 +34949,15 @@ class TextMagicApi
      *
      * Step 1: Send a verification code
      *
-     * @param  \TextMagic\Models\SendPhoneVerificationCodeInputObject $sendPhoneVerificationCodeInputObject (required)
+     * @param  \TextMagic\Models\SendPhoneVerificationCodeTFAInputObject $sendPhoneVerificationCodeTFAInputObject (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function sendPhoneVerificationCodeTFAAsyncWithHttpInfo($sendPhoneVerificationCodeInputObject)
+    public function sendPhoneVerificationCodeTFAAsyncWithHttpInfo($sendPhoneVerificationCodeTFAInputObject)
     {
         $returnType = '\TextMagic\Models\SendPhoneVerificationCodeResponse';
-        $request = $this->sendPhoneVerificationCodeTFARequest($sendPhoneVerificationCodeInputObject);
+        $request = $this->sendPhoneVerificationCodeTFARequest($sendPhoneVerificationCodeTFAInputObject);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -34999,17 +34999,17 @@ class TextMagicApi
     /**
      * Create request for operation 'sendPhoneVerificationCodeTFA'
      *
-     * @param  \TextMagic\Models\SendPhoneVerificationCodeInputObject $sendPhoneVerificationCodeInputObject (required)
+     * @param  \TextMagic\Models\SendPhoneVerificationCodeTFAInputObject $sendPhoneVerificationCodeTFAInputObject (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function sendPhoneVerificationCodeTFARequest($sendPhoneVerificationCodeInputObject)
+    protected function sendPhoneVerificationCodeTFARequest($sendPhoneVerificationCodeTFAInputObject)
     {
-        // verify the required parameter 'sendPhoneVerificationCodeInputObject' is set
-        if ($sendPhoneVerificationCodeInputObject === null || (is_array($sendPhoneVerificationCodeInputObject) && count($sendPhoneVerificationCodeInputObject) === 0)) {
+        // verify the required parameter 'sendPhoneVerificationCodeTFAInputObject' is set
+        if ($sendPhoneVerificationCodeTFAInputObject === null || (is_array($sendPhoneVerificationCodeTFAInputObject) && count($sendPhoneVerificationCodeTFAInputObject) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $sendPhoneVerificationCodeInputObject when calling sendPhoneVerificationCodeTFA'
+                'Missing the required parameter $sendPhoneVerificationCodeTFAInputObject when calling sendPhoneVerificationCodeTFA'
             );
         }
 
@@ -35024,8 +35024,8 @@ class TextMagicApi
 
         // body params
         $_tempBody = null;
-        if (isset($sendPhoneVerificationCodeInputObject)) {
-            $_tempBody = $sendPhoneVerificationCodeInputObject;
+        if (isset($sendPhoneVerificationCodeTFAInputObject)) {
+            $_tempBody = $sendPhoneVerificationCodeTFAInputObject;
         }
 
         if ($multipart) {

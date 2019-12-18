@@ -1,4 +1,4 @@
-# SendPhoneVerificationCodeInputObject
+# SendPhoneVerificationCodeTFAInputObject
 
 ## Properties
 Name | Type | Description | Notes
