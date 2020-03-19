@@ -347,7 +347,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     new GuzzleHttp\Client(),
     $config
 );
-$verifyId = "\"123e4567-e89b-12d3-a456-426655440000\""; // string | The verifyId that you received in Step 1.
+$verifyId = "123e4567-e89b-12d3-a456-426655440000"; // string | The verifyId that you received in Step 1.
 
 try {
     $apiInstance->cancelVerification($verifyId);
@@ -2494,8 +2494,8 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     new GuzzleHttp\Client(),
     $config
 );
-$phone = "\"447860021130\""; // string | Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers).
-$country = "\"GB\""; // string | This option must be specified only if the phone number is in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**.
+$phone = "447860021130"; // string | Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers).
+$country = "GB"; // string | This option must be specified only if the phone number is in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**.
 
 try {
     $result = $apiInstance->doCarrierLookup($phone, $country);
@@ -2552,7 +2552,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     new GuzzleHttp\Client(),
     $config
 );
-$email = "\"john@sample.com\""; // string | Email address.
+$email = "john@sample.com"; // string | Email address.
 
 try {
     $result = $apiInstance->doEmailLookup($email);
@@ -2666,7 +2666,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     new GuzzleHttp\Client(),
     $config
 );
-$status = "\"a\""; // string | Fetch only (a)ctive, (c)losed or (d)eleted chats.
+$status = "a"; // string | Fetch only (a)ctive, (c)losed or (d)eleted chats.
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
 $orderBy = "id"; // string | Order results by some field. Default is id.
@@ -3034,7 +3034,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     new GuzzleHttp\Client(),
     $config
 );
-$country = "\"GB\""; // string | The 2-letter dedicated number country ISO code.
+$country = "GB"; // string | The 2-letter dedicated number country ISO code.
 $prefix = 447155; // int | Desired number prefix. Should include the country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country.
 $tollfree = 0; // int | Should we show only tollfree numbers (tollfree available only for US).
 
@@ -3094,7 +3094,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     new GuzzleHttp\Client(),
     $config
 );
-$country = "\"US\""; // string | The 2-letter ISO country ID. If not specified, it returns all the available sender settings.
+$country = "US"; // string | The 2-letter ISO country ID. If not specified, it returns all the available sender settings.
 
 try {
     $result = $apiInstance->getAvailableSenderSettingOptions($country);
@@ -3482,7 +3482,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     new GuzzleHttp\Client(),
     $config
 );
-$phone = "\"447860021130\""; // string | 
+$phone = "447860021130"; // string | 
 $upsert = 0; // int | Create a new chat if not found.
 $reopen = 0; // int | Reopen chat if found or do not change status.
 
@@ -3668,7 +3668,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     new GuzzleHttp\Client(),
     $config
 );
-$phone = "\"447860021130\""; // string | 
+$phone = "447860021130"; // string | 
 
 try {
     $result = $apiInstance->getContactByPhone($phone);
@@ -3724,7 +3724,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     new GuzzleHttp\Client(),
     $config
 );
-$phone = "\"447860021130\""; // string | Phone number to check.
+$phone = "447860021130"; // string | Phone number to check.
 
 try {
     $result = $apiInstance->getContactIfBlocked($phone);
@@ -4016,7 +4016,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     new GuzzleHttp\Client(),
     $config
 );
-$query = "\"A\""; // string | Find recipients by specified search query.
+$query = "A"; // string | Find recipients by specified search query.
 $limit = 10; // int | The number of results per page.
 $lists = 0; // int | Should lists be returned or not?
 
@@ -4416,7 +4416,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 );
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
-$query = "\"A\""; // string | Find contacts or lists by specified search query.
+$query = "A"; // string | Find contacts or lists by specified search query.
 
 try {
     $result = $apiInstance->getFavorites($page, $limit, $query);
@@ -4878,23 +4878,23 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     new GuzzleHttp\Client(),
     $config
 );
-$text = "\"Test message test\""; // string | Message text. Required if **template_id** is not set.
+$text = "Test message test"; // string | Message text. Required if **template_id** is not set.
 $templateId = 1; // int | Template used instead of message text. Required if **text** is not set.
 $sendingTime = 1565606455; // int | DEPRECATED, consider using sendingDateTime and sendingTimezone parameters instead: Optional (required with rrule set). Message sending time is in unix timestamp format. Default is now.
-$sendingDateTime = "\"2020-05-27 13:02:33\""; // string | Sending time is in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to the sendingTimezone.
-$sendingTimezone = "\"America/Buenos_Aires\""; // string | The ID or ISO-name of the timezone used for sending when the sendingDateTime parameter is set, e.g. if you specify sendingDateTime = \\\"2016-05-27 13:02:33\\\" and sendingTimezone = \\\"America/Buenos_Aires\\\", your message will be sent on May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is the account timezone.
-$contacts = "\"1,2,3,4\""; // string | Comma-separated array of contact resources id message will be sent to.
-$lists = "\"1,2,3,4\""; // string | Comma-separated array of list resources id message will be sent to.
-$phones = "\"447860021130,447860021131\""; // string | Comma-separated array of E.164 phone numbers message will be sent to.
+$sendingDateTime = "2020-05-27 13:02:33"; // string | Sending time is in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to the sendingTimezone.
+$sendingTimezone = "America/Buenos_Aires"; // string | The ID or ISO-name of the timezone used for sending when the sendingDateTime parameter is set, e.g. if you specify sendingDateTime = \\\"2016-05-27 13:02:33\\\" and sendingTimezone = \\\"America/Buenos_Aires\\\", your message will be sent on May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is the account timezone.
+$contacts = "1,2,3,4"; // string | Comma-separated array of contact resources id message will be sent to.
+$lists = "1,2,3,4"; // string | Comma-separated array of list resources id message will be sent to.
+$phones = "447860021130,447860021131"; // string | Comma-separated array of E.164 phone numbers message will be sent to.
 $cutExtra = 0; // int | Should sending method cut extra characters which not fit supplied partsCount or return 400 Bad request response instead.
 $partsCount = 6; // int | Maximum message parts count (TextMagic allows sending of 1 to 6 message parts).
 $referenceId = 1; // int | Custom message reference id which can be used in your application infrastructure.
-$from = "\"Test Sender ID\""; // string | One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](https://docs.textmagic.com/#tag/Sender-IDs).
-$rule = "\"FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=1;COUNT=1\""; // string | An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
+$from = "Test Sender ID"; // string | One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](https://docs.textmagic.com/#tag/Sender-IDs).
+$rule = "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=1;COUNT=1"; // string | An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
 $createChat = 0; // int | Should the sending method try to create new Chat(if not exist) with specified recipients?
 $tts = 0; // int | Send Text-to-Speech message.
 $local = 0; // int | Treat phone numbers passed in the \\'phones\\' field as local.
-$localCountry = "\"US\""; // string | The 2-letter ISO country code for local phone numbers, used when \\'local\\' is set to true. Default is the account country.
+$localCountry = "US"; // string | The 2-letter ISO country code for local phone numbers, used when \\'local\\' is set to true. Default is the account country.
 
 try {
     $result = $apiInstance->getMessagePreview($text, $templateId, $sendingTime, $sendingDateTime, $sendingTimezone, $contacts, $lists, $phones, $cutExtra, $partsCount, $referenceId, $from, $rule, $createChat, $tts, $local, $localCountry);
@@ -4967,23 +4967,23 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     $config
 );
 $includeBlocked = 0; // int | Should we show the pricing for blocked contacts?
-$text = "\"Test message test\""; // string | Message text. Required if the **template_id** is not set.
+$text = "Test message test"; // string | Message text. Required if the **template_id** is not set.
 $templateId = 1; // int | Template used instead of message text. Required if the **text** is not set.
 $sendingTime = 1565606455; // int | DEPRECATED, consider using the sendingDateTime and sendingTimezone parameters instead: optional (required with rrule set). Message sending time is in unix timestamp format. Default is now.
-$sendingDateTime = "\"2020-05-27 13:02:33\""; // string | Sending time is in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to the sendingTimezone.
-$sendingTimezone = "\"America/Buenos_Aires\""; // string | The ID or ISO-name of the timezone used for sending when sendingDateTime parameter is set, e.g. if you specify sendingDateTime = \\\"2016-05-27 13:02:33\\\" and sendingTimezone = \\\"America/Buenos_Aires\\\", your message will be sent on May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is the account timezone.
-$contacts = "\"1,2,3,4\""; // string | Comma-separated array of contact resources id message will be sent to.
-$lists = "\"1,2,3,4\""; // string | Comma-separated array of list resources id message will be sent to.
-$phones = "\"447860021130,447860021131\""; // string | Comma-separated array of E.164 phone numbers message will be sent to.
+$sendingDateTime = "2020-05-27 13:02:33"; // string | Sending time is in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to the sendingTimezone.
+$sendingTimezone = "America/Buenos_Aires"; // string | The ID or ISO-name of the timezone used for sending when sendingDateTime parameter is set, e.g. if you specify sendingDateTime = \\\"2016-05-27 13:02:33\\\" and sendingTimezone = \\\"America/Buenos_Aires\\\", your message will be sent on May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is the account timezone.
+$contacts = "1,2,3,4"; // string | Comma-separated array of contact resources id message will be sent to.
+$lists = "1,2,3,4"; // string | Comma-separated array of list resources id message will be sent to.
+$phones = "447860021130,447860021131"; // string | Comma-separated array of E.164 phone numbers message will be sent to.
 $cutExtra = 0; // int | Should sending method cut extra characters which not fit supplied partsCount or return 400 Bad request response instead.
 $partsCount = 6; // int | Maximum message parts count (TextMagic allows sending 1 to 6 message parts).
 $referenceId = 1; // int | Custom message reference id which can be used in your application infrastructure.
-$from = "\"Test Sender ID\""; // string | One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](https://docs.textmagic.com/#tag/Sender-IDs).
-$rule = "\"FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=1;COUNT=1\""; // string | An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
+$from = "Test Sender ID"; // string | One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](https://docs.textmagic.com/#tag/Sender-IDs).
+$rule = "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=1;COUNT=1"; // string | An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
 $createChat = 0; // int | Should the sending method try to create new Chat (if not exist) with specified recipients?
 $tts = 0; // int | Send a Text-to-Speech message.
 $local = 0; // int | Treat phone numbers passed in the \\'phones\\' field as local.
-$localCountry = "\"US\""; // string | The 2-letter ISO country code for local phone numbers, used when \\'local\\' is set to true. Default is the account country.
+$localCountry = "US"; // string | The 2-letter ISO country code for local phone numbers, used when \\'local\\' is set to true. Default is the account country.
 
 try {
     $result = $apiInstance->getMessagePrice($includeBlocked, $text, $templateId, $sendingTime, $sendingDateTime, $sendingTimezone, $contacts, $lists, $phones, $cutExtra, $partsCount, $referenceId, $from, $rule, $createChat, $tts, $local, $localCountry);
@@ -5636,7 +5636,7 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     new GuzzleHttp\Client(),
     $config
 );
-$country = "\"US\""; // string | Return sender settings enabled for sending to a specified country. Should be 2 upper-case characters.
+$country = "US"; // string | Return sender settings enabled for sending to a specified country. Should be 2 upper-case characters.
 
 try {
     $result = $apiInstance->getSenderSettings($country);
@@ -5694,8 +5694,8 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 );
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
-$start = "\"2018-11-11 11:11\""; // string | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.
-$end = "\"2019-11-11 11:11\""; // string | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.
+$start = "2018-11-11 11:11"; // string | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.
+$end = "2019-11-11 11:11"; // string | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.
 
 try {
     $result = $apiInstance->getSpendingStat($page, $limit, $start, $end);
@@ -6267,9 +6267,9 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
     $config
 );
 $file = "/path/to/file.txt"; // \SplFileObject | File containing contacts in csv or xls(x) formats.
-$column = "\"0:firstName;1:lastName;3:phone;4:email\""; // string | Import file column mapping. The string must contain sub-strings of mapping in format `columnNumber:field` glued by `;`. For example: `0:firstName;1:lastName;3:phone;4:email` where the value before `:` is a number of the column in the file, and the value after `:` is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: `firstName`, `lastName`, `phone`, `email`. Existing of `phone` mapping is required.
+$column = "0:firstName;1:lastName;3:phone;4:email"; // string | Import file column mapping. The string must contain sub-strings of mapping in format `columnNumber:field` glued by `;`. For example: `0:firstName;1:lastName;3:phone;4:email` where the value before `:` is a number of the column in the file, and the value after `:` is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: `firstName`, `lastName`, `phone`, `email`. Existing of `phone` mapping is required.
 $listId = 443; // int | List that ID contacts will be imported to. Ignored if `listName` is specified.
-$listName = "\"A new list\""; // string | List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if `listId` is specified.
+$listName = "A new list"; // string | List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if `listId` is specified.
 
 try {
     $result = $apiInstance->importContacts($file, $column, $listId, $listName);
@@ -6982,7 +6982,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchContacts**
-> \TextMagic\Models\SearchContactsPaginatedResponse searchContacts($page, $limit, $shared, $ids, $listId, $includeBlocked, $query, $local, $country, $orderBy, $direction)
+> \TextMagic\Models\SearchContactsPaginatedResponse searchContacts($page, $limit, $shared, $ids, $listId, $includeBlocked, $query, $local, $exactMatch, $country, $orderBy, $direction)
 
 Find contacts by given criteria
 
@@ -7013,12 +7013,13 @@ $listId = 56; // int | Find contacts by List ID.
 $includeBlocked = 56; // int | Should blocked contacts be included?
 $query = "query_example"; // string | Find contacts by specified search query.
 $local = 0; // int | Treat phone number passed in the \"query\" field as local. Default is 0.
+$exactMatch = 0; // int | Return only exactly matching contacts. Default is 0.
 $country = "country_example"; // string | The 2-letter ISO country code for local phone numbers, used when \"local\" is set to true. Default is the account country.
 $orderBy = "id"; // string | Order results by some field. Default is id.
 $direction = "desc"; // string | Order direction. Default is desc.
 
 try {
-    $result = $apiInstance->searchContacts($page, $limit, $shared, $ids, $listId, $includeBlocked, $query, $local, $country, $orderBy, $direction);
+    $result = $apiInstance->searchContacts($page, $limit, $shared, $ids, $listId, $includeBlocked, $query, $local, $exactMatch, $country, $orderBy, $direction);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TextMagicApi->searchContacts: ', $e->getMessage(), PHP_EOL;
@@ -7038,6 +7039,7 @@ Name | Type | Description  | Notes
  **includeBlocked** | **int**| Should blocked contacts be included? | [optional]
  **query** | **string**| Find contacts by specified search query. | [optional]
  **local** | **int**| Treat phone number passed in the \&quot;query\&quot; field as local. Default is 0. | [optional] [default to 0]
+ **exactMatch** | **int**| Return only exactly matching contacts. Default is 0. | [optional] [default to 0]
  **country** | **string**| The 2-letter ISO country code for local phone numbers, used when \&quot;local\&quot; is set to true. Default is the account country. | [optional]
  **orderBy** | **string**| Order results by some field. Default is id. | [optional] [default to id]
  **direction** | **string**| Order direction. Default is desc. | [optional] [default to desc]
@@ -7151,8 +7153,8 @@ $apiInstance = new TextMagic\Api\TextMagicApi(
 );
 $page = 1; // int | Fetch specified results page.
 $limit = 10; // int | The number of results per page.
-$ids = "\"1,2,3,4\""; // string | Find lists by IDs.
-$query = "\"A\""; // string | Find lists by specified search query.
+$ids = "1,2,3,4"; // string | Find lists by IDs.
+$query = "A"; // string | Find lists by specified search query.
 $onlyMine = 0; // int | Return only current user lists.
 $onlyDefault = 0; // int | Return only default lists.
 $orderBy = "id"; // string | Order results by some field. Default is id.
@@ -7224,7 +7226,7 @@ $limit = 10; // int | The number of results per page.
 $lastId = 56; // int | Filter results by ID, selecting all values lesser than the specified ID. Note that the \\'page\\' parameter is ignored when \\'lastId\\' is specified.
 $ids = "ids_example"; // string | Find message by ID(s).
 $sessionId = 56; // int | Find messages by session ID.
-$statuses = "\"q\""; // string | Find messages by status.
+$statuses = "q"; // string | Find messages by status.
 $includeDeleted = 0; // int | Search also in deleted messages.
 $query = "query_example"; // string | Find messages by specified search query.
 

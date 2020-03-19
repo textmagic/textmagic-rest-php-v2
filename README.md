@@ -25,7 +25,7 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
         }
     ],
     "require": {
-        "textmagic/textmagic-rest-php-v2": "dev-master#v2.0.1067"
+        "textmagic/textmagic-rest-php-v2": "dev-master#v2.0.1307"
     }
 }
 ```
@@ -51,9 +51,10 @@ use TextMagic\Models\SendMessageInputObject;
 use TextMagic\Api\TextMagicApi;
 use TextMagic\Configuration;
 
+// put your Username and API Key from https://my.textmagic.com/online/api/rest-api/keys page.
 $config = Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
-    ->setPassword('YOUR_PASSWORD');
+    ->setPassword('YOUR_API_KEY');
 
 $api = new TextMagicApi(
     new GuzzleHttp\Client(),
