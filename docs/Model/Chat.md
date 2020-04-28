@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **mutedUntil** | [**\DateTime**](\DateTime.md) | Date and time until the chat will be muted. | 
 **timeLeftMute** | **int** | Time left untill the chat will be unmuted (seconds). | 
 **country** | [**\TextMagic\Models\Country**](Country.md) |  | 
+**pinned** | **bool** | Indicates when the chat is pinned. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

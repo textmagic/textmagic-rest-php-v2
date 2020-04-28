@@ -58,6 +58,7 @@ class SendPhoneVerificationCodeTFAInputObject implements ModelInterface, ArrayAc
       */
     protected static $swaggerTypes = [
         'phone' => 'string',
+        'workflowId' => 'string',
         'brand' => 'string',
         'codeLength' => 'int',
         'language' => 'string',
@@ -72,6 +73,7 @@ class SendPhoneVerificationCodeTFAInputObject implements ModelInterface, ArrayAc
       */
     protected static $swaggerFormats = [
         'phone' => null,
+        'workflowId' => null,
         'brand' => null,
         'codeLength' => null,
         'language' => null,
@@ -107,6 +109,7 @@ class SendPhoneVerificationCodeTFAInputObject implements ModelInterface, ArrayAc
      */
     protected static $attributeMap = [
         'phone' => 'phone',
+        'workflowId' => 'workflowId',
         'brand' => 'brand',
         'codeLength' => 'codeLength',
         'language' => 'language',
@@ -121,6 +124,7 @@ class SendPhoneVerificationCodeTFAInputObject implements ModelInterface, ArrayAc
      */
     protected static $setters = [
         'phone' => 'setPhone',
+        'workflowId' => 'setWorkflowId',
         'brand' => 'setBrand',
         'codeLength' => 'setCodeLength',
         'language' => 'setLanguage',
@@ -135,6 +139,7 @@ class SendPhoneVerificationCodeTFAInputObject implements ModelInterface, ArrayAc
      */
     protected static $getters = [
         'phone' => 'getPhone',
+        'workflowId' => 'getWorkflowId',
         'brand' => 'getBrand',
         'codeLength' => 'getCodeLength',
         'language' => 'getLanguage',
@@ -203,6 +208,7 @@ class SendPhoneVerificationCodeTFAInputObject implements ModelInterface, ArrayAc
     public function __construct(array $data = null)
     {
         $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
+        $this->container['workflowId'] = isset($data['workflowId']) ? $data['workflowId'] : null;
         $this->container['brand'] = isset($data['brand']) ? $data['brand'] : null;
         $this->container['codeLength'] = isset($data['codeLength']) ? $data['codeLength'] : null;
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
@@ -254,6 +260,30 @@ class SendPhoneVerificationCodeTFAInputObject implements ModelInterface, ArrayAc
     public function setPhone($phone)
     {
         $this->container['phone'] = $phone;
+
+        return $this;
+    }
+
+    /**
+     * Gets workflowId
+     *
+     * @return string
+     */
+    public function getWorkflowId()
+    {
+        return $this->container['workflowId'];
+    }
+
+    /**
+     * Sets workflowId
+     *
+     * @param string $workflowId **Workflows**  The Verify API allows you to select the best workflow for your use case. This might depend on the type of verification taking place, your users' preference, or their geographical location. You can specify which workflow to use for each Verify API request by setting the workflowId field to an integer value 1-7. The details of each of these preset workflows are detailed below.  <br />  **Workflow 1 (Default Workflow): SMS -> TTS -> TTS**  <br />  Send PIN code by text message, follow up with two subsequent voice calls if the request wasn't already verified.  Send SMS to user with PIN code Wait for 60 seconds Call user and give TTS PIN code Wait for 60 seconds Call user and give TTS PIN code  Request expires after 300 seconds  <br />  **Workflow 2: SMS -> SMS -> TTS**  <br />    Send PIN code by text message, follow up with a second text message and finally a voice call if the request has not been verified.  Send SMS to user with PIN code Wait for 60 seconds Send SMS to user with PIN code Wait for 60 seconds Call user and give TTS PIN code  Request expires after 300 seconds  <br />  **Workflow 3: TTS -> TTS**  <br />   Call the user and speak a PIN code, follow up with a second call if the request wasn't already verified.  Call user and give TTS PIN code Wait for 60 seconds Call user and give TTS PIN code  Request expires after 300 seconds  <br />  **Workflow 4: SMS -> SMS**  <br />    Send PIN code by text message, follow up with a second text message if the code hasn't been verified.  Send SMS to user with PIN code Wait for 60 seconds Send SMS to user with PIN code Wait for 60 seconds  Request expires after 300 seconds  <br />  **Workflow 5: SMS -> TTS**  <br />   Send PIN code by text message, follow up with a voice call if the code hasn't been verified.  Send SMS to user with PIN code Wait for 60 seconds Call user and give TTS PIN code Wait for 60 seconds  Request expires after 300 seconds  <br />  **Workflow 6: SMS**  <br />   Send PIN code by text message once only.  Send SMS to user with PIN code Request expires after 300 seconds  <br />  **Workflow 7: TTS**  <br />  Call the user and speak a PIN code once only.  Call user and give TTS PIN code  Request expires after 300 seconds
+     *
+     * @return $this
+     */
+    public function setWorkflowId($workflowId)
+    {
+        $this->container['workflowId'] = $workflowId;
 
         return $this;
     }

@@ -71,7 +71,8 @@ class Chat implements ModelInterface, ArrayAccess
         'from' => 'string',
         'mutedUntil' => '\DateTime',
         'timeLeftMute' => 'int',
-        'country' => '\TextMagic\Models\Country'
+        'country' => '\TextMagic\Models\Country',
+        'pinned' => 'bool'
     ];
 
     /**
@@ -94,7 +95,8 @@ class Chat implements ModelInterface, ArrayAccess
         'from' => null,
         'mutedUntil' => 'date-time',
         'timeLeftMute' => null,
-        'country' => null
+        'country' => null,
+        'pinned' => null
     ];
 
     /**
@@ -138,7 +140,8 @@ class Chat implements ModelInterface, ArrayAccess
         'from' => 'from',
         'mutedUntil' => 'mutedUntil',
         'timeLeftMute' => 'timeLeftMute',
-        'country' => 'country'
+        'country' => 'country',
+        'pinned' => 'pinned'
     ];
 
     /**
@@ -161,7 +164,8 @@ class Chat implements ModelInterface, ArrayAccess
         'from' => 'setFrom',
         'mutedUntil' => 'setMutedUntil',
         'timeLeftMute' => 'setTimeLeftMute',
-        'country' => 'setCountry'
+        'country' => 'setCountry',
+        'pinned' => 'setPinned'
     ];
 
     /**
@@ -184,7 +188,8 @@ class Chat implements ModelInterface, ArrayAccess
         'from' => 'getFrom',
         'mutedUntil' => 'getMutedUntil',
         'timeLeftMute' => 'getTimeLeftMute',
-        'country' => 'getCountry'
+        'country' => 'getCountry',
+        'pinned' => 'getPinned'
     ];
 
     /**
@@ -298,6 +303,7 @@ class Chat implements ModelInterface, ArrayAccess
         $this->container['mutedUntil'] = isset($data['mutedUntil']) ? $data['mutedUntil'] : null;
         $this->container['timeLeftMute'] = isset($data['timeLeftMute']) ? $data['timeLeftMute'] : null;
         $this->container['country'] = isset($data['country']) ? $data['country'] : null;
+        $this->container['pinned'] = isset($data['pinned']) ? $data['pinned'] : null;
     }
 
     /**
@@ -369,6 +375,9 @@ class Chat implements ModelInterface, ArrayAccess
         }
         if ($this->container['country'] === null) {
             $invalidProperties[] = "'country' can't be null";
+        }
+        if ($this->container['pinned'] === null) {
+            $invalidProperties[] = "'pinned' can't be null";
         }
         return $invalidProperties;
     }
@@ -759,6 +768,30 @@ class Chat implements ModelInterface, ArrayAccess
     public function setCountry($country)
     {
         $this->container['country'] = $country;
+
+        return $this;
+    }
+
+    /**
+     * Gets pinned
+     *
+     * @return bool
+     */
+    public function getPinned()
+    {
+        return $this->container['pinned'];
+    }
+
+    /**
+     * Sets pinned
+     *
+     * @param bool $pinned Indicates when the chat is pinned.
+     *
+     * @return $this
+     */
+    public function setPinned($pinned)
+    {
+        $this->container['pinned'] = $pinned;
 
         return $this;
     }

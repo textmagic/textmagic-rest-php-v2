@@ -81,6 +81,8 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'chatMarkedAsRead' => 'int',
         'chatMuted' => 'int',
         'chatUnmuted' => 'int',
+        'chatPinned' => 'int',
+        'chatUnpinned' => 'int',
         'chatDeleted' => 'int',
         'chatClosed' => 'int',
         'chatReopened' => 'int',
@@ -128,6 +130,8 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'chatMarkedAsRead' => null,
         'chatMuted' => null,
         'chatUnmuted' => null,
+        'chatPinned' => null,
+        'chatUnpinned' => null,
         'chatDeleted' => null,
         'chatClosed' => null,
         'chatReopened' => null,
@@ -196,6 +200,8 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'chatMarkedAsRead' => 'chatMarkedAsRead',
         'chatMuted' => 'chatMuted',
         'chatUnmuted' => 'chatUnmuted',
+        'chatPinned' => 'chatPinned',
+        'chatUnpinned' => 'chatUnpinned',
         'chatDeleted' => 'chatDeleted',
         'chatClosed' => 'chatClosed',
         'chatReopened' => 'chatReopened',
@@ -243,6 +249,8 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'chatMarkedAsRead' => 'setChatMarkedAsRead',
         'chatMuted' => 'setChatMuted',
         'chatUnmuted' => 'setChatUnmuted',
+        'chatPinned' => 'setChatPinned',
+        'chatUnpinned' => 'setChatUnpinned',
         'chatDeleted' => 'setChatDeleted',
         'chatClosed' => 'setChatClosed',
         'chatReopened' => 'setChatReopened',
@@ -290,6 +298,8 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'chatMarkedAsRead' => 'getChatMarkedAsRead',
         'chatMuted' => 'getChatMuted',
         'chatUnmuted' => 'getChatUnmuted',
+        'chatPinned' => 'getChatPinned',
+        'chatUnpinned' => 'getChatUnpinned',
         'chatDeleted' => 'getChatDeleted',
         'chatClosed' => 'getChatClosed',
         'chatReopened' => 'getChatReopened',
@@ -391,6 +401,8 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         $this->container['chatMarkedAsRead'] = isset($data['chatMarkedAsRead']) ? $data['chatMarkedAsRead'] : null;
         $this->container['chatMuted'] = isset($data['chatMuted']) ? $data['chatMuted'] : null;
         $this->container['chatUnmuted'] = isset($data['chatUnmuted']) ? $data['chatUnmuted'] : null;
+        $this->container['chatPinned'] = isset($data['chatPinned']) ? $data['chatPinned'] : null;
+        $this->container['chatUnpinned'] = isset($data['chatUnpinned']) ? $data['chatUnpinned'] : null;
         $this->container['chatDeleted'] = isset($data['chatDeleted']) ? $data['chatDeleted'] : null;
         $this->container['chatClosed'] = isset($data['chatClosed']) ? $data['chatClosed'] : null;
         $this->container['chatReopened'] = isset($data['chatReopened']) ? $data['chatReopened'] : null;
@@ -488,6 +500,12 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         }
         if ($this->container['chatUnmuted'] === null) {
             $invalidProperties[] = "'chatUnmuted' can't be null";
+        }
+        if ($this->container['chatPinned'] === null) {
+            $invalidProperties[] = "'chatPinned' can't be null";
+        }
+        if ($this->container['chatUnpinned'] === null) {
+            $invalidProperties[] = "'chatUnpinned' can't be null";
         }
         if ($this->container['chatDeleted'] === null) {
             $invalidProperties[] = "'chatDeleted' can't be null";
@@ -1121,6 +1139,54 @@ class GetStateResponse implements ModelInterface, ArrayAccess
     public function setChatUnmuted($chatUnmuted)
     {
         $this->container['chatUnmuted'] = $chatUnmuted;
+
+        return $this;
+    }
+
+    /**
+     * Gets chatPinned
+     *
+     * @return int
+     */
+    public function getChatPinned()
+    {
+        return $this->container['chatPinned'];
+    }
+
+    /**
+     * Sets chatPinned
+     *
+     * @param int $chatPinned chatPinned
+     *
+     * @return $this
+     */
+    public function setChatPinned($chatPinned)
+    {
+        $this->container['chatPinned'] = $chatPinned;
+
+        return $this;
+    }
+
+    /**
+     * Gets chatUnpinned
+     *
+     * @return int
+     */
+    public function getChatUnpinned()
+    {
+        return $this->container['chatUnpinned'];
+    }
+
+    /**
+     * Sets chatUnpinned
+     *
+     * @param int $chatUnpinned chatUnpinned
+     *
+     * @return $this
+     */
+    public function setChatUnpinned($chatUnpinned)
+    {
+        $this->container['chatUnpinned'] = $chatUnpinned;
 
         return $this;
     }
