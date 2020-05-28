@@ -60,7 +60,8 @@ class UploadMessageAttachmentResponse implements ModelInterface, ArrayAccess
         'chars' => 'int',
         'href' => 'string',
         'name' => 'string',
-        'size' => 'int'
+        'size' => 'int',
+        'resource' => 'string'
     ];
 
     /**
@@ -72,7 +73,8 @@ class UploadMessageAttachmentResponse implements ModelInterface, ArrayAccess
         'chars' => null,
         'href' => null,
         'name' => null,
-        'size' => null
+        'size' => null,
+        'resource' => null
     ];
 
     /**
@@ -105,7 +107,8 @@ class UploadMessageAttachmentResponse implements ModelInterface, ArrayAccess
         'chars' => 'chars',
         'href' => 'href',
         'name' => 'name',
-        'size' => 'size'
+        'size' => 'size',
+        'resource' => 'resource'
     ];
 
     /**
@@ -117,7 +120,8 @@ class UploadMessageAttachmentResponse implements ModelInterface, ArrayAccess
         'chars' => 'setChars',
         'href' => 'setHref',
         'name' => 'setName',
-        'size' => 'setSize'
+        'size' => 'setSize',
+        'resource' => 'setResource'
     ];
 
     /**
@@ -129,7 +133,8 @@ class UploadMessageAttachmentResponse implements ModelInterface, ArrayAccess
         'chars' => 'getChars',
         'href' => 'getHref',
         'name' => 'getName',
-        'size' => 'getSize'
+        'size' => 'getSize',
+        'resource' => 'getResource'
     ];
 
     /**
@@ -196,6 +201,7 @@ class UploadMessageAttachmentResponse implements ModelInterface, ArrayAccess
         $this->container['href'] = isset($data['href']) ? $data['href'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
+        $this->container['resource'] = isset($data['resource']) ? $data['resource'] : null;
     }
 
     /**
@@ -218,6 +224,9 @@ class UploadMessageAttachmentResponse implements ModelInterface, ArrayAccess
         }
         if ($this->container['size'] === null) {
             $invalidProperties[] = "'size' can't be null";
+        }
+        if ($this->container['resource'] === null) {
+            $invalidProperties[] = "'resource' can't be null";
         }
         return $invalidProperties;
     }
@@ -326,6 +335,30 @@ class UploadMessageAttachmentResponse implements ModelInterface, ArrayAccess
     public function setSize($size)
     {
         $this->container['size'] = $size;
+
+        return $this;
+    }
+
+    /**
+     * Gets resource
+     *
+     * @return string
+     */
+    public function getResource()
+    {
+        return $this->container['resource'];
+    }
+
+    /**
+     * Sets resource
+     *
+     * @param string $resource Internal file name
+     *
+     * @return $this
+     */
+    public function setResource($resource)
+    {
+        $this->container['resource'] = $resource;
 
         return $this;
     }

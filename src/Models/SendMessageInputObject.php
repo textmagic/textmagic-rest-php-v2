@@ -73,7 +73,9 @@ class SendMessageInputObject implements ModelInterface, ArrayAccess
         'createChat' => 'bool',
         'tts' => 'bool',
         'local' => 'bool',
-        'localCountry' => 'string'
+        'localCountry' => 'string',
+        'destination' => 'string',
+        'resources' => 'string'
     ];
 
     /**
@@ -98,7 +100,9 @@ class SendMessageInputObject implements ModelInterface, ArrayAccess
         'createChat' => null,
         'tts' => null,
         'local' => null,
-        'localCountry' => null
+        'localCountry' => null,
+        'destination' => null,
+        'resources' => null
     ];
 
     /**
@@ -144,7 +148,9 @@ class SendMessageInputObject implements ModelInterface, ArrayAccess
         'createChat' => 'createChat',
         'tts' => 'tts',
         'local' => 'local',
-        'localCountry' => 'localCountry'
+        'localCountry' => 'localCountry',
+        'destination' => 'destination',
+        'resources' => 'resources'
     ];
 
     /**
@@ -169,7 +175,9 @@ class SendMessageInputObject implements ModelInterface, ArrayAccess
         'createChat' => 'setCreateChat',
         'tts' => 'setTts',
         'local' => 'setLocal',
-        'localCountry' => 'setLocalCountry'
+        'localCountry' => 'setLocalCountry',
+        'destination' => 'setDestination',
+        'resources' => 'setResources'
     ];
 
     /**
@@ -194,7 +202,9 @@ class SendMessageInputObject implements ModelInterface, ArrayAccess
         'createChat' => 'getCreateChat',
         'tts' => 'getTts',
         'local' => 'getLocal',
-        'localCountry' => 'getLocalCountry'
+        'localCountry' => 'getLocalCountry',
+        'destination' => 'getDestination',
+        'resources' => 'getResources'
     ];
 
     /**
@@ -274,6 +284,8 @@ class SendMessageInputObject implements ModelInterface, ArrayAccess
         $this->container['tts'] = isset($data['tts']) ? $data['tts'] : false;
         $this->container['local'] = isset($data['local']) ? $data['local'] : false;
         $this->container['localCountry'] = isset($data['localCountry']) ? $data['localCountry'] : null;
+        $this->container['destination'] = isset($data['destination']) ? $data['destination'] : 'false';
+        $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
     }
 
     /**
@@ -704,6 +716,54 @@ class SendMessageInputObject implements ModelInterface, ArrayAccess
     public function setLocalCountry($localCountry)
     {
         $this->container['localCountry'] = $localCountry;
+
+        return $this;
+    }
+
+    /**
+     * Gets destination
+     *
+     * @return string
+     */
+    public function getDestination()
+    {
+        return $this->container['destination'];
+    }
+
+    /**
+     * Sets destination
+     *
+     * @param string $destination Messsage destination type allowed [mms, tts].
+     *
+     * @return $this
+     */
+    public function setDestination($destination)
+    {
+        $this->container['destination'] = $destination;
+
+        return $this;
+    }
+
+    /**
+     * Gets resources
+     *
+     * @return string
+     */
+    public function getResources()
+    {
+        return $this->container['resources'];
+    }
+
+    /**
+     * Sets resources
+     *
+     * @param string $resources File name from mms attachment response (named as resource)
+     *
+     * @return $this
+     */
+    public function setResources($resources)
+    {
+        $this->container['resources'] = $resources;
 
         return $this;
     }

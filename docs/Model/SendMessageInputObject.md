@@ -20,6 +20,8 @@ Name | Type | Description | Notes
 **tts** | **bool** | Send a Text-to-Speech message. | [optional] [default to false]
 **local** | **bool** | Treat phone numbers passed in the \\&#39;phones\\&#39; field as local. | [optional] [default to false]
 **localCountry** | **string** | The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country. | [optional] 
+**destination** | **string** | Messsage destination type allowed [mms, tts]. | [optional] [default to 'false']
+**resources** | **string** | File name from mms attachment response (named as resource) | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
