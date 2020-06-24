@@ -284,7 +284,7 @@ class SendMessageInputObject implements ModelInterface, ArrayAccess
         $this->container['tts'] = isset($data['tts']) ? $data['tts'] : false;
         $this->container['local'] = isset($data['local']) ? $data['local'] : false;
         $this->container['localCountry'] = isset($data['localCountry']) ? $data['localCountry'] : null;
-        $this->container['destination'] = isset($data['destination']) ? $data['destination'] : 'false';
+        $this->container['destination'] = isset($data['destination']) ? $data['destination'] : null;
         $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
     }
 
