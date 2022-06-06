@@ -57,9 +57,9 @@ class GetVersionsResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'ios' => 'int',
-        'android' => 'int',
-        'desktop' => 'int'
+        'ios' => 'string',
+        'android' => 'string',
+        'desktop' => 'string'
     ];
 
     /**
@@ -228,7 +228,7 @@ class GetVersionsResponse implements ModelInterface, ArrayAccess
     /**
      * Gets ios
      *
-     * @return int
+     * @return string
      */
     public function getIos()
     {
@@ -238,7 +238,7 @@ class GetVersionsResponse implements ModelInterface, ArrayAccess
     /**
      * Sets ios
      *
-     * @param int $ios ios
+     * @param string $ios ios
      *
      * @return $this
      */
@@ -252,7 +252,7 @@ class GetVersionsResponse implements ModelInterface, ArrayAccess
     /**
      * Gets android
      *
-     * @return int
+     * @return string
      */
     public function getAndroid()
     {
@@ -262,7 +262,7 @@ class GetVersionsResponse implements ModelInterface, ArrayAccess
     /**
      * Sets android
      *
-     * @param int $android android
+     * @param string $android android
      *
      * @return $this
      */
@@ -276,7 +276,7 @@ class GetVersionsResponse implements ModelInterface, ArrayAccess
     /**
      * Gets desktop
      *
-     * @return int
+     * @return string
      */
     public function getDesktop()
     {
@@ -286,7 +286,7 @@ class GetVersionsResponse implements ModelInterface, ArrayAccess
     /**
      * Sets desktop
      *
-     * @param int $desktop desktop
+     * @param string $desktop desktop
      *
      * @return $this
      */
