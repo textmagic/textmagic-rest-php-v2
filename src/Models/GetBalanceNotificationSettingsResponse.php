@@ -58,7 +58,7 @@ class GetBalanceNotificationSettingsResponse implements ModelInterface, ArrayAcc
       */
     protected static $swaggerTypes = [
         'lowBalanceNotification' => 'bool',
-        'alertBalance' => 'string',
+        'alertBalance' => 'float',
         'alertPhone' => 'string',
         'alertEmail1' => 'string',
         'alertEmail2' => 'string',
@@ -279,7 +279,7 @@ class GetBalanceNotificationSettingsResponse implements ModelInterface, ArrayAcc
     /**
      * Gets alertBalance
      *
-     * @return string
+     * @return float
      */
     public function getAlertBalance()
     {
@@ -289,7 +289,7 @@ class GetBalanceNotificationSettingsResponse implements ModelInterface, ArrayAcc
     /**
      * Sets alertBalance
      *
-     * @param string $alertBalance If balance is below this value, user receive low balance notification.
+     * @param float $alertBalance If balance is below this value, user receive low balance notification.
      *
      * @return $this
      */

@@ -58,7 +58,7 @@ class DeleteContactsByIdsInputObject implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'ids' => 'string',
-        'all' => 'bool'
+        'all' => 'int'
     ];
 
     /**
@@ -237,7 +237,7 @@ class DeleteContactsByIdsInputObject implements ModelInterface, ArrayAccess
     /**
      * Gets all
      *
-     * @return bool
+     * @return int
      */
     public function getAll()
     {
@@ -247,7 +247,7 @@ class DeleteContactsByIdsInputObject implements ModelInterface, ArrayAccess
     /**
      * Sets all
      *
-     * @param bool $all Entity ID(s), separated by comma.
+     * @param int $all Optional. Default is 0 (false). If set to 1 all the entities will be removed.
      *
      * @return $this
      */
