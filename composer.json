@@ -1,6 +1,6 @@
 {
     "name": "textmagic/textmagic-rest-php-v2",
-    "version": "2.0.4420",
+    "version": "2.0.17421",
     "description": "",
     "keywords": [
         "swagger",
@@ -17,11 +17,11 @@
         }
     ],
     "require": {
-        "php": ">=5.5",
+        "php": "^7.2.5",
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
-        "guzzlehttp/guzzle": "^6.2"
+        "guzzlehttp/guzzle": "^7.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.8",
