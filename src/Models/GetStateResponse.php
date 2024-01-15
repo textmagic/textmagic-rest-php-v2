@@ -111,6 +111,8 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'forceRefreshWebApp' => 'int',
         'chatSenderSettingsChanged' => 'int',
         'countrySenderSettingsChanged' => 'int',
+        'chatSummaryChunk' => 'int',
+        'chatWaysToReplyChunk' => 'int',
         'chatSuggestedReplyChunk' => 'int'
     ];
 
@@ -174,6 +176,8 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'forceRefreshWebApp' => null,
         'chatSenderSettingsChanged' => null,
         'countrySenderSettingsChanged' => null,
+        'chatSummaryChunk' => null,
+        'chatWaysToReplyChunk' => null,
         'chatSuggestedReplyChunk' => null
     ];
 
@@ -258,6 +262,8 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'forceRefreshWebApp' => 'forceRefreshWebApp',
         'chatSenderSettingsChanged' => 'chatSenderSettingsChanged',
         'countrySenderSettingsChanged' => 'countrySenderSettingsChanged',
+        'chatSummaryChunk' => 'chatSummaryChunk',
+        'chatWaysToReplyChunk' => 'chatWaysToReplyChunk',
         'chatSuggestedReplyChunk' => 'chatSuggestedReplyChunk'
     ];
 
@@ -321,6 +327,8 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'forceRefreshWebApp' => 'setForceRefreshWebApp',
         'chatSenderSettingsChanged' => 'setChatSenderSettingsChanged',
         'countrySenderSettingsChanged' => 'setCountrySenderSettingsChanged',
+        'chatSummaryChunk' => 'setChatSummaryChunk',
+        'chatWaysToReplyChunk' => 'setChatWaysToReplyChunk',
         'chatSuggestedReplyChunk' => 'setChatSuggestedReplyChunk'
     ];
 
@@ -384,6 +392,8 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'forceRefreshWebApp' => 'getForceRefreshWebApp',
         'chatSenderSettingsChanged' => 'getChatSenderSettingsChanged',
         'countrySenderSettingsChanged' => 'getCountrySenderSettingsChanged',
+        'chatSummaryChunk' => 'getChatSummaryChunk',
+        'chatWaysToReplyChunk' => 'getChatWaysToReplyChunk',
         'chatSuggestedReplyChunk' => 'getChatSuggestedReplyChunk'
     ];
 
@@ -501,6 +511,8 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         $this->container['forceRefreshWebApp'] = isset($data['forceRefreshWebApp']) ? $data['forceRefreshWebApp'] : null;
         $this->container['chatSenderSettingsChanged'] = isset($data['chatSenderSettingsChanged']) ? $data['chatSenderSettingsChanged'] : null;
         $this->container['countrySenderSettingsChanged'] = isset($data['countrySenderSettingsChanged']) ? $data['countrySenderSettingsChanged'] : null;
+        $this->container['chatSummaryChunk'] = isset($data['chatSummaryChunk']) ? $data['chatSummaryChunk'] : null;
+        $this->container['chatWaysToReplyChunk'] = isset($data['chatWaysToReplyChunk']) ? $data['chatWaysToReplyChunk'] : null;
         $this->container['chatSuggestedReplyChunk'] = isset($data['chatSuggestedReplyChunk']) ? $data['chatSuggestedReplyChunk'] : null;
     }
 
@@ -674,6 +686,12 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         }
         if ($this->container['countrySenderSettingsChanged'] === null) {
             $invalidProperties[] = "'countrySenderSettingsChanged' can't be null";
+        }
+        if ($this->container['chatSummaryChunk'] === null) {
+            $invalidProperties[] = "'chatSummaryChunk' can't be null";
+        }
+        if ($this->container['chatWaysToReplyChunk'] === null) {
+            $invalidProperties[] = "'chatWaysToReplyChunk' can't be null";
         }
         if ($this->container['chatSuggestedReplyChunk'] === null) {
             $invalidProperties[] = "'chatSuggestedReplyChunk' can't be null";
@@ -1985,6 +2003,54 @@ class GetStateResponse implements ModelInterface, ArrayAccess
     public function setCountrySenderSettingsChanged($countrySenderSettingsChanged)
     {
         $this->container['countrySenderSettingsChanged'] = $countrySenderSettingsChanged;
+
+        return $this;
+    }
+
+    /**
+     * Gets chatSummaryChunk
+     *
+     * @return int
+     */
+    public function getChatSummaryChunk()
+    {
+        return $this->container['chatSummaryChunk'];
+    }
+
+    /**
+     * Sets chatSummaryChunk
+     *
+     * @param int $chatSummaryChunk chatSummaryChunk
+     *
+     * @return $this
+     */
+    public function setChatSummaryChunk($chatSummaryChunk)
+    {
+        $this->container['chatSummaryChunk'] = $chatSummaryChunk;
+
+        return $this;
+    }
+
+    /**
+     * Gets chatWaysToReplyChunk
+     *
+     * @return int
+     */
+    public function getChatWaysToReplyChunk()
+    {
+        return $this->container['chatWaysToReplyChunk'];
+    }
+
+    /**
+     * Sets chatWaysToReplyChunk
+     *
+     * @param int $chatWaysToReplyChunk chatWaysToReplyChunk
+     *
+     * @return $this
+     */
+    public function setChatWaysToReplyChunk($chatWaysToReplyChunk)
+    {
+        $this->container['chatWaysToReplyChunk'] = $chatWaysToReplyChunk;
 
         return $this;
     }
