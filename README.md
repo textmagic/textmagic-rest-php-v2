@@ -14,8 +14,6 @@ PHP 5.5 and later.
 ## Installation
 ### Composer
 
-7.2+ PHP version is required to use Composer.
-
 To install the bindings via [Composer](http://getcomposer.org/), add the following to `composer.json`:
 
 ```javascript
@@ -27,7 +25,7 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
         }
     ],
     "require": {
-        "textmagic/textmagic-rest-php-v2": "dev-master#v2.0.18991"
+        "textmagic/textmagic-rest-php-v2": "dev-master#v2.0.20604"
     }
 }
 ```
@@ -35,8 +33,6 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
 Then run `composer install`
 
 ### Manual Installation
-
-5.5+ PHP version is required for manual installation.
 
 Download the files and include `autoload.php`:
 

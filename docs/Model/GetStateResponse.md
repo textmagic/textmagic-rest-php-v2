@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **systemExit** | **int** |  | 
 **systemAlert** | **int** |  | 
 **systemAccountStateChanged** | **int** |  | 
+**systemAccountClosed** | **int** |  | 
 **systemAccountAdditionalFields** | **int** |  | 
 **systemAccountPermissionsChanged** | **int** |  | 
 **userBalanceChanged** | **int** |  | 

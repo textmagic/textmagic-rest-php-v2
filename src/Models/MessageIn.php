@@ -66,7 +66,9 @@ class MessageIn implements ModelInterface, ArrayAccess
         'firstName' => 'string',
         'lastName' => 'string',
         'avatar' => 'string',
-        'email' => 'string'
+        'email' => 'string',
+        'contactUserId' => 'int',
+        'userId' => 'int'
     ];
 
     /**
@@ -84,7 +86,9 @@ class MessageIn implements ModelInterface, ArrayAccess
         'firstName' => null,
         'lastName' => null,
         'avatar' => null,
-        'email' => null
+        'email' => null,
+        'contactUserId' => null,
+        'userId' => null
     ];
 
     /**
@@ -123,7 +127,9 @@ class MessageIn implements ModelInterface, ArrayAccess
         'firstName' => 'firstName',
         'lastName' => 'lastName',
         'avatar' => 'avatar',
-        'email' => 'email'
+        'email' => 'email',
+        'contactUserId' => 'contactUserId',
+        'userId' => 'userId'
     ];
 
     /**
@@ -141,7 +147,9 @@ class MessageIn implements ModelInterface, ArrayAccess
         'firstName' => 'setFirstName',
         'lastName' => 'setLastName',
         'avatar' => 'setAvatar',
-        'email' => 'setEmail'
+        'email' => 'setEmail',
+        'contactUserId' => 'setContactUserId',
+        'userId' => 'setUserId'
     ];
 
     /**
@@ -159,7 +167,9 @@ class MessageIn implements ModelInterface, ArrayAccess
         'firstName' => 'getFirstName',
         'lastName' => 'getLastName',
         'avatar' => 'getAvatar',
-        'email' => 'getEmail'
+        'email' => 'getEmail',
+        'contactUserId' => 'getContactUserId',
+        'userId' => 'getUserId'
     ];
 
     /**
@@ -232,6 +242,8 @@ class MessageIn implements ModelInterface, ArrayAccess
         $this->container['lastName'] = isset($data['lastName']) ? $data['lastName'] : null;
         $this->container['avatar'] = isset($data['avatar']) ? $data['avatar'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['contactUserId'] = isset($data['contactUserId']) ? $data['contactUserId'] : null;
+        $this->container['userId'] = isset($data['userId']) ? $data['userId'] : null;
     }
 
     /**
@@ -512,6 +524,54 @@ class MessageIn implements ModelInterface, ArrayAccess
     public function setEmail($email)
     {
         $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets contactUserId
+     *
+     * @return int
+     */
+    public function getContactUserId()
+    {
+        return $this->container['contactUserId'];
+    }
+
+    /**
+     * Sets contactUserId
+     *
+     * @param int $contactUserId contactUserId
+     *
+     * @return $this
+     */
+    public function setContactUserId($contactUserId)
+    {
+        $this->container['contactUserId'] = $contactUserId;
+
+        return $this;
+    }
+
+    /**
+     * Gets userId
+     *
+     * @return int
+     */
+    public function getUserId()
+    {
+        return $this->container['userId'];
+    }
+
+    /**
+     * Sets userId
+     *
+     * @param int $userId userId
+     *
+     * @return $this
+     */
+    public function setUserId($userId)
+    {
+        $this->container['userId'] = $userId;
 
         return $this;
     }

@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 **lastName** | **string** | Sender contact last name. | [optional] 
 **avatar** | **string** |  | 
 **email** | **string** | Sender email. | [optional] 
+**contactUserId** | **int** |  | [optional] 
+**userId** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

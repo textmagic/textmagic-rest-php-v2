@@ -61,6 +61,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'systemExit' => 'int',
         'systemAlert' => 'int',
         'systemAccountStateChanged' => 'int',
+        'systemAccountClosed' => 'int',
         'systemAccountAdditionalFields' => 'int',
         'systemAccountPermissionsChanged' => 'int',
         'userBalanceChanged' => 'int',
@@ -126,6 +127,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'systemExit' => null,
         'systemAlert' => null,
         'systemAccountStateChanged' => null,
+        'systemAccountClosed' => null,
         'systemAccountAdditionalFields' => null,
         'systemAccountPermissionsChanged' => null,
         'userBalanceChanged' => null,
@@ -212,6 +214,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'systemExit' => 'systemExit',
         'systemAlert' => 'systemAlert',
         'systemAccountStateChanged' => 'systemAccountStateChanged',
+        'systemAccountClosed' => 'systemAccountClosed',
         'systemAccountAdditionalFields' => 'systemAccountAdditionalFields',
         'systemAccountPermissionsChanged' => 'systemAccountPermissionsChanged',
         'userBalanceChanged' => 'userBalanceChanged',
@@ -277,6 +280,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'systemExit' => 'setSystemExit',
         'systemAlert' => 'setSystemAlert',
         'systemAccountStateChanged' => 'setSystemAccountStateChanged',
+        'systemAccountClosed' => 'setSystemAccountClosed',
         'systemAccountAdditionalFields' => 'setSystemAccountAdditionalFields',
         'systemAccountPermissionsChanged' => 'setSystemAccountPermissionsChanged',
         'userBalanceChanged' => 'setUserBalanceChanged',
@@ -342,6 +346,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'systemExit' => 'getSystemExit',
         'systemAlert' => 'getSystemAlert',
         'systemAccountStateChanged' => 'getSystemAccountStateChanged',
+        'systemAccountClosed' => 'getSystemAccountClosed',
         'systemAccountAdditionalFields' => 'getSystemAccountAdditionalFields',
         'systemAccountPermissionsChanged' => 'getSystemAccountPermissionsChanged',
         'userBalanceChanged' => 'getUserBalanceChanged',
@@ -461,6 +466,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         $this->container['systemExit'] = isset($data['systemExit']) ? $data['systemExit'] : null;
         $this->container['systemAlert'] = isset($data['systemAlert']) ? $data['systemAlert'] : null;
         $this->container['systemAccountStateChanged'] = isset($data['systemAccountStateChanged']) ? $data['systemAccountStateChanged'] : null;
+        $this->container['systemAccountClosed'] = isset($data['systemAccountClosed']) ? $data['systemAccountClosed'] : null;
         $this->container['systemAccountAdditionalFields'] = isset($data['systemAccountAdditionalFields']) ? $data['systemAccountAdditionalFields'] : null;
         $this->container['systemAccountPermissionsChanged'] = isset($data['systemAccountPermissionsChanged']) ? $data['systemAccountPermissionsChanged'] : null;
         $this->container['userBalanceChanged'] = isset($data['userBalanceChanged']) ? $data['userBalanceChanged'] : null;
@@ -536,6 +542,9 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         }
         if ($this->container['systemAccountStateChanged'] === null) {
             $invalidProperties[] = "'systemAccountStateChanged' can't be null";
+        }
+        if ($this->container['systemAccountClosed'] === null) {
+            $invalidProperties[] = "'systemAccountClosed' can't be null";
         }
         if ($this->container['systemAccountAdditionalFields'] === null) {
             $invalidProperties[] = "'systemAccountAdditionalFields' can't be null";
@@ -803,6 +812,30 @@ class GetStateResponse implements ModelInterface, ArrayAccess
     public function setSystemAccountStateChanged($systemAccountStateChanged)
     {
         $this->container['systemAccountStateChanged'] = $systemAccountStateChanged;
+
+        return $this;
+    }
+
+    /**
+     * Gets systemAccountClosed
+     *
+     * @return int
+     */
+    public function getSystemAccountClosed()
+    {
+        return $this->container['systemAccountClosed'];
+    }
+
+    /**
+     * Sets systemAccountClosed
+     *
+     * @param int $systemAccountClosed systemAccountClosed
+     *
+     * @return $this
+     */
+    public function setSystemAccountClosed($systemAccountClosed)
+    {
+        $this->container['systemAccountClosed'] = $systemAccountClosed;
 
         return $this;
     }
