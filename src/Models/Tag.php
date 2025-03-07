@@ -1,6 +1,6 @@
 <?php
 /**
- * GetBlockedContactsPaginatedResponse
+ * Tag
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \TextMagic\ObjectSerializer;
 
 /**
- * GetBlockedContactsPaginatedResponse Class Doc Comment
+ * Tag Class Doc Comment
  *
  * @category Class
  * @package  TextMagic
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class GetBlockedContactsPaginatedResponse implements ModelInterface, ArrayAccess
+class Tag implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class GetBlockedContactsPaginatedResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'GetBlockedContactsPaginatedResponse';
+    protected static $swaggerModelName = 'Tag';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,10 +57,8 @@ class GetBlockedContactsPaginatedResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'page' => 'int',
-        'pageCount' => 'int',
-        'limit' => 'int',
-        'resources' => '\TextMagic\Models\Contact[]'
+        'id' => 'int',
+        'title' => 'string'
     ];
 
     /**
@@ -69,10 +67,8 @@ class GetBlockedContactsPaginatedResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'page' => null,
-        'pageCount' => null,
-        'limit' => null,
-        'resources' => null
+        'id' => null,
+        'title' => null
     ];
 
     /**
@@ -102,10 +98,8 @@ class GetBlockedContactsPaginatedResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'page' => 'page',
-        'pageCount' => 'pageCount',
-        'limit' => 'limit',
-        'resources' => 'resources'
+        'id' => 'id',
+        'title' => 'title'
     ];
 
     /**
@@ -114,10 +108,8 @@ class GetBlockedContactsPaginatedResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'page' => 'setPage',
-        'pageCount' => 'setPageCount',
-        'limit' => 'setLimit',
-        'resources' => 'setResources'
+        'id' => 'setId',
+        'title' => 'setTitle'
     ];
 
     /**
@@ -126,10 +118,8 @@ class GetBlockedContactsPaginatedResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'page' => 'getPage',
-        'pageCount' => 'getPageCount',
-        'limit' => 'getLimit',
-        'resources' => 'getResources'
+        'id' => 'getId',
+        'title' => 'getTitle'
     ];
 
     /**
@@ -192,10 +182,8 @@ class GetBlockedContactsPaginatedResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
-        $this->container['pageCount'] = isset($data['pageCount']) ? $data['pageCount'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['title'] = isset($data['title']) ? $data['title'] : null;
     }
 
     /**
@@ -207,17 +195,11 @@ class GetBlockedContactsPaginatedResponse implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['page'] === null) {
-            $invalidProperties[] = "'page' can't be null";
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
         }
-        if ($this->container['pageCount'] === null) {
-            $invalidProperties[] = "'pageCount' can't be null";
-        }
-        if ($this->container['limit'] === null) {
-            $invalidProperties[] = "'limit' can't be null";
-        }
-        if ($this->container['resources'] === null) {
-            $invalidProperties[] = "'resources' can't be null";
+        if ($this->container['title'] === null) {
+            $invalidProperties[] = "'title' can't be null";
         }
         return $invalidProperties;
     }
@@ -235,97 +217,49 @@ class GetBlockedContactsPaginatedResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets page
+     * Gets id
      *
      * @return int
      */
-    public function getPage()
+    public function getId()
     {
-        return $this->container['page'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets page
+     * Sets id
      *
-     * @param int $page page
+     * @param int $id Tag ID.
      *
      * @return $this
      */
-    public function setPage($page)
+    public function setId($id)
     {
-        $this->container['page'] = $page;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets pageCount
+     * Gets title
      *
-     * @return int
+     * @return string
      */
-    public function getPageCount()
+    public function getTitle()
     {
-        return $this->container['pageCount'];
+        return $this->container['title'];
     }
 
     /**
-     * Sets pageCount
+     * Sets title
      *
-     * @param int $pageCount The total number of pages.
+     * @param string $title Tag title.
      *
      * @return $this
      */
-    public function setPageCount($pageCount)
+    public function setTitle($title)
     {
-        $this->container['pageCount'] = $pageCount;
-
-        return $this;
-    }
-
-    /**
-     * Gets limit
-     *
-     * @return int
-     */
-    public function getLimit()
-    {
-        return $this->container['limit'];
-    }
-
-    /**
-     * Sets limit
-     *
-     * @param int $limit The number of results per page.
-     *
-     * @return $this
-     */
-    public function setLimit($limit)
-    {
-        $this->container['limit'] = $limit;
-
-        return $this;
-    }
-
-    /**
-     * Gets resources
-     *
-     * @return \TextMagic\Models\Contact[]
-     */
-    public function getResources()
-    {
-        return $this->container['resources'];
-    }
-
-    /**
-     * Sets resources
-     *
-     * @param \TextMagic\Models\Contact[] $resources resources
-     *
-     * @return $this
-     */
-    public function setResources($resources)
-    {
-        $this->container['resources'] = $resources;
+        $this->container['title'] = $title;
 
         return $this;
     }

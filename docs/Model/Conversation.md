@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **lastName** | **string** | Contact last name. | 
 **sessionId** | **int** | Session ID of a message. See [message sessions](https://docs.textmagic.com/#tag/Outbound-Message-Sessions) for details. | 
 **initiatorId** | **int** | Initiator ID of a message. See [message sessions](https://docs.textmagic.com/#tag/Outbound-Message-Sessions) for details. | [optional] 
+**messageFileId** | **int** | Message file id. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * GetBlockedContactsPaginatedResponse
+ * MessageOutSession
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \TextMagic\ObjectSerializer;
 
 /**
- * GetBlockedContactsPaginatedResponse Class Doc Comment
+ * MessageOutSession Class Doc Comment
  *
  * @category Class
  * @package  TextMagic
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class GetBlockedContactsPaginatedResponse implements ModelInterface, ArrayAccess
+class MessageOutSession implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class GetBlockedContactsPaginatedResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'GetBlockedContactsPaginatedResponse';
+    protected static $swaggerModelName = 'MessageOut_session';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,10 +57,15 @@ class GetBlockedContactsPaginatedResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'page' => 'int',
-        'pageCount' => 'int',
-        'limit' => 'int',
-        'resources' => '\TextMagic\Models\Contact[]'
+        'id' => 'int',
+        'startTime' => 'string',
+        'text' => 'string',
+        'price' => 'float',
+        'numbersCount' => 'int',
+        'destination' => 'string',
+        'source' => 'string',
+        'referenceId' => 'string',
+        'initiatorId' => 'int'
     ];
 
     /**
@@ -69,10 +74,15 @@ class GetBlockedContactsPaginatedResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'page' => null,
-        'pageCount' => null,
-        'limit' => null,
-        'resources' => null
+        'id' => null,
+        'startTime' => null,
+        'text' => null,
+        'price' => 'float',
+        'numbersCount' => null,
+        'destination' => null,
+        'source' => null,
+        'referenceId' => null,
+        'initiatorId' => null
     ];
 
     /**
@@ -102,10 +112,15 @@ class GetBlockedContactsPaginatedResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'page' => 'page',
-        'pageCount' => 'pageCount',
-        'limit' => 'limit',
-        'resources' => 'resources'
+        'id' => 'id',
+        'startTime' => 'startTime',
+        'text' => 'text',
+        'price' => 'price',
+        'numbersCount' => 'numbersCount',
+        'destination' => 'destination',
+        'source' => 'source',
+        'referenceId' => 'referenceId',
+        'initiatorId' => 'initiatorId'
     ];
 
     /**
@@ -114,10 +129,15 @@ class GetBlockedContactsPaginatedResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'page' => 'setPage',
-        'pageCount' => 'setPageCount',
-        'limit' => 'setLimit',
-        'resources' => 'setResources'
+        'id' => 'setId',
+        'startTime' => 'setStartTime',
+        'text' => 'setText',
+        'price' => 'setPrice',
+        'numbersCount' => 'setNumbersCount',
+        'destination' => 'setDestination',
+        'source' => 'setSource',
+        'referenceId' => 'setReferenceId',
+        'initiatorId' => 'setInitiatorId'
     ];
 
     /**
@@ -126,10 +146,15 @@ class GetBlockedContactsPaginatedResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'page' => 'getPage',
-        'pageCount' => 'getPageCount',
-        'limit' => 'getLimit',
-        'resources' => 'getResources'
+        'id' => 'getId',
+        'startTime' => 'getStartTime',
+        'text' => 'getText',
+        'price' => 'getPrice',
+        'numbersCount' => 'getNumbersCount',
+        'destination' => 'getDestination',
+        'source' => 'getSource',
+        'referenceId' => 'getReferenceId',
+        'initiatorId' => 'getInitiatorId'
     ];
 
     /**
@@ -192,10 +217,15 @@ class GetBlockedContactsPaginatedResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
-        $this->container['pageCount'] = isset($data['pageCount']) ? $data['pageCount'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
+        $this->container['text'] = isset($data['text']) ? $data['text'] : null;
+        $this->container['price'] = isset($data['price']) ? $data['price'] : null;
+        $this->container['numbersCount'] = isset($data['numbersCount']) ? $data['numbersCount'] : null;
+        $this->container['destination'] = isset($data['destination']) ? $data['destination'] : null;
+        $this->container['source'] = isset($data['source']) ? $data['source'] : null;
+        $this->container['referenceId'] = isset($data['referenceId']) ? $data['referenceId'] : null;
+        $this->container['initiatorId'] = isset($data['initiatorId']) ? $data['initiatorId'] : null;
     }
 
     /**
@@ -207,18 +237,6 @@ class GetBlockedContactsPaginatedResponse implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['page'] === null) {
-            $invalidProperties[] = "'page' can't be null";
-        }
-        if ($this->container['pageCount'] === null) {
-            $invalidProperties[] = "'pageCount' can't be null";
-        }
-        if ($this->container['limit'] === null) {
-            $invalidProperties[] = "'limit' can't be null";
-        }
-        if ($this->container['resources'] === null) {
-            $invalidProperties[] = "'resources' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -235,97 +253,217 @@ class GetBlockedContactsPaginatedResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets page
+     * Gets id
      *
      * @return int
      */
-    public function getPage()
+    public function getId()
     {
-        return $this->container['page'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets page
+     * Sets id
      *
-     * @param int $page page
+     * @param int $id id
      *
      * @return $this
      */
-    public function setPage($page)
+    public function setId($id)
     {
-        $this->container['page'] = $page;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets pageCount
+     * Gets startTime
      *
-     * @return int
+     * @return string
      */
-    public function getPageCount()
+    public function getStartTime()
     {
-        return $this->container['pageCount'];
+        return $this->container['startTime'];
     }
 
     /**
-     * Sets pageCount
+     * Sets startTime
      *
-     * @param int $pageCount The total number of pages.
+     * @param string $startTime startTime
      *
      * @return $this
      */
-    public function setPageCount($pageCount)
+    public function setStartTime($startTime)
     {
-        $this->container['pageCount'] = $pageCount;
+        $this->container['startTime'] = $startTime;
 
         return $this;
     }
 
     /**
-     * Gets limit
+     * Gets text
      *
-     * @return int
+     * @return string
      */
-    public function getLimit()
+    public function getText()
     {
-        return $this->container['limit'];
+        return $this->container['text'];
     }
 
     /**
-     * Sets limit
+     * Sets text
      *
-     * @param int $limit The number of results per page.
+     * @param string $text text
      *
      * @return $this
      */
-    public function setLimit($limit)
+    public function setText($text)
     {
-        $this->container['limit'] = $limit;
+        $this->container['text'] = $text;
 
         return $this;
     }
 
     /**
-     * Gets resources
+     * Gets price
      *
-     * @return \TextMagic\Models\Contact[]
+     * @return float
      */
-    public function getResources()
+    public function getPrice()
     {
-        return $this->container['resources'];
+        return $this->container['price'];
     }
 
     /**
-     * Sets resources
+     * Sets price
      *
-     * @param \TextMagic\Models\Contact[] $resources resources
+     * @param float $price price
      *
      * @return $this
      */
-    public function setResources($resources)
+    public function setPrice($price)
     {
-        $this->container['resources'] = $resources;
+        $this->container['price'] = $price;
+
+        return $this;
+    }
+
+    /**
+     * Gets numbersCount
+     *
+     * @return int
+     */
+    public function getNumbersCount()
+    {
+        return $this->container['numbersCount'];
+    }
+
+    /**
+     * Sets numbersCount
+     *
+     * @param int $numbersCount numbersCount
+     *
+     * @return $this
+     */
+    public function setNumbersCount($numbersCount)
+    {
+        $this->container['numbersCount'] = $numbersCount;
+
+        return $this;
+    }
+
+    /**
+     * Gets destination
+     *
+     * @return string
+     */
+    public function getDestination()
+    {
+        return $this->container['destination'];
+    }
+
+    /**
+     * Sets destination
+     *
+     * @param string $destination destination
+     *
+     * @return $this
+     */
+    public function setDestination($destination)
+    {
+        $this->container['destination'] = $destination;
+
+        return $this;
+    }
+
+    /**
+     * Gets source
+     *
+     * @return string
+     */
+    public function getSource()
+    {
+        return $this->container['source'];
+    }
+
+    /**
+     * Sets source
+     *
+     * @param string $source source
+     *
+     * @return $this
+     */
+    public function setSource($source)
+    {
+        $this->container['source'] = $source;
+
+        return $this;
+    }
+
+    /**
+     * Gets referenceId
+     *
+     * @return string
+     */
+    public function getReferenceId()
+    {
+        return $this->container['referenceId'];
+    }
+
+    /**
+     * Sets referenceId
+     *
+     * @param string $referenceId referenceId
+     *
+     * @return $this
+     */
+    public function setReferenceId($referenceId)
+    {
+        $this->container['referenceId'] = $referenceId;
+
+        return $this;
+    }
+
+    /**
+     * Gets initiatorId
+     *
+     * @return int
+     */
+    public function getInitiatorId()
+    {
+        return $this->container['initiatorId'];
+    }
+
+    /**
+     * Sets initiatorId
+     *
+     * @param int $initiatorId initiatorId
+     *
+     * @return $this
+     */
+    public function setInitiatorId($initiatorId)
+    {
+        $this->container['initiatorId'] = $initiatorId;
 
         return $this;
     }

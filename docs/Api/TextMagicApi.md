@@ -7,8 +7,6 @@ Method | HTTP request | Description
 [**assignContactsToList**](TextMagicApi.md#assignContactsToList) | **PUT** /api/v2/lists/{id}/contacts | Assign contacts to a list
 [**blockContact**](TextMagicApi.md#blockContact) | **POST** /api/v2/contacts/block | Block a contact by phone number
 [**buyDedicatedNumber**](TextMagicApi.md#buyDedicatedNumber) | **POST** /api/v2/numbers | Buy a dedicated number
-[**cancelVerification**](TextMagicApi.md#cancelVerification) | **DELETE** /api/v2/verify/{verifyId} | Cancel verification process
-[**checkPhoneVerificationCodeTFA**](TextMagicApi.md#checkPhoneVerificationCodeTFA) | **PUT** /api/v2/verify | Step 2: Check the verification code
 [**clearAndAssignContactsToList**](TextMagicApi.md#clearAndAssignContactsToList) | **POST** /api/v2/lists/{id}/contacts | Reset list members to the specified contacts
 [**closeChatsBulk**](TextMagicApi.md#closeChatsBulk) | **POST** /api/v2/chats/close/bulk | Close chats (bulk)
 [**closeReadChats**](TextMagicApi.md#closeReadChats) | **POST** /api/v2/chats/close/read | Close read chats
@@ -126,7 +124,6 @@ Method | HTTP request | Description
 [**searchScheduledMessages**](TextMagicApi.md#searchScheduledMessages) | **GET** /api/v2/schedules/search | Find scheduled messages
 [**searchTemplates**](TextMagicApi.md#searchTemplates) | **GET** /api/v2/templates/search | Find templates by criteria
 [**sendMessage**](TextMagicApi.md#sendMessage) | **POST** /api/v2/messages | Send message
-[**sendPhoneVerificationCodeTFA**](TextMagicApi.md#sendPhoneVerificationCodeTFA) | **POST** /api/v2/verify | Step 1: Send a verification code
 [**setChatStatus**](TextMagicApi.md#setChatStatus) | **POST** /api/v2/chats/status | Change chat status
 [**unblockContact**](TextMagicApi.md#unblockContact) | **POST** /api/v2/contacts/unblock | Unblock a contact by phone number
 [**unblockContactsBulk**](TextMagicApi.md#unblockContactsBulk) | **POST** /api/v2/contacts/unblock/bulk | Unblock contacts (bulk)
@@ -304,116 +301,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **buyDedicatedNumberInputObject** | [**\TextMagic\Models\BuyDedicatedNumberInputObject**](../Model/BuyDedicatedNumberInputObject.md)|  |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[BasicAuth](../../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **cancelVerification**
-> cancelVerification($verifyId)
-
-Cancel verification process
-
-You can cancel the verification not earlier than 30 seconds after the initial request.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure HTTP basic authorization: BasicAuth
-$config = TextMagic\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
-
-
-$apiInstance = new TextMagic\Api\TextMagicApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$verifyId = "123e4567-e89b-12d3-a456-426655440000"; // string | The verifyId that you received in Step 1.
-
-try {
-    $apiInstance->cancelVerification($verifyId);
-} catch (Exception $e) {
-    echo 'Exception when calling TextMagicApi->cancelVerification: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **verifyId** | **string**| The verifyId that you received in Step 1. |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[BasicAuth](../../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **checkPhoneVerificationCodeTFA**
-> checkPhoneVerificationCodeTFA($checkPhoneVerificationCodeTFAInputObject)
-
-Step 2: Check the verification code
-
-Check received code from user with the code which was actually sent.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure HTTP basic authorization: BasicAuth
-$config = TextMagic\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
-
-
-$apiInstance = new TextMagic\Api\TextMagicApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$checkPhoneVerificationCodeTFAInputObject = new \TextMagic\Models\CheckPhoneVerificationCodeTFAInputObject(); // \TextMagic\Models\CheckPhoneVerificationCodeTFAInputObject | 
-
-try {
-    $apiInstance->checkPhoneVerificationCodeTFA($checkPhoneVerificationCodeTFAInputObject);
-} catch (Exception $e) {
-    echo 'Exception when calling TextMagicApi->checkPhoneVerificationCodeTFA: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **checkPhoneVerificationCodeTFAInputObject** | [**\TextMagic\Models\CheckPhoneVerificationCodeTFAInputObject**](../Model/CheckPhoneVerificationCodeTFAInputObject.md)|  |
 
 ### Return type
 
@@ -4744,7 +4631,7 @@ Name | Type | Description  | Notes
 
 Preview message
 
-Get a messages preview (with tags merged) of up to 100 messages per session.
+Get a messages preview (with dynamic fields merged) of up to 100 messages per session.
 
 ### Example
 ```php
@@ -7212,62 +7099,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\TextMagic\Models\SendMessageResponse**](../Model/SendMessageResponse.md)
-
-### Authorization
-
-[BasicAuth](../../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **sendPhoneVerificationCodeTFA**
-> \TextMagic\Models\SendPhoneVerificationCodeResponse sendPhoneVerificationCodeTFA($sendPhoneVerificationCodeTFAInputObject)
-
-Step 1: Send a verification code
-
-Sends a verification code to a specified phone number.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure HTTP basic authorization: BasicAuth
-$config = TextMagic\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
-
-
-$apiInstance = new TextMagic\Api\TextMagicApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$sendPhoneVerificationCodeTFAInputObject = new \TextMagic\Models\SendPhoneVerificationCodeTFAInputObject(); // \TextMagic\Models\SendPhoneVerificationCodeTFAInputObject | 
-
-try {
-    $result = $apiInstance->sendPhoneVerificationCodeTFA($sendPhoneVerificationCodeTFAInputObject);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TextMagicApi->sendPhoneVerificationCodeTFA: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sendPhoneVerificationCodeTFAInputObject** | [**\TextMagic\Models\SendPhoneVerificationCodeTFAInputObject**](../Model/SendPhoneVerificationCodeTFAInputObject.md)|  |
-
-### Return type
-
-[**\TextMagic\Models\SendPhoneVerificationCodeResponse**](../Model/SendPhoneVerificationCodeResponse.md)
 
 ### Authorization
 

@@ -20,6 +20,10 @@ Name | Type | Description | Notes
 **timeLeftMute** | **int** | Time left untill the chat will be unmuted (seconds). | 
 **country** | [**\TextMagic\Models\Country**](Country.md) |  | 
 **pinned** | **bool** | Indicates when the chat is pinned. | 
+**type** | **string** | Chat type. | 
+**smsPrice** | **float** |  | 
+**mmsPrice** | **float** |  | 
+**tags** | [**\TextMagic\Models\Tag[]**](Tag.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
