@@ -15,6 +15,14 @@ Name | Type | Description | Notes
 **sessionId** | **int** | Session ID of a message. See [message sessions](https://docs.textmagic.com/#tag/Outbound-Message-Sessions) for details. | 
 **initiatorId** | **int** | Initiator ID of a message. See [message sessions](https://docs.textmagic.com/#tag/Outbound-Message-Sessions) for details. | [optional] 
 **messageFileId** | **int** | Message file id. | [optional] 
+**type** | **string** | Message type. | [optional] 
+**chatType** | **string** | Chat type. | [optional] 
+**chatId** | **int** | Chat id. | [optional] 
+**isEdited** | **bool** |  | [optional] 
+**errorCode** | **string** | Error code. | [optional] 
+**files** | [**\TextMagic\Models\File[]**](File.md) |  | [optional] 
+**payload** | [**\TextMagic\Models\MessagePayload**](MessagePayload.md) |  | [optional] 
+**avatar** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

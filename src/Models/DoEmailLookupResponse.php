@@ -470,7 +470,7 @@ class DoEmailLookupResponse implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status The email is `valid` or `invalid`.
+     * @param string $status The email is `valid` or `invalid`.
      *
      * @return $this
      */
@@ -503,7 +503,7 @@ class DoEmailLookupResponse implements ModelInterface, ArrayAccess
     /**
      * Sets deliverability
      *
-     * @param string $deliverability The delivery status of the email address is`deliverable`, `undeliverable`. or `unknown`.
+     * @param string $deliverability The delivery status of the email address is`deliverable`, `undeliverable`. or `unknown`.
      *
      * @return $this
      */
@@ -551,7 +551,7 @@ class DoEmailLookupResponse implements ModelInterface, ArrayAccess
     /**
      * Sets risk
      *
-     * @param string $risk The risk score of the email is`high`, `medium`, `low` or `null`.
+     * @param string $risk The risk score of the email is`high`, `medium`, `low` or `null`.
      *
      * @return $this
      */
@@ -584,7 +584,7 @@ class DoEmailLookupResponse implements ModelInterface, ArrayAccess
     /**
      * Sets addressType
      *
-     * @param string $addressType The email address type (domain) is `free` or `corporate`.
+     * @param string $addressType The email address type (domain) is `free` or `corporate`.
      *
      * @return $this
      */
@@ -617,7 +617,7 @@ class DoEmailLookupResponse implements ModelInterface, ArrayAccess
     /**
      * Sets isDisposableAddress
      *
-     * @param bool $isDisposableAddress This is `true` if the domain is in the list of disposable email addresses; otherwise, it returns as `false`.
+     * @param bool $isDisposableAddress This is `true` if the domain is in the list of disposable email addresses; otherwise, it returns as `false`.
      *
      * @return $this
      */

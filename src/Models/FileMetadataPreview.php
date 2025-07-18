@@ -1,6 +1,6 @@
 <?php
 /**
- * BadRequestResponseErrors
+ * FileMetadataPreview
  *
  * PHP version 5
  *
@@ -33,15 +33,14 @@ use \ArrayAccess;
 use \TextMagic\ObjectSerializer;
 
 /**
- * BadRequestResponseErrors Class Doc Comment
+ * FileMetadataPreview Class Doc Comment
  *
  * @category Class
- * @description If it was a **POST** or **PUT** request (and the **message** returned is &#x60;Validation Failed&#x60;), this field may contain **errors** that describe the errors grouped by the input parameter name.
  * @package  TextMagic
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class BadRequestResponseErrors implements ModelInterface, ArrayAccess
+class FileMetadataPreview implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +49,7 @@ class BadRequestResponseErrors implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'BadRequestResponse_errors';
+    protected static $swaggerModelName = 'FileMetadataPreview';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,8 +57,8 @@ class BadRequestResponseErrors implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'common' => 'string[]',
-        'fields' => 'object'
+        'height' => 'int',
+        'width' => 'int'
     ];
 
     /**
@@ -68,8 +67,8 @@ class BadRequestResponseErrors implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'common' => null,
-        'fields' => null
+        'height' => null,
+        'width' => null
     ];
 
     /**
@@ -99,8 +98,8 @@ class BadRequestResponseErrors implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'common' => 'common',
-        'fields' => 'fields'
+        'height' => 'height',
+        'width' => 'width'
     ];
 
     /**
@@ -109,8 +108,8 @@ class BadRequestResponseErrors implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'common' => 'setCommon',
-        'fields' => 'setFields'
+        'height' => 'setHeight',
+        'width' => 'setWidth'
     ];
 
     /**
@@ -119,8 +118,8 @@ class BadRequestResponseErrors implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'common' => 'getCommon',
-        'fields' => 'getFields'
+        'height' => 'getHeight',
+        'width' => 'getWidth'
     ];
 
     /**
@@ -183,8 +182,8 @@ class BadRequestResponseErrors implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['common'] = isset($data['common']) ? $data['common'] : null;
-        $this->container['fields'] = isset($data['fields']) ? $data['fields'] : null;
+        $this->container['height'] = isset($data['height']) ? $data['height'] : null;
+        $this->container['width'] = isset($data['width']) ? $data['width'] : null;
     }
 
     /**
@@ -196,6 +195,12 @@ class BadRequestResponseErrors implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['height'] === null) {
+            $invalidProperties[] = "'height' can't be null";
+        }
+        if ($this->container['width'] === null) {
+            $invalidProperties[] = "'width' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -212,49 +217,49 @@ class BadRequestResponseErrors implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets common
+     * Gets height
      *
-     * @return string[]
+     * @return int
      */
-    public function getCommon()
+    public function getHeight()
     {
-        return $this->container['common'];
+        return $this->container['height'];
     }
 
     /**
-     * Sets common
+     * Sets height
      *
-     * @param string[] $common Array of messages with errors related to the entire request. For example, you did not specify either the **text** or the **templateId** when [sending the message](https://docs.textmagic.com/#tag/Outbound-Messages).
+     * @param int $height height
      *
      * @return $this
      */
-    public function setCommon($common)
+    public function setHeight($height)
     {
-        $this->container['common'] = $common;
+        $this->container['height'] = $height;
 
         return $this;
     }
 
     /**
-     * Gets fields
+     * Gets width
      *
-     * @return object
+     * @return int
      */
-    public function getFields()
+    public function getWidth()
     {
-        return $this->container['fields'];
+        return $this->container['width'];
     }
 
     /**
-     * Sets fields
+     * Sets width
      *
-     * @param object $fields Associative array. The keys are the POST/PUT parameter names and the values are arrays with error messages for these parameters.
+     * @param int $width width
      *
      * @return $this
      */
-    public function setFields($fields)
+    public function setWidth($width)
     {
-        $this->container['fields'] = $fields;
+        $this->container['width'] = $width;
 
         return $this;
     }

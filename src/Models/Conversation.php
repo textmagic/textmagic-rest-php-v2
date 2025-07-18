@@ -68,7 +68,15 @@ class Conversation implements ModelInterface, ArrayAccess
         'lastName' => 'string',
         'sessionId' => 'int',
         'initiatorId' => 'int',
-        'messageFileId' => 'int'
+        'messageFileId' => 'int',
+        'type' => 'string',
+        'chatType' => 'string',
+        'chatId' => 'int',
+        'isEdited' => 'bool',
+        'errorCode' => 'string',
+        'files' => '\TextMagic\Models\File[]',
+        'payload' => '\TextMagic\Models\MessagePayload',
+        'avatar' => 'string'
     ];
 
     /**
@@ -88,7 +96,15 @@ class Conversation implements ModelInterface, ArrayAccess
         'lastName' => null,
         'sessionId' => null,
         'initiatorId' => null,
-        'messageFileId' => null
+        'messageFileId' => null,
+        'type' => null,
+        'chatType' => null,
+        'chatId' => null,
+        'isEdited' => null,
+        'errorCode' => null,
+        'files' => null,
+        'payload' => null,
+        'avatar' => null
     ];
 
     /**
@@ -129,7 +145,15 @@ class Conversation implements ModelInterface, ArrayAccess
         'lastName' => 'lastName',
         'sessionId' => 'sessionId',
         'initiatorId' => 'initiatorId',
-        'messageFileId' => 'messageFileId'
+        'messageFileId' => 'messageFileId',
+        'type' => 'type',
+        'chatType' => 'chatType',
+        'chatId' => 'chatId',
+        'isEdited' => 'isEdited',
+        'errorCode' => 'errorCode',
+        'files' => 'files',
+        'payload' => 'payload',
+        'avatar' => 'avatar'
     ];
 
     /**
@@ -149,7 +173,15 @@ class Conversation implements ModelInterface, ArrayAccess
         'lastName' => 'setLastName',
         'sessionId' => 'setSessionId',
         'initiatorId' => 'setInitiatorId',
-        'messageFileId' => 'setMessageFileId'
+        'messageFileId' => 'setMessageFileId',
+        'type' => 'setType',
+        'chatType' => 'setChatType',
+        'chatId' => 'setChatId',
+        'isEdited' => 'setIsEdited',
+        'errorCode' => 'setErrorCode',
+        'files' => 'setFiles',
+        'payload' => 'setPayload',
+        'avatar' => 'setAvatar'
     ];
 
     /**
@@ -169,7 +201,15 @@ class Conversation implements ModelInterface, ArrayAccess
         'lastName' => 'getLastName',
         'sessionId' => 'getSessionId',
         'initiatorId' => 'getInitiatorId',
-        'messageFileId' => 'getMessageFileId'
+        'messageFileId' => 'getMessageFileId',
+        'type' => 'getType',
+        'chatType' => 'getChatType',
+        'chatId' => 'getChatId',
+        'isEdited' => 'getIsEdited',
+        'errorCode' => 'getErrorCode',
+        'files' => 'getFiles',
+        'payload' => 'getPayload',
+        'avatar' => 'getAvatar'
     ];
 
     /**
@@ -217,6 +257,20 @@ class Conversation implements ModelInterface, ArrayAccess
     const DIRECTION_OUT = 'out';
     const DIRECTION_O = 'o';
     const DIRECTION_I = 'i';
+    const TYPE_TEXT = 'text';
+    const TYPE_IMAGE = 'image';
+    const TYPE_AUDIO = 'audio';
+    const TYPE_VOICE = 'voice';
+    const TYPE_DOCUMENT = 'document';
+    const TYPE_VIDEO = 'video';
+    const TYPE_LOG = 'log';
+    const TYPE_INITIAL = 'initial';
+    const TYPE_NOTE = 'note';
+    const CHAT_TYPE_SMS = 'sms';
+    const CHAT_TYPE_FACEBOOK_MESSENGER = 'facebook_messenger';
+    const CHAT_TYPE_INSTAGRAM = 'instagram';
+    const CHAT_TYPE_WHATSAPP_BUSINESS = 'whatsapp_business';
+    const CHAT_TYPE_LIVE_CHAT = 'live_chat';
     
 
     
@@ -232,6 +286,42 @@ class Conversation implements ModelInterface, ArrayAccess
             self::DIRECTION_OUT,
             self::DIRECTION_O,
             self::DIRECTION_I,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_TEXT,
+            self::TYPE_IMAGE,
+            self::TYPE_AUDIO,
+            self::TYPE_VOICE,
+            self::TYPE_DOCUMENT,
+            self::TYPE_VIDEO,
+            self::TYPE_LOG,
+            self::TYPE_INITIAL,
+            self::TYPE_NOTE,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getChatTypeAllowableValues()
+    {
+        return [
+            self::CHAT_TYPE_SMS,
+            self::CHAT_TYPE_FACEBOOK_MESSENGER,
+            self::CHAT_TYPE_INSTAGRAM,
+            self::CHAT_TYPE_WHATSAPP_BUSINESS,
+            self::CHAT_TYPE_LIVE_CHAT,
         ];
     }
     
@@ -263,6 +353,14 @@ class Conversation implements ModelInterface, ArrayAccess
         $this->container['sessionId'] = isset($data['sessionId']) ? $data['sessionId'] : null;
         $this->container['initiatorId'] = isset($data['initiatorId']) ? $data['initiatorId'] : null;
         $this->container['messageFileId'] = isset($data['messageFileId']) ? $data['messageFileId'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['chatType'] = isset($data['chatType']) ? $data['chatType'] : null;
+        $this->container['chatId'] = isset($data['chatId']) ? $data['chatId'] : null;
+        $this->container['isEdited'] = isset($data['isEdited']) ? $data['isEdited'] : null;
+        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
+        $this->container['files'] = isset($data['files']) ? $data['files'] : null;
+        $this->container['payload'] = isset($data['payload']) ? $data['payload'] : null;
+        $this->container['avatar'] = isset($data['avatar']) ? $data['avatar'] : null;
     }
 
     /**
@@ -312,6 +410,22 @@ class Conversation implements ModelInterface, ArrayAccess
         if ($this->container['sessionId'] === null) {
             $invalidProperties[] = "'sessionId' can't be null";
         }
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+        $allowedValues = $this->getChatTypeAllowableValues();
+        if (!is_null($this->container['chatType']) && !in_array($this->container['chatType'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'chatType', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
         return $invalidProperties;
     }
 
@@ -620,6 +734,216 @@ class Conversation implements ModelInterface, ArrayAccess
     public function setMessageFileId($messageFileId)
     {
         $this->container['messageFileId'] = $messageFileId;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param string $type Message type.
+     *
+     * @return $this
+     */
+    public function setType($type)
+    {
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($type) && !in_array($type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'type', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets chatType
+     *
+     * @return string
+     */
+    public function getChatType()
+    {
+        return $this->container['chatType'];
+    }
+
+    /**
+     * Sets chatType
+     *
+     * @param string $chatType Chat type.
+     *
+     * @return $this
+     */
+    public function setChatType($chatType)
+    {
+        $allowedValues = $this->getChatTypeAllowableValues();
+        if (!is_null($chatType) && !in_array($chatType, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'chatType', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['chatType'] = $chatType;
+
+        return $this;
+    }
+
+    /**
+     * Gets chatId
+     *
+     * @return int
+     */
+    public function getChatId()
+    {
+        return $this->container['chatId'];
+    }
+
+    /**
+     * Sets chatId
+     *
+     * @param int $chatId Chat id.
+     *
+     * @return $this
+     */
+    public function setChatId($chatId)
+    {
+        $this->container['chatId'] = $chatId;
+
+        return $this;
+    }
+
+    /**
+     * Gets isEdited
+     *
+     * @return bool
+     */
+    public function getIsEdited()
+    {
+        return $this->container['isEdited'];
+    }
+
+    /**
+     * Sets isEdited
+     *
+     * @param bool $isEdited isEdited
+     *
+     * @return $this
+     */
+    public function setIsEdited($isEdited)
+    {
+        $this->container['isEdited'] = $isEdited;
+
+        return $this;
+    }
+
+    /**
+     * Gets errorCode
+     *
+     * @return string
+     */
+    public function getErrorCode()
+    {
+        return $this->container['errorCode'];
+    }
+
+    /**
+     * Sets errorCode
+     *
+     * @param string $errorCode Error code.
+     *
+     * @return $this
+     */
+    public function setErrorCode($errorCode)
+    {
+        $this->container['errorCode'] = $errorCode;
+
+        return $this;
+    }
+
+    /**
+     * Gets files
+     *
+     * @return \TextMagic\Models\File[]
+     */
+    public function getFiles()
+    {
+        return $this->container['files'];
+    }
+
+    /**
+     * Sets files
+     *
+     * @param \TextMagic\Models\File[] $files files
+     *
+     * @return $this
+     */
+    public function setFiles($files)
+    {
+        $this->container['files'] = $files;
+
+        return $this;
+    }
+
+    /**
+     * Gets payload
+     *
+     * @return \TextMagic\Models\MessagePayload
+     */
+    public function getPayload()
+    {
+        return $this->container['payload'];
+    }
+
+    /**
+     * Sets payload
+     *
+     * @param \TextMagic\Models\MessagePayload $payload payload
+     *
+     * @return $this
+     */
+    public function setPayload($payload)
+    {
+        $this->container['payload'] = $payload;
+
+        return $this;
+    }
+
+    /**
+     * Gets avatar
+     *
+     * @return string
+     */
+    public function getAvatar()
+    {
+        return $this->container['avatar'];
+    }
+
+    /**
+     * Sets avatar
+     *
+     * @param string $avatar avatar
+     *
+     * @return $this
+     */
+    public function setAvatar($avatar)
+    {
+        $this->container['avatar'] = $avatar;
 
         return $this;
     }

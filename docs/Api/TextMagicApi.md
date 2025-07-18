@@ -3403,7 +3403,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getChatMessages**
-> \TextMagic\Models\GetChatMessagesPaginatedResponse getChatMessages($id, $page, $limit, $query, $start, $end, $direction, $voice)
+> \TextMagic\Models\GetChatMessagesPaginatedResponse getChatMessages($id, $page, $limit, $query, $start, $end, $direction, $voice, $includeNotes)
 
 Get chat messages
 
@@ -3434,9 +3434,10 @@ $start = "start_example"; // string | Return messages since specified timestamp 
 $end = "end_example"; // string | Return messages up to specified timestamp only. Required when `start` parameter specified.
 $direction = "desc"; // string | Order direction. Default is desc.
 $voice = 0; // int | Fetch results with voice calls.
+$includeNotes = 0; // int | Fetch results with messenger notes.
 
 try {
-    $result = $apiInstance->getChatMessages($id, $page, $limit, $query, $start, $end, $direction, $voice);
+    $result = $apiInstance->getChatMessages($id, $page, $limit, $query, $start, $end, $direction, $voice, $includeNotes);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TextMagicApi->getChatMessages: ', $e->getMessage(), PHP_EOL;
@@ -3456,6 +3457,7 @@ Name | Type | Description  | Notes
  **end** | **string**| Return messages up to specified timestamp only. Required when &#x60;start&#x60; parameter specified. | [optional]
  **direction** | **string**| Order direction. Default is desc. | [optional] [default to desc]
  **voice** | **int**| Fetch results with voice calls. | [optional] [default to 0]
+ **includeNotes** | **int**| Fetch results with messenger notes. | [optional] [default to 0]
 
 ### Return type
 

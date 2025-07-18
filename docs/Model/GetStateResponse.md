@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **systemAccountPermissionsChanged** | **int** |  | 
 **userProfileChanged** | **int** |  | 
 **userBalanceChanged** | **int** |  | 
+**userPresenceStatusChanged** | **int** |  | 
 **userImpersonationEnd** | **int** |  | 
 **messageDeleted** | **int** |  | 
 **messageIncoming** | **int** |  | 
@@ -58,6 +59,7 @@ Name | Type | Description | Notes
 **webWidgetDeleted** | **int** |  | 
 **contactAdded** | **int** |  | 
 **contactDeleted** | **int** |  | 
+**contactBulkUpdated** | **int** |  | 
 **contactStateChanged** | **int** |  | 
 **contactUnsubscribed** | **int** |  | 
 **contactResubscribed** | **int** |  | 
@@ -76,7 +78,7 @@ Name | Type | Description | Notes
 **progressCarrierBulkLookup** | **int** |  | 
 **progressEmailBulkLookup** | **int** |  | 
 **progressSubAccountBulkImport** | **int** |  | 
-**progressContactBulkImport** | **int** |  | 
+**importProgressState** | **int** |  | 
 **forceRefreshWebApp** | **int** |  | 
 **chatSenderSettingsChanged** | **int** |  | 
 **countrySenderSettingsChanged** | **int** |  | 
@@ -169,14 +171,24 @@ Name | Type | Description | Notes
 **emailCampaignEmailSenderCreated** | **int** |  | 
 **emailCampaignEmailSenderUpdated** | **int** |  | 
 **emailCampaignEmailSenderDeleted** | **int** |  | 
-**emailCampaignEmailSenderVerified** | **int** |  | 
 **emailCampaignDomainCreated** | **int** |  | 
 **emailCampaignDomainDeleted** | **int** |  | 
 **emailCampaignDomainVerified** | **int** |  | 
+**emailCampaignDomainStatusChanged** | **int** |  | 
 **emailCampaignDomainDkimVerified** | **int** |  | 
 **emailCampaignDomainReturnPathVerified** | **int** |  | 
-**emailCampaignBulkProcessProgress** | **int** |  | 
+**emailCampaignDomainDmarcVerified** | **int** |  | 
+**emailCampaignDomainEntryVerificationChanged** | **int** |  | 
+**emailCampaignProgressState** | **int** |  | 
+**emailCampaignUpdated** | **int** |  | 
 **smsCampaignInvalidated** | **int** |  | 
+**scheduledEmailCampaignCreated** | **int** |  | 
+**scheduledEmailCampaignUpdated** | **int** |  | 
+**scheduledEmailCampaignStatusUpdated** | **int** |  | 
+**scheduledEmailCampaignDeleted** | **int** |  | 
+**emailCampaignFailedAttemptCreated** | **int** |  | 
+**emailCampaignFailedAttemptDeleted** | **int** |  | 
+**emailCampaignFailedAttemptStateUpdated** | **int** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

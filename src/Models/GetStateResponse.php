@@ -67,6 +67,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'systemAccountPermissionsChanged' => 'int',
         'userProfileChanged' => 'int',
         'userBalanceChanged' => 'int',
+        'userPresenceStatusChanged' => 'int',
         'userImpersonationEnd' => 'int',
         'messageDeleted' => 'int',
         'messageIncoming' => 'int',
@@ -112,6 +113,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'webWidgetDeleted' => 'int',
         'contactAdded' => 'int',
         'contactDeleted' => 'int',
+        'contactBulkUpdated' => 'int',
         'contactStateChanged' => 'int',
         'contactUnsubscribed' => 'int',
         'contactResubscribed' => 'int',
@@ -130,7 +132,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'progressCarrierBulkLookup' => 'int',
         'progressEmailBulkLookup' => 'int',
         'progressSubAccountBulkImport' => 'int',
-        'progressContactBulkImport' => 'int',
+        'importProgressState' => 'int',
         'forceRefreshWebApp' => 'int',
         'chatSenderSettingsChanged' => 'int',
         'countrySenderSettingsChanged' => 'int',
@@ -223,14 +225,24 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'emailCampaignEmailSenderCreated' => 'int',
         'emailCampaignEmailSenderUpdated' => 'int',
         'emailCampaignEmailSenderDeleted' => 'int',
-        'emailCampaignEmailSenderVerified' => 'int',
         'emailCampaignDomainCreated' => 'int',
         'emailCampaignDomainDeleted' => 'int',
         'emailCampaignDomainVerified' => 'int',
+        'emailCampaignDomainStatusChanged' => 'int',
         'emailCampaignDomainDkimVerified' => 'int',
         'emailCampaignDomainReturnPathVerified' => 'int',
-        'emailCampaignBulkProcessProgress' => 'int',
-        'smsCampaignInvalidated' => 'int'
+        'emailCampaignDomainDmarcVerified' => 'int',
+        'emailCampaignDomainEntryVerificationChanged' => 'int',
+        'emailCampaignProgressState' => 'int',
+        'emailCampaignUpdated' => 'int',
+        'smsCampaignInvalidated' => 'int',
+        'scheduledEmailCampaignCreated' => 'int',
+        'scheduledEmailCampaignUpdated' => 'int',
+        'scheduledEmailCampaignStatusUpdated' => 'int',
+        'scheduledEmailCampaignDeleted' => 'int',
+        'emailCampaignFailedAttemptCreated' => 'int',
+        'emailCampaignFailedAttemptDeleted' => 'int',
+        'emailCampaignFailedAttemptStateUpdated' => 'int'
     ];
 
     /**
@@ -249,6 +261,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'systemAccountPermissionsChanged' => null,
         'userProfileChanged' => null,
         'userBalanceChanged' => null,
+        'userPresenceStatusChanged' => null,
         'userImpersonationEnd' => null,
         'messageDeleted' => null,
         'messageIncoming' => null,
@@ -294,6 +307,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'webWidgetDeleted' => null,
         'contactAdded' => null,
         'contactDeleted' => null,
+        'contactBulkUpdated' => null,
         'contactStateChanged' => null,
         'contactUnsubscribed' => null,
         'contactResubscribed' => null,
@@ -312,7 +326,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'progressCarrierBulkLookup' => null,
         'progressEmailBulkLookup' => null,
         'progressSubAccountBulkImport' => null,
-        'progressContactBulkImport' => null,
+        'importProgressState' => null,
         'forceRefreshWebApp' => null,
         'chatSenderSettingsChanged' => null,
         'countrySenderSettingsChanged' => null,
@@ -405,14 +419,24 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'emailCampaignEmailSenderCreated' => null,
         'emailCampaignEmailSenderUpdated' => null,
         'emailCampaignEmailSenderDeleted' => null,
-        'emailCampaignEmailSenderVerified' => null,
         'emailCampaignDomainCreated' => null,
         'emailCampaignDomainDeleted' => null,
         'emailCampaignDomainVerified' => null,
+        'emailCampaignDomainStatusChanged' => null,
         'emailCampaignDomainDkimVerified' => null,
         'emailCampaignDomainReturnPathVerified' => null,
-        'emailCampaignBulkProcessProgress' => null,
-        'smsCampaignInvalidated' => null
+        'emailCampaignDomainDmarcVerified' => null,
+        'emailCampaignDomainEntryVerificationChanged' => null,
+        'emailCampaignProgressState' => null,
+        'emailCampaignUpdated' => null,
+        'smsCampaignInvalidated' => null,
+        'scheduledEmailCampaignCreated' => null,
+        'scheduledEmailCampaignUpdated' => null,
+        'scheduledEmailCampaignStatusUpdated' => null,
+        'scheduledEmailCampaignDeleted' => null,
+        'emailCampaignFailedAttemptCreated' => null,
+        'emailCampaignFailedAttemptDeleted' => null,
+        'emailCampaignFailedAttemptStateUpdated' => null
     ];
 
     /**
@@ -452,6 +476,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'systemAccountPermissionsChanged' => 'systemAccountPermissionsChanged',
         'userProfileChanged' => 'userProfileChanged',
         'userBalanceChanged' => 'userBalanceChanged',
+        'userPresenceStatusChanged' => 'userPresenceStatusChanged',
         'userImpersonationEnd' => 'userImpersonationEnd',
         'messageDeleted' => 'messageDeleted',
         'messageIncoming' => 'messageIncoming',
@@ -497,6 +522,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'webWidgetDeleted' => 'webWidgetDeleted',
         'contactAdded' => 'contactAdded',
         'contactDeleted' => 'contactDeleted',
+        'contactBulkUpdated' => 'contactBulkUpdated',
         'contactStateChanged' => 'contactStateChanged',
         'contactUnsubscribed' => 'contactUnsubscribed',
         'contactResubscribed' => 'contactResubscribed',
@@ -515,7 +541,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'progressCarrierBulkLookup' => 'progressCarrierBulkLookup',
         'progressEmailBulkLookup' => 'progressEmailBulkLookup',
         'progressSubAccountBulkImport' => 'progressSubAccountBulkImport',
-        'progressContactBulkImport' => 'progressContactBulkImport',
+        'importProgressState' => 'importProgressState',
         'forceRefreshWebApp' => 'forceRefreshWebApp',
         'chatSenderSettingsChanged' => 'chatSenderSettingsChanged',
         'countrySenderSettingsChanged' => 'countrySenderSettingsChanged',
@@ -608,14 +634,24 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'emailCampaignEmailSenderCreated' => 'emailCampaignEmailSenderCreated',
         'emailCampaignEmailSenderUpdated' => 'emailCampaignEmailSenderUpdated',
         'emailCampaignEmailSenderDeleted' => 'emailCampaignEmailSenderDeleted',
-        'emailCampaignEmailSenderVerified' => 'emailCampaignEmailSenderVerified',
         'emailCampaignDomainCreated' => 'emailCampaignDomainCreated',
         'emailCampaignDomainDeleted' => 'emailCampaignDomainDeleted',
         'emailCampaignDomainVerified' => 'emailCampaignDomainVerified',
+        'emailCampaignDomainStatusChanged' => 'emailCampaignDomainStatusChanged',
         'emailCampaignDomainDkimVerified' => 'emailCampaignDomainDkimVerified',
         'emailCampaignDomainReturnPathVerified' => 'emailCampaignDomainReturnPathVerified',
-        'emailCampaignBulkProcessProgress' => 'emailCampaignBulkProcessProgress',
-        'smsCampaignInvalidated' => 'smsCampaignInvalidated'
+        'emailCampaignDomainDmarcVerified' => 'emailCampaignDomainDmarcVerified',
+        'emailCampaignDomainEntryVerificationChanged' => 'emailCampaignDomainEntryVerificationChanged',
+        'emailCampaignProgressState' => 'emailCampaignProgressState',
+        'emailCampaignUpdated' => 'emailCampaignUpdated',
+        'smsCampaignInvalidated' => 'smsCampaignInvalidated',
+        'scheduledEmailCampaignCreated' => 'scheduledEmailCampaignCreated',
+        'scheduledEmailCampaignUpdated' => 'scheduledEmailCampaignUpdated',
+        'scheduledEmailCampaignStatusUpdated' => 'scheduledEmailCampaignStatusUpdated',
+        'scheduledEmailCampaignDeleted' => 'scheduledEmailCampaignDeleted',
+        'emailCampaignFailedAttemptCreated' => 'emailCampaignFailedAttemptCreated',
+        'emailCampaignFailedAttemptDeleted' => 'emailCampaignFailedAttemptDeleted',
+        'emailCampaignFailedAttemptStateUpdated' => 'emailCampaignFailedAttemptStateUpdated'
     ];
 
     /**
@@ -634,6 +670,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'systemAccountPermissionsChanged' => 'setSystemAccountPermissionsChanged',
         'userProfileChanged' => 'setUserProfileChanged',
         'userBalanceChanged' => 'setUserBalanceChanged',
+        'userPresenceStatusChanged' => 'setUserPresenceStatusChanged',
         'userImpersonationEnd' => 'setUserImpersonationEnd',
         'messageDeleted' => 'setMessageDeleted',
         'messageIncoming' => 'setMessageIncoming',
@@ -679,6 +716,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'webWidgetDeleted' => 'setWebWidgetDeleted',
         'contactAdded' => 'setContactAdded',
         'contactDeleted' => 'setContactDeleted',
+        'contactBulkUpdated' => 'setContactBulkUpdated',
         'contactStateChanged' => 'setContactStateChanged',
         'contactUnsubscribed' => 'setContactUnsubscribed',
         'contactResubscribed' => 'setContactResubscribed',
@@ -697,7 +735,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'progressCarrierBulkLookup' => 'setProgressCarrierBulkLookup',
         'progressEmailBulkLookup' => 'setProgressEmailBulkLookup',
         'progressSubAccountBulkImport' => 'setProgressSubAccountBulkImport',
-        'progressContactBulkImport' => 'setProgressContactBulkImport',
+        'importProgressState' => 'setImportProgressState',
         'forceRefreshWebApp' => 'setForceRefreshWebApp',
         'chatSenderSettingsChanged' => 'setChatSenderSettingsChanged',
         'countrySenderSettingsChanged' => 'setCountrySenderSettingsChanged',
@@ -790,14 +828,24 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'emailCampaignEmailSenderCreated' => 'setEmailCampaignEmailSenderCreated',
         'emailCampaignEmailSenderUpdated' => 'setEmailCampaignEmailSenderUpdated',
         'emailCampaignEmailSenderDeleted' => 'setEmailCampaignEmailSenderDeleted',
-        'emailCampaignEmailSenderVerified' => 'setEmailCampaignEmailSenderVerified',
         'emailCampaignDomainCreated' => 'setEmailCampaignDomainCreated',
         'emailCampaignDomainDeleted' => 'setEmailCampaignDomainDeleted',
         'emailCampaignDomainVerified' => 'setEmailCampaignDomainVerified',
+        'emailCampaignDomainStatusChanged' => 'setEmailCampaignDomainStatusChanged',
         'emailCampaignDomainDkimVerified' => 'setEmailCampaignDomainDkimVerified',
         'emailCampaignDomainReturnPathVerified' => 'setEmailCampaignDomainReturnPathVerified',
-        'emailCampaignBulkProcessProgress' => 'setEmailCampaignBulkProcessProgress',
-        'smsCampaignInvalidated' => 'setSmsCampaignInvalidated'
+        'emailCampaignDomainDmarcVerified' => 'setEmailCampaignDomainDmarcVerified',
+        'emailCampaignDomainEntryVerificationChanged' => 'setEmailCampaignDomainEntryVerificationChanged',
+        'emailCampaignProgressState' => 'setEmailCampaignProgressState',
+        'emailCampaignUpdated' => 'setEmailCampaignUpdated',
+        'smsCampaignInvalidated' => 'setSmsCampaignInvalidated',
+        'scheduledEmailCampaignCreated' => 'setScheduledEmailCampaignCreated',
+        'scheduledEmailCampaignUpdated' => 'setScheduledEmailCampaignUpdated',
+        'scheduledEmailCampaignStatusUpdated' => 'setScheduledEmailCampaignStatusUpdated',
+        'scheduledEmailCampaignDeleted' => 'setScheduledEmailCampaignDeleted',
+        'emailCampaignFailedAttemptCreated' => 'setEmailCampaignFailedAttemptCreated',
+        'emailCampaignFailedAttemptDeleted' => 'setEmailCampaignFailedAttemptDeleted',
+        'emailCampaignFailedAttemptStateUpdated' => 'setEmailCampaignFailedAttemptStateUpdated'
     ];
 
     /**
@@ -816,6 +864,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'systemAccountPermissionsChanged' => 'getSystemAccountPermissionsChanged',
         'userProfileChanged' => 'getUserProfileChanged',
         'userBalanceChanged' => 'getUserBalanceChanged',
+        'userPresenceStatusChanged' => 'getUserPresenceStatusChanged',
         'userImpersonationEnd' => 'getUserImpersonationEnd',
         'messageDeleted' => 'getMessageDeleted',
         'messageIncoming' => 'getMessageIncoming',
@@ -861,6 +910,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'webWidgetDeleted' => 'getWebWidgetDeleted',
         'contactAdded' => 'getContactAdded',
         'contactDeleted' => 'getContactDeleted',
+        'contactBulkUpdated' => 'getContactBulkUpdated',
         'contactStateChanged' => 'getContactStateChanged',
         'contactUnsubscribed' => 'getContactUnsubscribed',
         'contactResubscribed' => 'getContactResubscribed',
@@ -879,7 +929,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'progressCarrierBulkLookup' => 'getProgressCarrierBulkLookup',
         'progressEmailBulkLookup' => 'getProgressEmailBulkLookup',
         'progressSubAccountBulkImport' => 'getProgressSubAccountBulkImport',
-        'progressContactBulkImport' => 'getProgressContactBulkImport',
+        'importProgressState' => 'getImportProgressState',
         'forceRefreshWebApp' => 'getForceRefreshWebApp',
         'chatSenderSettingsChanged' => 'getChatSenderSettingsChanged',
         'countrySenderSettingsChanged' => 'getCountrySenderSettingsChanged',
@@ -972,14 +1022,24 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'emailCampaignEmailSenderCreated' => 'getEmailCampaignEmailSenderCreated',
         'emailCampaignEmailSenderUpdated' => 'getEmailCampaignEmailSenderUpdated',
         'emailCampaignEmailSenderDeleted' => 'getEmailCampaignEmailSenderDeleted',
-        'emailCampaignEmailSenderVerified' => 'getEmailCampaignEmailSenderVerified',
         'emailCampaignDomainCreated' => 'getEmailCampaignDomainCreated',
         'emailCampaignDomainDeleted' => 'getEmailCampaignDomainDeleted',
         'emailCampaignDomainVerified' => 'getEmailCampaignDomainVerified',
+        'emailCampaignDomainStatusChanged' => 'getEmailCampaignDomainStatusChanged',
         'emailCampaignDomainDkimVerified' => 'getEmailCampaignDomainDkimVerified',
         'emailCampaignDomainReturnPathVerified' => 'getEmailCampaignDomainReturnPathVerified',
-        'emailCampaignBulkProcessProgress' => 'getEmailCampaignBulkProcessProgress',
-        'smsCampaignInvalidated' => 'getSmsCampaignInvalidated'
+        'emailCampaignDomainDmarcVerified' => 'getEmailCampaignDomainDmarcVerified',
+        'emailCampaignDomainEntryVerificationChanged' => 'getEmailCampaignDomainEntryVerificationChanged',
+        'emailCampaignProgressState' => 'getEmailCampaignProgressState',
+        'emailCampaignUpdated' => 'getEmailCampaignUpdated',
+        'smsCampaignInvalidated' => 'getSmsCampaignInvalidated',
+        'scheduledEmailCampaignCreated' => 'getScheduledEmailCampaignCreated',
+        'scheduledEmailCampaignUpdated' => 'getScheduledEmailCampaignUpdated',
+        'scheduledEmailCampaignStatusUpdated' => 'getScheduledEmailCampaignStatusUpdated',
+        'scheduledEmailCampaignDeleted' => 'getScheduledEmailCampaignDeleted',
+        'emailCampaignFailedAttemptCreated' => 'getEmailCampaignFailedAttemptCreated',
+        'emailCampaignFailedAttemptDeleted' => 'getEmailCampaignFailedAttemptDeleted',
+        'emailCampaignFailedAttemptStateUpdated' => 'getEmailCampaignFailedAttemptStateUpdated'
     ];
 
     /**
@@ -1052,6 +1112,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         $this->container['systemAccountPermissionsChanged'] = isset($data['systemAccountPermissionsChanged']) ? $data['systemAccountPermissionsChanged'] : null;
         $this->container['userProfileChanged'] = isset($data['userProfileChanged']) ? $data['userProfileChanged'] : null;
         $this->container['userBalanceChanged'] = isset($data['userBalanceChanged']) ? $data['userBalanceChanged'] : null;
+        $this->container['userPresenceStatusChanged'] = isset($data['userPresenceStatusChanged']) ? $data['userPresenceStatusChanged'] : null;
         $this->container['userImpersonationEnd'] = isset($data['userImpersonationEnd']) ? $data['userImpersonationEnd'] : null;
         $this->container['messageDeleted'] = isset($data['messageDeleted']) ? $data['messageDeleted'] : null;
         $this->container['messageIncoming'] = isset($data['messageIncoming']) ? $data['messageIncoming'] : null;
@@ -1097,6 +1158,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         $this->container['webWidgetDeleted'] = isset($data['webWidgetDeleted']) ? $data['webWidgetDeleted'] : null;
         $this->container['contactAdded'] = isset($data['contactAdded']) ? $data['contactAdded'] : null;
         $this->container['contactDeleted'] = isset($data['contactDeleted']) ? $data['contactDeleted'] : null;
+        $this->container['contactBulkUpdated'] = isset($data['contactBulkUpdated']) ? $data['contactBulkUpdated'] : null;
         $this->container['contactStateChanged'] = isset($data['contactStateChanged']) ? $data['contactStateChanged'] : null;
         $this->container['contactUnsubscribed'] = isset($data['contactUnsubscribed']) ? $data['contactUnsubscribed'] : null;
         $this->container['contactResubscribed'] = isset($data['contactResubscribed']) ? $data['contactResubscribed'] : null;
@@ -1115,7 +1177,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         $this->container['progressCarrierBulkLookup'] = isset($data['progressCarrierBulkLookup']) ? $data['progressCarrierBulkLookup'] : null;
         $this->container['progressEmailBulkLookup'] = isset($data['progressEmailBulkLookup']) ? $data['progressEmailBulkLookup'] : null;
         $this->container['progressSubAccountBulkImport'] = isset($data['progressSubAccountBulkImport']) ? $data['progressSubAccountBulkImport'] : null;
-        $this->container['progressContactBulkImport'] = isset($data['progressContactBulkImport']) ? $data['progressContactBulkImport'] : null;
+        $this->container['importProgressState'] = isset($data['importProgressState']) ? $data['importProgressState'] : null;
         $this->container['forceRefreshWebApp'] = isset($data['forceRefreshWebApp']) ? $data['forceRefreshWebApp'] : null;
         $this->container['chatSenderSettingsChanged'] = isset($data['chatSenderSettingsChanged']) ? $data['chatSenderSettingsChanged'] : null;
         $this->container['countrySenderSettingsChanged'] = isset($data['countrySenderSettingsChanged']) ? $data['countrySenderSettingsChanged'] : null;
@@ -1208,14 +1270,24 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         $this->container['emailCampaignEmailSenderCreated'] = isset($data['emailCampaignEmailSenderCreated']) ? $data['emailCampaignEmailSenderCreated'] : null;
         $this->container['emailCampaignEmailSenderUpdated'] = isset($data['emailCampaignEmailSenderUpdated']) ? $data['emailCampaignEmailSenderUpdated'] : null;
         $this->container['emailCampaignEmailSenderDeleted'] = isset($data['emailCampaignEmailSenderDeleted']) ? $data['emailCampaignEmailSenderDeleted'] : null;
-        $this->container['emailCampaignEmailSenderVerified'] = isset($data['emailCampaignEmailSenderVerified']) ? $data['emailCampaignEmailSenderVerified'] : null;
         $this->container['emailCampaignDomainCreated'] = isset($data['emailCampaignDomainCreated']) ? $data['emailCampaignDomainCreated'] : null;
         $this->container['emailCampaignDomainDeleted'] = isset($data['emailCampaignDomainDeleted']) ? $data['emailCampaignDomainDeleted'] : null;
         $this->container['emailCampaignDomainVerified'] = isset($data['emailCampaignDomainVerified']) ? $data['emailCampaignDomainVerified'] : null;
+        $this->container['emailCampaignDomainStatusChanged'] = isset($data['emailCampaignDomainStatusChanged']) ? $data['emailCampaignDomainStatusChanged'] : null;
         $this->container['emailCampaignDomainDkimVerified'] = isset($data['emailCampaignDomainDkimVerified']) ? $data['emailCampaignDomainDkimVerified'] : null;
         $this->container['emailCampaignDomainReturnPathVerified'] = isset($data['emailCampaignDomainReturnPathVerified']) ? $data['emailCampaignDomainReturnPathVerified'] : null;
-        $this->container['emailCampaignBulkProcessProgress'] = isset($data['emailCampaignBulkProcessProgress']) ? $data['emailCampaignBulkProcessProgress'] : null;
+        $this->container['emailCampaignDomainDmarcVerified'] = isset($data['emailCampaignDomainDmarcVerified']) ? $data['emailCampaignDomainDmarcVerified'] : null;
+        $this->container['emailCampaignDomainEntryVerificationChanged'] = isset($data['emailCampaignDomainEntryVerificationChanged']) ? $data['emailCampaignDomainEntryVerificationChanged'] : null;
+        $this->container['emailCampaignProgressState'] = isset($data['emailCampaignProgressState']) ? $data['emailCampaignProgressState'] : null;
+        $this->container['emailCampaignUpdated'] = isset($data['emailCampaignUpdated']) ? $data['emailCampaignUpdated'] : null;
         $this->container['smsCampaignInvalidated'] = isset($data['smsCampaignInvalidated']) ? $data['smsCampaignInvalidated'] : null;
+        $this->container['scheduledEmailCampaignCreated'] = isset($data['scheduledEmailCampaignCreated']) ? $data['scheduledEmailCampaignCreated'] : null;
+        $this->container['scheduledEmailCampaignUpdated'] = isset($data['scheduledEmailCampaignUpdated']) ? $data['scheduledEmailCampaignUpdated'] : null;
+        $this->container['scheduledEmailCampaignStatusUpdated'] = isset($data['scheduledEmailCampaignStatusUpdated']) ? $data['scheduledEmailCampaignStatusUpdated'] : null;
+        $this->container['scheduledEmailCampaignDeleted'] = isset($data['scheduledEmailCampaignDeleted']) ? $data['scheduledEmailCampaignDeleted'] : null;
+        $this->container['emailCampaignFailedAttemptCreated'] = isset($data['emailCampaignFailedAttemptCreated']) ? $data['emailCampaignFailedAttemptCreated'] : null;
+        $this->container['emailCampaignFailedAttemptDeleted'] = isset($data['emailCampaignFailedAttemptDeleted']) ? $data['emailCampaignFailedAttemptDeleted'] : null;
+        $this->container['emailCampaignFailedAttemptStateUpdated'] = isset($data['emailCampaignFailedAttemptStateUpdated']) ? $data['emailCampaignFailedAttemptStateUpdated'] : null;
     }
 
     /**
@@ -1256,6 +1328,9 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         }
         if ($this->container['userBalanceChanged'] === null) {
             $invalidProperties[] = "'userBalanceChanged' can't be null";
+        }
+        if ($this->container['userPresenceStatusChanged'] === null) {
+            $invalidProperties[] = "'userPresenceStatusChanged' can't be null";
         }
         if ($this->container['userImpersonationEnd'] === null) {
             $invalidProperties[] = "'userImpersonationEnd' can't be null";
@@ -1392,6 +1467,9 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         if ($this->container['contactDeleted'] === null) {
             $invalidProperties[] = "'contactDeleted' can't be null";
         }
+        if ($this->container['contactBulkUpdated'] === null) {
+            $invalidProperties[] = "'contactBulkUpdated' can't be null";
+        }
         if ($this->container['contactStateChanged'] === null) {
             $invalidProperties[] = "'contactStateChanged' can't be null";
         }
@@ -1446,8 +1524,8 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         if ($this->container['progressSubAccountBulkImport'] === null) {
             $invalidProperties[] = "'progressSubAccountBulkImport' can't be null";
         }
-        if ($this->container['progressContactBulkImport'] === null) {
-            $invalidProperties[] = "'progressContactBulkImport' can't be null";
+        if ($this->container['importProgressState'] === null) {
+            $invalidProperties[] = "'importProgressState' can't be null";
         }
         if ($this->container['forceRefreshWebApp'] === null) {
             $invalidProperties[] = "'forceRefreshWebApp' can't be null";
@@ -1725,9 +1803,6 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         if ($this->container['emailCampaignEmailSenderDeleted'] === null) {
             $invalidProperties[] = "'emailCampaignEmailSenderDeleted' can't be null";
         }
-        if ($this->container['emailCampaignEmailSenderVerified'] === null) {
-            $invalidProperties[] = "'emailCampaignEmailSenderVerified' can't be null";
-        }
         if ($this->container['emailCampaignDomainCreated'] === null) {
             $invalidProperties[] = "'emailCampaignDomainCreated' can't be null";
         }
@@ -1737,17 +1812,50 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         if ($this->container['emailCampaignDomainVerified'] === null) {
             $invalidProperties[] = "'emailCampaignDomainVerified' can't be null";
         }
+        if ($this->container['emailCampaignDomainStatusChanged'] === null) {
+            $invalidProperties[] = "'emailCampaignDomainStatusChanged' can't be null";
+        }
         if ($this->container['emailCampaignDomainDkimVerified'] === null) {
             $invalidProperties[] = "'emailCampaignDomainDkimVerified' can't be null";
         }
         if ($this->container['emailCampaignDomainReturnPathVerified'] === null) {
             $invalidProperties[] = "'emailCampaignDomainReturnPathVerified' can't be null";
         }
-        if ($this->container['emailCampaignBulkProcessProgress'] === null) {
-            $invalidProperties[] = "'emailCampaignBulkProcessProgress' can't be null";
+        if ($this->container['emailCampaignDomainDmarcVerified'] === null) {
+            $invalidProperties[] = "'emailCampaignDomainDmarcVerified' can't be null";
+        }
+        if ($this->container['emailCampaignDomainEntryVerificationChanged'] === null) {
+            $invalidProperties[] = "'emailCampaignDomainEntryVerificationChanged' can't be null";
+        }
+        if ($this->container['emailCampaignProgressState'] === null) {
+            $invalidProperties[] = "'emailCampaignProgressState' can't be null";
+        }
+        if ($this->container['emailCampaignUpdated'] === null) {
+            $invalidProperties[] = "'emailCampaignUpdated' can't be null";
         }
         if ($this->container['smsCampaignInvalidated'] === null) {
             $invalidProperties[] = "'smsCampaignInvalidated' can't be null";
+        }
+        if ($this->container['scheduledEmailCampaignCreated'] === null) {
+            $invalidProperties[] = "'scheduledEmailCampaignCreated' can't be null";
+        }
+        if ($this->container['scheduledEmailCampaignUpdated'] === null) {
+            $invalidProperties[] = "'scheduledEmailCampaignUpdated' can't be null";
+        }
+        if ($this->container['scheduledEmailCampaignStatusUpdated'] === null) {
+            $invalidProperties[] = "'scheduledEmailCampaignStatusUpdated' can't be null";
+        }
+        if ($this->container['scheduledEmailCampaignDeleted'] === null) {
+            $invalidProperties[] = "'scheduledEmailCampaignDeleted' can't be null";
+        }
+        if ($this->container['emailCampaignFailedAttemptCreated'] === null) {
+            $invalidProperties[] = "'emailCampaignFailedAttemptCreated' can't be null";
+        }
+        if ($this->container['emailCampaignFailedAttemptDeleted'] === null) {
+            $invalidProperties[] = "'emailCampaignFailedAttemptDeleted' can't be null";
+        }
+        if ($this->container['emailCampaignFailedAttemptStateUpdated'] === null) {
+            $invalidProperties[] = "'emailCampaignFailedAttemptStateUpdated' can't be null";
         }
         return $invalidProperties;
     }
@@ -2000,6 +2108,30 @@ class GetStateResponse implements ModelInterface, ArrayAccess
     public function setUserBalanceChanged($userBalanceChanged)
     {
         $this->container['userBalanceChanged'] = $userBalanceChanged;
+
+        return $this;
+    }
+
+    /**
+     * Gets userPresenceStatusChanged
+     *
+     * @return int
+     */
+    public function getUserPresenceStatusChanged()
+    {
+        return $this->container['userPresenceStatusChanged'];
+    }
+
+    /**
+     * Sets userPresenceStatusChanged
+     *
+     * @param int $userPresenceStatusChanged userPresenceStatusChanged
+     *
+     * @return $this
+     */
+    public function setUserPresenceStatusChanged($userPresenceStatusChanged)
+    {
+        $this->container['userPresenceStatusChanged'] = $userPresenceStatusChanged;
 
         return $this;
     }
@@ -3085,6 +3217,30 @@ class GetStateResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets contactBulkUpdated
+     *
+     * @return int
+     */
+    public function getContactBulkUpdated()
+    {
+        return $this->container['contactBulkUpdated'];
+    }
+
+    /**
+     * Sets contactBulkUpdated
+     *
+     * @param int $contactBulkUpdated contactBulkUpdated
+     *
+     * @return $this
+     */
+    public function setContactBulkUpdated($contactBulkUpdated)
+    {
+        $this->container['contactBulkUpdated'] = $contactBulkUpdated;
+
+        return $this;
+    }
+
+    /**
      * Gets contactStateChanged
      *
      * @return int
@@ -3517,25 +3673,25 @@ class GetStateResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets progressContactBulkImport
+     * Gets importProgressState
      *
      * @return int
      */
-    public function getProgressContactBulkImport()
+    public function getImportProgressState()
     {
-        return $this->container['progressContactBulkImport'];
+        return $this->container['importProgressState'];
     }
 
     /**
-     * Sets progressContactBulkImport
+     * Sets importProgressState
      *
-     * @param int $progressContactBulkImport progressContactBulkImport
+     * @param int $importProgressState importProgressState
      *
      * @return $this
      */
-    public function setProgressContactBulkImport($progressContactBulkImport)
+    public function setImportProgressState($importProgressState)
     {
-        $this->container['progressContactBulkImport'] = $progressContactBulkImport;
+        $this->container['importProgressState'] = $importProgressState;
 
         return $this;
     }
@@ -5749,30 +5905,6 @@ class GetStateResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets emailCampaignEmailSenderVerified
-     *
-     * @return int
-     */
-    public function getEmailCampaignEmailSenderVerified()
-    {
-        return $this->container['emailCampaignEmailSenderVerified'];
-    }
-
-    /**
-     * Sets emailCampaignEmailSenderVerified
-     *
-     * @param int $emailCampaignEmailSenderVerified emailCampaignEmailSenderVerified
-     *
-     * @return $this
-     */
-    public function setEmailCampaignEmailSenderVerified($emailCampaignEmailSenderVerified)
-    {
-        $this->container['emailCampaignEmailSenderVerified'] = $emailCampaignEmailSenderVerified;
-
-        return $this;
-    }
-
-    /**
      * Gets emailCampaignDomainCreated
      *
      * @return int
@@ -5845,6 +5977,30 @@ class GetStateResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets emailCampaignDomainStatusChanged
+     *
+     * @return int
+     */
+    public function getEmailCampaignDomainStatusChanged()
+    {
+        return $this->container['emailCampaignDomainStatusChanged'];
+    }
+
+    /**
+     * Sets emailCampaignDomainStatusChanged
+     *
+     * @param int $emailCampaignDomainStatusChanged emailCampaignDomainStatusChanged
+     *
+     * @return $this
+     */
+    public function setEmailCampaignDomainStatusChanged($emailCampaignDomainStatusChanged)
+    {
+        $this->container['emailCampaignDomainStatusChanged'] = $emailCampaignDomainStatusChanged;
+
+        return $this;
+    }
+
+    /**
      * Gets emailCampaignDomainDkimVerified
      *
      * @return int
@@ -5893,25 +6049,97 @@ class GetStateResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets emailCampaignBulkProcessProgress
+     * Gets emailCampaignDomainDmarcVerified
      *
      * @return int
      */
-    public function getEmailCampaignBulkProcessProgress()
+    public function getEmailCampaignDomainDmarcVerified()
     {
-        return $this->container['emailCampaignBulkProcessProgress'];
+        return $this->container['emailCampaignDomainDmarcVerified'];
     }
 
     /**
-     * Sets emailCampaignBulkProcessProgress
+     * Sets emailCampaignDomainDmarcVerified
      *
-     * @param int $emailCampaignBulkProcessProgress emailCampaignBulkProcessProgress
+     * @param int $emailCampaignDomainDmarcVerified emailCampaignDomainDmarcVerified
      *
      * @return $this
      */
-    public function setEmailCampaignBulkProcessProgress($emailCampaignBulkProcessProgress)
+    public function setEmailCampaignDomainDmarcVerified($emailCampaignDomainDmarcVerified)
     {
-        $this->container['emailCampaignBulkProcessProgress'] = $emailCampaignBulkProcessProgress;
+        $this->container['emailCampaignDomainDmarcVerified'] = $emailCampaignDomainDmarcVerified;
+
+        return $this;
+    }
+
+    /**
+     * Gets emailCampaignDomainEntryVerificationChanged
+     *
+     * @return int
+     */
+    public function getEmailCampaignDomainEntryVerificationChanged()
+    {
+        return $this->container['emailCampaignDomainEntryVerificationChanged'];
+    }
+
+    /**
+     * Sets emailCampaignDomainEntryVerificationChanged
+     *
+     * @param int $emailCampaignDomainEntryVerificationChanged emailCampaignDomainEntryVerificationChanged
+     *
+     * @return $this
+     */
+    public function setEmailCampaignDomainEntryVerificationChanged($emailCampaignDomainEntryVerificationChanged)
+    {
+        $this->container['emailCampaignDomainEntryVerificationChanged'] = $emailCampaignDomainEntryVerificationChanged;
+
+        return $this;
+    }
+
+    /**
+     * Gets emailCampaignProgressState
+     *
+     * @return int
+     */
+    public function getEmailCampaignProgressState()
+    {
+        return $this->container['emailCampaignProgressState'];
+    }
+
+    /**
+     * Sets emailCampaignProgressState
+     *
+     * @param int $emailCampaignProgressState emailCampaignProgressState
+     *
+     * @return $this
+     */
+    public function setEmailCampaignProgressState($emailCampaignProgressState)
+    {
+        $this->container['emailCampaignProgressState'] = $emailCampaignProgressState;
+
+        return $this;
+    }
+
+    /**
+     * Gets emailCampaignUpdated
+     *
+     * @return int
+     */
+    public function getEmailCampaignUpdated()
+    {
+        return $this->container['emailCampaignUpdated'];
+    }
+
+    /**
+     * Sets emailCampaignUpdated
+     *
+     * @param int $emailCampaignUpdated emailCampaignUpdated
+     *
+     * @return $this
+     */
+    public function setEmailCampaignUpdated($emailCampaignUpdated)
+    {
+        $this->container['emailCampaignUpdated'] = $emailCampaignUpdated;
 
         return $this;
     }
@@ -5936,6 +6164,174 @@ class GetStateResponse implements ModelInterface, ArrayAccess
     public function setSmsCampaignInvalidated($smsCampaignInvalidated)
     {
         $this->container['smsCampaignInvalidated'] = $smsCampaignInvalidated;
+
+        return $this;
+    }
+
+    /**
+     * Gets scheduledEmailCampaignCreated
+     *
+     * @return int
+     */
+    public function getScheduledEmailCampaignCreated()
+    {
+        return $this->container['scheduledEmailCampaignCreated'];
+    }
+
+    /**
+     * Sets scheduledEmailCampaignCreated
+     *
+     * @param int $scheduledEmailCampaignCreated scheduledEmailCampaignCreated
+     *
+     * @return $this
+     */
+    public function setScheduledEmailCampaignCreated($scheduledEmailCampaignCreated)
+    {
+        $this->container['scheduledEmailCampaignCreated'] = $scheduledEmailCampaignCreated;
+
+        return $this;
+    }
+
+    /**
+     * Gets scheduledEmailCampaignUpdated
+     *
+     * @return int
+     */
+    public function getScheduledEmailCampaignUpdated()
+    {
+        return $this->container['scheduledEmailCampaignUpdated'];
+    }
+
+    /**
+     * Sets scheduledEmailCampaignUpdated
+     *
+     * @param int $scheduledEmailCampaignUpdated scheduledEmailCampaignUpdated
+     *
+     * @return $this
+     */
+    public function setScheduledEmailCampaignUpdated($scheduledEmailCampaignUpdated)
+    {
+        $this->container['scheduledEmailCampaignUpdated'] = $scheduledEmailCampaignUpdated;
+
+        return $this;
+    }
+
+    /**
+     * Gets scheduledEmailCampaignStatusUpdated
+     *
+     * @return int
+     */
+    public function getScheduledEmailCampaignStatusUpdated()
+    {
+        return $this->container['scheduledEmailCampaignStatusUpdated'];
+    }
+
+    /**
+     * Sets scheduledEmailCampaignStatusUpdated
+     *
+     * @param int $scheduledEmailCampaignStatusUpdated scheduledEmailCampaignStatusUpdated
+     *
+     * @return $this
+     */
+    public function setScheduledEmailCampaignStatusUpdated($scheduledEmailCampaignStatusUpdated)
+    {
+        $this->container['scheduledEmailCampaignStatusUpdated'] = $scheduledEmailCampaignStatusUpdated;
+
+        return $this;
+    }
+
+    /**
+     * Gets scheduledEmailCampaignDeleted
+     *
+     * @return int
+     */
+    public function getScheduledEmailCampaignDeleted()
+    {
+        return $this->container['scheduledEmailCampaignDeleted'];
+    }
+
+    /**
+     * Sets scheduledEmailCampaignDeleted
+     *
+     * @param int $scheduledEmailCampaignDeleted scheduledEmailCampaignDeleted
+     *
+     * @return $this
+     */
+    public function setScheduledEmailCampaignDeleted($scheduledEmailCampaignDeleted)
+    {
+        $this->container['scheduledEmailCampaignDeleted'] = $scheduledEmailCampaignDeleted;
+
+        return $this;
+    }
+
+    /**
+     * Gets emailCampaignFailedAttemptCreated
+     *
+     * @return int
+     */
+    public function getEmailCampaignFailedAttemptCreated()
+    {
+        return $this->container['emailCampaignFailedAttemptCreated'];
+    }
+
+    /**
+     * Sets emailCampaignFailedAttemptCreated
+     *
+     * @param int $emailCampaignFailedAttemptCreated emailCampaignFailedAttemptCreated
+     *
+     * @return $this
+     */
+    public function setEmailCampaignFailedAttemptCreated($emailCampaignFailedAttemptCreated)
+    {
+        $this->container['emailCampaignFailedAttemptCreated'] = $emailCampaignFailedAttemptCreated;
+
+        return $this;
+    }
+
+    /**
+     * Gets emailCampaignFailedAttemptDeleted
+     *
+     * @return int
+     */
+    public function getEmailCampaignFailedAttemptDeleted()
+    {
+        return $this->container['emailCampaignFailedAttemptDeleted'];
+    }
+
+    /**
+     * Sets emailCampaignFailedAttemptDeleted
+     *
+     * @param int $emailCampaignFailedAttemptDeleted emailCampaignFailedAttemptDeleted
+     *
+     * @return $this
+     */
+    public function setEmailCampaignFailedAttemptDeleted($emailCampaignFailedAttemptDeleted)
+    {
+        $this->container['emailCampaignFailedAttemptDeleted'] = $emailCampaignFailedAttemptDeleted;
+
+        return $this;
+    }
+
+    /**
+     * Gets emailCampaignFailedAttemptStateUpdated
+     *
+     * @return int
+     */
+    public function getEmailCampaignFailedAttemptStateUpdated()
+    {
+        return $this->container['emailCampaignFailedAttemptStateUpdated'];
+    }
+
+    /**
+     * Sets emailCampaignFailedAttemptStateUpdated
+     *
+     * @param int $emailCampaignFailedAttemptStateUpdated emailCampaignFailedAttemptStateUpdated
+     *
+     * @return $this
+     */
+    public function setEmailCampaignFailedAttemptStateUpdated($emailCampaignFailedAttemptStateUpdated)
+    {
+        $this->container['emailCampaignFailedAttemptStateUpdated'] = $emailCampaignFailedAttemptStateUpdated;
 
         return $this;
     }

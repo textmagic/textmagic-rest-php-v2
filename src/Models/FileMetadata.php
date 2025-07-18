@@ -1,6 +1,6 @@
 <?php
 /**
- * UserStatement
+ * FileMetadata
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \TextMagic\ObjectSerializer;
 
 /**
- * UserStatement Class Doc Comment
+ * FileMetadata Class Doc Comment
  *
  * @category Class
  * @package  TextMagic
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class UserStatement implements ModelInterface, ArrayAccess
+class FileMetadata implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class UserStatement implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'UserStatement';
+    protected static $swaggerModelName = 'FileMetadata';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,14 +57,10 @@ class UserStatement implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'userId' => 'int',
-        'date' => '\DateTime',
-        'balance' => 'double',
-        'delta' => 'float',
         'type' => 'string',
-        'value' => 'string',
-        'comment' => 'string'
+        'height' => 'int',
+        'width' => 'int',
+        'preview' => '\TextMagic\Models\FileMetadataPreview'
     ];
 
     /**
@@ -73,14 +69,10 @@ class UserStatement implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null,
-        'userId' => null,
-        'date' => 'date-time',
-        'balance' => 'double',
-        'delta' => 'float',
         'type' => null,
-        'value' => null,
-        'comment' => null
+        'height' => null,
+        'width' => null,
+        'preview' => null
     ];
 
     /**
@@ -110,14 +102,10 @@ class UserStatement implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'userId' => 'userId',
-        'date' => 'date',
-        'balance' => 'balance',
-        'delta' => 'delta',
         'type' => 'type',
-        'value' => 'value',
-        'comment' => 'comment'
+        'height' => 'height',
+        'width' => 'width',
+        'preview' => 'preview'
     ];
 
     /**
@@ -126,14 +114,10 @@ class UserStatement implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'userId' => 'setUserId',
-        'date' => 'setDate',
-        'balance' => 'setBalance',
-        'delta' => 'setDelta',
         'type' => 'setType',
-        'value' => 'setValue',
-        'comment' => 'setComment'
+        'height' => 'setHeight',
+        'width' => 'setWidth',
+        'preview' => 'setPreview'
     ];
 
     /**
@@ -142,14 +126,10 @@ class UserStatement implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'userId' => 'getUserId',
-        'date' => 'getDate',
-        'balance' => 'getBalance',
-        'delta' => 'getDelta',
         'type' => 'getType',
-        'value' => 'getValue',
-        'comment' => 'getComment'
+        'height' => 'getHeight',
+        'width' => 'getWidth',
+        'preview' => 'getPreview'
     ];
 
     /**
@@ -193,8 +173,23 @@ class UserStatement implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
+    const TYPE_IMAGE = 'image';
+    const TYPE_VIDEO = 'video';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_IMAGE,
+            self::TYPE_VIDEO,
+        ];
+    }
     
 
     /**
@@ -212,14 +207,10 @@ class UserStatement implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['userId'] = isset($data['userId']) ? $data['userId'] : null;
-        $this->container['date'] = isset($data['date']) ? $data['date'] : null;
-        $this->container['balance'] = isset($data['balance']) ? $data['balance'] : null;
-        $this->container['delta'] = isset($data['delta']) ? $data['delta'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
-        $this->container['comment'] = isset($data['comment']) ? $data['comment'] : null;
+        $this->container['height'] = isset($data['height']) ? $data['height'] : null;
+        $this->container['width'] = isset($data['width']) ? $data['width'] : null;
+        $this->container['preview'] = isset($data['preview']) ? $data['preview'] : null;
     }
 
     /**
@@ -231,29 +222,25 @@ class UserStatement implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
-        }
-        if ($this->container['userId'] === null) {
-            $invalidProperties[] = "'userId' can't be null";
-        }
-        if ($this->container['date'] === null) {
-            $invalidProperties[] = "'date' can't be null";
-        }
-        if ($this->container['balance'] === null) {
-            $invalidProperties[] = "'balance' can't be null";
-        }
-        if ($this->container['delta'] === null) {
-            $invalidProperties[] = "'delta' can't be null";
-        }
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
         }
-        if ($this->container['value'] === null) {
-            $invalidProperties[] = "'value' can't be null";
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
         }
-        if ($this->container['comment'] === null) {
-            $invalidProperties[] = "'comment' can't be null";
+
+        if ($this->container['height'] === null) {
+            $invalidProperties[] = "'height' can't be null";
+        }
+        if ($this->container['width'] === null) {
+            $invalidProperties[] = "'width' can't be null";
+        }
+        if ($this->container['preview'] === null) {
+            $invalidProperties[] = "'preview' can't be null";
         }
         return $invalidProperties;
     }
@@ -271,126 +258,6 @@ class UserStatement implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets id
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param int $id User statement ID.
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets userId
-     *
-     * @return int
-     */
-    public function getUserId()
-    {
-        return $this->container['userId'];
-    }
-
-    /**
-     * Sets userId
-     *
-     * @param int $userId User ID.
-     *
-     * @return $this
-     */
-    public function setUserId($userId)
-    {
-        $this->container['userId'] = $userId;
-
-        return $this;
-    }
-
-    /**
-     * Gets date
-     *
-     * @return \DateTime
-     */
-    public function getDate()
-    {
-        return $this->container['date'];
-    }
-
-    /**
-     * Sets date
-     *
-     * @param \DateTime $date User statement date.
-     *
-     * @return $this
-     */
-    public function setDate($date)
-    {
-        $this->container['date'] = $date;
-
-        return $this;
-    }
-
-    /**
-     * Gets balance
-     *
-     * @return double
-     */
-    public function getBalance()
-    {
-        return $this->container['balance'];
-    }
-
-    /**
-     * Sets balance
-     *
-     * @param double $balance balance
-     *
-     * @return $this
-     */
-    public function setBalance($balance)
-    {
-        $this->container['balance'] = $balance;
-
-        return $this;
-    }
-
-    /**
-     * Gets delta
-     *
-     * @return float
-     */
-    public function getDelta()
-    {
-        return $this->container['delta'];
-    }
-
-    /**
-     * Sets delta
-     *
-     * @param float $delta Balance change amount.
-     *
-     * @return $this
-     */
-    public function setDelta($delta)
-    {
-        $this->container['delta'] = $delta;
-
-        return $this;
-    }
-
-    /**
      * Gets type
      *
      * @return string
@@ -403,61 +270,94 @@ class UserStatement implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param string $type Type of statement (what you have been charged for): *   **sms** - for sending SMS *   **number** - for renewing a dedicated number; *   **schedule** - for scheduling text messages; *   **topup** - for adding credits to your account.
+     * @param string $type File metadata type.
      *
      * @return $this
      */
     public function setType($type)
     {
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!in_array($type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'type', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
         $this->container['type'] = $type;
 
         return $this;
     }
 
     /**
-     * Gets value
+     * Gets height
      *
-     * @return string
+     * @return int
      */
-    public function getValue()
+    public function getHeight()
     {
-        return $this->container['value'];
+        return $this->container['height'];
     }
 
     /**
-     * Sets value
+     * Sets height
      *
-     * @param string $value Value differs by **type**: *   for **sms**, it is the sent messages amount; *   for **number**, it is a dedicated phone number; *   for **schedule**, it is a scheduled messages amount; *   for **top-up**, it is an invoice ID.
+     * @param int $height height
      *
      * @return $this
      */
-    public function setValue($value)
+    public function setHeight($height)
     {
-        $this->container['value'] = $value;
+        $this->container['height'] = $height;
 
         return $this;
     }
 
     /**
-     * Gets comment
+     * Gets width
      *
-     * @return string
+     * @return int
      */
-    public function getComment()
+    public function getWidth()
     {
-        return $this->container['comment'];
+        return $this->container['width'];
     }
 
     /**
-     * Sets comment
+     * Sets width
      *
-     * @param string $comment Optional comment.
+     * @param int $width width
      *
      * @return $this
      */
-    public function setComment($comment)
+    public function setWidth($width)
     {
-        $this->container['comment'] = $comment;
+        $this->container['width'] = $width;
+
+        return $this;
+    }
+
+    /**
+     * Gets preview
+     *
+     * @return \TextMagic\Models\FileMetadataPreview
+     */
+    public function getPreview()
+    {
+        return $this->container['preview'];
+    }
+
+    /**
+     * Sets preview
+     *
+     * @param \TextMagic\Models\FileMetadataPreview $preview preview
+     *
+     * @return $this
+     */
+    public function setPreview($preview)
+    {
+        $this->container['preview'] = $preview;
 
         return $this;
     }

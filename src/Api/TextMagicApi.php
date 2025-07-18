@@ -15676,14 +15676,15 @@ class TextMagicApi
      * @param  string $end Return messages up to specified timestamp only. Required when &#x60;start&#x60; parameter specified. (optional)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      * @param  int $voice Fetch results with voice calls. (optional, default to 0)
+     * @param  int $includeNotes Fetch results with messenger notes. (optional, default to 0)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \TextMagic\Models\GetChatMessagesPaginatedResponse
      */
-    public function getChatMessages($id, $page = '1', $limit = '10', $query = null, $start = null, $end = null, $direction = 'desc', $voice = '0')
+    public function getChatMessages($id, $page = '1', $limit = '10', $query = null, $start = null, $end = null, $direction = 'desc', $voice = '0', $includeNotes = '0')
     {
-        list($response) = $this->getChatMessagesWithHttpInfo($id, $page, $limit, $query, $start, $end, $direction, $voice);
+        list($response) = $this->getChatMessagesWithHttpInfo($id, $page, $limit, $query, $start, $end, $direction, $voice, $includeNotes);
         return $response;
     }
 
@@ -15700,15 +15701,16 @@ class TextMagicApi
      * @param  string $end Return messages up to specified timestamp only. Required when &#x60;start&#x60; parameter specified. (optional)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      * @param  int $voice Fetch results with voice calls. (optional, default to 0)
+     * @param  int $includeNotes Fetch results with messenger notes. (optional, default to 0)
      *
      * @throws \TextMagic\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \TextMagic\Models\GetChatMessagesPaginatedResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getChatMessagesWithHttpInfo($id, $page = '1', $limit = '10', $query = null, $start = null, $end = null, $direction = 'desc', $voice = '0')
+    public function getChatMessagesWithHttpInfo($id, $page = '1', $limit = '10', $query = null, $start = null, $end = null, $direction = 'desc', $voice = '0', $includeNotes = '0')
     {
         $returnType = '\TextMagic\Models\GetChatMessagesPaginatedResponse';
-        $request = $this->getChatMessagesRequest($id, $page, $limit, $query, $start, $end, $direction, $voice);
+        $request = $this->getChatMessagesRequest($id, $page, $limit, $query, $start, $end, $direction, $voice, $includeNotes);
 
         try {
             $options = $this->createHttpClientOption();
@@ -15782,13 +15784,14 @@ class TextMagicApi
      * @param  string $end Return messages up to specified timestamp only. Required when &#x60;start&#x60; parameter specified. (optional)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      * @param  int $voice Fetch results with voice calls. (optional, default to 0)
+     * @param  int $includeNotes Fetch results with messenger notes. (optional, default to 0)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getChatMessagesAsync($id, $page = '1', $limit = '10', $query = null, $start = null, $end = null, $direction = 'desc', $voice = '0')
+    public function getChatMessagesAsync($id, $page = '1', $limit = '10', $query = null, $start = null, $end = null, $direction = 'desc', $voice = '0', $includeNotes = '0')
     {
-        return $this->getChatMessagesAsyncWithHttpInfo($id, $page, $limit, $query, $start, $end, $direction, $voice)
+        return $this->getChatMessagesAsyncWithHttpInfo($id, $page, $limit, $query, $start, $end, $direction, $voice, $includeNotes)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -15809,14 +15812,15 @@ class TextMagicApi
      * @param  string $end Return messages up to specified timestamp only. Required when &#x60;start&#x60; parameter specified. (optional)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      * @param  int $voice Fetch results with voice calls. (optional, default to 0)
+     * @param  int $includeNotes Fetch results with messenger notes. (optional, default to 0)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getChatMessagesAsyncWithHttpInfo($id, $page = '1', $limit = '10', $query = null, $start = null, $end = null, $direction = 'desc', $voice = '0')
+    public function getChatMessagesAsyncWithHttpInfo($id, $page = '1', $limit = '10', $query = null, $start = null, $end = null, $direction = 'desc', $voice = '0', $includeNotes = '0')
     {
         $returnType = '\TextMagic\Models\GetChatMessagesPaginatedResponse';
-        $request = $this->getChatMessagesRequest($id, $page, $limit, $query, $start, $end, $direction, $voice);
+        $request = $this->getChatMessagesRequest($id, $page, $limit, $query, $start, $end, $direction, $voice, $includeNotes);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -15866,11 +15870,12 @@ class TextMagicApi
      * @param  string $end Return messages up to specified timestamp only. Required when &#x60;start&#x60; parameter specified. (optional)
      * @param  string $direction Order direction. Default is desc. (optional, default to desc)
      * @param  int $voice Fetch results with voice calls. (optional, default to 0)
+     * @param  int $includeNotes Fetch results with messenger notes. (optional, default to 0)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getChatMessagesRequest($id, $page = '1', $limit = '10', $query = null, $start = null, $end = null, $direction = 'desc', $voice = '0')
+    protected function getChatMessagesRequest($id, $page = '1', $limit = '10', $query = null, $start = null, $end = null, $direction = 'desc', $voice = '0', $includeNotes = '0')
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
@@ -15913,6 +15918,10 @@ class TextMagicApi
         // query params
         if ($voice !== null) {
             $queryParams['voice'] = ObjectSerializer::toQueryValue($voice);
+        }
+        // query params
+        if ($includeNotes !== null) {
+            $queryParams['includeNotes'] = ObjectSerializer::toQueryValue($includeNotes);
         }
 
         // path params
