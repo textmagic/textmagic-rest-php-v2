@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **systemAccountAcceptTermsUpdate** | **int** |  | 
 **systemAccountClosed** | **int** |  | 
 **systemAccountAdditionalFields** | **int** |  | 
+**systemAccountNumbersListChange** | **int** |  | 
 **systemAccountPermissionsChanged** | **int** |  | 
 **userProfileChanged** | **int** |  | 
 **userBalanceChanged** | **int** |  | 
@@ -76,8 +77,8 @@ Name | Type | Description | Notes
 **listCacheClear** | **int** |  | 
 **customFieldsCacheClear** | **int** |  | 
 **progressCarrierBulkLookup** | **int** |  | 
-**progressEmailBulkLookup** | **int** |  | 
 **progressSubAccountBulkImport** | **int** |  | 
+**emailLookupProgressState** | **int** |  | 
 **importProgressState** | **int** |  | 
 **forceRefreshWebApp** | **int** |  | 
 **chatSenderSettingsChanged** | **int** |  | 
@@ -181,6 +182,8 @@ Name | Type | Description | Notes
 **emailCampaignDomainEntryVerificationChanged** | **int** |  | 
 **emailCampaignProgressState** | **int** |  | 
 **emailCampaignUpdated** | **int** |  | 
+**emailTemplateImproved** | **int** |  | 
+**emailTemplateImprovingFailed** | **int** |  | 
 **smsCampaignInvalidated** | **int** |  | 
 **scheduledEmailCampaignCreated** | **int** |  | 
 **scheduledEmailCampaignUpdated** | **int** |  | 

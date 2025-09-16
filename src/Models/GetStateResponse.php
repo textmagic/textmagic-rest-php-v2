@@ -64,6 +64,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'systemAccountAcceptTermsUpdate' => 'int',
         'systemAccountClosed' => 'int',
         'systemAccountAdditionalFields' => 'int',
+        'systemAccountNumbersListChange' => 'int',
         'systemAccountPermissionsChanged' => 'int',
         'userProfileChanged' => 'int',
         'userBalanceChanged' => 'int',
@@ -130,8 +131,8 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'listCacheClear' => 'int',
         'customFieldsCacheClear' => 'int',
         'progressCarrierBulkLookup' => 'int',
-        'progressEmailBulkLookup' => 'int',
         'progressSubAccountBulkImport' => 'int',
+        'emailLookupProgressState' => 'int',
         'importProgressState' => 'int',
         'forceRefreshWebApp' => 'int',
         'chatSenderSettingsChanged' => 'int',
@@ -235,6 +236,8 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'emailCampaignDomainEntryVerificationChanged' => 'int',
         'emailCampaignProgressState' => 'int',
         'emailCampaignUpdated' => 'int',
+        'emailTemplateImproved' => 'int',
+        'emailTemplateImprovingFailed' => 'int',
         'smsCampaignInvalidated' => 'int',
         'scheduledEmailCampaignCreated' => 'int',
         'scheduledEmailCampaignUpdated' => 'int',
@@ -258,6 +261,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'systemAccountAcceptTermsUpdate' => null,
         'systemAccountClosed' => null,
         'systemAccountAdditionalFields' => null,
+        'systemAccountNumbersListChange' => null,
         'systemAccountPermissionsChanged' => null,
         'userProfileChanged' => null,
         'userBalanceChanged' => null,
@@ -324,8 +328,8 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'listCacheClear' => null,
         'customFieldsCacheClear' => null,
         'progressCarrierBulkLookup' => null,
-        'progressEmailBulkLookup' => null,
         'progressSubAccountBulkImport' => null,
+        'emailLookupProgressState' => null,
         'importProgressState' => null,
         'forceRefreshWebApp' => null,
         'chatSenderSettingsChanged' => null,
@@ -429,6 +433,8 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'emailCampaignDomainEntryVerificationChanged' => null,
         'emailCampaignProgressState' => null,
         'emailCampaignUpdated' => null,
+        'emailTemplateImproved' => null,
+        'emailTemplateImprovingFailed' => null,
         'smsCampaignInvalidated' => null,
         'scheduledEmailCampaignCreated' => null,
         'scheduledEmailCampaignUpdated' => null,
@@ -473,6 +479,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'systemAccountAcceptTermsUpdate' => 'systemAccountAcceptTermsUpdate',
         'systemAccountClosed' => 'systemAccountClosed',
         'systemAccountAdditionalFields' => 'systemAccountAdditionalFields',
+        'systemAccountNumbersListChange' => 'systemAccountNumbersListChange',
         'systemAccountPermissionsChanged' => 'systemAccountPermissionsChanged',
         'userProfileChanged' => 'userProfileChanged',
         'userBalanceChanged' => 'userBalanceChanged',
@@ -539,8 +546,8 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'listCacheClear' => 'listCacheClear',
         'customFieldsCacheClear' => 'customFieldsCacheClear',
         'progressCarrierBulkLookup' => 'progressCarrierBulkLookup',
-        'progressEmailBulkLookup' => 'progressEmailBulkLookup',
         'progressSubAccountBulkImport' => 'progressSubAccountBulkImport',
+        'emailLookupProgressState' => 'emailLookupProgressState',
         'importProgressState' => 'importProgressState',
         'forceRefreshWebApp' => 'forceRefreshWebApp',
         'chatSenderSettingsChanged' => 'chatSenderSettingsChanged',
@@ -644,6 +651,8 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'emailCampaignDomainEntryVerificationChanged' => 'emailCampaignDomainEntryVerificationChanged',
         'emailCampaignProgressState' => 'emailCampaignProgressState',
         'emailCampaignUpdated' => 'emailCampaignUpdated',
+        'emailTemplateImproved' => 'emailTemplateImproved',
+        'emailTemplateImprovingFailed' => 'emailTemplateImprovingFailed',
         'smsCampaignInvalidated' => 'smsCampaignInvalidated',
         'scheduledEmailCampaignCreated' => 'scheduledEmailCampaignCreated',
         'scheduledEmailCampaignUpdated' => 'scheduledEmailCampaignUpdated',
@@ -667,6 +676,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'systemAccountAcceptTermsUpdate' => 'setSystemAccountAcceptTermsUpdate',
         'systemAccountClosed' => 'setSystemAccountClosed',
         'systemAccountAdditionalFields' => 'setSystemAccountAdditionalFields',
+        'systemAccountNumbersListChange' => 'setSystemAccountNumbersListChange',
         'systemAccountPermissionsChanged' => 'setSystemAccountPermissionsChanged',
         'userProfileChanged' => 'setUserProfileChanged',
         'userBalanceChanged' => 'setUserBalanceChanged',
@@ -733,8 +743,8 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'listCacheClear' => 'setListCacheClear',
         'customFieldsCacheClear' => 'setCustomFieldsCacheClear',
         'progressCarrierBulkLookup' => 'setProgressCarrierBulkLookup',
-        'progressEmailBulkLookup' => 'setProgressEmailBulkLookup',
         'progressSubAccountBulkImport' => 'setProgressSubAccountBulkImport',
+        'emailLookupProgressState' => 'setEmailLookupProgressState',
         'importProgressState' => 'setImportProgressState',
         'forceRefreshWebApp' => 'setForceRefreshWebApp',
         'chatSenderSettingsChanged' => 'setChatSenderSettingsChanged',
@@ -838,6 +848,8 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'emailCampaignDomainEntryVerificationChanged' => 'setEmailCampaignDomainEntryVerificationChanged',
         'emailCampaignProgressState' => 'setEmailCampaignProgressState',
         'emailCampaignUpdated' => 'setEmailCampaignUpdated',
+        'emailTemplateImproved' => 'setEmailTemplateImproved',
+        'emailTemplateImprovingFailed' => 'setEmailTemplateImprovingFailed',
         'smsCampaignInvalidated' => 'setSmsCampaignInvalidated',
         'scheduledEmailCampaignCreated' => 'setScheduledEmailCampaignCreated',
         'scheduledEmailCampaignUpdated' => 'setScheduledEmailCampaignUpdated',
@@ -861,6 +873,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'systemAccountAcceptTermsUpdate' => 'getSystemAccountAcceptTermsUpdate',
         'systemAccountClosed' => 'getSystemAccountClosed',
         'systemAccountAdditionalFields' => 'getSystemAccountAdditionalFields',
+        'systemAccountNumbersListChange' => 'getSystemAccountNumbersListChange',
         'systemAccountPermissionsChanged' => 'getSystemAccountPermissionsChanged',
         'userProfileChanged' => 'getUserProfileChanged',
         'userBalanceChanged' => 'getUserBalanceChanged',
@@ -927,8 +940,8 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'listCacheClear' => 'getListCacheClear',
         'customFieldsCacheClear' => 'getCustomFieldsCacheClear',
         'progressCarrierBulkLookup' => 'getProgressCarrierBulkLookup',
-        'progressEmailBulkLookup' => 'getProgressEmailBulkLookup',
         'progressSubAccountBulkImport' => 'getProgressSubAccountBulkImport',
+        'emailLookupProgressState' => 'getEmailLookupProgressState',
         'importProgressState' => 'getImportProgressState',
         'forceRefreshWebApp' => 'getForceRefreshWebApp',
         'chatSenderSettingsChanged' => 'getChatSenderSettingsChanged',
@@ -1032,6 +1045,8 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'emailCampaignDomainEntryVerificationChanged' => 'getEmailCampaignDomainEntryVerificationChanged',
         'emailCampaignProgressState' => 'getEmailCampaignProgressState',
         'emailCampaignUpdated' => 'getEmailCampaignUpdated',
+        'emailTemplateImproved' => 'getEmailTemplateImproved',
+        'emailTemplateImprovingFailed' => 'getEmailTemplateImprovingFailed',
         'smsCampaignInvalidated' => 'getSmsCampaignInvalidated',
         'scheduledEmailCampaignCreated' => 'getScheduledEmailCampaignCreated',
         'scheduledEmailCampaignUpdated' => 'getScheduledEmailCampaignUpdated',
@@ -1109,6 +1124,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         $this->container['systemAccountAcceptTermsUpdate'] = isset($data['systemAccountAcceptTermsUpdate']) ? $data['systemAccountAcceptTermsUpdate'] : null;
         $this->container['systemAccountClosed'] = isset($data['systemAccountClosed']) ? $data['systemAccountClosed'] : null;
         $this->container['systemAccountAdditionalFields'] = isset($data['systemAccountAdditionalFields']) ? $data['systemAccountAdditionalFields'] : null;
+        $this->container['systemAccountNumbersListChange'] = isset($data['systemAccountNumbersListChange']) ? $data['systemAccountNumbersListChange'] : null;
         $this->container['systemAccountPermissionsChanged'] = isset($data['systemAccountPermissionsChanged']) ? $data['systemAccountPermissionsChanged'] : null;
         $this->container['userProfileChanged'] = isset($data['userProfileChanged']) ? $data['userProfileChanged'] : null;
         $this->container['userBalanceChanged'] = isset($data['userBalanceChanged']) ? $data['userBalanceChanged'] : null;
@@ -1175,8 +1191,8 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         $this->container['listCacheClear'] = isset($data['listCacheClear']) ? $data['listCacheClear'] : null;
         $this->container['customFieldsCacheClear'] = isset($data['customFieldsCacheClear']) ? $data['customFieldsCacheClear'] : null;
         $this->container['progressCarrierBulkLookup'] = isset($data['progressCarrierBulkLookup']) ? $data['progressCarrierBulkLookup'] : null;
-        $this->container['progressEmailBulkLookup'] = isset($data['progressEmailBulkLookup']) ? $data['progressEmailBulkLookup'] : null;
         $this->container['progressSubAccountBulkImport'] = isset($data['progressSubAccountBulkImport']) ? $data['progressSubAccountBulkImport'] : null;
+        $this->container['emailLookupProgressState'] = isset($data['emailLookupProgressState']) ? $data['emailLookupProgressState'] : null;
         $this->container['importProgressState'] = isset($data['importProgressState']) ? $data['importProgressState'] : null;
         $this->container['forceRefreshWebApp'] = isset($data['forceRefreshWebApp']) ? $data['forceRefreshWebApp'] : null;
         $this->container['chatSenderSettingsChanged'] = isset($data['chatSenderSettingsChanged']) ? $data['chatSenderSettingsChanged'] : null;
@@ -1280,6 +1296,8 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         $this->container['emailCampaignDomainEntryVerificationChanged'] = isset($data['emailCampaignDomainEntryVerificationChanged']) ? $data['emailCampaignDomainEntryVerificationChanged'] : null;
         $this->container['emailCampaignProgressState'] = isset($data['emailCampaignProgressState']) ? $data['emailCampaignProgressState'] : null;
         $this->container['emailCampaignUpdated'] = isset($data['emailCampaignUpdated']) ? $data['emailCampaignUpdated'] : null;
+        $this->container['emailTemplateImproved'] = isset($data['emailTemplateImproved']) ? $data['emailTemplateImproved'] : null;
+        $this->container['emailTemplateImprovingFailed'] = isset($data['emailTemplateImprovingFailed']) ? $data['emailTemplateImprovingFailed'] : null;
         $this->container['smsCampaignInvalidated'] = isset($data['smsCampaignInvalidated']) ? $data['smsCampaignInvalidated'] : null;
         $this->container['scheduledEmailCampaignCreated'] = isset($data['scheduledEmailCampaignCreated']) ? $data['scheduledEmailCampaignCreated'] : null;
         $this->container['scheduledEmailCampaignUpdated'] = isset($data['scheduledEmailCampaignUpdated']) ? $data['scheduledEmailCampaignUpdated'] : null;
@@ -1319,6 +1337,9 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         }
         if ($this->container['systemAccountAdditionalFields'] === null) {
             $invalidProperties[] = "'systemAccountAdditionalFields' can't be null";
+        }
+        if ($this->container['systemAccountNumbersListChange'] === null) {
+            $invalidProperties[] = "'systemAccountNumbersListChange' can't be null";
         }
         if ($this->container['systemAccountPermissionsChanged'] === null) {
             $invalidProperties[] = "'systemAccountPermissionsChanged' can't be null";
@@ -1518,11 +1539,11 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         if ($this->container['progressCarrierBulkLookup'] === null) {
             $invalidProperties[] = "'progressCarrierBulkLookup' can't be null";
         }
-        if ($this->container['progressEmailBulkLookup'] === null) {
-            $invalidProperties[] = "'progressEmailBulkLookup' can't be null";
-        }
         if ($this->container['progressSubAccountBulkImport'] === null) {
             $invalidProperties[] = "'progressSubAccountBulkImport' can't be null";
+        }
+        if ($this->container['emailLookupProgressState'] === null) {
+            $invalidProperties[] = "'emailLookupProgressState' can't be null";
         }
         if ($this->container['importProgressState'] === null) {
             $invalidProperties[] = "'importProgressState' can't be null";
@@ -1833,6 +1854,12 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         if ($this->container['emailCampaignUpdated'] === null) {
             $invalidProperties[] = "'emailCampaignUpdated' can't be null";
         }
+        if ($this->container['emailTemplateImproved'] === null) {
+            $invalidProperties[] = "'emailTemplateImproved' can't be null";
+        }
+        if ($this->container['emailTemplateImprovingFailed'] === null) {
+            $invalidProperties[] = "'emailTemplateImprovingFailed' can't be null";
+        }
         if ($this->container['smsCampaignInvalidated'] === null) {
             $invalidProperties[] = "'smsCampaignInvalidated' can't be null";
         }
@@ -2036,6 +2063,30 @@ class GetStateResponse implements ModelInterface, ArrayAccess
     public function setSystemAccountAdditionalFields($systemAccountAdditionalFields)
     {
         $this->container['systemAccountAdditionalFields'] = $systemAccountAdditionalFields;
+
+        return $this;
+    }
+
+    /**
+     * Gets systemAccountNumbersListChange
+     *
+     * @return int
+     */
+    public function getSystemAccountNumbersListChange()
+    {
+        return $this->container['systemAccountNumbersListChange'];
+    }
+
+    /**
+     * Sets systemAccountNumbersListChange
+     *
+     * @param int $systemAccountNumbersListChange systemAccountNumbersListChange
+     *
+     * @return $this
+     */
+    public function setSystemAccountNumbersListChange($systemAccountNumbersListChange)
+    {
+        $this->container['systemAccountNumbersListChange'] = $systemAccountNumbersListChange;
 
         return $this;
     }
@@ -3625,30 +3676,6 @@ class GetStateResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets progressEmailBulkLookup
-     *
-     * @return int
-     */
-    public function getProgressEmailBulkLookup()
-    {
-        return $this->container['progressEmailBulkLookup'];
-    }
-
-    /**
-     * Sets progressEmailBulkLookup
-     *
-     * @param int $progressEmailBulkLookup progressEmailBulkLookup
-     *
-     * @return $this
-     */
-    public function setProgressEmailBulkLookup($progressEmailBulkLookup)
-    {
-        $this->container['progressEmailBulkLookup'] = $progressEmailBulkLookup;
-
-        return $this;
-    }
-
-    /**
      * Gets progressSubAccountBulkImport
      *
      * @return int
@@ -3668,6 +3695,30 @@ class GetStateResponse implements ModelInterface, ArrayAccess
     public function setProgressSubAccountBulkImport($progressSubAccountBulkImport)
     {
         $this->container['progressSubAccountBulkImport'] = $progressSubAccountBulkImport;
+
+        return $this;
+    }
+
+    /**
+     * Gets emailLookupProgressState
+     *
+     * @return int
+     */
+    public function getEmailLookupProgressState()
+    {
+        return $this->container['emailLookupProgressState'];
+    }
+
+    /**
+     * Sets emailLookupProgressState
+     *
+     * @param int $emailLookupProgressState emailLookupProgressState
+     *
+     * @return $this
+     */
+    public function setEmailLookupProgressState($emailLookupProgressState)
+    {
+        $this->container['emailLookupProgressState'] = $emailLookupProgressState;
 
         return $this;
     }
@@ -6140,6 +6191,54 @@ class GetStateResponse implements ModelInterface, ArrayAccess
     public function setEmailCampaignUpdated($emailCampaignUpdated)
     {
         $this->container['emailCampaignUpdated'] = $emailCampaignUpdated;
+
+        return $this;
+    }
+
+    /**
+     * Gets emailTemplateImproved
+     *
+     * @return int
+     */
+    public function getEmailTemplateImproved()
+    {
+        return $this->container['emailTemplateImproved'];
+    }
+
+    /**
+     * Sets emailTemplateImproved
+     *
+     * @param int $emailTemplateImproved emailTemplateImproved
+     *
+     * @return $this
+     */
+    public function setEmailTemplateImproved($emailTemplateImproved)
+    {
+        $this->container['emailTemplateImproved'] = $emailTemplateImproved;
+
+        return $this;
+    }
+
+    /**
+     * Gets emailTemplateImprovingFailed
+     *
+     * @return int
+     */
+    public function getEmailTemplateImprovingFailed()
+    {
+        return $this->container['emailTemplateImprovingFailed'];
+    }
+
+    /**
+     * Sets emailTemplateImprovingFailed
+     *
+     * @param int $emailTemplateImprovingFailed emailTemplateImprovingFailed
+     *
+     * @return $this
+     */
+    public function setEmailTemplateImprovingFailed($emailTemplateImprovingFailed)
+    {
+        $this->container['emailTemplateImprovingFailed'] = $emailTemplateImprovingFailed;
 
         return $this;
     }
