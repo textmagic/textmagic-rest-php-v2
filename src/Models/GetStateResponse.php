@@ -238,6 +238,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'emailCampaignUpdated' => 'int',
         'emailTemplateImproved' => 'int',
         'emailTemplateImprovingFailed' => 'int',
+        'emailBonusUpdated' => 'int',
         'smsCampaignInvalidated' => 'int',
         'scheduledEmailCampaignCreated' => 'int',
         'scheduledEmailCampaignUpdated' => 'int',
@@ -435,6 +436,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'emailCampaignUpdated' => null,
         'emailTemplateImproved' => null,
         'emailTemplateImprovingFailed' => null,
+        'emailBonusUpdated' => null,
         'smsCampaignInvalidated' => null,
         'scheduledEmailCampaignCreated' => null,
         'scheduledEmailCampaignUpdated' => null,
@@ -653,6 +655,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'emailCampaignUpdated' => 'emailCampaignUpdated',
         'emailTemplateImproved' => 'emailTemplateImproved',
         'emailTemplateImprovingFailed' => 'emailTemplateImprovingFailed',
+        'emailBonusUpdated' => 'emailBonusUpdated',
         'smsCampaignInvalidated' => 'smsCampaignInvalidated',
         'scheduledEmailCampaignCreated' => 'scheduledEmailCampaignCreated',
         'scheduledEmailCampaignUpdated' => 'scheduledEmailCampaignUpdated',
@@ -850,6 +853,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'emailCampaignUpdated' => 'setEmailCampaignUpdated',
         'emailTemplateImproved' => 'setEmailTemplateImproved',
         'emailTemplateImprovingFailed' => 'setEmailTemplateImprovingFailed',
+        'emailBonusUpdated' => 'setEmailBonusUpdated',
         'smsCampaignInvalidated' => 'setSmsCampaignInvalidated',
         'scheduledEmailCampaignCreated' => 'setScheduledEmailCampaignCreated',
         'scheduledEmailCampaignUpdated' => 'setScheduledEmailCampaignUpdated',
@@ -1047,6 +1051,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         'emailCampaignUpdated' => 'getEmailCampaignUpdated',
         'emailTemplateImproved' => 'getEmailTemplateImproved',
         'emailTemplateImprovingFailed' => 'getEmailTemplateImprovingFailed',
+        'emailBonusUpdated' => 'getEmailBonusUpdated',
         'smsCampaignInvalidated' => 'getSmsCampaignInvalidated',
         'scheduledEmailCampaignCreated' => 'getScheduledEmailCampaignCreated',
         'scheduledEmailCampaignUpdated' => 'getScheduledEmailCampaignUpdated',
@@ -1298,6 +1303,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         $this->container['emailCampaignUpdated'] = isset($data['emailCampaignUpdated']) ? $data['emailCampaignUpdated'] : null;
         $this->container['emailTemplateImproved'] = isset($data['emailTemplateImproved']) ? $data['emailTemplateImproved'] : null;
         $this->container['emailTemplateImprovingFailed'] = isset($data['emailTemplateImprovingFailed']) ? $data['emailTemplateImprovingFailed'] : null;
+        $this->container['emailBonusUpdated'] = isset($data['emailBonusUpdated']) ? $data['emailBonusUpdated'] : null;
         $this->container['smsCampaignInvalidated'] = isset($data['smsCampaignInvalidated']) ? $data['smsCampaignInvalidated'] : null;
         $this->container['scheduledEmailCampaignCreated'] = isset($data['scheduledEmailCampaignCreated']) ? $data['scheduledEmailCampaignCreated'] : null;
         $this->container['scheduledEmailCampaignUpdated'] = isset($data['scheduledEmailCampaignUpdated']) ? $data['scheduledEmailCampaignUpdated'] : null;
@@ -1565,12 +1571,6 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         }
         if ($this->container['chatSuggestedReplyChunk'] === null) {
             $invalidProperties[] = "'chatSuggestedReplyChunk' can't be null";
-        }
-        if ($this->container['userSubscriptionChanged'] === null) {
-            $invalidProperties[] = "'userSubscriptionChanged' can't be null";
-        }
-        if ($this->container['userSubscriptionDeleted'] === null) {
-            $invalidProperties[] = "'userSubscriptionDeleted' can't be null";
         }
         if ($this->container['taskCreated'] === null) {
             $invalidProperties[] = "'taskCreated' can't be null";
@@ -1859,6 +1859,9 @@ class GetStateResponse implements ModelInterface, ArrayAccess
         }
         if ($this->container['emailTemplateImprovingFailed'] === null) {
             $invalidProperties[] = "'emailTemplateImprovingFailed' can't be null";
+        }
+        if ($this->container['emailBonusUpdated'] === null) {
+            $invalidProperties[] = "'emailBonusUpdated' can't be null";
         }
         if ($this->container['smsCampaignInvalidated'] === null) {
             $invalidProperties[] = "'smsCampaignInvalidated' can't be null";
@@ -6239,6 +6242,30 @@ class GetStateResponse implements ModelInterface, ArrayAccess
     public function setEmailTemplateImprovingFailed($emailTemplateImprovingFailed)
     {
         $this->container['emailTemplateImprovingFailed'] = $emailTemplateImprovingFailed;
+
+        return $this;
+    }
+
+    /**
+     * Gets emailBonusUpdated
+     *
+     * @return int
+     */
+    public function getEmailBonusUpdated()
+    {
+        return $this->container['emailBonusUpdated'];
+    }
+
+    /**
+     * Sets emailBonusUpdated
+     *
+     * @param int $emailBonusUpdated emailBonusUpdated
+     *
+     * @return $this
+     */
+    public function setEmailBonusUpdated($emailBonusUpdated)
+    {
+        $this->container['emailBonusUpdated'] = $emailBonusUpdated;
 
         return $this;
     }

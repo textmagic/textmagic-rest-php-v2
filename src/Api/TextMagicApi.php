@@ -2870,7 +2870,7 @@ class TextMagicApi
     /**
      * Operation createEmailCampaign
      *
-     * Create new email campaign
+     * Send email campaign
      *
      * @param  \TextMagic\Models\CreateEmailCampaignInputObject $createEmailCampaignInputObject createEmailCampaignInputObject (required)
      *
@@ -2887,7 +2887,7 @@ class TextMagicApi
     /**
      * Operation createEmailCampaignWithHttpInfo
      *
-     * Create new email campaign
+     * Send email campaign
      *
      * @param  \TextMagic\Models\CreateEmailCampaignInputObject $createEmailCampaignInputObject (required)
      *
@@ -2978,7 +2978,7 @@ class TextMagicApi
     /**
      * Operation createEmailCampaignAsync
      *
-     * Create new email campaign
+     * Send email campaign
      *
      * @param  \TextMagic\Models\CreateEmailCampaignInputObject $createEmailCampaignInputObject (required)
      *
@@ -2998,7 +2998,7 @@ class TextMagicApi
     /**
      * Operation createEmailCampaignAsyncWithHttpInfo
      *
-     * Create new email campaign
+     * Send email campaign
      *
      * @param  \TextMagic\Models\CreateEmailCampaignInputObject $createEmailCampaignInputObject (required)
      *

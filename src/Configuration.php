@@ -88,7 +88,7 @@ class Configuration
      *
      * @var string
      */
-    protected $userAgent = 'textmagic client';
+    protected $userAgent = 'textmagic client SDK PHP';
 
     /**
      * Debug switch (default set to false)
@@ -397,7 +397,7 @@ class Configuration
         $report .= '    OS: ' . php_uname() . PHP_EOL;
         $report .= '    PHP Version: ' . PHP_VERSION . PHP_EOL;
         $report .= '    OpenAPI Spec Version: 2' . PHP_EOL;
-        $report .= '    SDK Package Version: 2.0.43753' . PHP_EOL;
+        $report .= '    SDK Package Version: 2.0.43821' . PHP_EOL;
         $report .= '    Temp Folder Path: ' . self::getDefaultConfiguration()->getTempFolderPath() . PHP_EOL;
 
         return $report;
