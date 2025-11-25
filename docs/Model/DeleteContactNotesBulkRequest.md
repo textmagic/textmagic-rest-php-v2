@@ -1,0 +1,10 @@
+# # DeleteContactNotesBulkRequest
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**ids** | **string** | Entity ID(s), separated by comma. | [optional]
+**all** | **bool** | Entity ID(s), separated by comma. | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
