@@ -77,7 +77,11 @@ class Chat implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'string',
         'smsPrice' => 'float',
         'mmsPrice' => 'float',
-        'tags' => '\TextMagic\Models\Tag[]'
+        'tags' => '\TextMagic\Models\Tag[]',
+        'assigneeId' => 'int',
+        'updatedBy' => '\TextMagic\Models\NullableUserPersonalInfo',
+        'createdAt' => '\DateTime',
+        'messageTime' => '\DateTime'
     ];
 
     /**
@@ -108,7 +112,11 @@ class Chat implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => null,
         'smsPrice' => null,
         'mmsPrice' => null,
-        'tags' => null
+        'tags' => null,
+        'assigneeId' => null,
+        'updatedBy' => null,
+        'createdAt' => 'date-time',
+        'messageTime' => 'date-time'
     ];
 
     /**
@@ -137,7 +145,11 @@ class Chat implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => false,
         'smsPrice' => false,
         'mmsPrice' => false,
-        'tags' => false
+        'tags' => false,
+        'assigneeId' => true,
+        'updatedBy' => true,
+        'createdAt' => false,
+        'messageTime' => false
     ];
 
     /**
@@ -246,7 +258,11 @@ class Chat implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'type',
         'smsPrice' => 'smsPrice',
         'mmsPrice' => 'mmsPrice',
-        'tags' => 'tags'
+        'tags' => 'tags',
+        'assigneeId' => 'assigneeId',
+        'updatedBy' => 'updatedBy',
+        'createdAt' => 'createdAt',
+        'messageTime' => 'messageTime'
     ];
 
     /**
@@ -275,7 +291,11 @@ class Chat implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'setType',
         'smsPrice' => 'setSmsPrice',
         'mmsPrice' => 'setMmsPrice',
-        'tags' => 'setTags'
+        'tags' => 'setTags',
+        'assigneeId' => 'setAssigneeId',
+        'updatedBy' => 'setUpdatedBy',
+        'createdAt' => 'setCreatedAt',
+        'messageTime' => 'setMessageTime'
     ];
 
     /**
@@ -304,7 +324,11 @@ class Chat implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'getType',
         'smsPrice' => 'getSmsPrice',
         'mmsPrice' => 'getMmsPrice',
-        'tags' => 'getTags'
+        'tags' => 'getTags',
+        'assigneeId' => 'getAssigneeId',
+        'updatedBy' => 'getUpdatedBy',
+        'createdAt' => 'getCreatedAt',
+        'messageTime' => 'getMessageTime'
     ];
 
     /**
@@ -421,6 +445,10 @@ class Chat implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('smsPrice', $data ?? [], null);
         $this->setIfExists('mmsPrice', $data ?? [], null);
         $this->setIfExists('tags', $data ?? [], null);
+        $this->setIfExists('assigneeId', $data ?? [], null);
+        $this->setIfExists('updatedBy', $data ?? [], null);
+        $this->setIfExists('createdAt', $data ?? [], null);
+        $this->setIfExists('messageTime', $data ?? [], null);
     }
 
     /**
@@ -527,6 +555,15 @@ class Chat implements ModelInterface, ArrayAccess, \JsonSerializable
         }
         if ($this->container['mmsPrice'] === null) {
             $invalidProperties[] = "'mmsPrice' can't be null";
+        }
+        if ($this->container['assigneeId'] === null) {
+            $invalidProperties[] = "'assigneeId' can't be null";
+        }
+        if ($this->container['createdAt'] === null) {
+            $invalidProperties[] = "'createdAt' can't be null";
+        }
+        if ($this->container['messageTime'] === null) {
+            $invalidProperties[] = "'messageTime' can't be null";
         }
         return $invalidProperties;
     }
@@ -1196,6 +1233,128 @@ class Chat implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable tags cannot be null');
         }
         $this->container['tags'] = $tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets assigneeId
+     *
+     * @return int
+     */
+    public function getAssigneeId()
+    {
+        return $this->container['assigneeId'];
+    }
+
+    /**
+     * Sets assigneeId
+     *
+     * @param int $assigneeId assigneeId
+     *
+     * @return self
+     */
+    public function setAssigneeId($assigneeId)
+    {
+        if (is_null($assigneeId)) {
+            array_push($this->openAPINullablesSetToNull, 'assigneeId');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('assigneeId', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['assigneeId'] = $assigneeId;
+
+        return $this;
+    }
+
+    /**
+     * Gets updatedBy
+     *
+     * @return \TextMagic\Models\NullableUserPersonalInfo|null
+     */
+    public function getUpdatedBy()
+    {
+        return $this->container['updatedBy'];
+    }
+
+    /**
+     * Sets updatedBy
+     *
+     * @param \TextMagic\Models\NullableUserPersonalInfo|null $updatedBy updatedBy
+     *
+     * @return self
+     */
+    public function setUpdatedBy($updatedBy)
+    {
+        if (is_null($updatedBy)) {
+            array_push($this->openAPINullablesSetToNull, 'updatedBy');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('updatedBy', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['updatedBy'] = $updatedBy;
+
+        return $this;
+    }
+
+    /**
+     * Gets createdAt
+     *
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['createdAt'];
+    }
+
+    /**
+     * Sets createdAt
+     *
+     * @param \DateTime $createdAt Chat creation date and time.
+     *
+     * @return self
+     */
+    public function setCreatedAt($createdAt)
+    {
+        if (is_null($createdAt)) {
+            throw new \InvalidArgumentException('non-nullable createdAt cannot be null');
+        }
+        $this->container['createdAt'] = $createdAt;
+
+        return $this;
+    }
+
+    /**
+     * Gets messageTime
+     *
+     * @return \DateTime
+     */
+    public function getMessageTime()
+    {
+        return $this->container['messageTime'];
+    }
+
+    /**
+     * Sets messageTime
+     *
+     * @param \DateTime $messageTime Chat last message date and time.
+     *
+     * @return self
+     */
+    public function setMessageTime($messageTime)
+    {
+        if (is_null($messageTime)) {
+            throw new \InvalidArgumentException('non-nullable messageTime cannot be null');
+        }
+        $this->container['messageTime'] = $messageTime;
 
         return $this;
     }

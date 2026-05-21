@@ -59,6 +59,7 @@ Name | Type | Description | Notes
 **liveChatRated** | **int** |  |
 **webWidgetUpdated** | **int** |  |
 **webWidgetDeleted** | **int** |  |
+**webWidgetCreated** | **int** |  |
 **contactAdded** | **int** |  |
 **contactDeleted** | **int** |  |
 **contactBulkUpdated** | **int** |  |
@@ -194,5 +195,17 @@ Name | Type | Description | Notes
 **emailCampaignFailedAttemptCreated** | **int** |  |
 **emailCampaignFailedAttemptDeleted** | **int** |  |
 **emailCampaignFailedAttemptStateUpdated** | **int** |  |
+**tollFreePreFillCompleted** | **int** |  |
+**tollFreePreFillFailed** | **int** |  |
+**tollFreeComplianceCheckCompleted** | **int** |  |
+**tollFreeComplianceCheckFailed** | **int** |  |
+**tenDlcPreFillCompleted** | **int** |  |
+**tenDlcPreFillFailed** | **int** |  |
+**tenDlcComplianceCheckCompleted** | **int** |  |
+**tenDlcComplianceCheckFailed** | **int** |  |
+**marketingDataModalChanged** | **int** |  |
+**integrationStatusChanged** | **int** |  |
+**integrationCustomerSyncProgressState** | **int** |  |
+**integrationCustomerSyncEnd** | **int** |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

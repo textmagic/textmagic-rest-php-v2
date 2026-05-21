@@ -67,6 +67,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         'email' => 'string',
         'country' => '\TextMagic\Models\Country',
         'customFields' => '\TextMagic\Models\CustomFieldListItem[]',
+        'customFieldValues' => '\TextMagic\Models\CustomFieldValues[]',
         'user' => '\TextMagic\Models\User',
         'lists' => '\TextMagic\Models\ModelList[]',
         'owner' => '\TextMagic\Models\User',
@@ -95,6 +96,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         'email' => 'email',
         'country' => null,
         'customFields' => null,
+        'customFieldValues' => null,
         'user' => null,
         'lists' => null,
         'owner' => null,
@@ -121,6 +123,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         'email' => true,
         'country' => true,
         'customFields' => false,
+        'customFieldValues' => false,
         'user' => true,
         'lists' => false,
         'owner' => true,
@@ -227,6 +230,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         'email' => 'email',
         'country' => 'country',
         'customFields' => 'customFields',
+        'customFieldValues' => 'customFieldValues',
         'user' => 'user',
         'lists' => 'lists',
         'owner' => 'owner',
@@ -253,6 +257,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         'email' => 'setEmail',
         'country' => 'setCountry',
         'customFields' => 'setCustomFields',
+        'customFieldValues' => 'setCustomFieldValues',
         'user' => 'setUser',
         'lists' => 'setLists',
         'owner' => 'setOwner',
@@ -279,6 +284,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         'email' => 'getEmail',
         'country' => 'getCountry',
         'customFields' => 'getCustomFields',
+        'customFieldValues' => 'getCustomFieldValues',
         'user' => 'getUser',
         'lists' => 'getLists',
         'owner' => 'getOwner',
@@ -356,6 +362,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('email', $data ?? [], null);
         $this->setIfExists('country', $data ?? [], null);
         $this->setIfExists('customFields', $data ?? [], null);
+        $this->setIfExists('customFieldValues', $data ?? [], null);
         $this->setIfExists('user', $data ?? [], null);
         $this->setIfExists('lists', $data ?? [], null);
         $this->setIfExists('owner', $data ?? [], null);
@@ -422,6 +429,9 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         }
         if ($this->container['customFields'] === null) {
             $invalidProperties[] = "'customFields' can't be null";
+        }
+        if ($this->container['customFieldValues'] === null) {
+            $invalidProperties[] = "'customFieldValues' can't be null";
         }
         if ($this->container['user'] === null) {
             $invalidProperties[] = "'user' can't be null";
@@ -761,6 +771,33 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable customFields cannot be null');
         }
         $this->container['customFields'] = $customFields;
+
+        return $this;
+    }
+
+    /**
+     * Gets customFieldValues
+     *
+     * @return \TextMagic\Models\CustomFieldValues[]
+     */
+    public function getCustomFieldValues()
+    {
+        return $this->container['customFieldValues'];
+    }
+
+    /**
+     * Sets customFieldValues
+     *
+     * @param \TextMagic\Models\CustomFieldValues[] $customFieldValues customFieldValues
+     *
+     * @return self
+     */
+    public function setCustomFieldValues($customFieldValues)
+    {
+        if (is_null($customFieldValues)) {
+            throw new \InvalidArgumentException('non-nullable customFieldValues cannot be null');
+        }
+        $this->container['customFieldValues'] = $customFieldValues;
 
         return $this;
     }

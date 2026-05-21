@@ -25,5 +25,9 @@ Name | Type | Description | Notes
 **smsPrice** | **float** |  |
 **mmsPrice** | **float** |  |
 **tags** | [**\TextMagic\Models\Tag[]**](Tag.md) |  | [optional]
+**assigneeId** | **int** |  |
+**updatedBy** | [**\TextMagic\Models\NullableUserPersonalInfo**](NullableUserPersonalInfo.md) |  | [optional]
+**createdAt** | **\DateTime** | Chat creation date and time. |
+**messageTime** | **\DateTime** | Chat last message date and time. |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

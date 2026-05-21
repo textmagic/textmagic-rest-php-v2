@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **email** | **string** | Contact email address. |
 **country** | [**\TextMagic\Models\Country**](Country.md) |  |
 **customFields** | [**\TextMagic\Models\CustomFieldListItem[]**](CustomFieldListItem.md) |  |
+**customFieldValues** | [**\TextMagic\Models\CustomFieldValues[]**](CustomFieldValues.md) |  |
 **user** | [**\TextMagic\Models\User**](User.md) |  |
 **lists** | [**\TextMagic\Models\ModelList[]**](ModelList.md) |  |
 **owner** | [**\TextMagic\Models\User**](User.md) |  | [optional]

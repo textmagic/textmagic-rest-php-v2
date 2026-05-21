@@ -112,6 +112,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'liveChatRated' => 'int',
         'webWidgetUpdated' => 'int',
         'webWidgetDeleted' => 'int',
+        'webWidgetCreated' => 'int',
         'contactAdded' => 'int',
         'contactDeleted' => 'int',
         'contactBulkUpdated' => 'int',
@@ -246,7 +247,19 @@ class GetStateResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'scheduledEmailCampaignDeleted' => 'int',
         'emailCampaignFailedAttemptCreated' => 'int',
         'emailCampaignFailedAttemptDeleted' => 'int',
-        'emailCampaignFailedAttemptStateUpdated' => 'int'
+        'emailCampaignFailedAttemptStateUpdated' => 'int',
+        'tollFreePreFillCompleted' => 'int',
+        'tollFreePreFillFailed' => 'int',
+        'tollFreeComplianceCheckCompleted' => 'int',
+        'tollFreeComplianceCheckFailed' => 'int',
+        'tenDlcPreFillCompleted' => 'int',
+        'tenDlcPreFillFailed' => 'int',
+        'tenDlcComplianceCheckCompleted' => 'int',
+        'tenDlcComplianceCheckFailed' => 'int',
+        'marketingDataModalChanged' => 'int',
+        'integrationStatusChanged' => 'int',
+        'integrationCustomerSyncProgressState' => 'int',
+        'integrationCustomerSyncEnd' => 'int'
     ];
 
     /**
@@ -312,6 +325,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'liveChatRated' => null,
         'webWidgetUpdated' => null,
         'webWidgetDeleted' => null,
+        'webWidgetCreated' => null,
         'contactAdded' => null,
         'contactDeleted' => null,
         'contactBulkUpdated' => null,
@@ -446,7 +460,19 @@ class GetStateResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'scheduledEmailCampaignDeleted' => null,
         'emailCampaignFailedAttemptCreated' => null,
         'emailCampaignFailedAttemptDeleted' => null,
-        'emailCampaignFailedAttemptStateUpdated' => null
+        'emailCampaignFailedAttemptStateUpdated' => null,
+        'tollFreePreFillCompleted' => null,
+        'tollFreePreFillFailed' => null,
+        'tollFreeComplianceCheckCompleted' => null,
+        'tollFreeComplianceCheckFailed' => null,
+        'tenDlcPreFillCompleted' => null,
+        'tenDlcPreFillFailed' => null,
+        'tenDlcComplianceCheckCompleted' => null,
+        'tenDlcComplianceCheckFailed' => null,
+        'marketingDataModalChanged' => null,
+        'integrationStatusChanged' => null,
+        'integrationCustomerSyncProgressState' => null,
+        'integrationCustomerSyncEnd' => null
     ];
 
     /**
@@ -510,6 +536,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'liveChatRated' => false,
         'webWidgetUpdated' => false,
         'webWidgetDeleted' => false,
+        'webWidgetCreated' => false,
         'contactAdded' => false,
         'contactDeleted' => false,
         'contactBulkUpdated' => false,
@@ -644,7 +671,19 @@ class GetStateResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'scheduledEmailCampaignDeleted' => false,
         'emailCampaignFailedAttemptCreated' => false,
         'emailCampaignFailedAttemptDeleted' => false,
-        'emailCampaignFailedAttemptStateUpdated' => false
+        'emailCampaignFailedAttemptStateUpdated' => false,
+        'tollFreePreFillCompleted' => false,
+        'tollFreePreFillFailed' => false,
+        'tollFreeComplianceCheckCompleted' => false,
+        'tollFreeComplianceCheckFailed' => false,
+        'tenDlcPreFillCompleted' => false,
+        'tenDlcPreFillFailed' => false,
+        'tenDlcComplianceCheckCompleted' => false,
+        'tenDlcComplianceCheckFailed' => false,
+        'marketingDataModalChanged' => false,
+        'integrationStatusChanged' => false,
+        'integrationCustomerSyncProgressState' => false,
+        'integrationCustomerSyncEnd' => false
     ];
 
     /**
@@ -788,6 +827,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'liveChatRated' => 'liveChatRated',
         'webWidgetUpdated' => 'webWidgetUpdated',
         'webWidgetDeleted' => 'webWidgetDeleted',
+        'webWidgetCreated' => 'webWidgetCreated',
         'contactAdded' => 'contactAdded',
         'contactDeleted' => 'contactDeleted',
         'contactBulkUpdated' => 'contactBulkUpdated',
@@ -922,7 +962,19 @@ class GetStateResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'scheduledEmailCampaignDeleted' => 'scheduledEmailCampaignDeleted',
         'emailCampaignFailedAttemptCreated' => 'emailCampaignFailedAttemptCreated',
         'emailCampaignFailedAttemptDeleted' => 'emailCampaignFailedAttemptDeleted',
-        'emailCampaignFailedAttemptStateUpdated' => 'emailCampaignFailedAttemptStateUpdated'
+        'emailCampaignFailedAttemptStateUpdated' => 'emailCampaignFailedAttemptStateUpdated',
+        'tollFreePreFillCompleted' => 'tollFreePreFillCompleted',
+        'tollFreePreFillFailed' => 'tollFreePreFillFailed',
+        'tollFreeComplianceCheckCompleted' => 'tollFreeComplianceCheckCompleted',
+        'tollFreeComplianceCheckFailed' => 'tollFreeComplianceCheckFailed',
+        'tenDlcPreFillCompleted' => 'tenDlcPreFillCompleted',
+        'tenDlcPreFillFailed' => 'tenDlcPreFillFailed',
+        'tenDlcComplianceCheckCompleted' => 'tenDlcComplianceCheckCompleted',
+        'tenDlcComplianceCheckFailed' => 'tenDlcComplianceCheckFailed',
+        'marketingDataModalChanged' => 'marketingDataModalChanged',
+        'integrationStatusChanged' => 'integrationStatusChanged',
+        'integrationCustomerSyncProgressState' => 'integrationCustomerSyncProgressState',
+        'integrationCustomerSyncEnd' => 'integrationCustomerSyncEnd'
     ];
 
     /**
@@ -986,6 +1038,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'liveChatRated' => 'setLiveChatRated',
         'webWidgetUpdated' => 'setWebWidgetUpdated',
         'webWidgetDeleted' => 'setWebWidgetDeleted',
+        'webWidgetCreated' => 'setWebWidgetCreated',
         'contactAdded' => 'setContactAdded',
         'contactDeleted' => 'setContactDeleted',
         'contactBulkUpdated' => 'setContactBulkUpdated',
@@ -1120,7 +1173,19 @@ class GetStateResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'scheduledEmailCampaignDeleted' => 'setScheduledEmailCampaignDeleted',
         'emailCampaignFailedAttemptCreated' => 'setEmailCampaignFailedAttemptCreated',
         'emailCampaignFailedAttemptDeleted' => 'setEmailCampaignFailedAttemptDeleted',
-        'emailCampaignFailedAttemptStateUpdated' => 'setEmailCampaignFailedAttemptStateUpdated'
+        'emailCampaignFailedAttemptStateUpdated' => 'setEmailCampaignFailedAttemptStateUpdated',
+        'tollFreePreFillCompleted' => 'setTollFreePreFillCompleted',
+        'tollFreePreFillFailed' => 'setTollFreePreFillFailed',
+        'tollFreeComplianceCheckCompleted' => 'setTollFreeComplianceCheckCompleted',
+        'tollFreeComplianceCheckFailed' => 'setTollFreeComplianceCheckFailed',
+        'tenDlcPreFillCompleted' => 'setTenDlcPreFillCompleted',
+        'tenDlcPreFillFailed' => 'setTenDlcPreFillFailed',
+        'tenDlcComplianceCheckCompleted' => 'setTenDlcComplianceCheckCompleted',
+        'tenDlcComplianceCheckFailed' => 'setTenDlcComplianceCheckFailed',
+        'marketingDataModalChanged' => 'setMarketingDataModalChanged',
+        'integrationStatusChanged' => 'setIntegrationStatusChanged',
+        'integrationCustomerSyncProgressState' => 'setIntegrationCustomerSyncProgressState',
+        'integrationCustomerSyncEnd' => 'setIntegrationCustomerSyncEnd'
     ];
 
     /**
@@ -1184,6 +1249,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'liveChatRated' => 'getLiveChatRated',
         'webWidgetUpdated' => 'getWebWidgetUpdated',
         'webWidgetDeleted' => 'getWebWidgetDeleted',
+        'webWidgetCreated' => 'getWebWidgetCreated',
         'contactAdded' => 'getContactAdded',
         'contactDeleted' => 'getContactDeleted',
         'contactBulkUpdated' => 'getContactBulkUpdated',
@@ -1318,7 +1384,19 @@ class GetStateResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'scheduledEmailCampaignDeleted' => 'getScheduledEmailCampaignDeleted',
         'emailCampaignFailedAttemptCreated' => 'getEmailCampaignFailedAttemptCreated',
         'emailCampaignFailedAttemptDeleted' => 'getEmailCampaignFailedAttemptDeleted',
-        'emailCampaignFailedAttemptStateUpdated' => 'getEmailCampaignFailedAttemptStateUpdated'
+        'emailCampaignFailedAttemptStateUpdated' => 'getEmailCampaignFailedAttemptStateUpdated',
+        'tollFreePreFillCompleted' => 'getTollFreePreFillCompleted',
+        'tollFreePreFillFailed' => 'getTollFreePreFillFailed',
+        'tollFreeComplianceCheckCompleted' => 'getTollFreeComplianceCheckCompleted',
+        'tollFreeComplianceCheckFailed' => 'getTollFreeComplianceCheckFailed',
+        'tenDlcPreFillCompleted' => 'getTenDlcPreFillCompleted',
+        'tenDlcPreFillFailed' => 'getTenDlcPreFillFailed',
+        'tenDlcComplianceCheckCompleted' => 'getTenDlcComplianceCheckCompleted',
+        'tenDlcComplianceCheckFailed' => 'getTenDlcComplianceCheckFailed',
+        'marketingDataModalChanged' => 'getMarketingDataModalChanged',
+        'integrationStatusChanged' => 'getIntegrationStatusChanged',
+        'integrationCustomerSyncProgressState' => 'getIntegrationCustomerSyncProgressState',
+        'integrationCustomerSyncEnd' => 'getIntegrationCustomerSyncEnd'
     ];
 
     /**
@@ -1433,6 +1511,7 @@ class GetStateResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('liveChatRated', $data ?? [], null);
         $this->setIfExists('webWidgetUpdated', $data ?? [], null);
         $this->setIfExists('webWidgetDeleted', $data ?? [], null);
+        $this->setIfExists('webWidgetCreated', $data ?? [], null);
         $this->setIfExists('contactAdded', $data ?? [], null);
         $this->setIfExists('contactDeleted', $data ?? [], null);
         $this->setIfExists('contactBulkUpdated', $data ?? [], null);
@@ -1568,6 +1647,18 @@ class GetStateResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('emailCampaignFailedAttemptCreated', $data ?? [], null);
         $this->setIfExists('emailCampaignFailedAttemptDeleted', $data ?? [], null);
         $this->setIfExists('emailCampaignFailedAttemptStateUpdated', $data ?? [], null);
+        $this->setIfExists('tollFreePreFillCompleted', $data ?? [], null);
+        $this->setIfExists('tollFreePreFillFailed', $data ?? [], null);
+        $this->setIfExists('tollFreeComplianceCheckCompleted', $data ?? [], null);
+        $this->setIfExists('tollFreeComplianceCheckFailed', $data ?? [], null);
+        $this->setIfExists('tenDlcPreFillCompleted', $data ?? [], null);
+        $this->setIfExists('tenDlcPreFillFailed', $data ?? [], null);
+        $this->setIfExists('tenDlcComplianceCheckCompleted', $data ?? [], null);
+        $this->setIfExists('tenDlcComplianceCheckFailed', $data ?? [], null);
+        $this->setIfExists('marketingDataModalChanged', $data ?? [], null);
+        $this->setIfExists('integrationStatusChanged', $data ?? [], null);
+        $this->setIfExists('integrationCustomerSyncProgressState', $data ?? [], null);
+        $this->setIfExists('integrationCustomerSyncEnd', $data ?? [], null);
     }
 
     /**
@@ -1761,6 +1852,9 @@ class GetStateResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         }
         if ($this->container['webWidgetDeleted'] === null) {
             $invalidProperties[] = "'webWidgetDeleted' can't be null";
+        }
+        if ($this->container['webWidgetCreated'] === null) {
+            $invalidProperties[] = "'webWidgetCreated' can't be null";
         }
         if ($this->container['contactAdded'] === null) {
             $invalidProperties[] = "'contactAdded' can't be null";
@@ -2160,6 +2254,42 @@ class GetStateResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         }
         if ($this->container['emailCampaignFailedAttemptStateUpdated'] === null) {
             $invalidProperties[] = "'emailCampaignFailedAttemptStateUpdated' can't be null";
+        }
+        if ($this->container['tollFreePreFillCompleted'] === null) {
+            $invalidProperties[] = "'tollFreePreFillCompleted' can't be null";
+        }
+        if ($this->container['tollFreePreFillFailed'] === null) {
+            $invalidProperties[] = "'tollFreePreFillFailed' can't be null";
+        }
+        if ($this->container['tollFreeComplianceCheckCompleted'] === null) {
+            $invalidProperties[] = "'tollFreeComplianceCheckCompleted' can't be null";
+        }
+        if ($this->container['tollFreeComplianceCheckFailed'] === null) {
+            $invalidProperties[] = "'tollFreeComplianceCheckFailed' can't be null";
+        }
+        if ($this->container['tenDlcPreFillCompleted'] === null) {
+            $invalidProperties[] = "'tenDlcPreFillCompleted' can't be null";
+        }
+        if ($this->container['tenDlcPreFillFailed'] === null) {
+            $invalidProperties[] = "'tenDlcPreFillFailed' can't be null";
+        }
+        if ($this->container['tenDlcComplianceCheckCompleted'] === null) {
+            $invalidProperties[] = "'tenDlcComplianceCheckCompleted' can't be null";
+        }
+        if ($this->container['tenDlcComplianceCheckFailed'] === null) {
+            $invalidProperties[] = "'tenDlcComplianceCheckFailed' can't be null";
+        }
+        if ($this->container['marketingDataModalChanged'] === null) {
+            $invalidProperties[] = "'marketingDataModalChanged' can't be null";
+        }
+        if ($this->container['integrationStatusChanged'] === null) {
+            $invalidProperties[] = "'integrationStatusChanged' can't be null";
+        }
+        if ($this->container['integrationCustomerSyncProgressState'] === null) {
+            $invalidProperties[] = "'integrationCustomerSyncProgressState' can't be null";
+        }
+        if ($this->container['integrationCustomerSyncEnd'] === null) {
+            $invalidProperties[] = "'integrationCustomerSyncEnd' can't be null";
         }
         return $invalidProperties;
     }
@@ -3657,6 +3787,33 @@ class GetStateResponse implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable webWidgetDeleted cannot be null');
         }
         $this->container['webWidgetDeleted'] = $webWidgetDeleted;
+
+        return $this;
+    }
+
+    /**
+     * Gets webWidgetCreated
+     *
+     * @return int
+     */
+    public function getWebWidgetCreated()
+    {
+        return $this->container['webWidgetCreated'];
+    }
+
+    /**
+     * Sets webWidgetCreated
+     *
+     * @param int $webWidgetCreated webWidgetCreated
+     *
+     * @return self
+     */
+    public function setWebWidgetCreated($webWidgetCreated)
+    {
+        if (is_null($webWidgetCreated)) {
+            throw new \InvalidArgumentException('non-nullable webWidgetCreated cannot be null');
+        }
+        $this->container['webWidgetCreated'] = $webWidgetCreated;
 
         return $this;
     }
@@ -7302,6 +7459,330 @@ class GetStateResponse implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable emailCampaignFailedAttemptStateUpdated cannot be null');
         }
         $this->container['emailCampaignFailedAttemptStateUpdated'] = $emailCampaignFailedAttemptStateUpdated;
+
+        return $this;
+    }
+
+    /**
+     * Gets tollFreePreFillCompleted
+     *
+     * @return int
+     */
+    public function getTollFreePreFillCompleted()
+    {
+        return $this->container['tollFreePreFillCompleted'];
+    }
+
+    /**
+     * Sets tollFreePreFillCompleted
+     *
+     * @param int $tollFreePreFillCompleted tollFreePreFillCompleted
+     *
+     * @return self
+     */
+    public function setTollFreePreFillCompleted($tollFreePreFillCompleted)
+    {
+        if (is_null($tollFreePreFillCompleted)) {
+            throw new \InvalidArgumentException('non-nullable tollFreePreFillCompleted cannot be null');
+        }
+        $this->container['tollFreePreFillCompleted'] = $tollFreePreFillCompleted;
+
+        return $this;
+    }
+
+    /**
+     * Gets tollFreePreFillFailed
+     *
+     * @return int
+     */
+    public function getTollFreePreFillFailed()
+    {
+        return $this->container['tollFreePreFillFailed'];
+    }
+
+    /**
+     * Sets tollFreePreFillFailed
+     *
+     * @param int $tollFreePreFillFailed tollFreePreFillFailed
+     *
+     * @return self
+     */
+    public function setTollFreePreFillFailed($tollFreePreFillFailed)
+    {
+        if (is_null($tollFreePreFillFailed)) {
+            throw new \InvalidArgumentException('non-nullable tollFreePreFillFailed cannot be null');
+        }
+        $this->container['tollFreePreFillFailed'] = $tollFreePreFillFailed;
+
+        return $this;
+    }
+
+    /**
+     * Gets tollFreeComplianceCheckCompleted
+     *
+     * @return int
+     */
+    public function getTollFreeComplianceCheckCompleted()
+    {
+        return $this->container['tollFreeComplianceCheckCompleted'];
+    }
+
+    /**
+     * Sets tollFreeComplianceCheckCompleted
+     *
+     * @param int $tollFreeComplianceCheckCompleted tollFreeComplianceCheckCompleted
+     *
+     * @return self
+     */
+    public function setTollFreeComplianceCheckCompleted($tollFreeComplianceCheckCompleted)
+    {
+        if (is_null($tollFreeComplianceCheckCompleted)) {
+            throw new \InvalidArgumentException('non-nullable tollFreeComplianceCheckCompleted cannot be null');
+        }
+        $this->container['tollFreeComplianceCheckCompleted'] = $tollFreeComplianceCheckCompleted;
+
+        return $this;
+    }
+
+    /**
+     * Gets tollFreeComplianceCheckFailed
+     *
+     * @return int
+     */
+    public function getTollFreeComplianceCheckFailed()
+    {
+        return $this->container['tollFreeComplianceCheckFailed'];
+    }
+
+    /**
+     * Sets tollFreeComplianceCheckFailed
+     *
+     * @param int $tollFreeComplianceCheckFailed tollFreeComplianceCheckFailed
+     *
+     * @return self
+     */
+    public function setTollFreeComplianceCheckFailed($tollFreeComplianceCheckFailed)
+    {
+        if (is_null($tollFreeComplianceCheckFailed)) {
+            throw new \InvalidArgumentException('non-nullable tollFreeComplianceCheckFailed cannot be null');
+        }
+        $this->container['tollFreeComplianceCheckFailed'] = $tollFreeComplianceCheckFailed;
+
+        return $this;
+    }
+
+    /**
+     * Gets tenDlcPreFillCompleted
+     *
+     * @return int
+     */
+    public function getTenDlcPreFillCompleted()
+    {
+        return $this->container['tenDlcPreFillCompleted'];
+    }
+
+    /**
+     * Sets tenDlcPreFillCompleted
+     *
+     * @param int $tenDlcPreFillCompleted tenDlcPreFillCompleted
+     *
+     * @return self
+     */
+    public function setTenDlcPreFillCompleted($tenDlcPreFillCompleted)
+    {
+        if (is_null($tenDlcPreFillCompleted)) {
+            throw new \InvalidArgumentException('non-nullable tenDlcPreFillCompleted cannot be null');
+        }
+        $this->container['tenDlcPreFillCompleted'] = $tenDlcPreFillCompleted;
+
+        return $this;
+    }
+
+    /**
+     * Gets tenDlcPreFillFailed
+     *
+     * @return int
+     */
+    public function getTenDlcPreFillFailed()
+    {
+        return $this->container['tenDlcPreFillFailed'];
+    }
+
+    /**
+     * Sets tenDlcPreFillFailed
+     *
+     * @param int $tenDlcPreFillFailed tenDlcPreFillFailed
+     *
+     * @return self
+     */
+    public function setTenDlcPreFillFailed($tenDlcPreFillFailed)
+    {
+        if (is_null($tenDlcPreFillFailed)) {
+            throw new \InvalidArgumentException('non-nullable tenDlcPreFillFailed cannot be null');
+        }
+        $this->container['tenDlcPreFillFailed'] = $tenDlcPreFillFailed;
+
+        return $this;
+    }
+
+    /**
+     * Gets tenDlcComplianceCheckCompleted
+     *
+     * @return int
+     */
+    public function getTenDlcComplianceCheckCompleted()
+    {
+        return $this->container['tenDlcComplianceCheckCompleted'];
+    }
+
+    /**
+     * Sets tenDlcComplianceCheckCompleted
+     *
+     * @param int $tenDlcComplianceCheckCompleted tenDlcComplianceCheckCompleted
+     *
+     * @return self
+     */
+    public function setTenDlcComplianceCheckCompleted($tenDlcComplianceCheckCompleted)
+    {
+        if (is_null($tenDlcComplianceCheckCompleted)) {
+            throw new \InvalidArgumentException('non-nullable tenDlcComplianceCheckCompleted cannot be null');
+        }
+        $this->container['tenDlcComplianceCheckCompleted'] = $tenDlcComplianceCheckCompleted;
+
+        return $this;
+    }
+
+    /**
+     * Gets tenDlcComplianceCheckFailed
+     *
+     * @return int
+     */
+    public function getTenDlcComplianceCheckFailed()
+    {
+        return $this->container['tenDlcComplianceCheckFailed'];
+    }
+
+    /**
+     * Sets tenDlcComplianceCheckFailed
+     *
+     * @param int $tenDlcComplianceCheckFailed tenDlcComplianceCheckFailed
+     *
+     * @return self
+     */
+    public function setTenDlcComplianceCheckFailed($tenDlcComplianceCheckFailed)
+    {
+        if (is_null($tenDlcComplianceCheckFailed)) {
+            throw new \InvalidArgumentException('non-nullable tenDlcComplianceCheckFailed cannot be null');
+        }
+        $this->container['tenDlcComplianceCheckFailed'] = $tenDlcComplianceCheckFailed;
+
+        return $this;
+    }
+
+    /**
+     * Gets marketingDataModalChanged
+     *
+     * @return int
+     */
+    public function getMarketingDataModalChanged()
+    {
+        return $this->container['marketingDataModalChanged'];
+    }
+
+    /**
+     * Sets marketingDataModalChanged
+     *
+     * @param int $marketingDataModalChanged marketingDataModalChanged
+     *
+     * @return self
+     */
+    public function setMarketingDataModalChanged($marketingDataModalChanged)
+    {
+        if (is_null($marketingDataModalChanged)) {
+            throw new \InvalidArgumentException('non-nullable marketingDataModalChanged cannot be null');
+        }
+        $this->container['marketingDataModalChanged'] = $marketingDataModalChanged;
+
+        return $this;
+    }
+
+    /**
+     * Gets integrationStatusChanged
+     *
+     * @return int
+     */
+    public function getIntegrationStatusChanged()
+    {
+        return $this->container['integrationStatusChanged'];
+    }
+
+    /**
+     * Sets integrationStatusChanged
+     *
+     * @param int $integrationStatusChanged integrationStatusChanged
+     *
+     * @return self
+     */
+    public function setIntegrationStatusChanged($integrationStatusChanged)
+    {
+        if (is_null($integrationStatusChanged)) {
+            throw new \InvalidArgumentException('non-nullable integrationStatusChanged cannot be null');
+        }
+        $this->container['integrationStatusChanged'] = $integrationStatusChanged;
+
+        return $this;
+    }
+
+    /**
+     * Gets integrationCustomerSyncProgressState
+     *
+     * @return int
+     */
+    public function getIntegrationCustomerSyncProgressState()
+    {
+        return $this->container['integrationCustomerSyncProgressState'];
+    }
+
+    /**
+     * Sets integrationCustomerSyncProgressState
+     *
+     * @param int $integrationCustomerSyncProgressState integrationCustomerSyncProgressState
+     *
+     * @return self
+     */
+    public function setIntegrationCustomerSyncProgressState($integrationCustomerSyncProgressState)
+    {
+        if (is_null($integrationCustomerSyncProgressState)) {
+            throw new \InvalidArgumentException('non-nullable integrationCustomerSyncProgressState cannot be null');
+        }
+        $this->container['integrationCustomerSyncProgressState'] = $integrationCustomerSyncProgressState;
+
+        return $this;
+    }
+
+    /**
+     * Gets integrationCustomerSyncEnd
+     *
+     * @return int
+     */
+    public function getIntegrationCustomerSyncEnd()
+    {
+        return $this->container['integrationCustomerSyncEnd'];
+    }
+
+    /**
+     * Sets integrationCustomerSyncEnd
+     *
+     * @param int $integrationCustomerSyncEnd integrationCustomerSyncEnd
+     *
+     * @return self
+     */
+    public function setIntegrationCustomerSyncEnd($integrationCustomerSyncEnd)
+    {
+        if (is_null($integrationCustomerSyncEnd)) {
+            throw new \InvalidArgumentException('non-nullable integrationCustomerSyncEnd cannot be null');
+        }
+        $this->container['integrationCustomerSyncEnd'] = $integrationCustomerSyncEnd;
 
         return $this;
     }

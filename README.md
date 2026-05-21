@@ -33,7 +33,7 @@ Or add it to your `composer.json`:
 ```json
 {
     "require": {
-        "textmagic/textmagic-rest-php-v2": "^3.0.43870"
+        "textmagic/textmagic-rest-php-v2": "^3.0.50032"
     }
 }
 ```

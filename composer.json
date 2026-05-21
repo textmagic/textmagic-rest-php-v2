@@ -1,6 +1,6 @@
 {
     "name": "textmagic/textmagic-rest-php-v2",
-    "version": "3.0.43870",
+    "version": "3.0.50032",
     "description": "PHP SDK for TextMagic API",
     "keywords": [
         "openapitools",

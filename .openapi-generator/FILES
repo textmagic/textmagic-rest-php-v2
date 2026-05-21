@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 .php-cs-fixer.dist.php
 .travis.yml
 README.md
@@ -32,6 +31,7 @@ docs/Model/CreateTagResponse.md
 docs/Model/CreateTemplateRequest.md
 docs/Model/Currency.md
 docs/Model/CustomFieldListItem.md
+docs/Model/CustomFieldValues.md
 docs/Model/DeleteChatMessagesRequest.md
 docs/Model/DeleteChatsBulkRequest.md
 docs/Model/DeleteContactNotesBulkRequest.md
@@ -116,6 +116,7 @@ docs/Model/ModelList.md
 docs/Model/MuteChatRequest.md
 docs/Model/MuteChatsBulkRequest.md
 docs/Model/NotFoundResponse.md
+docs/Model/NullableUserPersonalInfo.md
 docs/Model/OutboundEmailResponse.md
 docs/Model/PingResponse.md
 docs/Model/PushToken.md
@@ -206,6 +207,7 @@ src/Models/CreateTagResponse.php
 src/Models/CreateTemplateRequest.php
 src/Models/Currency.php
 src/Models/CustomFieldListItem.php
+src/Models/CustomFieldValues.php
 src/Models/DeleteChatMessagesRequest.php
 src/Models/DeleteChatsBulkRequest.php
 src/Models/DeleteContactNotesBulkRequest.php
@@ -291,6 +293,7 @@ src/Models/ModelList.php
 src/Models/MuteChatRequest.php
 src/Models/MuteChatsBulkRequest.php
 src/Models/NotFoundResponse.php
+src/Models/NullableUserPersonalInfo.php
 src/Models/OutboundEmailResponse.php
 src/Models/PingResponse.php
 src/Models/PushToken.php

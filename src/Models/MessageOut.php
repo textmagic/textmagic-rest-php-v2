@@ -68,6 +68,7 @@ class MessageOut implements ModelInterface, ArrayAccess, \JsonSerializable
         'messageTime' => '\DateTime',
         'avatar' => 'string',
         'deleted' => 'bool',
+        'deliveredAt' => '\DateTime',
         'charset' => 'string',
         'charsetLabel' => 'string',
         'firstName' => 'string',
@@ -101,6 +102,7 @@ class MessageOut implements ModelInterface, ArrayAccess, \JsonSerializable
         'messageTime' => 'date-time',
         'avatar' => null,
         'deleted' => null,
+        'deliveredAt' => 'date-time',
         'charset' => null,
         'charsetLabel' => null,
         'firstName' => null,
@@ -132,6 +134,7 @@ class MessageOut implements ModelInterface, ArrayAccess, \JsonSerializable
         'messageTime' => false,
         'avatar' => true,
         'deleted' => false,
+        'deliveredAt' => true,
         'charset' => true,
         'charsetLabel' => true,
         'firstName' => true,
@@ -243,6 +246,7 @@ class MessageOut implements ModelInterface, ArrayAccess, \JsonSerializable
         'messageTime' => 'messageTime',
         'avatar' => 'avatar',
         'deleted' => 'deleted',
+        'deliveredAt' => 'deliveredAt',
         'charset' => 'charset',
         'charsetLabel' => 'charsetLabel',
         'firstName' => 'firstName',
@@ -274,6 +278,7 @@ class MessageOut implements ModelInterface, ArrayAccess, \JsonSerializable
         'messageTime' => 'setMessageTime',
         'avatar' => 'setAvatar',
         'deleted' => 'setDeleted',
+        'deliveredAt' => 'setDeliveredAt',
         'charset' => 'setCharset',
         'charsetLabel' => 'setCharsetLabel',
         'firstName' => 'setFirstName',
@@ -305,6 +310,7 @@ class MessageOut implements ModelInterface, ArrayAccess, \JsonSerializable
         'messageTime' => 'getMessageTime',
         'avatar' => 'getAvatar',
         'deleted' => 'getDeleted',
+        'deliveredAt' => 'getDeliveredAt',
         'charset' => 'getCharset',
         'charsetLabel' => 'getCharsetLabel',
         'firstName' => 'getFirstName',
@@ -485,6 +491,7 @@ class MessageOut implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('messageTime', $data ?? [], null);
         $this->setIfExists('avatar', $data ?? [], null);
         $this->setIfExists('deleted', $data ?? [], null);
+        $this->setIfExists('deliveredAt', $data ?? [], null);
         $this->setIfExists('charset', $data ?? [], null);
         $this->setIfExists('charsetLabel', $data ?? [], null);
         $this->setIfExists('firstName', $data ?? [], null);
@@ -939,6 +946,40 @@ class MessageOut implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable deleted cannot be null');
         }
         $this->container['deleted'] = $deleted;
+
+        return $this;
+    }
+
+    /**
+     * Gets deliveredAt
+     *
+     * @return \DateTime|null
+     */
+    public function getDeliveredAt()
+    {
+        return $this->container['deliveredAt'];
+    }
+
+    /**
+     * Sets deliveredAt
+     *
+     * @param \DateTime|null $deliveredAt Time when message was delivered.
+     *
+     * @return self
+     */
+    public function setDeliveredAt($deliveredAt)
+    {
+        if (is_null($deliveredAt)) {
+            array_push($this->openAPINullablesSetToNull, 'deliveredAt');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('deliveredAt', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['deliveredAt'] = $deliveredAt;
 
         return $this;
     }
